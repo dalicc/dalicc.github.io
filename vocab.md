@@ -169,7 +169,7 @@ Schema.org
    </td>
    <td>The Assignee may add a written offer for permissions according to the license.
    </td>
-   <td>
+   <td>https://dalicc.net/ns#attachoffer
    </td>
   </tr>
   <tr>
