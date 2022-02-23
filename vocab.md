@@ -165,7 +165,7 @@ Schema.org
    </td>
   </tr>
   <tr>
-   <td>dalicc:attachoffer
+   <td><p id="attachoffer">dalicc:attachoffer</p>
    </td>
    <td>The Assignee may add a written offer for permissions according to the license.
    </td>
