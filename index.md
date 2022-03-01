@@ -1,7 +1,7 @@
 # DALICC Vocabulary Documentation
 
 
-# Introduction
+## Introduction
 
 DALICC stands for Data License Clearance Center. It is a software framework that supports application developers, legal experts and sales managers in the legally secure reutilization of third party digital sources such as data, content or software. 
 
@@ -10,16 +10,18 @@ As modern IT applications increasingly retrieve, store and process data from a v
 The DALICC framework supports the automated clearance of rights, thus helping to detect licensing conflicts and significantly reducing the costs of rights clearance in the creation of derivative works.
 
 
-# DALICC Information Model
+## DALICC Information Model
 
-The DALICC Information Model as depicted in Figure 1 consists of two components. 
+![DALICC Information Model](model.png)
+
+The DALICC Information Model as depicted in the above figure consists of two components. 
 
 The first component makes a reference to the [ODRL information model](https://www.w3.org/TR/odrl-model/) to express permissions, duties and prohibitions stated in a license. It uses vocabularies from ODRL, CCRel and particular extensions to describe licenses for machine processing in a legally valid manner. In this respect a license can be understood as a policy that defines specific actions as permissions, duties or prohibitions. 
 
 The second component is the so-called Dependency Graph. This graph expresses the valid relationships between various actions defined in a license.The graph currently consists of three basic relationships: "included in", "implies" and "contradicts". The graph is used to check the consistency of the license itself and to detect potential conflicts arising from contradicting actions defined in two or more licenses.
 
 
-# License Vocabulary 
+## License Vocabulary 
 
 In order to express a license DALICC uses terms from vocabularies provided under the following namespaces:
 
@@ -163,11 +165,11 @@ Schema.org
    </td>
   </tr>
   <tr>
-   <td>dalicc:attachoffer
+   <td><p id="attachoffer">dalicc:attachoffer</p>
    </td>
    <td>The Assignee may add a written offer for permissions according to the license.
    </td>
-   <td>
+   <td>https://dalicc.net/ns#attachoffer
    </td>
   </tr>
   <tr>
@@ -540,4 +542,3 @@ Schema.org
    </td>
   </tr>
 </table>
-
