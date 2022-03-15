@@ -199,7 +199,7 @@ In order to express a license DALICC uses terms from vocabularies provided under
   <tr>
    <td><p id="contradicts"> dalicc:contradicts </p>
    </td>
-   <td>
+   <td>An Action contradicts with another Action.
    </td>
   </tr>
   <tr>
