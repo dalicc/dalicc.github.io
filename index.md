@@ -5,7 +5,7 @@
 <h2>DALICC Vocabulary Documentation</h2>
 
 
-<h2>Introduction</h2>
+<h2>Introduction2</h2>
 
 
 DALICC stands for Data License Clearance Center. It is a software framework that supports application developers, legal experts and sales managers in the legally secure reutilization of third party digital sources such as data, content or software. 
