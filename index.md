@@ -1,7 +1,12 @@
-# DALICC Vocabulary Documentation
+<!-- Output copied to clipboard! -->
+
+<!-- Yay, no errors, warnings, or alerts! -->
+
+<h2>DALICC Vocabulary Documentation</h2>
 
 
-## Introduction
+<h2>Introduction</h2>
+
 
 DALICC stands for Data License Clearance Center. It is a software framework that supports application developers, legal experts and sales managers in the legally secure reutilization of third party digital sources such as data, content or software. 
 
@@ -9,59 +14,57 @@ As modern IT applications increasingly retrieve, store and process data from a v
 
 The DALICC framework supports the automated clearance of rights, thus helping to detect licensing conflicts and significantly reducing the costs of rights clearance in the creation of derivative works.
 
-
-## DALICC Information Model
+<h2>DALICC Information Model</h2>
 
 ![DALICC Information Model](model.png)
 
-The DALICC Information Model as depicted in the above figure consists of two components. 
+The DALICC Information Model as depicted in Figure 1 consists of two components. 
 
 The first component makes a reference to the [ODRL information model](https://www.w3.org/TR/odrl-model/) to express permissions, duties and prohibitions stated in a license. It uses vocabularies from ODRL, CCRel and particular extensions to describe licenses for machine processing in a legally valid manner. In this respect a license can be understood as a policy that defines specific actions as permissions, duties or prohibitions. 
 
 The second component is the so-called Dependency Graph. This graph expresses the valid relationships between various actions defined in a license.The graph currently consists of three basic relationships: "included in", "implies" and "contradicts". The graph is used to check the consistency of the license itself and to detect potential conflicts arising from contradicting actions defined in two or more licenses.
 
+<h2>License Vocabulary </h2>
 
-## License Vocabulary 
 
 In order to express a license DALICC uses terms from vocabularies provided under the following namespaces:
 
-CCRel
+**CCRel**
 
-@prefix cc: &lt;https://creativecommons.org/ns#> 
+@prefix cc: <http://creativecommons.org/ns#> 
 
-DALICC
+**DALICC**
 
-@prefix dalicc: &lt;https://dalicc.net/ns#> 
+@prefix dalicc: <http://dalicc.net/ns#> 
 
-@prefix lib: &lt;http://dalicc-api.net/license_library/license/> 
+@prefix dalicclib: <http://dalicc.net/licenselibrary/> 
 
-Dublin Core
+**Dublin Core**
 
-@prefix dcmitype: &lt;http://purl.org/dc/dcmitype/> 
+@prefix dcmitype: <http://purl.org/dc/dcmitype/> 
 
-@prefix dct: &lt;http://purl.org/dc/terms/> 
+@prefix dct: <http://purl.org/dc/terms/> 
 
-FOAF
+**FOAF**
 
-@prefix foaf: &lt;http://xmlns.com/foaf/0.1/> 
+@prefix foaf: <http://xmlns.com/foaf/0.1/> 
 
-ODRL
+**ODRL**
 
-@prefix odrl: &lt;http://www.w3.org/ns/odrl/2/> 
+@prefix odrl: <http://www.w3.org/ns/odrl/2/> 
 
-opensource.org
+**opensource.org**
 
-@prefix osl: &lt;https://opensource.org/licenses/> 
+@prefix osl: <http://opensource.org/licenses/> 
 
-Schema.org
+**Schema.org**
 
-@prefix ns1: &lt;https://schema.org/> 
+@prefix scho: <http://schema.org/> 
 
-@prefix scho: &lt;http://schema.org/> 
+<h3>CCRel - Creative Commons Rights Expression Language</h3>
 
-**CCRel - Creative Commons Rights Expression Language**
 
-@prefix cc: &lt;https://creativecommons.org/ns#> 
+@prefix cc: <http://creativecommons.org/ns#> 
 
 
 <table>
@@ -74,11 +77,11 @@ Schema.org
    </td>
   </tr>
   <tr>
-   <td>cc:AttributionName
+   <td>cc:attributionName
    </td>
    <td>the name to cite when giving attribution when the work is modified or redistributed under the terms of the associated Creative Commons license
    </td>
-   <td>https://www.w3.org/Submission/ccREL/
+   <td><a href="http://creativecommons.org/ns#attributionName">http://creativecommons.org/ns#attributionName</a> 
    </td>
   </tr>
   <tr>
@@ -86,7 +89,7 @@ Schema.org
    </td>
    <td>using the Work for commercial purposes
    </td>
-   <td>https://www.w3.org/Submission/ccREL/
+   <td><a href="http://creativecommons.org/ns#CommercialUse">http://creativecommons.org/ns#CommercialUse</a> 
    </td>
   </tr>
   <tr>
@@ -94,7 +97,7 @@ Schema.org
    </td>
    <td>preparing derivatives of the work
    </td>
-   <td>https://www.w3.org/Submission/ccREL/
+   <td><a href="http://creativecommons.org/ns#DerivativeWorks">http://creativecommons.org/ns#DerivativeWorks</a> 
    </td>
   </tr>
   <tr>
@@ -102,7 +105,7 @@ Schema.org
    </td>
    <td>associates the license with a particular legal jurisdiction
    </td>
-   <td>https://www.w3.org/Submission/ccREL/
+   <td><a href="http://creativecommons.org/ns#jurisdiction">http://creativecommons.org/ns#jurisdiction</a> 
    </td>
   </tr>
   <tr>
@@ -110,7 +113,7 @@ Schema.org
    </td>
    <td>references the corresponding legal text of the license
    </td>
-   <td>https://www.w3.org/Submission/ccREL/
+   <td><a href="http://creativecommons.org/ns#legalcode">http://creativecommons.org/ns#legalcode</a> 
    </td>
   </tr>
   <tr>
@@ -118,7 +121,7 @@ Schema.org
    </td>
    <td>providing an indication of the license that governs the work
    </td>
-   <td>https://www.w3.org/Submission/ccREL/
+   <td><a href="http://creativecommons.org/ns#Notice">http://creativecommons.org/ns#Notice</a> 
    </td>
   </tr>
   <tr>
@@ -126,7 +129,7 @@ Schema.org
    </td>
    <td>when redistributing derivative works of this work, using the same license
    </td>
-   <td>https://www.w3.org/Submission/ccREL/
+   <td><a href="http://creativecommons.org/ns#ShareAlike">http://creativecommons.org/ns#ShareAlike</a> 
    </td>
   </tr>
   <tr>
@@ -134,17 +137,20 @@ Schema.org
    </td>
    <td>when redistributing this work (which is expected to be software when this requirement is used), source code must be provided
    </td>
-   <td>https://www.w3.org/Submission/ccREL/
+   <td><a href="http://creativecommons.org/ns#SourceCode">http://creativecommons.org/ns#SourceCode</a> 
    </td>
   </tr>
 </table>
 
 
-**DALICC**
+* For more information [https://wiki.creativecommons.org/CC_REL](https://wiki.creativecommons.org/CC_REL) 
 
-@prefix dalicc: &lt;https://dalicc.net/ns#> 
+<h3>DALICC</h3>
 
-@prefix lib: &lt;http://dalicc-api.net/license_library/license/>
+
+@prefix dalicc: <http://dalicc.net/ns#> 
+
+@prefix dalicclib: <http://dalicc.net/licenselibrary/> 
 
 
 <table>
@@ -153,199 +159,152 @@ Schema.org
    </td>
    <td>Description
    </td>
-   <td>Reference
-   </td>
   </tr>
   <tr>
-   <td>dalicc:addStatement
+   <td><p id="addStatement"> dalicc:addStatement </p>
    </td>
    <td>The Assignee may add his own copyright statement, notices to his modifications and may provide additional or different license terms and conditions for use, reproduction, or distribution of his modifications, or for any such Derivative Works as a whole, provided use, reproduction, and distribution of the Work otherwise complies with the conditions stated in this License.
    </td>
-   <td>
-   </td>
   </tr>
   <tr>
-   <td><p id="attachoffer">dalicc:attachoffer</p>
+   <td><p id="attachoffer"> dalicc:attachoffer </p>
    </td>
    <td>The Assignee may add a written offer for permissions according to the license.
    </td>
-   <td>https://dalicc.net/ns#attachoffer
-   </td>
   </tr>
   <tr>
-   <td>dalicc:attributionNotice
+   <td><p id="attributionNotice"> dalicc:attributionNotice </p>
    </td>
    <td>Notify the attributes of License Material.
    </td>
-   <td>
-   </td>
   </tr>
   <tr>
-   <td>dalicc:chargeDistributionFee
+   <td><p id="chargeDistributionFee"> dalicc:chargeDistributionFee </p>
    </td>
    <td>The distribution of the Licensed Material is provided on a costly basis.
    </td>
-   <td>
-   </td>
   </tr>
   <tr>
-   <td>dalicc:chargeLicenseFee
+   <td><p id="chargeLicenseFee"> dalicc:chargeLicenseFee </p>
    </td>
    <td>The Licensed Material is available for use at monetary cost.
    </td>
-   <td>
-   </td>
   </tr>
   <tr>
-   <td>dalicc:chargeOffer
+   <td><p id="chargeOffer"> dalicc:chargeOffer </p>
    </td>
    <td>The Assignee may charge a fee for the physical act of transferring a copy, and you may at your option offer warranty protection in exchange for a fee.
    </td>
-   <td>
-   </td>
   </tr>
   <tr>
-   <td>dalicc:contradicts
-   </td>
-   <td>
+   <td><p id="contradicts"> dalicc:contradicts </p>
    </td>
    <td>
    </td>
   </tr>
   <tr>
-   <td>dalicc:CreativeWork
+   <td><p id="CreativeWork"> dalicc:CreativeWork </p>
    </td>
    <td>This asset type comprises any type of literary work that is subject to copyright. It also includes multimedia work that combines various media types such as text, audio, images, animations, video and interactive content.
    </td>
-   <td>
-   </td>
   </tr>
   <tr>
-   <td>dalicc:irrevocable
+   <td><p id="irrevocable"> dalicc:irrevocable </p>
    </td>
    <td>The license cannot be terminated for any reason or only that the license cannot be terminated for convenience, but still may be terminated for breach.
    </td>
-   <td>
-   </td>
   </tr>
   <tr>
-   <td>dalicc:modificationNotice
+   <td><p id="modificationNotice"> dalicc:modificationNotice </p>
    </td>
    <td>A notice that indicates if the Assignee modified the Licensed Material and retains an indication of any previous modifications.
    </td>
-   <td>
-   </td>
   </tr>
   <tr>
-   <td>dalicc:noWarrantyNotice
+   <td><p id="noWarrantyNotice"> dalicc:noWarrantyNotice </p>
    </td>
    <td>Informs that Licensed Material does not provide any warranties.
    </td>
-   <td>
-   </td>
   </tr>
   <tr>
-   <td>dalicc:patentFree
+   <td><p id="patentFree"> dalicc:patentFree </p>
    </td>
    <td>The license applies only to those patent claims licensable by such Contributor that are necessarily infringed by their Contribution(s) alone or by combination of their Contribution(s) with the Licensed Material to which such Contribution(s) was submitted.
    </td>
-   <td>
-   </td>
   </tr>
   <tr>
-   <td>dalicc:patentNotice
+   <td><p id="patentNotice"> dalicc:patentNotice </p>
    </td>
    <td>Notifies that Licensed Material is patented or includes patented parts.
    </td>
-   <td>
-   </td>
   </tr>
   <tr>
-   <td>dalicc:perpetual
+   <td><p id="perpetual"> dalicc:perpetual </p>
    </td>
    <td>A perpetual license allows to use the licensed work indefinitely.
    </td>
-   <td>
-   </td>
   </tr>
   <tr>
-   <td>dalicc:permissionNotice
+   <td><p id="permissionNotice"> dalicc:permissionNotice </p>
    </td>
    <td>The permission notices which are in the License shall be included.
    </td>
-   <td>
-   </td>
   </tr>
   <tr>
-   <td>dalicc:publish
+   <td><p id="publish"> dalicc:publish </p>
    </td>
    <td>The Assigner permits the Assignee to prepare and issue (a book, journal) for public sale to make it generally known, to make available online.
    </td>
-   <td>
-   </td>
   </tr>
   <tr>
-   <td>dalicc:promote
+   <td><p id="promote"> dalicc:promote </p>
    </td>
    <td>The Assigner permits the Assignee to use the licensed work for promotional purposes..
    </td>
-   <td>
-   </td>
   </tr>
   <tr>
-   <td>dalicc:redistribute
+   <td><p id="redistribute"> dalicc:redistribute </p>
    </td>
    <td>The Assigner permits/prohibits the Assignees to redistribute the Asset.
    </td>
-   <td>
-   </td>
   </tr>
   <tr>
-   <td>dalicc:royalityFree
+   <td><p id="royalityFree"> dalicc:royalityFree </p>
    </td>
    <td>Refers to the right to use copyright material or intellectual property without the need to pay royalties or license fees for each use, per each copy or volume sold or some time period of use or sales.
    </td>
-   <td>
-   </td>
   </tr>
   <tr>
-   <td>dalicc:sellCopy
+   <td><p id="sellCopy"> dalicc:sellCopy </p>
    </td>
    <td>The Assignee may sell the copies of the License Material.
    </td>
-   <td>
-   </td>
   </tr>
   <tr>
-   <td>dalicc:sublicense
+   <td><p id="sublicense"> dalicc:sublicense </p>
    </td>
    <td>The license granted by a licensee to a third party, under the authority of the license originally granted by a licensor to the licensee.
    </td>
-   <td>
-   </td>
   </tr>
   <tr>
-   <td>dalicc:trademarkNotice
+   <td><p id="sublicense"> dalicc:trademarkNotice </p>
    </td>
    <td>Informs that Licensed Material is a trademark or includes trademark. The license does not grant permission to use the trade names, trademarks, service marks, or product names of the Licensor, except as required for reasonable and customary use in describing the origin of the Work and reproducing the content of the notice file.
    </td>
-   <td>
-   </td>
   </tr>
   <tr>
-   <td>dalicc:worldwide
+   <td><p id="sublicense"> dalicc:worldwide </p>
    </td>
    <td>The license terms are valid throughout the world.
-   </td>
-   <td>
    </td>
   </tr>
 </table>
 
 
-**Dublin Core**
+<h3>Dublin Core</h3>
 
-@prefix dct: &lt;http://purl.org/dc/terms/> .
+
+@prefix dcmitype: <http://purl.org/dc/dcmitype/> .
 
 
 <table>
@@ -362,7 +321,7 @@ Schema.org
    </td>
    <td>Data encoded in a defined structure.
    </td>
-   <td>http://purl.org/dc/dcmitype/Dataset
+   <td><a href="http://purl.org/dc/dcmitype/Dataset">http://purl.org/dc/dcmitype/Dataset</a> 
    </td>
   </tr>
   <tr>
@@ -370,13 +329,13 @@ Schema.org
    </td>
    <td>A computer program in source or compiled form.
    </td>
-   <td>http://purl.org/dc/dcmitype/Software
+   <td><a href="http://purl.org/dc/dcmitype/Software">http://purl.org/dc/dcmitype/Software</a> 
    </td>
   </tr>
 </table>
 
 
-@prefix dct: &lt;http://purl.org/dc/terms/> .
+@prefix dct: <http://purl.org/dc/terms/> .
 
 
 <table>
@@ -393,7 +352,7 @@ Schema.org
    </td>
    <td>An alternative name for the resource.
    </td>
-   <td>http://purl.org/dc/terms/alternative
+   <td><a href="http://purl.org/dc/terms/alternative">http://purl.org/dc/terms/alternative</a> 
    </td>
   </tr>
   <tr>
@@ -401,7 +360,7 @@ Schema.org
    </td>
    <td>An entity responsible for making the resource available.
    </td>
-   <td>http://purl.org/dc/terms/publisher
+   <td><a href="http://purl.org/dc/terms/publisher">http://purl.org/dc/terms/publisher</a> 
    </td>
   </tr>
   <tr>
@@ -409,7 +368,7 @@ Schema.org
    </td>
    <td>A related resource from which the described resource is derived.
    </td>
-   <td>http://purl.org/dc/elements/1.1/source
+   <td><a href="http://purl.org/dc/elements/1.1/source">http://purl.org/dc/elements/1.1/source</a> 
    </td>
   </tr>
   <tr>
@@ -417,15 +376,16 @@ Schema.org
    </td>
    <td>A name given to the resource.
    </td>
-   <td>http://purl.org/dc/elements/1.1/title
+   <td><a href="http://purl.org/dc/elements/1.1/title">http://purl.org/dc/elements/1.1/title</a> 
    </td>
   </tr>
 </table>
 
 
-**ODRL - Open Digital Rights Language**
+<h3>ODRL - Open Digital Rights Language</h3>
 
-@prefix odrl: &lt;http://www.w3.org/ns/odrl/2/> 
+
+@prefix odrl: <http://www.w3.org/ns/odrl/2/> 
 
 
 <table>
@@ -442,7 +402,7 @@ Schema.org
    </td>
    <td>The Party is the issuer of the Rule.
    </td>
-   <td><a href="http://www.w3.org/ns/odrl/2/assigner">http://www.w3.org/ns/odrl/2/assigner</a>
+   <td><a href="http://www.w3.org/ns/odrl/2/assigner">http://www.w3.org/ns/odrl/2/assigne</a>r
    </td>
   </tr>
   <tr>
@@ -450,7 +410,7 @@ Schema.org
    </td>
    <td>An Asset that is collection of individual resources
    </td>
-   <td><a href="http://www.w3.org/ns/odrl/2/AssetCollection">http://www.w3.org/ns/odrl/2/AssetCollection</a>
+   <td><a href="http://www.w3.org/ns/odrl/2/AssetCollection">http://www.w3.org/ns/odrl/2/AssetCollection</a> 
    </td>
   </tr>
   <tr>
@@ -494,7 +454,7 @@ Schema.org
    </td>
   </tr>
   <tr>
-   <td>odrl:inludedin
+   <td>odrl:includedin
    </td>
    <td>An Action transitively asserts that another Action that encompasses its operational semantics.
    </td>
@@ -542,3 +502,4 @@ Schema.org
    </td>
   </tr>
 </table>
+
