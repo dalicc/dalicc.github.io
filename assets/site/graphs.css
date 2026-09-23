@@ -1,0 +1,161 @@
+/* SPDX-License-Identifier: AGPL-3.0-only
+ * SPDX-FileCopyrightText: 2021-2026 DALICC - Verein zur Foerderung der Rechtssicherheit in der Datenbewirtschaftung (ZVR 1249185710)
+ */
+/* DALICC site: the dependency-graph pages.
+ *
+ * Loaded on top of tools.css (the diagram, the legend, the dg- table) and my.css
+ * (panels, tables, timelines), and adds only what those two do not have: the list of
+ * graphs a visitor can choose, the CURIE-first cells of the axiom tables, and the
+ * editor.  Colours are the site tokens; nothing here introduces a new one.
+ */
+
+/* ------------------------------------------------------------- graph picker */
+
+.dg-picker {
+  margin: 24px 0;
+  padding: 16px 20px;
+  background: #f7fafb;
+  border: 1px solid #e6eef0;
+}
+
+.dg-picker h2 {
+  margin: 0 0 8px;
+  font-size: 20px;
+}
+
+.dg-picker__list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.dg-picker__item {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  align-items: baseline;
+  padding: 6px 0;
+  border-bottom: 1px solid #e6eef0;
+}
+
+.dg-picker__item:last-child {
+  border-bottom: 0;
+}
+
+.dg-picker__item--current > a {
+  font-weight: 700;
+}
+
+/* ---------------------------------------------------- CURIE-first term cells */
+
+.dg-term {
+  font-family: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, monospace;
+  font-size: 0.95em;
+}
+
+.dg-term__label {
+  display: block;
+  color: #7c9297;
+  font-size: 14px;
+}
+
+.dg-used {
+  margin-top: 0;
+}
+
+/* A named-graph IRI has no hyphens to break at, so it has to be allowed to break
+   anywhere; otherwise it runs past the edge of a phone screen. */
+.dg-definition code,
+.account-facts code.uri {
+  overflow-wrap: anywhere;
+  word-break: break-word;
+}
+
+/* ------------------------------------------------------------------ selector */
+
+.dg-select {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  align-items: flex-end;
+  margin: 0 0 24px;
+  padding: 12px 16px;
+  background: #f7fafb;
+  border: 1px solid #e6eef0;
+}
+
+.dg-select .field {
+  margin: 0;
+  flex: 1 1 260px;
+}
+
+.dg-select .field__hint {
+  flex: 1 1 100%;
+  margin: 0;
+}
+
+/* -------------------------------------------------------------------- editor */
+
+/* The editor is a table of three dropdowns, and a dropdown that is too narrow to
+   read its own value is useless.  The table therefore keeps a readable width and its
+   .table-scroll wrapper scrolls sideways on a phone, which is what the site does with
+   every table too wide for the screen. */
+.dg-editor__table {
+  min-width: 620px;
+}
+
+.dg-editor__table select {
+  width: 100%;
+  min-width: 170px;
+}
+
+.dg-editor__row--bad td {
+  background: #fff3ea;
+}
+
+.dg-editor__error td {
+  padding-top: 0;
+  border-top: 0;
+}
+
+.dg-editor__publish {
+  margin: 24px 0;
+  padding: 12px 16px;
+  border: 1px solid #e6eef0;
+}
+
+.dg-editor__publish legend {
+  padding: 0 6px;
+  font-weight: 700;
+}
+
+.dg-editor__import {
+  margin: 24px 0;
+}
+
+.dg-editor__import textarea {
+  width: 100%;
+  font-family: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, monospace;
+  font-size: 14px;
+}
+
+.dg-relations {
+  margin: 0;
+}
+
+.dg-relations dt {
+  margin-top: 12px;
+  font-weight: 700;
+}
+
+.dg-relations dd {
+  margin: 0;
+  color: #40565b;
+}
+
+@media (max-width: 604px) {
+  .dg-select {
+    flex-direction: column;
+    align-items: stretch;
+  }
+}

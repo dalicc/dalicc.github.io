@@ -1,0 +1,268 @@
+/* SPDX-License-Identifier: AGPL-3.0-only
+ * SPDX-FileCopyrightText: 2021-2026 DALICC - Verein zur Foerderung der Rechtssicherheit in der Datenbewirtschaftung (ZVR 1249185710)
+ */
+/* ==========================================================================
+   vocabulary.css -- the /ns page only.
+
+   Loaded after site.css and components.css, which already define .term-card,
+   .term-index, .rule-dotted, .table-scroll and the colour/type tokens. This file
+   adds what the page needs on top of those: the information-model figure, the
+   section table of contents, the per-term metadata list and the copy button.
+   ========================================================================== */
+
+.vocab-provenance {
+  border-left: 4px solid var(--c-mint);
+  padding-left: 16px;
+  color: var(--c-ink-soft);
+}
+
+/* ------------------------------------------------- the information model */
+
+.vocab-model {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 32px;
+  align-items: flex-start;
+  margin: 0 0 40px;
+}
+
+.vocab-model__figure {
+  flex: 0 1 340px;
+  margin: 0;
+  padding: 20px;
+  background: var(--c-surface-alt);
+  border: 1px solid var(--c-rule-strong);
+}
+
+.vocab-model__figure img {
+  display: block;
+  width: 100%;
+  height: auto;
+  max-width: 309px;
+  margin: 0 auto;
+}
+
+.vocab-model__figure figcaption {
+  margin-top: 14px;
+  font-size: 15px;
+  line-height: 1.45;
+  color: var(--c-slate);
+}
+
+.vocab-model__text {
+  flex: 1 1 380px;
+  min-width: 0;
+}
+
+.vocab-model__text p:first-child {
+  margin-top: 0;
+}
+
+/* ------------------------------------------------------ section contents */
+
+.vocab-toc {
+  margin: 0 0 40px;
+  border: 1px solid var(--c-rule-strong);
+  background: var(--c-surface-alt);
+}
+
+.vocab-toc ul {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0;
+  margin: 0;
+  padding: 0;
+}
+
+.vocab-toc li {
+  margin: 0;
+  flex: 1 1 auto;
+  display: flex;
+  align-items: baseline;
+  gap: 8px;
+  padding: 12px 18px;
+  border-right: 1px solid var(--c-rule);
+}
+
+.vocab-toc li:last-child {
+  border-right: 0;
+}
+
+.vocab-toc a {
+  font-family: var(--font-display);
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  color: var(--c-slate);
+}
+
+.vocab-toc a:hover {
+  color: var(--c-green);
+}
+
+.vocab-toc__count {
+  font-size: 14px;
+  color: var(--c-slate-muted);
+  font-variant-numeric: tabular-nums;
+}
+
+/* ----------------------------------------------------------- term cards */
+
+.term-card--deprecated {
+  border-style: dashed;
+  background: var(--c-surface-alt);
+}
+
+/* Set by vocabulary.js when the card is the one named in the URL fragment. */
+.term-card[data-targeted="true"] {
+  border-color: var(--c-green);
+  box-shadow: 0 0 0 3px rgba(0, 159, 123, 0.18);
+}
+
+.term-card__flag {
+  display: inline-block;
+  font-size: 13px;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--c-white);
+  background: var(--c-red);
+  padding: 2px 8px;
+  border-radius: 999px;
+  margin-left: 8px;
+  vertical-align: middle;
+}
+
+.term-card__iri {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 10px;
+}
+
+.term-card__copy {
+  font: inherit;
+  font-size: 13px;
+  font-family: var(--font-body);
+  line-height: 1;
+  padding: 4px 10px;
+  border: 1px solid var(--c-rule-strong);
+  background: var(--c-white);
+  color: var(--c-slate);
+  cursor: pointer;
+  border-radius: var(--radius);
+}
+
+.term-card__copy:hover {
+  border-color: var(--c-green);
+  color: var(--c-green);
+}
+
+.term-card__copy:focus-visible {
+  outline: var(--focus-ring);
+  outline-offset: 2px;
+}
+
+.term-card__copy[data-copied="true"] {
+  border-color: var(--c-green);
+  background: var(--c-green);
+  color: var(--c-white);
+}
+
+.term-card__definition {
+  margin: 0 0 10px;
+}
+
+.term-card__gloss {
+  margin: 0 0 10px;
+  color: var(--c-ink-soft);
+}
+
+.term-card__gloss-label {
+  font-family: var(--font-display);
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  font-size: 14px;
+  color: var(--c-slate-muted);
+  margin-right: 4px;
+}
+
+.term-card__meta {
+  display: grid;
+  grid-template-columns: max-content 1fr;
+  gap: 4px 16px;
+  margin: 14px 0 0;
+  padding-top: 12px;
+  border-top: 1px solid var(--c-rule);
+  font-size: 15px;
+}
+
+.term-card__meta dt {
+  font-family: var(--font-display);
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  color: var(--c-slate-muted);
+  font-size: 14px;
+}
+
+.term-card__meta dd {
+  margin: 0;
+  color: var(--c-ink-soft);
+}
+
+.term-card__meta code {
+  font-size: 14px;
+}
+
+/* A list of term links: chips, separated by the gap rather than by punctuation. */
+.term-card__links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px 10px;
+}
+
+/* --------------------------------------------- external vocabulary table */
+
+/* The table sits in .table-scroll, so a namespace may run wide rather than be
+   broken mid-word: an IRI cut across three lines is unreadable and uncopyable. */
+.vocab-table__ns {
+  font-size: 13px;
+  white-space: nowrap;
+}
+
+.vocab-table td:first-child,
+.vocab-table td:nth-child(3) {
+  white-space: nowrap;
+}
+
+.vocab-table td:nth-child(2) {
+  min-width: 11em;
+}
+
+.vocab-table td:last-child {
+  min-width: 20em;
+}
+
+@media (max-width: 604px) {
+  .vocab-model {
+    gap: 24px;
+  }
+
+  .vocab-toc li {
+    flex: 1 1 100%;
+    border-right: 0;
+    border-bottom: 1px solid var(--c-rule);
+  }
+
+  .vocab-toc li:last-child {
+    border-bottom: 0;
+  }
+
+  .term-card__meta {
+    grid-template-columns: 1fr;
+    gap: 2px;
+  }
+
+  .term-card__meta dt {
+    margin-top: 8px;
+  }
+}

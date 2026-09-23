@@ -1,0 +1,1335 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rdf:RDF
+   xmlns:dalicc="https://dalicc.net/ns#"
+   xmlns:dct="http://purl.org/dc/terms/"
+   xmlns:owl="http://www.w3.org/2002/07/owl#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+   xmlns:skos="http://www.w3.org/2004/02/skos/core#"
+   xmlns:vann="http://purl.org/vocab/vann/"
+>
+  <rdf:Description rdf:about="http://www.w3.org/2002/07/owl#sameAs">
+    <rdf:type rdf:resource="https://dalicc.net/ns#DependencyRelation"/>
+    <rdfs:isDefinedBy rdf:resource="http://www.w3.org/2002/07/owl#"/>
+    <rdfs:label xml:lang="en">Same as</rdfs:label>
+    <skos:scopeNote xml:lang="en">Synonymy: the two actions denote the same act in different vocabularies
+(cc:Attribution sameAs odrl:attribute), so a statement about one is a statement about the other.
+8 statements in the default dependency graph.</skos:scopeNote>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/ns/odrl/2/implies">
+    <dct:source rdf:resource="https://dalicc.github.io/"/>
+    <rdf:type rdf:resource="https://dalicc.net/ns#DependencyRelation"/>
+    <rdfs:comment xml:lang="en">An Action asserts that another Action is not prohibited to enable its operational semantics.</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/odrl/2/"/>
+    <rdfs:label xml:lang="en">Implies</rdfs:label>
+    <skos:scopeNote xml:lang="en">Entailment: permitting the subject action necessarily permits the object
+action as well (odrl:modify implies cc:SourceCode). 7 statements in the default dependency
+graph.</skos:scopeNote>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/ns/odrl/2/includedIn">
+    <dct:source rdf:resource="https://dalicc.github.io/"/>
+    <rdf:type rdf:resource="https://dalicc.net/ns#DependencyRelation"/>
+    <rdfs:comment xml:lang="en">An Action transitively asserts that another Action that encompasses its operational semantics.</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/odrl/2/"/>
+    <rdfs:label xml:lang="en">Included in</rdfs:label>
+    <skos:scopeNote xml:lang="en">Action subsumption: exercising the subject action is a way of exercising the
+object action, so a permission or prohibition on the object also covers the subject
+(odrl:sell includedIn odrl:commercialize). 23 statements in the default dependency graph.</skos:scopeNote>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://dalicc.net/ns#">
+    <dct:creator>DALICC</dct:creator>
+    <dct:description xml:lang="en">The vocabulary of proprietary terms used by the DALICC license library. It
+extends ODRL 2.2 and the Creative Commons Rights Expression Language with the actions, duty
+actions, clause properties and controlled values that the DALICC licenses require and that
+neither vocabulary provides.</dct:description>
+    <dct:hasVersion>6</dct:hasVersion>
+    <dct:license rdf:resource="http://creativecommons.org/licenses/by/4.0/"/>
+    <dct:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2026-09-23</dct:modified>
+    <dct:publisher>DALICC</dct:publisher>
+    <dct:source rdf:resource="https://dalicc.github.io/"/>
+    <dct:title xml:lang="en">DALICC vocabulary</dct:title>
+    <vann:preferredNamespacePrefix>dalicc</vann:preferredNamespacePrefix>
+    <vann:preferredNamespaceUri>https://dalicc.net/ns#</vann:preferredNamespaceUri>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Ontology"/>
+    <rdfs:comment xml:lang="en">Namespace scheme: `https://dalicc.net/ns#` is the canonical, authoritative
+form of every term IRI in this vocabulary. `http://dalicc.net/ns#` (plain HTTP) is the legacy
+form used by the 2022 vocabulary documentation and by a few dependency-graph axioms still held
+in the production triple store; it denotes the same terms but must not be used in new data.</rdfs:comment>
+    <rdfs:seeAlso rdf:resource="http://creativecommons.org/ns#"/>
+    <rdfs:seeAlso rdf:resource="http://www.w3.org/ns/odrl/2/"/>
+    <rdfs:seeAlso rdf:resource="https://dalicc.github.io/"/>
+    <owl:imports rdf:resource="http://www.w3.org/ns/odrl/2/"/>
+    <owl:priorVersion rdf:resource="http://dalicc.net/ns#"/>
+    <owl:priorVersion rdf:resource="https://dalicc.net/ns/versions/1"/>
+    <owl:priorVersion rdf:resource="https://dalicc.net/ns/versions/2"/>
+    <owl:priorVersion rdf:resource="https://dalicc.net/ns/versions/3"/>
+    <owl:priorVersion rdf:resource="https://dalicc.net/ns/versions/4"/>
+    <owl:priorVersion rdf:resource="https://dalicc.net/ns/versions/5"/>
+    <owl:versionInfo>6.0</owl:versionInfo>
+    <dalicc:versionHistory rdf:resource="https://dalicc.net/ns/versions"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://dalicc.net/ns#Approved">
+    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+    <rdf:type rdf:resource="https://dalicc.net/ns#ReviewStatus"/>
+    <rdfs:comment xml:lang="en">The review of the record, including every question it left open, has been signed off by the party responsible for the library.</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource="https://dalicc.net/ns#"/>
+    <rdfs:label xml:lang="en">Approved</rdfs:label>
+    <rdfs:seeAlso rdf:resource="https://dalicc.net/ns#reviewStatus"/>
+    <skos:prefLabel xml:lang="en">Approved</skos:prefLabel>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://dalicc.net/ns#AssetType">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:comment xml:lang="en">The kind of thing a license covers, as the value of dct:type on the
+odrl:AssetCollection an odrl:Set targets. The DALICC library uses dcmitype:Software,
+dcmitype:Dataset and the two asset types this vocabulary defines.</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource="https://dalicc.net/ns#"/>
+    <rdfs:label xml:lang="en">Asset type</rdfs:label>
+    <rdfs:seeAlso rdf:resource="http://purl.org/dc/dcmitype/Dataset"/>
+    <rdfs:seeAlso rdf:resource="http://purl.org/dc/dcmitype/Software"/>
+    <skos:scopeNote xml:lang="en">Read by app/services/vocab.py, which builds the asset-type facet of the library and the target list of the composer from the instances of this class plus the two Dublin Core types.</skos:scopeNote>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://dalicc.net/ns#Audited">
+    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+    <rdf:type rdf:resource="https://dalicc.net/ns#ReviewStatus"/>
+    <rdfs:comment xml:lang="en">The record has been checked a second time, independently of the reviewer who last changed it.</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource="https://dalicc.net/ns#"/>
+    <rdfs:label xml:lang="en">Audited</rdfs:label>
+    <rdfs:seeAlso rdf:resource="https://dalicc.net/ns#reviewStatus"/>
+    <skos:prefLabel xml:lang="en">Audited</skos:prefLabel>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://dalicc.net/ns#ChangeLicense">
+    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+    <rdf:type rdf:resource="http://www.w3.org/ns/odrl/2/Action"/>
+    <rdf:type rdf:resource="https://dalicc.net/ns#RuleAction"/>
+    <rdfs:comment xml:lang="en">The licensee may change, extend or modify the license terms and replace the
+original license with a new one. Where the license carries a share-alike duty for the whole
+work, this permission must carry the dalicc:compliantLicense duty.</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource="https://dalicc.net/ns#"/>
+    <rdfs:label xml:lang="en">Change license</rdfs:label>
+    <rdfs:seeAlso rdf:resource="http://creativecommons.org/ns#ShareAlike"/>
+    <rdfs:seeAlso rdf:resource="http://www.w3.org/ns/odrl/2/grantUse"/>
+    <skos:scopeNote xml:lang="en">Occurs 318 times as an odrl:Prohibition or odrl:Permission in 317 licenses. When permitted it usually carries the duty dalicc:compliantLicense.</skos:scopeNote>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://dalicc.net/ns#Created">
+    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+    <rdf:type rdf:resource="https://dalicc.net/ns#ReviewStatus"/>
+    <rdfs:comment xml:lang="en">The record exists but has not been checked against the text of the license it models.</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource="https://dalicc.net/ns#"/>
+    <rdfs:label xml:lang="en">Created</rdfs:label>
+    <rdfs:seeAlso rdf:resource="https://dalicc.net/ns#reviewStatus"/>
+    <skos:prefLabel xml:lang="en">Created</skos:prefLabel>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://dalicc.net/ns#CreativeWork">
+    <dct:source rdf:resource="https://dalicc.github.io/"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdf:type rdf:resource="https://dalicc.net/ns#AssetType"/>
+    <rdfs:comment xml:lang="en">This asset type comprises any type of literary work that is subject to
+copyright. It also includes multimedia work that combines various media types such as text,
+audio, images, animations, video and interactive content.</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource="https://dalicc.net/ns#"/>
+    <rdfs:label xml:lang="en">Creative work</rdfs:label>
+    <rdfs:seeAlso rdf:resource="http://purl.org/dc/dcmitype/Image"/>
+    <rdfs:seeAlso rdf:resource="http://purl.org/dc/dcmitype/InteractiveResource"/>
+    <rdfs:seeAlso rdf:resource="http://purl.org/dc/dcmitype/MovingImage"/>
+    <rdfs:seeAlso rdf:resource="http://purl.org/dc/dcmitype/Sound"/>
+    <rdfs:seeAlso rdf:resource="http://purl.org/dc/dcmitype/Text"/>
+    <skos:scopeNote xml:lang="en">Used as a value of dct:type on the odrl:AssetCollection that an odrl:Set targets, alongside dcmitype:Dataset and dcmitype:Software.</skos:scopeNote>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://dalicc.net/ns#DependencyRelation">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:comment xml:lang="en">A relation between two actions that the DALICC compatibility checker reasons
+over. The DALICC dependency graph (named graph https://dalicc.net/dependencygraph/dg_default)
+consists exclusively of statements whose predicate is an instance of this class.</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource="https://dalicc.net/ns#"/>
+    <rdfs:label xml:lang="en">Dependency relation</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://dalicc.net/ns#DutyAction">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:comment xml:lang="en">An action that may be the odrl:action of an odrl:Duty, whether attached
+to one permission or carried by the license as a whole: something the licensee must do.</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource="https://dalicc.net/ns#"/>
+    <rdfs:label xml:lang="en">Duty action</rdfs:label>
+    <rdfs:seeAlso rdf:resource="http://www.w3.org/ns/odrl/2/Action"/>
+    <rdfs:seeAlso rdf:resource="https://dalicc.net/ns#RuleAction"/>
+    <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/odrl/2/Action"/>
+    <skos:scopeNote xml:lang="en">Read by app/services/vocab.py. An action can be both a rule action and a duty action: dalicc:noWarrantyNotice is a permission on AFL-3.0 and a duty on Frameworx-1.0.</skos:scopeNote>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://dalicc.net/ns#Hardware">
+    <dct:source rdf:resource="https://dalicc.net/licenselibrary/CERN-OHL-S-2.0"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdf:type rdf:resource="https://dalicc.net/ns#AssetType"/>
+    <rdfs:comment xml:lang="en">A physical product, or the design material from which one is made: schematics,
+layouts, mechanical drawings, bills of material and the firmware that belongs to them. The open
+hardware licenses govern the design material and reach the product made from it.</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource="https://dalicc.net/ns#"/>
+    <rdfs:label xml:lang="en">Hardware</rdfs:label>
+    <rdfs:seeAlso rdf:resource="http://purl.org/dc/dcmitype/Software"/>
+    <rdfs:seeAlso rdf:resource="https://dalicc.net/ns#CreativeWork"/>
+    <skos:scopeNote xml:lang="en">Used as a value of dct:type on the odrl:AssetCollection that an odrl:Set targets, alongside dcmitype:Software, dcmitype:Dataset and dalicc:CreativeWork. Carried by the three CERN Open Hardware Licence records.</skos:scopeNote>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://dalicc.net/ns#Jurisdiction">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:comment xml:lang="en">The legal territory in which a license is valid. Values are either a country IRI of the BPI country list or dalicc:worldwide.</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource="https://dalicc.net/ns#"/>
+    <rdfs:label xml:lang="en">Jurisdiction</rdfs:label>
+    <rdfs:seeAlso rdf:resource="http://creativecommons.org/ns#jurisdiction"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://dalicc.net/ns#LiabilityLimitation">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:comment xml:lang="en">The verbatim text of the limitation-of-liability clause of the license. The work comes with a limitation of liability.</rdfs:comment>
+    <rdfs:domain rdf:resource="http://www.w3.org/ns/odrl/2/Set"/>
+    <rdfs:isDefinedBy rdf:resource="https://dalicc.net/ns#"/>
+    <rdfs:label xml:lang="en">Limitation of liability</rdfs:label>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <skos:scopeNote xml:lang="en">Present on 301 of 343 licenses.</skos:scopeNote>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://dalicc.net/ns#ModifiedWorks">
+    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+    <rdf:type rdf:resource="http://www.w3.org/ns/odrl/2/Action"/>
+    <rdf:type rdf:resource="https://dalicc.net/ns#RuleAction"/>
+    <rdfs:comment xml:lang="en">Distributing a modified version of the work and making it available to the
+public. The counterpart of cc:DerivativeWorks for alterations that do not amount to a new,
+derivative work.</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource="https://dalicc.net/ns#"/>
+    <rdfs:label xml:lang="en">Modified works</rdfs:label>
+    <rdfs:seeAlso rdf:resource="http://creativecommons.org/ns#DerivativeWorks"/>
+    <rdfs:seeAlso rdf:resource="http://www.w3.org/ns/odrl/2/modify"/>
+    <skos:scopeNote xml:lang="en">Occurs in 320 of 343 licenses as an odrl:Permission.</skos:scopeNote>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://dalicc.net/ns#PromotionSpecification">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:comment xml:lang="en">The verbatim acknowledgement text that the license requires the licensee to reproduce when promoting a product that contains the work.</rdfs:comment>
+    <rdfs:domain rdf:resource="http://www.w3.org/ns/odrl/2/Set"/>
+    <rdfs:isDefinedBy rdf:resource="https://dalicc.net/ns#"/>
+    <rdfs:label xml:lang="en">Promotion specification</rdfs:label>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:seeAlso rdf:resource="https://dalicc.net/ns#promote"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://dalicc.net/ns#RecordStatus">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:comment xml:lang="en">The editorial state of a library record, as distinct from the state of the license it models. Used to mark records that are not published licenses.</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource="https://dalicc.net/ns#"/>
+    <rdfs:label xml:lang="en">Record status</rdfs:label>
+    <rdfs:seeAlso rdf:resource="https://dalicc.net/ns#recordStatus"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://dalicc.net/ns#ReviewStatus">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:comment xml:lang="en">How far a library record has come in the editorial review workflow: created, reviewed, approved or audited.</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource="https://dalicc.net/ns#"/>
+    <rdfs:label xml:lang="en">Review status</rdfs:label>
+    <rdfs:seeAlso rdf:resource="https://dalicc.net/ns#reviewStatus"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://dalicc.net/ns#Reviewed">
+    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+    <rdf:type rdf:resource="https://dalicc.net/ns#ReviewStatus"/>
+    <rdfs:comment xml:lang="en">The record has been checked against the legal text of the license and against the modelling conventions, and the result is recorded in licensedata/reviews.</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource="https://dalicc.net/ns#"/>
+    <rdfs:label xml:lang="en">Reviewed</rdfs:label>
+    <rdfs:seeAlso rdf:resource="https://dalicc.net/ns#reviewStatus"/>
+    <rdfs:seeAlso rdf:resource="https://dalicc.net/ns#reviewedOn"/>
+    <skos:prefLabel xml:lang="en">Reviewed</skos:prefLabel>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://dalicc.net/ns#RuleAction">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:comment xml:lang="en">An action that may be the odrl:action of an odrl:Permission or an
+odrl:Prohibition: something the licensee may or may not do.</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource="https://dalicc.net/ns#"/>
+    <rdfs:label xml:lang="en">Rule action</rdfs:label>
+    <rdfs:seeAlso rdf:resource="http://www.w3.org/ns/odrl/2/Action"/>
+    <rdfs:seeAlso rdf:resource="https://dalicc.net/ns#DutyAction"/>
+    <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/odrl/2/Action"/>
+    <skos:scopeNote xml:lang="en">Read by app/services/vocab.py, which offers only rule actions as permissions and prohibitions in the composer and in the search questionnaire.</skos:scopeNote>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://dalicc.net/ns#ValidityType">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:comment xml:lang="en">The kind of validity period a license has: an indefinite period (dalicc:perpetual), a fixed start and end date (dalicc:specifyDate) or a duration (dalicc:specifyPeriod).</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource="https://dalicc.net/ns#"/>
+    <rdfs:label xml:lang="en">Validity type</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://dalicc.net/ns#WarrantyDisclaimer">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:comment xml:lang="en">The verbatim text of the warranty disclaimer of the license. The licensee must accept a disclaimer attached to this work.</rdfs:comment>
+    <rdfs:domain rdf:resource="http://www.w3.org/ns/odrl/2/Set"/>
+    <rdfs:isDefinedBy rdf:resource="https://dalicc.net/ns#"/>
+    <rdfs:label xml:lang="en">Warranty disclaimer</rdfs:label>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:seeAlso rdf:resource="https://dalicc.net/ns#noWarrantyNotice"/>
+    <skos:scopeNote xml:lang="en">Present on 325 of 343 licenses.</skos:scopeNote>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://dalicc.net/ns#WarrantyOrLiabilityAcceptance">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:comment xml:lang="en">The verbatim text of a clause under which the licensee may accept a warranty or additional liability. The work comes with a warranty or additional liability.</rdfs:comment>
+    <rdfs:domain rdf:resource="http://www.w3.org/ns/odrl/2/Set"/>
+    <rdfs:isDefinedBy rdf:resource="https://dalicc.net/ns#"/>
+    <rdfs:label xml:lang="en">Warranty or liability acceptance</rdfs:label>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://dalicc.net/ns#addLimitation">
+    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+    <rdf:type rdf:resource="http://www.w3.org/ns/odrl/2/Action"/>
+    <rdf:type rdf:resource="https://dalicc.net/ns#RuleAction"/>
+    <rdfs:comment xml:lang="en">Adding further limitations or restrictions to the license terms when redistributing the work. Where this action is prohibited the license may not be made more restrictive downstream.</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource="https://dalicc.net/ns#"/>
+    <rdfs:label xml:lang="en">Add limitation</rdfs:label>
+    <rdfs:seeAlso rdf:resource="https://dalicc.net/ns#ChangeLicense"/>
+    <rdfs:seeAlso rdf:resource="https://dalicc.net/ns#addStatement"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://dalicc.net/ns#addStatement">
+    <dct:source rdf:resource="https://dalicc.github.io/"/>
+    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+    <rdf:type rdf:resource="http://www.w3.org/ns/odrl/2/Action"/>
+    <rdf:type rdf:resource="https://dalicc.net/ns#DutyAction"/>
+    <rdf:type rdf:resource="https://dalicc.net/ns#RuleAction"/>
+    <rdfs:comment xml:lang="en">The Assignee may add his own copyright statement, notices to his modifications
+and may provide additional or different license terms and conditions for use, reproduction, or
+distribution of his modifications, or for any such Derivative Works as a whole, provided use,
+reproduction, and distribution of the Work otherwise complies with the conditions stated in this
+License.</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource="https://dalicc.net/ns#"/>
+    <rdfs:label xml:lang="en">Add statement</rdfs:label>
+    <rdfs:seeAlso rdf:resource="https://dalicc.net/ns#addLimitation"/>
+    <skos:definition xml:lang="en">Attaching additional terms, notices or statements to the work when redistributing it. Where this action is prohibited the licensee must pass the license on unchanged.</skos:definition>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://dalicc.net/ns#additionalClauses">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:comment xml:lang="en">The verbatim text of any license clause that the ODRL policy of the odrl:Set cannot express.</rdfs:comment>
+    <rdfs:domain rdf:resource="http://www.w3.org/ns/odrl/2/Set"/>
+    <rdfs:isDefinedBy rdf:resource="https://dalicc.net/ns#"/>
+    <rdfs:label xml:lang="en">Additional clauses</rdfs:label>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://dalicc.net/ns#advertisingAcknowledgement">
+    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+    <rdf:type rdf:resource="http://www.w3.org/ns/odrl/2/Action"/>
+    <rdf:type rdf:resource="https://dalicc.net/ns#DutyAction"/>
+    <rdfs:comment xml:lang="en">Displaying a prescribed acknowledgement in every advertisement that mentions
+features of the work or its use. The wording itself is carried by
+dalicc:PromotionSpecification.</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource="https://dalicc.net/ns#"/>
+    <rdfs:label xml:lang="en">Advertising acknowledgement</rdfs:label>
+    <rdfs:seeAlso rdf:resource="http://creativecommons.org/ns#Attribution"/>
+    <rdfs:seeAlso rdf:resource="https://dalicc.net/ns#PromotionSpecification"/>
+    <rdfs:seeAlso rdf:resource="https://dalicc.net/ns#promote"/>
+    <skos:note xml:lang="en">Added by the standard-license addition of 2026-09-15, which recorded the clause as a vocabulary gap. Applied to 3 license records by the standard-license addition of 2026-09-15.</skos:note>
+    <skos:scopeNote xml:lang="en">Carried by RSCPL and by BSD-4-Clause, the two records whose texts carry the BSD advertising clause.</skos:scopeNote>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://dalicc.net/ns#alternativeConditionSet">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AnnotationProperty"/>
+    <rdfs:comment xml:lang="en">A statement that the license lets the licensee satisfy any one of several
+listed conditions rather than all of them. The deontic model has no way to say "one of these", so
+the alternatives are quoted and this property records that they are alternatives.</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource="https://dalicc.net/ns#"/>
+    <rdfs:label xml:lang="en">Alternative condition set</rdfs:label>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:seeAlso rdf:resource="http://www.w3.org/ns/odrl/2/duty"/>
+    <rdfs:seeAlso rdf:resource="https://dalicc.net/ns#additionalClauses"/>
+    <skos:note xml:lang="en">Added by the standard-license addition of 2026-09-15, which recorded the clause as a vocabulary gap. Applied to 3 license records by the standard-license addition of 2026-09-15.</skos:note>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://dalicc.net/ns#applyTechnicalProtectionMeasures">
+    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+    <rdf:type rdf:resource="http://www.w3.org/ns/odrl/2/Action"/>
+    <rdf:type rdf:resource="https://dalicc.net/ns#RuleAction"/>
+    <rdfs:comment xml:lang="en">Applying technological measures that control access to the work or its
+use. Where this action is prohibited the licensee may not pass the work on behind a measure
+that keeps a recipient from exercising the rights the license grants.</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource="https://dalicc.net/ns#"/>
+    <rdfs:label xml:lang="en">Apply technical protection measures</rdfs:label>
+    <rdfs:seeAlso rdf:resource="http://www.w3.org/ns/odrl/2/distribute"/>
+    <rdfs:seeAlso rdf:resource="https://dalicc.net/ns#addLimitation"/>
+    <skos:note xml:lang="en">Added by the license library review of 2026-09-15, which recorded the clause as a vocabulary gap. Applied to 2 license records by the standard-license addition of 2026-09-15.</skos:note>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://dalicc.net/ns#attachoffer">
+    <dct:source rdf:resource="https://dalicc.github.io/"/>
+    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+    <rdf:type rdf:resource="http://www.w3.org/ns/odrl/2/Action"/>
+    <rdf:type rdf:resource="https://dalicc.net/ns#RuleAction"/>
+    <rdfs:comment xml:lang="en">The Assignee may add a written offer for permissions according to the license.</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource="https://dalicc.net/ns#"/>
+    <rdfs:label xml:lang="en">Attach offer</rdfs:label>
+    <rdfs:seeAlso rdf:resource="https://dalicc.net/ns#addStatement"/>
+    <rdfs:seeAlso rdf:resource="https://dalicc.net/ns#chargeOffer"/>
+    <skos:note xml:lang="en">Defined in the 2022 documentation; not used by any license in the current library.</skos:note>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://dalicc.net/ns#attributionNotice">
+    <dct:source rdf:resource="https://dalicc.github.io/"/>
+    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+    <rdf:type rdf:resource="http://www.w3.org/ns/odrl/2/Action"/>
+    <rdf:type rdf:resource="https://dalicc.net/ns#DutyAction"/>
+    <rdfs:comment xml:lang="en">Notify the attributes of License Material.</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource="https://dalicc.net/ns#"/>
+    <rdfs:label xml:lang="en">Attribution notice</rdfs:label>
+    <rdfs:seeAlso rdf:resource="http://creativecommons.org/ns#Attribution"/>
+    <rdfs:seeAlso rdf:resource="http://creativecommons.org/ns#attributionName"/>
+    <rdfs:seeAlso rdf:resource="http://www.w3.org/ns/odrl/2/attribute"/>
+    <skos:note xml:lang="en">Defined in the 2022 documentation; not used by any license in the current library; the library uses cc:Attribution instead.</skos:note>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://dalicc.net/ns#chargeDistributionFee">
+    <dct:source rdf:resource="https://dalicc.github.io/"/>
+    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+    <rdf:type rdf:resource="http://www.w3.org/ns/odrl/2/Action"/>
+    <rdf:type rdf:resource="https://dalicc.net/ns#RuleAction"/>
+    <rdfs:comment xml:lang="en">The distribution of the Licensed Material is provided on a costly basis.</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource="https://dalicc.net/ns#"/>
+    <rdfs:label xml:lang="en">Charge distribution fee</rdfs:label>
+    <rdfs:seeAlso rdf:resource="http://www.w3.org/ns/odrl/2/distribute"/>
+    <rdfs:seeAlso rdf:resource="https://dalicc.net/ns#chargeLicenseFee"/>
+    <skos:definition xml:lang="en">The licensee is allowed to charge a distribution fee, that is, a fee covering the act of providing the work to a third party.</skos:definition>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://dalicc.net/ns#chargeLicenseFee">
+    <dct:source rdf:resource="https://dalicc.github.io/"/>
+    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+    <rdf:type rdf:resource="http://www.w3.org/ns/odrl/2/Action"/>
+    <rdf:type rdf:resource="https://dalicc.net/ns#RuleAction"/>
+    <rdfs:comment xml:lang="en">The Licensed Material is available for use at monetary cost.</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource="https://dalicc.net/ns#"/>
+    <rdfs:label xml:lang="en">Charge license fee</rdfs:label>
+    <rdfs:seeAlso rdf:resource="http://creativecommons.org/ns#CommercialUse"/>
+    <rdfs:seeAlso rdf:resource="http://www.w3.org/ns/odrl/2/commercialize"/>
+    <rdfs:seeAlso rdf:resource="http://www.w3.org/ns/odrl/2/sell"/>
+    <skos:definition xml:lang="en">The licensee is allowed to charge a fee for granting a license to the work, that is, to generate revenue from sub-licensing rather than from distribution alone.</skos:definition>
+    <skos:scopeNote xml:lang="en">The dependency graph states that this action implies odrl:commercialize and odrl:sell and is included in odrl:transfer.</skos:scopeNote>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://dalicc.net/ns#chargeOffer">
+    <dct:source rdf:resource="https://dalicc.github.io/"/>
+    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+    <rdf:type rdf:resource="http://www.w3.org/ns/odrl/2/Action"/>
+    <rdf:type rdf:resource="https://dalicc.net/ns#RuleAction"/>
+    <rdfs:comment xml:lang="en">The Assignee may charge a fee for the physical act of transferring a copy, and
+you may at your option offer warranty protection in exchange for a fee.</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource="https://dalicc.net/ns#"/>
+    <rdfs:label xml:lang="en">Charge offer</rdfs:label>
+    <rdfs:seeAlso rdf:resource="https://dalicc.net/ns#attachoffer"/>
+    <rdfs:seeAlso rdf:resource="https://dalicc.net/ns#chargeDistributionFee"/>
+    <skos:note xml:lang="en">Defined in the 2022 documentation; not used by any license in the current library.</skos:note>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://dalicc.net/ns#compatibleLicenseTest">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AnnotationProperty"/>
+    <rdfs:comment xml:lang="en">The test a license states for deciding whether another license is compatible
+with it, as a short literal: a named list, an approval by a body, or a comparison of the level of
+reciprocity. The list itself is quoted in dalicc:additionalClauses.</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource="https://dalicc.net/ns#"/>
+    <rdfs:label xml:lang="en">Compatible license test</rdfs:label>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:seeAlso rdf:resource="http://creativecommons.org/ns#ShareAlike"/>
+    <rdfs:seeAlso rdf:resource="https://dalicc.net/ns#ChangeLicense"/>
+    <rdfs:seeAlso rdf:resource="https://dalicc.net/ns#compliantLicense"/>
+    <skos:note xml:lang="en">Added by the standard-license addition of 2026-09-15, which recorded the clause as a vocabulary gap. Applied to 12 license records by the standard-license addition of 2026-09-15.</skos:note>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://dalicc.net/ns#compliantLicense">
+    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+    <rdf:type rdf:resource="http://www.w3.org/ns/odrl/2/Action"/>
+    <rdf:type rdf:resource="https://dalicc.net/ns#DutyAction"/>
+    <rdfs:comment xml:lang="en">The replacement license chosen by the licensee must remain compliant with the terms of the original license. Attached as an odrl:Duty to a dalicc:ChangeLicense permission.</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource="https://dalicc.net/ns#"/>
+    <rdfs:label xml:lang="en">Use a compliant license</rdfs:label>
+    <rdfs:seeAlso rdf:resource="http://creativecommons.org/ns#ShareAlike"/>
+    <rdfs:seeAlso rdf:resource="https://dalicc.net/ns#ChangeLicense"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://dalicc.net/ns#composedOf">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:comment xml:lang="en">Relates a license that is a stack of separate agreements to one of the
+agreements it is made of. A licensee of the stack must comply with every one of them, so the
+compatibility answer for the stack is the conjunction of the answers for its parts.</rdfs:comment>
+    <rdfs:domain rdf:resource="http://www.w3.org/ns/odrl/2/Set"/>
+    <rdfs:isDefinedBy rdf:resource="https://dalicc.net/ns#"/>
+    <rdfs:label xml:lang="en">Composed of</rdfs:label>
+    <rdfs:range rdf:resource="http://www.w3.org/ns/odrl/2/Set"/>
+    <rdfs:seeAlso rdf:resource="http://purl.org/dc/terms/hasPart"/>
+    <rdfs:seeAlso rdf:resource="https://dalicc.net/ns#jurisdictionPortOf"/>
+    <skos:note xml:lang="en">Added by the standard-license addition of 2026-09-15, which recorded the clause as a vocabulary gap. Applied to 1 license record by the standard-license addition of 2026-09-15.</skos:note>
+    <skos:scopeNote xml:lang="en">Carried by Python-2.0.1, which is four agreements published as one license.</skos:scopeNote>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://dalicc.net/ns#computationalUseOnly">
+    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+    <rdf:type rdf:resource="http://www.w3.org/ns/odrl/2/Action"/>
+    <rdf:type rdf:resource="https://dalicc.net/ns#DutyAction"/>
+    <rdfs:comment xml:lang="en">Using the work only as the input of a computation: analysis, training,
+testing or the production of a result, as against publishing or performing the work itself.
+Where a license carries this term as a duty the licensee may make no other use.</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource="https://dalicc.net/ns#"/>
+    <rdfs:label xml:lang="en">Computational use only</rdfs:label>
+    <rdfs:seeAlso rdf:resource="https://dalicc.net/ns#fieldOfUseRestriction"/>
+    <rdfs:seeAlso rdf:resource="https://dalicc.net/ns#useForModelTraining"/>
+    <skos:note xml:lang="en">Added by the standard-license addition of 2026-09-15, which recorded the clause as a vocabulary gap. Applied to 1 license record by the standard-license addition of 2026-09-15.</skos:note>
+    <skos:scopeNote xml:lang="en">Carried by C-UDA-1.0, whose section 2 binds the licensee to use the data solely for Computational Use.</skos:scopeNote>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://dalicc.net/ns#conditionalAddLimitation">
+    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+    <rdf:type rdf:resource="http://www.w3.org/ns/odrl/2/Action"/>
+    <rdf:type rdf:resource="https://dalicc.net/ns#RuleAction"/>
+    <rdfs:comment xml:lang="en">Adding a further condition to the license terms, but only in the narrow
+circumstances the license names, such as a statute, a judicial order, a regulation or a matter of
+national security. It is the qualified form of dalicc:addLimitation, which a license either
+allows outright or forbids outright.</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource="https://dalicc.net/ns#"/>
+    <rdfs:label xml:lang="en">Conditional add limitation</rdfs:label>
+    <rdfs:seeAlso rdf:resource="https://dalicc.net/ns#addLimitation"/>
+    <rdfs:seeAlso rdf:resource="https://dalicc.net/ns#additionalClauses"/>
+    <skos:note xml:lang="en">Added by the standard-license addition of 2026-09-15, which recorded the clause as a vocabulary gap. Applied to 1 license record by the standard-license addition of 2026-09-15.</skos:note>
+    <skos:scopeNote xml:lang="en">Carried by OSET-PL-2.1, whose section 3.2 allows further conditions only to the extent statute, judicial order, regulation, national security or the public interest requires.</skos:scopeNote>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://dalicc.net/ns#contradicts">
+    <dct:source rdf:resource="https://dalicc.github.io/"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#SymmetricProperty"/>
+    <rdf:type rdf:resource="https://dalicc.net/ns#DependencyRelation"/>
+    <rdfs:comment xml:lang="en">An Action contradicts with another Action.</rdfs:comment>
+    <rdfs:domain rdf:resource="http://www.w3.org/ns/odrl/2/Action"/>
+    <rdfs:isDefinedBy rdf:resource="https://dalicc.net/ns#"/>
+    <rdfs:label xml:lang="en">Contradicts</rdfs:label>
+    <rdfs:range rdf:resource="http://www.w3.org/ns/odrl/2/Action"/>
+    <skos:definition xml:lang="en">States that two actions cannot both be exercised under one policy: if one
+license permits the subject action while another requires or permits the object action, the two
+licenses are incompatible. This is the relation the DALICC compatibility checker reports as a
+conflicting statement.</skos:definition>
+    <skos:scopeNote xml:lang="en">Asserted once in the default dependency graph: odrl:ensureExclusivity contradicts odrl:commercialize. The pair cc:ShareAlike contradicts odrl:grantUse was removed on 2026-09-15: passing the same terms on is the normal way to satisfy a share-alike condition, not a contradiction of it.</skos:scopeNote>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://dalicc.net/ns#contributionGrantBack">
+    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+    <rdf:type rdf:resource="http://www.w3.org/ns/odrl/2/Action"/>
+    <rdf:type rdf:resource="https://dalicc.net/ns#DutyAction"/>
+    <rdfs:comment xml:lang="en">Granting the licensor, or every other licensee, a license over the changes
+the licensee makes, so that the modification can travel back into the original work.</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource="https://dalicc.net/ns#"/>
+    <rdfs:label xml:lang="en">Contribution grant back</rdfs:label>
+    <rdfs:seeAlso rdf:resource="http://creativecommons.org/ns#SourceCode"/>
+    <rdfs:seeAlso rdf:resource="https://dalicc.net/ns#sublicense"/>
+    <skos:note xml:lang="en">Added by the standard-license addition of 2026-09-15, which recorded the clause as a vocabulary gap. Applied to 3 license records by the standard-license addition of 2026-09-15.</skos:note>
+    <skos:scopeNote xml:lang="en">Carried by EUDatagrid, OCLC-2.0 and Vim, whose texts either ask for the changes or grant the steward a license over them.</skos:scopeNote>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://dalicc.net/ns#covenantNotToSue">
+    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+    <rdf:type rdf:resource="http://www.w3.org/ns/odrl/2/Action"/>
+    <rdf:type rdf:resource="https://dalicc.net/ns#RuleAction"/>
+    <rdfs:comment xml:lang="en">An undertaking by the licensor not to bring a claim over uses made under the
+license. It is wider than a patent grant, because it reaches every cause of action the licensor
+might have, and narrower, because it grants nothing: it only promises not to enforce.</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource="https://dalicc.net/ns#"/>
+    <rdfs:label xml:lang="en">Covenant not to sue</rdfs:label>
+    <rdfs:seeAlso rdf:resource="https://dalicc.net/ns#patentFree"/>
+    <rdfs:seeAlso rdf:resource="https://dalicc.net/ns#patentGrant"/>
+    <skos:note xml:lang="en">Added by the standard-license addition of 2026-09-15, which recorded the clause as a vocabulary gap. Applied to 2 license records by the standard-license addition of 2026-09-15.</skos:note>
+    <skos:scopeNote xml:lang="en">Carried by the two Microsoft use of data agreements, whose section 2 says the data provider will not sue the licensee or any downstream recipient over the use, modification or distribution of the data.</skos:scopeNote>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://dalicc.net/ns#curePeriod">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AnnotationProperty"/>
+    <rdfs:comment xml:lang="en">The time a licensee in breach is given to put the breach right before the
+license ends, as a short literal such as "30 days". The absence of the property beside
+dalicc:terminatesOnBreach says the termination is immediate.</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource="https://dalicc.net/ns#"/>
+    <rdfs:label xml:lang="en">Cure period</rdfs:label>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:seeAlso rdf:resource="https://dalicc.net/ns#terminatesOnBreach"/>
+    <skos:note xml:lang="en">Added by the standard-license addition of 2026-09-15, which recorded the clause as a vocabulary gap. Applied to 19 license records by the standard-license addition of 2026-09-15.</skos:note>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://dalicc.net/ns#databaseRightWaiver">
+    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+    <rdf:type rdf:resource="http://www.w3.org/ns/odrl/2/Action"/>
+    <rdf:type rdf:resource="https://dalicc.net/ns#RuleAction"/>
+    <rdfs:comment xml:lang="en">The licensor giving up the sui generis database right it holds in the
+licensed material, so that the conditions of the license do not reach the parts of the work
+protected by that right alone.</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource="https://dalicc.net/ns#"/>
+    <rdfs:label xml:lang="en">Database right waiver</rdfs:label>
+    <rdfs:seeAlso rdf:resource="https://dalicc.net/ns#suiGenerisDatabaseRights"/>
+    <skos:note xml:lang="en">Added by the license library review of 2026-09-15, which recorded the clause as a vocabulary gap. Defined here so the gap is named; the review applied it to no license record.</skos:note>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://dalicc.net/ns#derivativeDatabaseAccess">
+    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+    <rdf:type rdf:resource="http://www.w3.org/ns/odrl/2/Action"/>
+    <rdf:type rdf:resource="https://dalicc.net/ns#DutyAction"/>
+    <rdfs:comment xml:lang="en">Offering the recipients of a derivative database access to the derivative
+database itself, or to a file recording the alterations made to the original.</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource="https://dalicc.net/ns#"/>
+    <rdfs:label xml:lang="en">Derivative database access</rdfs:label>
+    <rdfs:seeAlso rdf:resource="http://creativecommons.org/ns#SourceCode"/>
+    <rdfs:seeAlso rdf:resource="https://dalicc.net/ns#suiGenerisDatabaseRights"/>
+    <skos:note xml:lang="en">Added by the license library review of 2026-09-15, which recorded the clause as a vocabulary gap. Defined here so the gap is named; the review applied it to no license record.</skos:note>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://dalicc.net/ns#downstreamOffer">
+    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+    <rdf:type rdf:resource="http://www.w3.org/ns/odrl/2/Action"/>
+    <rdf:type rdf:resource="https://dalicc.net/ns#DutyAction"/>
+    <rdfs:comment xml:lang="en">Offering every recipient of the work a license on the same terms, directly
+from the licensor rather than through the distributing licensee.</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource="https://dalicc.net/ns#"/>
+    <rdfs:label xml:lang="en">Downstream offer</rdfs:label>
+    <rdfs:seeAlso rdf:resource="http://www.w3.org/ns/odrl/2/distribute"/>
+    <rdfs:seeAlso rdf:resource="https://dalicc.net/ns#sublicense"/>
+    <skos:note xml:lang="en">Added by the license library review of 2026-09-15, which recorded the clause as a vocabulary gap. Defined here so the gap is named; the review applied it to no license record.</skos:note>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://dalicc.net/ns#exceptedCombination">
+    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+    <rdf:type rdf:resource="http://www.w3.org/ns/odrl/2/Action"/>
+    <rdf:type rdf:resource="https://dalicc.net/ns#RuleAction"/>
+    <rdfs:comment xml:lang="en">Combining or linking the covered work with the material the exception names
+and conveying the result without the condition the exception lifts. Where this action is
+permitted the exception applies, and dalicc:reciprocityScope says what the condition still
+covers.</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource="https://dalicc.net/ns#"/>
+    <rdfs:label xml:lang="en">Excepted combination</rdfs:label>
+    <rdfs:seeAlso rdf:resource="http://creativecommons.org/ns#ShareAlike"/>
+    <rdfs:seeAlso rdf:resource="https://dalicc.net/ns#exemptedMaterial"/>
+    <rdfs:seeAlso rdf:resource="https://dalicc.net/ns#reciprocityScope"/>
+    <skos:note xml:lang="en">Added on 2026-09-23 for the records that model a license with an SPDX exception. dalicc:exemptedMaterial keeps its one meaning, material the grant does not reach at all.</skos:note>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://dalicc.net/ns#exemptedMaterial">
+    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+    <rdf:type rdf:resource="http://www.w3.org/ns/odrl/2/Action"/>
+    <rdf:type rdf:resource="https://dalicc.net/ns#RuleAction"/>
+    <rdfs:comment xml:lang="en">Using material that the license expressly carves out of its grant, such as
+personal data, official insignia, third-party rights or material under a separate license.
+Where this action is prohibited the grant does not reach that material at all.</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource="https://dalicc.net/ns#"/>
+    <rdfs:label xml:lang="en">Exempted material</rdfs:label>
+    <rdfs:seeAlso rdf:resource="https://dalicc.net/ns#additionalClauses"/>
+    <skos:note xml:lang="en">Added by the license library review of 2026-09-15, which recorded the clause as a vocabulary gap. Applied to 3 license records by the standard-license addition of 2026-09-15.</skos:note>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://dalicc.net/ns#exportControlNotice">
+    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+    <rdf:type rdf:resource="http://www.w3.org/ns/odrl/2/Action"/>
+    <rdf:type rdf:resource="https://dalicc.net/ns#DutyAction"/>
+    <rdfs:comment xml:lang="en">Complying with the export and import laws that reach the work, and passing
+the notice of them on to every recipient.</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource="https://dalicc.net/ns#"/>
+    <rdfs:label xml:lang="en">Export control notice</rdfs:label>
+    <rdfs:seeAlso rdf:resource="http://creativecommons.org/ns#Notice"/>
+    <rdfs:seeAlso rdf:resource="https://dalicc.net/ns#additionalClauses"/>
+    <skos:note xml:lang="en">Added by the standard-license addition of 2026-09-15, which recorded the clause as a vocabulary gap. Applied to 3 license records by the standard-license addition of 2026-09-15.</skos:note>
+    <skos:scopeNote xml:lang="en">Carried by NASA-1.3, RPL-1.1 and RPL-1.5.</skos:scopeNote>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://dalicc.net/ns#fieldOfUseRestriction">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AnnotationProperty"/>
+    <rdfs:comment xml:lang="en">The field of activity a license confines the licensee to, as a short literal.
+Where the field is computational use the action dalicc:computationalUseOnly carries the duty and
+this property names the field.</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource="https://dalicc.net/ns#"/>
+    <rdfs:label xml:lang="en">Field of use restriction</rdfs:label>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:seeAlso rdf:resource="http://creativecommons.org/ns#CommercialUse"/>
+    <rdfs:seeAlso rdf:resource="https://dalicc.net/ns#computationalUseOnly"/>
+    <skos:note xml:lang="en">Added by the standard-license addition of 2026-09-15, which recorded the clause as a vocabulary gap. Applied to 1 license record by the standard-license addition of 2026-09-15.</skos:note>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://dalicc.net/ns#governingLaw">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AnnotationProperty"/>
+    <rdfs:comment xml:lang="en">The law that governs the license agreement, as a short literal. It is not the
+territory in which the grant is valid: a license whose grant is worldwide can still be governed by
+the law of one state, and cc:jurisdiction carries the territory.</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource="https://dalicc.net/ns#"/>
+    <rdfs:label xml:lang="en">Governing law</rdfs:label>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:seeAlso rdf:resource="http://creativecommons.org/ns#jurisdiction"/>
+    <rdfs:seeAlso rdf:resource="https://dalicc.net/ns#Jurisdiction"/>
+    <skos:note xml:lang="en">Added by the standard-license addition of 2026-09-15, which recorded the clause as a vocabulary gap. Applied to 6 license records by the standard-license addition of 2026-09-15.</skos:note>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://dalicc.net/ns#governmentRightsLimitation">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AnnotationProperty"/>
+    <rdfs:comment xml:lang="en">A clause limiting the rights a government end user acquires in the work, or
+making the governing law depend on which government the licensee is.</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource="https://dalicc.net/ns#"/>
+    <rdfs:label xml:lang="en">Government rights limitation</rdfs:label>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:seeAlso rdf:resource="https://dalicc.net/ns#additionalClauses"/>
+    <rdfs:seeAlso rdf:resource="https://dalicc.net/ns#governingLaw"/>
+    <skos:note xml:lang="en">Added by the standard-license addition of 2026-09-15, which recorded the clause as a vocabulary gap. Applied to 1 license record by the standard-license addition of 2026-09-15.</skos:note>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://dalicc.net/ns#includeNoticeFile">
+    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+    <rdf:type rdf:resource="http://www.w3.org/ns/odrl/2/Action"/>
+    <rdf:type rdf:resource="https://dalicc.net/ns#DutyAction"/>
+    <rdfs:comment xml:lang="en">Carrying a named notice file of the original work forward into every
+redistributed copy and into derivative works, in one of the places the license lists.</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource="https://dalicc.net/ns#"/>
+    <rdfs:label xml:lang="en">Include notice file</rdfs:label>
+    <rdfs:seeAlso rdf:resource="http://creativecommons.org/ns#Notice"/>
+    <rdfs:seeAlso rdf:resource="https://dalicc.net/ns#attributionNotice"/>
+    <skos:note xml:lang="en">Added by the license library review of 2026-09-15, which recorded the clause as a vocabulary gap. Applied to 3 license records by the standard-license addition of 2026-09-15.</skos:note>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://dalicc.net/ns#irrevocable">
+    <dct:source rdf:resource="https://dalicc.github.io/"/>
+    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+    <rdfs:comment xml:lang="en">The license cannot be terminated for any reason or only that the license cannot
+be terminated for convenience, but still may be terminated for breach.</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource="https://dalicc.net/ns#"/>
+    <rdfs:label xml:lang="en">Irrevocable</rdfs:label>
+    <skos:note xml:lang="en">Defined in the 2022 documentation; not used by any license in the current library.</skos:note>
+    <skos:prefLabel xml:lang="en">irrevocable</skos:prefLabel>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://dalicc.net/ns#jurisdictionPortOf">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:comment xml:lang="en">Relates a license adapted to one legal system to the license it was adapted
+from. The two licenses grant substantially the same rights; they differ in the law they are
+drafted against, in the language of the legal text and in the clauses that quote it.</rdfs:comment>
+    <rdfs:domain rdf:resource="http://www.w3.org/ns/odrl/2/Set"/>
+    <rdfs:isDefinedBy rdf:resource="https://dalicc.net/ns#"/>
+    <rdfs:label xml:lang="en">Jurisdiction port of</rdfs:label>
+    <rdfs:range rdf:resource="http://www.w3.org/ns/odrl/2/Set"/>
+    <rdfs:seeAlso rdf:resource="http://creativecommons.org/ns#jurisdiction"/>
+    <rdfs:seeAlso rdf:resource="https://dalicc.net/ns#translationOf"/>
+    <rdfs:seeAlso rdf:resource="https://dalicc.net/ns#variantKind"/>
+    <rdfs:subPropertyOf rdf:resource="http://purl.org/dc/terms/isVersionOf"/>
+    <skos:scopeNote xml:lang="en">Carried by 290 records. Where the library holds no record of the port's own version, the parent is the nearest version the library does hold, so the relation can carry a version difference as well as a jurisdiction difference; dalicc:licenseVersion names the version of the port itself.</skos:scopeNote>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://dalicc.net/ns#licenseOwner">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:comment xml:lang="en">The name of the party that owns the rights in the licensed work, as the licensor gave it when composing the license.</rdfs:comment>
+    <rdfs:domain rdf:resource="http://www.w3.org/ns/odrl/2/Set"/>
+    <rdfs:isDefinedBy rdf:resource="https://dalicc.net/ns#"/>
+    <rdfs:label xml:lang="en">License owner</rdfs:label>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:seeAlso rdf:resource="http://purl.org/dc/terms/publisher"/>
+    <rdfs:seeAlso rdf:resource="http://www.w3.org/ns/odrl/2/assigner"/>
+    <skos:note xml:lang="en">Written by the DALICC license composer onto user-composed licenses; no license of the published library carries it.</skos:note>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://dalicc.net/ns#licenseText">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:comment xml:lang="en">The full text of a licence as its licensor publishes it, carried by the
+record itself. Curated records point at the authoritative text with cc:legalcode and quote
+single clauses in dalicc:WarrantyDisclaimer, dalicc:LiabilityLimitation and
+dalicc:additionalClauses; a composed licence may carry the text written for it, for example
+by License-to-Text after the licensor has checked it.</rdfs:comment>
+    <rdfs:domain rdf:resource="http://www.w3.org/ns/odrl/2/Set"/>
+    <rdfs:isDefinedBy rdf:resource="https://dalicc.net/ns#"/>
+    <rdfs:label xml:lang="en">license text</rdfs:label>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:seeAlso rdf:resource="http://creativecommons.org/ns#legalcode"/>
+    <rdfs:seeAlso rdf:resource="https://dalicc.net/ns#additionalClauses"/>
+    <skos:note xml:lang="en">Written by the DALICC license composer onto user-composed licenses; no license of the published library carries it.</skos:note>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://dalicc.net/ns#licenseVersion">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:comment xml:lang="en">The version of the license text the record models, as the publisher numbers
+it, for example 2.0 or 3.0. It says nothing about the version of the DALICC model of that text,
+which dct:hasVersion carries.</rdfs:comment>
+    <rdfs:domain rdf:resource="http://www.w3.org/ns/odrl/2/Set"/>
+    <rdfs:isDefinedBy rdf:resource="https://dalicc.net/ns#"/>
+    <rdfs:label xml:lang="en">License version</rdfs:label>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:seeAlso rdf:resource="http://purl.org/dc/terms/hasVersion"/>
+    <rdfs:seeAlso rdf:resource="https://dalicc.net/ns#jurisdictionPortOf"/>
+    <skos:scopeNote xml:lang="en">Carried by the 287 Creative Commons jurisdiction ports, whose parent is the 4.0 International record of the same element set, and by the two GNU records that always named their version.</skos:scopeNote>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://dalicc.net/ns#modificationNotice">
+    <dct:source rdf:resource="https://dalicc.github.io/"/>
+    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+    <rdf:type rdf:resource="http://www.w3.org/ns/odrl/2/Action"/>
+    <rdf:type rdf:resource="https://dalicc.net/ns#DutyAction"/>
+    <rdfs:comment xml:lang="en">A notice that indicates if the Assignee modified the Licensed Material and
+retains an indication of any previous modifications.</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource="https://dalicc.net/ns#"/>
+    <rdfs:label xml:lang="en">Modification notice</rdfs:label>
+    <rdfs:seeAlso rdf:resource="http://creativecommons.org/ns#Notice"/>
+    <rdfs:seeAlso rdf:resource="http://www.w3.org/ns/odrl/2/modify"/>
+    <skos:definition xml:lang="en">Providing a modification note means to document any changes done to the work and clearly document how it differs from the original work.</skos:definition>
+    <skos:scopeNote xml:lang="en">The dependency graph states that this action is included in odrl:AttachPolicy. It is the most frequent DALICC-proprietary action (539 occurrences in 320 licenses), always as an odrl:Duty.</skos:scopeNote>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://dalicc.net/ns#moralRightsNonAssertion">
+    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+    <rdf:type rdf:resource="http://www.w3.org/ns/odrl/2/Action"/>
+    <rdf:type rdf:resource="https://dalicc.net/ns#RuleAction"/>
+    <rdfs:comment xml:lang="en">The licensor undertaking not to assert the moral rights of the author
+against uses made under the license, so far as the applicable law allows.</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource="https://dalicc.net/ns#"/>
+    <rdfs:label xml:lang="en">Moral rights non-assertion</rdfs:label>
+    <rdfs:seeAlso rdf:resource="https://dalicc.net/ns#moralRightsRestriction"/>
+    <skos:note xml:lang="en">Added by the license library review of 2026-09-15, which recorded the clause as a vocabulary gap. Applied to 4 license records by the standard-license addition of 2026-09-15.</skos:note>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://dalicc.net/ns#moralRightsRestriction">
+    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+    <rdf:type rdf:resource="http://www.w3.org/ns/odrl/2/Action"/>
+    <rdf:type rdf:resource="https://dalicc.net/ns#RuleAction"/>
+    <rdfs:comment xml:lang="en">Treating the work in a way that touches the moral rights of the author,
+such as false attribution or a derogatory treatment. Where the license binds the licensee to
+respect those rights, this is the action it restricts.</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource="https://dalicc.net/ns#"/>
+    <rdfs:label xml:lang="en">Moral rights restriction</rdfs:label>
+    <rdfs:seeAlso rdf:resource="http://creativecommons.org/ns#Attribution"/>
+    <rdfs:seeAlso rdf:resource="https://dalicc.net/ns#moralRightsNonAssertion"/>
+    <skos:note xml:lang="en">Added by the license library review of 2026-09-15, which recorded the clause as a vocabulary gap. Applied to 6 license records by the standard-license addition of 2026-09-15.</skos:note>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://dalicc.net/ns#networkUseTrigger">
+    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+    <rdf:type rdf:resource="http://www.w3.org/ns/odrl/2/Action"/>
+    <rdf:type rdf:resource="https://dalicc.net/ns#RuleAction"/>
+    <rdfs:comment xml:lang="en">Making the work available over a network, deploying it or providing a service
+with it. Where a license carries this term, that act triggers the duties the license would
+otherwise attach to distribution, so the duties hang off this action rather than off
+odrl:distribute.</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource="https://dalicc.net/ns#"/>
+    <rdfs:label xml:lang="en">Network use trigger</rdfs:label>
+    <rdfs:seeAlso rdf:resource="http://creativecommons.org/ns#ShareAlike"/>
+    <rdfs:seeAlso rdf:resource="http://creativecommons.org/ns#SourceCode"/>
+    <rdfs:seeAlso rdf:resource="http://www.w3.org/ns/odrl/2/distribute"/>
+    <skos:note xml:lang="en">Added by the standard-license addition of 2026-09-15, which recorded the clause as a vocabulary gap in the review records named in its scope note.</skos:note>
+    <skos:scopeNote xml:lang="en">Carried by 16 records whose texts make deployment or communication to the public a trigger: the Apple, Open Software, Reciprocal Public and Cryptographic Autonomy families and the two European Union Public Licence records.</skos:scopeNote>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://dalicc.net/ns#noWarrantyNotice">
+    <dct:source rdf:resource="https://dalicc.github.io/"/>
+    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+    <rdf:type rdf:resource="http://www.w3.org/ns/odrl/2/Action"/>
+    <rdf:type rdf:resource="https://dalicc.net/ns#DutyAction"/>
+    <rdf:type rdf:resource="https://dalicc.net/ns#RuleAction"/>
+    <rdfs:comment xml:lang="en">Informs that Licensed Material does not provide any warranties.</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource="https://dalicc.net/ns#"/>
+    <rdfs:label xml:lang="en">No-warranty notice</rdfs:label>
+    <rdfs:seeAlso rdf:resource="https://dalicc.net/ns#WarrantyDisclaimer"/>
+    <skos:definition xml:lang="en">The licensee may attach a notice stating that the work is provided without warranty of any kind.</skos:definition>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://dalicc.net/ns#orLaterVersionOption">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:comment xml:lang="en">Whether the record models a license text that lets the licensee choose a
+later version of the same license. False says the record models the named version only.</rdfs:comment>
+    <rdfs:domain rdf:resource="http://www.w3.org/ns/odrl/2/Set"/>
+    <rdfs:isDefinedBy rdf:resource="https://dalicc.net/ns#"/>
+    <rdfs:label xml:lang="en">Or later version option</rdfs:label>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+    <rdfs:seeAlso rdf:resource="http://purl.org/dc/terms/hasVersion"/>
+    <rdfs:seeAlso rdf:resource="https://dalicc.net/ns#ChangeLicense"/>
+    <skos:scopeNote xml:lang="en">Carried by the four GNU records, each with the value false: none of them models an or-later text.</skos:scopeNote>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://dalicc.net/ns#originalVersionOffer">
+    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+    <rdf:type rdf:resource="http://www.w3.org/ns/odrl/2/Action"/>
+    <rdf:type rdf:resource="https://dalicc.net/ns#DutyAction"/>
+    <rdfs:comment xml:lang="en">Giving every recipient of a modified work a way back to the original: the
+unmodified version itself, a difference file, or instructions for obtaining it.</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource="https://dalicc.net/ns#"/>
+    <rdfs:label xml:lang="en">Original version offer</rdfs:label>
+    <rdfs:seeAlso rdf:resource="http://creativecommons.org/ns#SourceCode"/>
+    <rdfs:seeAlso rdf:resource="https://dalicc.net/ns#modificationNotice"/>
+    <skos:note xml:lang="en">Added by the standard-license addition of 2026-09-15, which recorded the clause as a vocabulary gap. Applied to 1 license record by the standard-license addition of 2026-09-15.</skos:note>
+    <skos:scopeNote xml:lang="en">Carried by IPA and OGTSL, whose texts require the original version, or the means of returning to it, to travel with the modified one.</skos:scopeNote>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://dalicc.net/ns#patentFree">
+    <dct:source rdf:resource="https://dalicc.github.io/"/>
+    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+    <rdfs:comment xml:lang="en">The license applies only to those patent claims licensable by such Contributor
+that are necessarily infringed by their Contribution(s) alone or by combination of their
+Contribution(s) with the Licensed Material to which such Contribution(s) was submitted.</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource="https://dalicc.net/ns#"/>
+    <rdfs:label xml:lang="en">Patent free</rdfs:label>
+    <rdfs:seeAlso rdf:resource="https://dalicc.net/ns#patentNotice"/>
+    <skos:note xml:lang="en">Defined in the 2022 documentation; not used by any license in the current library.</skos:note>
+    <skos:prefLabel xml:lang="en">patentFree</skos:prefLabel>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://dalicc.net/ns#patentFreedomCondition">
+    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+    <rdf:type rdf:resource="http://www.w3.org/ns/odrl/2/Action"/>
+    <rdf:type rdf:resource="https://dalicc.net/ns#DutyAction"/>
+    <rdfs:comment xml:lang="en">The condition that a patent reading on the work must be licensed for free and
+unrestricted use by everyone, or else the work may not be distributed at all. It is the clause
+that forbids a licensee to accept a patent license narrower than the license itself.</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource="https://dalicc.net/ns#"/>
+    <rdfs:label xml:lang="en">Patent freedom condition</rdfs:label>
+    <rdfs:seeAlso rdf:resource="https://dalicc.net/ns#addLimitation"/>
+    <rdfs:seeAlso rdf:resource="https://dalicc.net/ns#patentFree"/>
+    <rdfs:seeAlso rdf:resource="https://dalicc.net/ns#patentGrant"/>
+    <skos:note xml:lang="en">Added by the standard-license addition of 2026-09-15, which recorded the clause as a vocabulary gap. Applied to 3 license records by the standard-license addition of 2026-09-15.</skos:note>
+    <skos:scopeNote xml:lang="en">Carried by LGPL-2.0-only and LGPL-2.1-only (section 11, the liberty-or-death clause) and by OCLC-2.0.</skos:scopeNote>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://dalicc.net/ns#patentGrant">
+    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+    <rdf:type rdf:resource="http://www.w3.org/ns/odrl/2/Action"/>
+    <rdf:type rdf:resource="https://dalicc.net/ns#RuleAction"/>
+    <rdfs:comment xml:lang="en">An express license to the patent claims a contributor holds that the
+contribution necessarily infringes. Modelled as a permission where the license text grants
+it; its absence means the license is silent about patents, not that patents are withheld.</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource="https://dalicc.net/ns#"/>
+    <rdfs:label xml:lang="en">Patent grant</rdfs:label>
+    <rdfs:seeAlso rdf:resource="https://dalicc.net/ns#patentFree"/>
+    <rdfs:seeAlso rdf:resource="https://dalicc.net/ns#patentNotice"/>
+    <rdfs:seeAlso rdf:resource="https://dalicc.net/ns#patentRetaliationTermination"/>
+    <skos:note xml:lang="en">Added by the license library review of 2026-09-15, which recorded the clause as a vocabulary gap. Applied to 54 license records by the standard-license addition of 2026-09-15.</skos:note>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://dalicc.net/ns#patentNotice">
+    <dct:source rdf:resource="https://dalicc.github.io/"/>
+    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+    <rdf:type rdf:resource="http://www.w3.org/ns/odrl/2/Action"/>
+    <rdf:type rdf:resource="https://dalicc.net/ns#DutyAction"/>
+    <rdfs:comment xml:lang="en">Notifies that Licensed Material is patented or includes patented parts.</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource="https://dalicc.net/ns#"/>
+    <rdfs:label xml:lang="en">Patent notice</rdfs:label>
+    <rdfs:seeAlso rdf:resource="http://creativecommons.org/ns#Notice"/>
+    <rdfs:seeAlso rdf:resource="https://dalicc.net/ns#patentFree"/>
+    <skos:note xml:lang="en">Defined in the 2022 documentation; used by 1 license record since 2026-09-15.</skos:note>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://dalicc.net/ns#patentRetaliationTermination">
+    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+    <rdf:type rdf:resource="http://www.w3.org/ns/odrl/2/Action"/>
+    <rdf:type rdf:resource="https://dalicc.net/ns#RuleAction"/>
+    <rdfs:comment xml:lang="en">Bringing a patent claim over the licensed work. Where a license carries
+this term, such a claim ends the patent license, or the whole license, as the text provides.</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource="https://dalicc.net/ns#"/>
+    <rdfs:label xml:lang="en">Patent retaliation termination</rdfs:label>
+    <rdfs:seeAlso rdf:resource="https://dalicc.net/ns#patentGrant"/>
+    <rdfs:seeAlso rdf:resource="https://dalicc.net/ns#terminationOnBreach"/>
+    <skos:note xml:lang="en">Added by the license library review of 2026-09-15, which recorded the clause as a vocabulary gap. Applied to 48 license records by the standard-license addition of 2026-09-15.</skos:note>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://dalicc.net/ns#permissionNotice">
+    <dct:source rdf:resource="https://dalicc.github.io/"/>
+    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+    <rdf:type rdf:resource="http://www.w3.org/ns/odrl/2/Action"/>
+    <rdf:type rdf:resource="https://dalicc.net/ns#DutyAction"/>
+    <rdfs:comment xml:lang="en">The permission notices which are in the License shall be included.</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource="https://dalicc.net/ns#"/>
+    <rdfs:label xml:lang="en">Permission notice</rdfs:label>
+    <rdfs:seeAlso rdf:resource="http://creativecommons.org/ns#Notice"/>
+    <rdfs:seeAlso rdf:resource="http://www.w3.org/ns/odrl/2/AttachPolicy"/>
+    <skos:note xml:lang="en">Defined in the 2022 documentation; not used by any license in the current library; the library uses cc:Notice instead.</skos:note>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://dalicc.net/ns#perpetual">
+    <dct:source rdf:resource="https://dalicc.github.io/"/>
+    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+    <rdf:type rdf:resource="https://dalicc.net/ns#ValidityType"/>
+    <rdfs:comment xml:lang="en">A perpetual license allows to use the licensed work indefinitely.</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource="https://dalicc.net/ns#"/>
+    <rdfs:label xml:lang="en">Perpetual</rdfs:label>
+    <skos:definition xml:lang="en">The license has no limit of time. Where this does not apply, a start date and an end date are given instead.</skos:definition>
+    <skos:prefLabel xml:lang="en">perpetual</skos:prefLabel>
+    <skos:scopeNote xml:lang="en">The value of dalicc:validityType on 342 of 343 licenses.</skos:scopeNote>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://dalicc.net/ns#promote">
+    <dct:source rdf:resource="https://dalicc.github.io/"/>
+    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+    <rdf:type rdf:resource="http://www.w3.org/ns/odrl/2/Action"/>
+    <rdf:type rdf:resource="https://dalicc.net/ns#RuleAction"/>
+    <rdfs:comment xml:lang="en">The Assigner permits the Assignee to use the licensed work for promotional purposes..</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource="https://dalicc.net/ns#"/>
+    <rdfs:label xml:lang="en">Promote</rdfs:label>
+    <rdfs:seeAlso rdf:resource="https://dalicc.net/ns#PromotionSpecification"/>
+    <rdfs:seeAlso rdf:resource="https://dalicc.net/ns#trademarkNotice"/>
+    <skos:definition xml:lang="en">Promote means that the licensee can use the licensor's trademark for advertising and promotion purposes.</skos:definition>
+    <skos:scopeNote xml:lang="en">Occurs 334 times in 332 licenses, almost always as an odrl:Prohibition: most licenses forbid trademark use.</skos:scopeNote>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://dalicc.net/ns#provideUserData">
+    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+    <rdf:type rdf:resource="http://www.w3.org/ns/odrl/2/Action"/>
+    <rdf:type rdf:resource="https://dalicc.net/ns#DutyAction"/>
+    <rdfs:comment xml:lang="en">Handing a recipient a no-charge copy, in a commonly used electronic form, of
+the data about that recipient which the licensee holds because of the work.</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource="https://dalicc.net/ns#"/>
+    <rdfs:label xml:lang="en">Provide user data</rdfs:label>
+    <rdfs:seeAlso rdf:resource="http://creativecommons.org/ns#SourceCode"/>
+    <rdfs:seeAlso rdf:resource="https://dalicc.net/ns#networkUseTrigger"/>
+    <skos:note xml:lang="en">Added by the standard-license addition of 2026-09-15, which recorded the clause as a vocabulary gap. Applied to 2 license records by the standard-license addition of 2026-09-15.</skos:note>
+    <skos:scopeNote xml:lang="en">Carried by the two Cryptographic Autonomy License records, whose section 4.2.1 is the clause the license is named for.</skos:scopeNote>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://dalicc.net/ns#publicationNonObstruction">
+    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+    <rdf:type rdf:resource="http://www.w3.org/ns/odrl/2/Action"/>
+    <rdf:type rdf:resource="https://dalicc.net/ns#RuleAction"/>
+    <rdfs:comment xml:lang="en">Restricting or deterring the ability of anyone who receives the work to
+publish it, or to record it and the grants of rights in it. Where this action is prohibited the
+licensee may not stand between a recipient and publication.</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource="https://dalicc.net/ns#"/>
+    <rdfs:label xml:lang="en">Publication non-obstruction</rdfs:label>
+    <rdfs:seeAlso rdf:resource="http://www.w3.org/ns/odrl/2/distribute"/>
+    <rdfs:seeAlso rdf:resource="https://dalicc.net/ns#addLimitation"/>
+    <skos:note xml:lang="en">Added by the standard-license addition of 2026-09-15, which recorded the clause as a vocabulary gap. Applied to 1 license record by the standard-license addition of 2026-09-15.</skos:note>
+    <skos:scopeNote xml:lang="en">Carried by CDLA-Sharing-1.0, whose section 3.3 forbids restricting or deterring publication of the data by a recipient.</skos:scopeNote>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://dalicc.net/ns#publish">
+    <dct:source rdf:resource="https://dalicc.github.io/"/>
+    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+    <rdf:type rdf:resource="http://www.w3.org/ns/odrl/2/Action"/>
+    <rdf:type rdf:resource="https://dalicc.net/ns#RuleAction"/>
+    <rdfs:comment xml:lang="en">The Assigner permits the Assignee to prepare and issue (a book, journal) for
+public sale to make it generally known, to make available online.</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource="https://dalicc.net/ns#"/>
+    <rdfs:label xml:lang="en">Publish</rdfs:label>
+    <rdfs:seeAlso rdf:resource="http://www.w3.org/ns/odrl/2/distribute"/>
+    <rdfs:seeAlso rdf:resource="http://www.w3.org/ns/odrl/2/present"/>
+    <skos:note xml:lang="en">Defined in the 2022 documentation; not used by any license in the current library.</skos:note>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://dalicc.net/ns#recipientAssent">
+    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+    <rdf:type rdf:resource="http://www.w3.org/ns/odrl/2/Action"/>
+    <rdf:type rdf:resource="https://dalicc.net/ns#DutyAction"/>
+    <rdfs:comment xml:lang="en">Making a reasonable effort to obtain the express assent of a recipient to the
+terms of the license before the work reaches them, rather than relying on the notice alone.</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource="https://dalicc.net/ns#"/>
+    <rdfs:label xml:lang="en">Recipient assent</rdfs:label>
+    <rdfs:seeAlso rdf:resource="http://creativecommons.org/ns#Notice"/>
+    <rdfs:seeAlso rdf:resource="http://www.w3.org/ns/odrl/2/distribute"/>
+    <skos:note xml:lang="en">Added by the standard-license addition of 2026-09-15, which recorded the clause as a vocabulary gap. Applied to 6 license records by the standard-license addition of 2026-09-15.</skos:note>
+    <skos:scopeNote xml:lang="en">Carried by the Academic Free and Open Software licenses from version 2.0 on, whose Attribution Rights clause asks for the express assent of recipients.</skos:scopeNote>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://dalicc.net/ns#recipientRegistrationRequest">
+    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+    <rdf:type rdf:resource="http://www.w3.org/ns/odrl/2/Action"/>
+    <rdf:type rdf:resource="https://dalicc.net/ns#DutyAction"/>
+    <rdfs:comment xml:lang="en">Asking, without requiring, that a recipient register as a user of the work
+and report the modifications they make to it, so that the steward can keep a record.</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource="https://dalicc.net/ns#"/>
+    <rdfs:label xml:lang="en">Recipient registration request</rdfs:label>
+    <rdfs:seeAlso rdf:resource="http://creativecommons.org/ns#Notice"/>
+    <rdfs:seeAlso rdf:resource="https://dalicc.net/ns#modificationNotice"/>
+    <skos:note xml:lang="en">Added by the standard-license addition of 2026-09-15, which recorded the clause as a vocabulary gap. Applied to 1 license record by the standard-license addition of 2026-09-15.</skos:note>
+    <skos:scopeNote xml:lang="en">Carried by NASA-1.3, whose recipient is asked to register and to report modifications.</skos:scopeNote>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://dalicc.net/ns#reciprocityScope">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AnnotationProperty"/>
+    <rdfs:comment xml:lang="en">How far a share-alike condition reaches, as a short literal: the changed file,
+the source form, the whole work, or the product the work is built into. It says in words what the
+attachment level of the cc:ShareAlike duty says in structure.</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource="https://dalicc.net/ns#"/>
+    <rdfs:label xml:lang="en">Reciprocity scope</rdfs:label>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:seeAlso rdf:resource="http://creativecommons.org/ns#ShareAlike"/>
+    <rdfs:seeAlso rdf:resource="https://dalicc.net/ns#shareAlikeVersionQualifier"/>
+    <skos:note xml:lang="en">Added by the standard-license addition of 2026-09-15, which recorded the clause as a vocabulary gap. Applied to 1 license record by the standard-license addition of 2026-09-15.</skos:note>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://dalicc.net/ns#recordStatus">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:comment xml:lang="en">Relates a library record to its editorial state, which says how the record should be treated rather than what the license says.</rdfs:comment>
+    <rdfs:domain rdf:resource="http://www.w3.org/ns/odrl/2/Set"/>
+    <rdfs:isDefinedBy rdf:resource="https://dalicc.net/ns#"/>
+    <rdfs:label xml:lang="en">Record status</rdfs:label>
+    <rdfs:range rdf:resource="https://dalicc.net/ns#RecordStatus"/>
+    <rdfs:seeAlso rdf:resource="https://dalicc.net/ns#testFixture"/>
+    <skos:scopeNote xml:lang="en">Carried by the two records that are test fixtures rather than published licenses.</skos:scopeNote>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://dalicc.net/ns#redistribute">
+    <dct:source rdf:resource="https://dalicc.github.io/"/>
+    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+    <rdf:type rdf:resource="http://www.w3.org/ns/odrl/2/Action"/>
+    <rdf:type rdf:resource="https://dalicc.net/ns#RuleAction"/>
+    <rdfs:comment xml:lang="en">The Assigner permits/prohibits the Assignees to redistribute the Asset.</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource="https://dalicc.net/ns#"/>
+    <rdfs:label xml:lang="en">Redistribute</rdfs:label>
+    <rdfs:seeAlso rdf:resource="http://www.w3.org/ns/odrl/2/distribute"/>
+    <skos:note xml:lang="en">Defined in the 2022 documentation; not used by any license in the current library.</skos:note>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://dalicc.net/ns#rename">
+    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+    <rdf:type rdf:resource="http://www.w3.org/ns/odrl/2/Action"/>
+    <rdf:type rdf:resource="https://dalicc.net/ns#DutyAction"/>
+    <rdfs:comment xml:lang="en">Rename means to change the title of the modified or derived work so that it can
+be clearly distinguished from the original work.</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource="https://dalicc.net/ns#"/>
+    <rdfs:label xml:lang="en">Rename</rdfs:label>
+    <rdfs:seeAlso rdf:resource="http://www.w3.org/ns/odrl/2/derive"/>
+    <rdfs:seeAlso rdf:resource="https://dalicc.net/ns#ModifiedWorks"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://dalicc.net/ns#reviewStatus">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:comment xml:lang="en">Relates a library record to how far it has come in the editorial review workflow.</rdfs:comment>
+    <rdfs:domain rdf:resource="http://www.w3.org/ns/odrl/2/Set"/>
+    <rdfs:isDefinedBy rdf:resource="https://dalicc.net/ns#"/>
+    <rdfs:label xml:lang="en">Review status</rdfs:label>
+    <rdfs:range rdf:resource="https://dalicc.net/ns#ReviewStatus"/>
+    <rdfs:seeAlso rdf:resource="https://dalicc.net/ns#Approved"/>
+    <rdfs:seeAlso rdf:resource="https://dalicc.net/ns#Audited"/>
+    <rdfs:seeAlso rdf:resource="https://dalicc.net/ns#Created"/>
+    <rdfs:seeAlso rdf:resource="https://dalicc.net/ns#Reviewed"/>
+    <rdfs:seeAlso rdf:resource="https://dalicc.net/ns#reviewedOn"/>
+    <skos:scopeNote xml:lang="en">Carried by every record of the library with the value dalicc:Reviewed after the review of 2026-09-15.</skos:scopeNote>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://dalicc.net/ns#reviewedOn">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:comment xml:lang="en">The date on which the record was last checked against the legal text of the license it models.</rdfs:comment>
+    <rdfs:domain rdf:resource="http://www.w3.org/ns/odrl/2/Set"/>
+    <rdfs:isDefinedBy rdf:resource="https://dalicc.net/ns#"/>
+    <rdfs:label xml:lang="en">Reviewed on</rdfs:label>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#date"/>
+    <rdfs:seeAlso rdf:resource="http://purl.org/dc/terms/modified"/>
+    <rdfs:seeAlso rdf:resource="https://dalicc.net/ns#reviewStatus"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://dalicc.net/ns#royalityFree">
+    <dct:isReplacedBy rdf:resource="https://dalicc.net/ns#royaltyFree"/>
+    <dct:source rdf:resource="https://dalicc.github.io/"/>
+    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+    <rdfs:comment xml:lang="en">Refers to the right to use copyright material or intellectual property without
+the need to pay royalties or license fees for each use, per each copy or volume sold or some time
+period of use or sales.</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource="https://dalicc.net/ns#"/>
+    <rdfs:label xml:lang="en">Royalty free (deprecated spelling)</rdfs:label>
+    <rdfs:seeAlso rdf:resource="https://dalicc.net/ns#royaltyFree"/>
+    <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
+    <skos:exactMatch rdf:resource="https://dalicc.net/ns#royaltyFree"/>
+    <skos:note xml:lang="en">Misspelling of "royalty" published in the 2022 DALICC vocabulary documentation. The
+IRI is kept so that data written against the published documentation still dereferences; use
+dalicc:royaltyFree in new data.</skos:note>
+    <skos:prefLabel xml:lang="en">royalityFree</skos:prefLabel>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://dalicc.net/ns#royaltyCollectionReserved">
+    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+    <rdf:type rdf:resource="http://www.w3.org/ns/odrl/2/Action"/>
+    <rdf:type rdf:resource="https://dalicc.net/ns#DutyAction"/>
+    <rdf:type rdf:resource="https://dalicc.net/ns#RuleAction"/>
+    <rdfs:comment xml:lang="en">The licensor keeping the right to collect a royalty for uses of the work,
+whether individually or through a collecting society. Where the license waives that right
+instead, the statement is absent.</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource="https://dalicc.net/ns#"/>
+    <rdfs:label xml:lang="en">Royalty collection reserved</rdfs:label>
+    <rdfs:seeAlso rdf:resource="http://creativecommons.org/ns#CommercialUse"/>
+    <rdfs:seeAlso rdf:resource="https://dalicc.net/ns#royaltyFree"/>
+    <skos:note xml:lang="en">Added by the license library review of 2026-09-15, which recorded the clause as a vocabulary gap. Applied to 9 license records by the standard-license addition of 2026-09-15.</skos:note>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://dalicc.net/ns#royaltyFree">
+    <dct:replaces rdf:resource="https://dalicc.net/ns#royalityFree"/>
+    <dct:source rdf:resource="https://dalicc.github.io/"/>
+    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+    <rdfs:comment xml:lang="en">Refers to the right to use copyright material or intellectual property without
+the need to pay royalties or license fees for each use, per each copy or volume sold or some time
+period of use or sales.</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource="https://dalicc.net/ns#"/>
+    <rdfs:label xml:lang="en">Royalty free</rdfs:label>
+    <rdfs:seeAlso rdf:resource="https://dalicc.net/ns#chargeLicenseFee"/>
+    <rdfs:seeAlso rdf:resource="https://dalicc.net/ns#royalityFree"/>
+    <skos:exactMatch rdf:resource="https://dalicc.net/ns#royalityFree"/>
+    <skos:note xml:lang="en">Defined in the 2022 documentation; not used by any license in the current library. The documentation spells the term dalicc:royalityFree; this is the corrected, canonical spelling.</skos:note>
+    <skos:prefLabel xml:lang="en">royaltyFree</skos:prefLabel>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://dalicc.net/ns#sellCopy">
+    <dct:source rdf:resource="https://dalicc.github.io/"/>
+    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+    <rdf:type rdf:resource="http://www.w3.org/ns/odrl/2/Action"/>
+    <rdf:type rdf:resource="https://dalicc.net/ns#RuleAction"/>
+    <rdfs:comment xml:lang="en">The Assignee may sell the copies of the License Material.</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource="https://dalicc.net/ns#"/>
+    <rdfs:label xml:lang="en">Sell copy</rdfs:label>
+    <rdfs:seeAlso rdf:resource="http://www.w3.org/ns/odrl/2/reproduce"/>
+    <rdfs:seeAlso rdf:resource="http://www.w3.org/ns/odrl/2/sell"/>
+    <skos:note xml:lang="en">Defined in the 2022 documentation; used by 3 license records since 2026-09-15.</skos:note>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://dalicc.net/ns#shareAlikeVersionQualifier">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AnnotationProperty"/>
+    <rdfs:comment xml:lang="en">Which outgoing licenses a share-alike condition accepts, as a short literal,
+for example the same license, a later version of it, another jurisdiction port with the same
+license elements, or a license declared compatible.</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource="https://dalicc.net/ns#"/>
+    <rdfs:label xml:lang="en">Share-alike version qualifier</rdfs:label>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:seeAlso rdf:resource="http://creativecommons.org/ns#ShareAlike"/>
+    <rdfs:seeAlso rdf:resource="https://dalicc.net/ns#compliantLicense"/>
+    <skos:note xml:lang="en">Added by the license library review of 2026-09-15, which recorded the clause as a vocabulary gap. Applied to 8 license records by the standard-license addition of 2026-09-15.</skos:note>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://dalicc.net/ns#sourcePublicationPeriod">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AnnotationProperty"/>
+    <rdfs:comment xml:lang="en">How long the source code a license requires to be published must stay
+available, and from when, as a short literal such as "12 months from first deployment".</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource="https://dalicc.net/ns#"/>
+    <rdfs:label xml:lang="en">Source publication period</rdfs:label>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:seeAlso rdf:resource="http://creativecommons.org/ns#SourceCode"/>
+    <rdfs:seeAlso rdf:resource="https://dalicc.net/ns#networkUseTrigger"/>
+    <skos:note xml:lang="en">Added by the standard-license addition of 2026-09-15, which recorded the clause as a vocabulary gap. Applied to 7 license records by the standard-license addition of 2026-09-15.</skos:note>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://dalicc.net/ns#specifyDate">
+    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+    <rdf:type rdf:resource="https://dalicc.net/ns#ValidityType"/>
+    <rdfs:comment xml:lang="en">The license is valid between an explicit start date and end date, given as schema:startDate and schema:endDate on the policy.</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource="https://dalicc.net/ns#"/>
+    <rdfs:label xml:lang="en">Specify date</rdfs:label>
+    <rdfs:seeAlso rdf:resource="http://schema.org/endDate"/>
+    <rdfs:seeAlso rdf:resource="http://schema.org/startDate"/>
+    <skos:note xml:lang="en">Written by the DALICC license composer; no license of the published library uses it.</skos:note>
+    <skos:prefLabel xml:lang="en">specifyDate</skos:prefLabel>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://dalicc.net/ns#specifyPeriod">
+    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+    <rdf:type rdf:resource="https://dalicc.net/ns#ValidityType"/>
+    <rdfs:comment xml:lang="en">The license is valid for a duration counted from the moment it is granted, given as schema:validFor on the policy.</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource="https://dalicc.net/ns#"/>
+    <rdfs:label xml:lang="en">Specify period</rdfs:label>
+    <rdfs:seeAlso rdf:resource="http://schema.org/validFor"/>
+    <skos:note xml:lang="en">Written by the DALICC license composer; no license of the published library uses it.</skos:note>
+    <skos:prefLabel xml:lang="en">specifyPeriod</skos:prefLabel>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://dalicc.net/ns#standardsConformance">
+    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+    <rdf:type rdf:resource="http://www.w3.org/ns/odrl/2/Action"/>
+    <rdf:type rdf:resource="https://dalicc.net/ns#DutyAction"/>
+    <rdfs:comment xml:lang="en">Keeping a modified version in conformity with an external technical standard
+the license names. Where the modification departs from that standard, the license attaches duties
+that a conforming modification does not carry.</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource="https://dalicc.net/ns#"/>
+    <rdfs:label xml:lang="en">Standards conformance</rdfs:label>
+    <rdfs:seeAlso rdf:resource="http://creativecommons.org/ns#ShareAlike"/>
+    <rdfs:seeAlso rdf:resource="https://dalicc.net/ns#modificationNotice"/>
+    <skos:note xml:lang="en">Added by the standard-license addition of 2026-09-15, which recorded the clause as a vocabulary gap. Applied to 1 license record by the standard-license addition of 2026-09-15.</skos:note>
+    <skos:scopeNote xml:lang="en">Carried by SISSL, whose reciprocity is triggered not by modification but by a modification that departs from the named Standard.</skos:scopeNote>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://dalicc.net/ns#sublicense">
+    <dct:source rdf:resource="https://dalicc.github.io/"/>
+    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+    <rdf:type rdf:resource="http://www.w3.org/ns/odrl/2/Action"/>
+    <rdf:type rdf:resource="https://dalicc.net/ns#RuleAction"/>
+    <rdfs:comment xml:lang="en">The license granted by a licensee to a third party, under the authority of the
+license originally granted by a licensor to the licensee.</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource="https://dalicc.net/ns#"/>
+    <rdfs:label xml:lang="en">Sublicense</rdfs:label>
+    <rdfs:seeAlso rdf:resource="http://www.w3.org/ns/odrl/2/grantUse"/>
+    <rdfs:seeAlso rdf:resource="https://dalicc.net/ns#ChangeLicense"/>
+    <skos:note xml:lang="en">Defined in the 2022 documentation and first used by the data in the 2026-09-15 license review: every Creative Commons 2.0 and 3.0 port, the six 4.0 International licenses, the Open Database License and the Open Data Commons Attribution License prohibit it in as many words.</skos:note>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://dalicc.net/ns#sublicenseSurvival">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:comment xml:lang="en">Whether the licenses a licensee has validly granted to third parties survive
+the termination of the licensee's own license.</rdfs:comment>
+    <rdfs:domain rdf:resource="http://www.w3.org/ns/odrl/2/Set"/>
+    <rdfs:isDefinedBy rdf:resource="https://dalicc.net/ns#"/>
+    <rdfs:label xml:lang="en">Sublicense survival</rdfs:label>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+    <rdfs:seeAlso rdf:resource="https://dalicc.net/ns#sublicense"/>
+    <rdfs:seeAlso rdf:resource="https://dalicc.net/ns#terminatesOnBreach"/>
+    <skos:note xml:lang="en">Added by the standard-license addition of 2026-09-15, which recorded the clause as a vocabulary gap. Applied to 11 license records by the standard-license addition of 2026-09-15.</skos:note>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://dalicc.net/ns#suiGenerisDatabaseRights">
+    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+    <rdf:type rdf:resource="http://www.w3.org/ns/odrl/2/Action"/>
+    <rdf:type rdf:resource="https://dalicc.net/ns#RuleAction"/>
+    <rdfs:comment xml:lang="en">Exercising the database right that protects a substantial investment in
+obtaining, verifying or presenting the contents of a database, separately from any copyright
+in the database or in its contents.</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource="https://dalicc.net/ns#"/>
+    <rdfs:label xml:lang="en">Sui generis database rights</rdfs:label>
+    <rdfs:seeAlso rdf:resource="http://purl.org/dc/dcmitype/Dataset"/>
+    <rdfs:seeAlso rdf:resource="http://www.w3.org/ns/odrl/2/extract"/>
+    <rdfs:seeAlso rdf:resource="https://dalicc.net/ns#databaseRightWaiver"/>
+    <skos:note xml:lang="en">Added by the license library review of 2026-09-15, which recorded the clause as a vocabulary gap. Applied to 8 license records by the standard-license addition of 2026-09-15.</skos:note>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://dalicc.net/ns#terminatesOnBreach">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:comment xml:lang="en">Whether the license ends automatically when the licensee fails to comply with
+it. True says the text carries such a clause; the absence of the property says the text is silent,
+not that the license survives a breach.</rdfs:comment>
+    <rdfs:domain rdf:resource="http://www.w3.org/ns/odrl/2/Set"/>
+    <rdfs:isDefinedBy rdf:resource="https://dalicc.net/ns#"/>
+    <rdfs:label xml:lang="en">Terminates on breach</rdfs:label>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+    <rdfs:seeAlso rdf:resource="https://dalicc.net/ns#curePeriod"/>
+    <rdfs:seeAlso rdf:resource="https://dalicc.net/ns#terminationOnBreach"/>
+    <skos:note xml:lang="en">Added by the standard-license addition of 2026-09-15, which recorded the clause as a vocabulary gap. Applied to 60 license records by the standard-license addition of 2026-09-15.</skos:note>
+    <skos:scopeNote xml:lang="en">The policy quality dalicc:terminationOnBreach names the concept; this property is how a record carries it.</skos:scopeNote>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://dalicc.net/ns#terminationOnBreach">
+    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+    <rdfs:comment xml:lang="en">The license ends automatically when the licensee breaches it. Licenses
+differ in what survives the end and in whether compliance reinstates the grant.</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource="https://dalicc.net/ns#"/>
+    <rdfs:label xml:lang="en">Termination on breach</rdfs:label>
+    <rdfs:seeAlso rdf:resource="https://dalicc.net/ns#irrevocable"/>
+    <rdfs:seeAlso rdf:resource="https://dalicc.net/ns#patentRetaliationTermination"/>
+    <skos:note xml:lang="en">Added by the license library review of 2026-09-15, which recorded the clause as a vocabulary gap. Defined here so the gap is named; the review applied it to no license record.</skos:note>
+    <skos:prefLabel xml:lang="en">terminationOnBreach</skos:prefLabel>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://dalicc.net/ns#testFixture">
+    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+    <rdf:type rdf:resource="https://dalicc.net/ns#RecordStatus"/>
+    <rdfs:comment xml:lang="en">The record is a fixture used to exercise the composer and the tests, not a
+published license. Its IRI stays resolvable, and presentation layers leave it out of listings,
+search results and counts.</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource="https://dalicc.net/ns#"/>
+    <rdfs:label xml:lang="en">Test fixture</rdfs:label>
+    <rdfs:seeAlso rdf:resource="https://dalicc.net/ns#recordStatus"/>
+    <skos:prefLabel xml:lang="en">testFixture</skos:prefLabel>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://dalicc.net/ns#trademarkNotice">
+    <dct:source rdf:resource="https://dalicc.github.io/"/>
+    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+    <rdf:type rdf:resource="http://www.w3.org/ns/odrl/2/Action"/>
+    <rdf:type rdf:resource="https://dalicc.net/ns#DutyAction"/>
+    <rdfs:comment xml:lang="en">Informs that Licensed Material is a trademark or includes trademark. The license
+does not grant permission to use the trade names, trademarks, service marks, or product names of
+the Licensor, except as required for reasonable and customary use in describing the origin of the
+Work and reproducing the content of the notice file.</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource="https://dalicc.net/ns#"/>
+    <rdfs:label xml:lang="en">Trademark notice</rdfs:label>
+    <rdfs:seeAlso rdf:resource="http://creativecommons.org/ns#Notice"/>
+    <rdfs:seeAlso rdf:resource="https://dalicc.net/ns#promote"/>
+    <skos:note xml:lang="en">Defined in the 2022 documentation; used by 1 license record since 2026-09-15.</skos:note>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://dalicc.net/ns#translationOf">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:comment xml:lang="en">Relates a license whose legal text is a translation to the license it
+translates. A translation may also be a jurisdiction port, and a jurisdiction port drafted in
+the same language is not a translation.</rdfs:comment>
+    <rdfs:domain rdf:resource="http://www.w3.org/ns/odrl/2/Set"/>
+    <rdfs:isDefinedBy rdf:resource="https://dalicc.net/ns#"/>
+    <rdfs:label xml:lang="en">Translation of</rdfs:label>
+    <rdfs:range rdf:resource="http://www.w3.org/ns/odrl/2/Set"/>
+    <rdfs:seeAlso rdf:resource="http://purl.org/dc/terms/language"/>
+    <rdfs:seeAlso rdf:resource="https://dalicc.net/ns#jurisdictionPortOf"/>
+    <rdfs:subPropertyOf rdf:resource="http://purl.org/dc/terms/isVersionOf"/>
+    <skos:note xml:lang="en">Added by the license library review of 2026-09-15, which recorded the clause as a vocabulary gap. Defined here so the gap is named; the review applied it to no license record.</skos:note>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://dalicc.net/ns#useForModelTraining">
+    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+    <rdf:type rdf:resource="http://www.w3.org/ns/odrl/2/Action"/>
+    <rdf:type rdf:resource="https://dalicc.net/ns#RuleAction"/>
+    <rdfs:comment xml:lang="en">Using the licensed material to train, validate or tune an automated
+system that learns from data. Some licenses grant it, some prohibit it and most are silent,
+in which case no statement is made.</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource="https://dalicc.net/ns#"/>
+    <rdfs:label xml:lang="en">Use for model training</rdfs:label>
+    <rdfs:seeAlso rdf:resource="http://purl.org/dc/dcmitype/Dataset"/>
+    <rdfs:seeAlso rdf:resource="http://www.w3.org/ns/odrl/2/extract"/>
+    <skos:note xml:lang="en">Added by the license library review of 2026-09-15, which recorded the clause as a vocabulary gap. Applied to 3 license records by the standard-license addition of 2026-09-15.</skos:note>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://dalicc.net/ns#validityType">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:comment xml:lang="en">Relates a license to the kind of validity period it has. Specify your license period by either giving a start date and an end date or by defining a validity period; where this does not apply, choose dalicc:perpetual for an indefinite period.</rdfs:comment>
+    <rdfs:domain rdf:resource="http://www.w3.org/ns/odrl/2/Set"/>
+    <rdfs:isDefinedBy rdf:resource="https://dalicc.net/ns#"/>
+    <rdfs:label xml:lang="en">Validity type</rdfs:label>
+    <rdfs:range rdf:resource="https://dalicc.net/ns#ValidityType"/>
+    <skos:scopeNote xml:lang="en">Present on 342 of 343 licenses, always with the value dalicc:perpetual.</skos:scopeNote>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://dalicc.net/ns#variantKind">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:comment xml:lang="en">How a record relates to the record it descends from: jurisdiction-port,
+translation, version, edition, version-option, exception or rider. The first four name a text
+of the same licence adapted, translated or reissued; version-option, exception and rider name
+a variant that keeps the base text and changes what it grants or requires, and each of those
+three carries dalicc:variantOf.</rdfs:comment>
+    <rdfs:domain rdf:resource="http://www.w3.org/ns/odrl/2/Set"/>
+    <rdfs:isDefinedBy rdf:resource="https://dalicc.net/ns#"/>
+    <rdfs:label xml:lang="en">Variant kind</rdfs:label>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:seeAlso rdf:resource="https://dalicc.net/ns#jurisdictionPortOf"/>
+    <rdfs:seeAlso rdf:resource="https://dalicc.net/ns#translationOf"/>
+    <skos:scopeNote xml:lang="en">Carried by 304 records: 290 with a parent and 14 version or edition variants whose predecessor the library does not hold.</skos:scopeNote>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://dalicc.net/ns#variantOf">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:comment xml:lang="en">The record this record is a version-option, exception or rider variant of.
+The variant keeps the base text and changes what the base grants or requires: an or-later
+identifier adds the option of a later version of the same licence, an exception lifts one
+condition for named material, and a rider adds a condition of its own.</rdfs:comment>
+    <rdfs:domain rdf:resource="http://www.w3.org/ns/odrl/2/Set"/>
+    <rdfs:isDefinedBy rdf:resource="https://dalicc.net/ns#"/>
+    <rdfs:label xml:lang="en">Variant of</rdfs:label>
+    <rdfs:range rdf:resource="http://www.w3.org/ns/odrl/2/Set"/>
+    <rdfs:seeAlso rdf:resource="https://dalicc.net/ns#exceptedCombination"/>
+    <rdfs:seeAlso rdf:resource="https://dalicc.net/ns#jurisdictionPortOf"/>
+    <rdfs:seeAlso rdf:resource="https://dalicc.net/ns#variantKind"/>
+    <rdfs:subPropertyOf rdf:resource="http://purl.org/dc/terms/relation"/>
+    <skos:note xml:lang="en">Added on 2026-09-23 with the records for the or-later identifiers, the SPDX exception combinations and the Commons Clause rider. dalicc:jurisdictionPortOf stays the relation for a jurisdiction port.</skos:note>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://dalicc.net/ns#versionHistory">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:comment xml:lang="en">Relates a curated model to the list of its versions. Every version the model
+ever had stays retrievable there, with the change log that says what was altered, when, by whom
+and on the strength of which finding or decision.</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource="https://dalicc.net/ns#"/>
+    <rdfs:label xml:lang="en">Version history</rdfs:label>
+    <rdfs:seeAlso rdf:resource="http://purl.org/dc/terms/hasVersion"/>
+    <rdfs:seeAlso rdf:resource="http://purl.org/dc/terms/modified"/>
+    <rdfs:seeAlso rdf:resource="https://dalicc.net/ns#reviewedOn"/>
+    <skos:scopeNote xml:lang="en">Carried by every record of the library, by the dependency graph and by this vocabulary. The object dereferences to the version list of that model.</skos:scopeNote>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://dalicc.net/ns#worldwide">
+    <dct:source rdf:resource="https://dalicc.github.io/"/>
+    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+    <rdf:type rdf:resource="https://dalicc.net/ns#Jurisdiction"/>
+    <rdfs:comment xml:lang="en">The license terms are valid throughout the world.</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource="https://dalicc.net/ns#"/>
+    <rdfs:label xml:lang="en">Worldwide</rdfs:label>
+    <rdfs:seeAlso rdf:resource="http://creativecommons.org/ns#jurisdiction"/>
+    <skos:definition xml:lang="en">The license is valid in every jurisdiction. Used as the value of cc:jurisdiction where a license is not bound to specific countries.</skos:definition>
+    <skos:prefLabel xml:lang="en">worldwide</skos:prefLabel>
+    <skos:scopeNote xml:lang="en">The value of cc:jurisdiction on 57 licenses; the other 286 name one or more BPI country IRIs.</skos:scopeNote>
+  </rdf:Description>
+</rdf:RDF>

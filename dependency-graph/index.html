@@ -1,0 +1,1327 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Dependency Graph Viewer | DALICC</title>
+  <meta name="description" content="The deontic dependency graph the DALICC reasoner reasons over: which actions include, imply, equal or contradict which other actions.">
+  <link rel="canonical" href="https://dalicc.net/dependency-graph">
+  <meta property="og:site_name" content="DALICC">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Dependency Graph Viewer">
+  <meta property="og:description" content="The deontic dependency graph the DALICC reasoner reasons over: which actions include, imply, equal or contradict which other actions.">
+  <meta property="og:url" content="https://dalicc.net/dependency-graph">
+  <meta property="og:image" content="https://dalicc.net/static/DALICC_full_logo_RGB.svg?v=3564dd55d12a">
+  <link rel="icon" href="../assets/site/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="../assets/site/favicon.svg">
+  <link rel="stylesheet" href="../assets/site/site.css">
+  <link rel="stylesheet" href="../assets/site/components.css">
+<link rel="stylesheet" href="../assets/site/tools.css">
+<link rel="stylesheet" href="../assets/site/graphs.css">
+<style>
+  /* The mirror's navigation is always open: it has no menu button to open it. */
+  .site-nav.mirror-nav { display: block; }
+</style>
+</head>
+<body class="">
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+
+  <header class="site-header">
+    <div class="site-header__inner">
+      <a class="site-logo" href="../index.html">
+        <img src="../assets/DALICC_full_logo_RGB.svg" width="121" height="50"
+             alt="DALICC, the Data Licenses Clearance Center">
+      </a>
+      
+
+      
+
+      <nav class="site-nav mirror-nav" aria-label="This mirror">
+        <ul class="site-nav__list">
+        <li class="site-nav__item"><a class="site-nav__link" href="../index.html">Vocabulary</a></li>
+        <li class="site-nav__item site-nav__item--active"><a class="site-nav__link" href="./" aria-current="page">Dependency graph</a></li>
+        <li class="site-nav__item"><a class="site-nav__link" href="../reasoning/">Reasoning</a></li>
+        <li class="site-nav__item"><a class="site-nav__link" href="../dalicc-ns.ttl">Turtle</a></li>
+        <li class="site-nav__item"><a class="site-nav__link" href="../dalicc-ns.jsonld">JSON-LD</a></li>
+        <li class="site-nav__item"><a class="site-nav__link" href="../dalicc-ns.rdf">RDF/XML</a></li>
+        </ul>
+      </nav>
+
+      <div class="site-header__aside">
+        <a class="social-link" href="https://www.linkedin.com/groups/13523102" target="_blank" rel="noopener noreferrer"
+           title="DALICC on LinkedIn">          <svg class="social-link__mark" viewBox="0 0 24 24" fill="currentColor"
+               aria-hidden="true" focusable="false">
+            <path d="M4.98 3.5a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5zM3 9.25h4v11.25H3V9.25zm6.5 0h3.83v1.54h.05c.53-.95 1.84-1.95 3.79-1.95 4.05 0 4.8 2.53 4.8 5.82v5.84h-4v-5.18c0-1.24-.02-2.83-1.78-2.83-1.78 0-2.05 1.35-2.05 2.74v5.27h-4V9.25z"/>
+          </svg>          <span class="visually-hidden">LinkedIn</span>
+        </a>
+        <a class="social-link" href="https://github.com/dalicc/" target="_blank" rel="noopener noreferrer"
+           title="DALICC on GitHub">          <svg class="social-link__mark" viewBox="0 0 24 24" fill="currentColor"
+               aria-hidden="true" focusable="false">
+            <path d="M12 1.75a10.25 10.25 0 0 0-3.24 19.98c.51.1.7-.22.7-.49v-1.9c-2.85.62-3.45-1.2-3.45-1.2-.47-1.18-1.14-1.5-1.14-1.5-.93-.63.07-.62.07-.62 1.03.07 1.57 1.05 1.57 1.05.92 1.57 2.41 1.12 3 .86.09-.67.36-1.12.65-1.38-2.28-.26-4.67-1.14-4.67-5.06 0-1.12.4-2.03 1.05-2.75-.11-.26-.46-1.3.1-2.72 0 0 .86-.27 2.82 1.05a9.8 9.8 0 0 1 5.14 0c1.96-1.32 2.82-1.05 2.82-1.05.56 1.42.21 2.46.1 2.72.66.72 1.05 1.63 1.05 2.75 0 3.93-2.39 4.79-4.67 5.05.37.32.7.94.7 1.9v2.81c0 .27.18.59.7.49A10.25 10.25 0 0 0 12 1.75z"/>
+          </svg>          <span class="visually-hidden">GitHub</span>
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <div class="l-shell">
+    <main id="main-content" tabindex="-1" class="">
+<div class="l-main">
+  <div class="flash flash--info" role="status">
+    <span class="flash__icon" aria-hidden="true">&#8505;</span>
+    <div class="flash__body">
+      <p style="margin:0">Static mirror of https://dalicc.net/ns, vocabulary version 6, generated on 2026-09-23; the live pages may be newer.</p>
+    </div>
+  </div>
+</div>
+
+<div class="l-main">
+  <nav class="breadcrumb" aria-label="Breadcrumb">
+  <ol>
+    <li><a href="../index.html">Home</a></li>
+    <li>
+<span aria-current="page">Dependency Graph Viewer</span>    </li>
+  </ol>
+</nav>
+
+<h1>Dependency Graph Viewer</h1>
+<hr class="rule-dotted">
+
+
+  <p class="page-lede">
+    Licenses do not conflict because two words differ; they conflict because the actions
+    behind those words relate to each other. The DALICC reasoner reads that relationship
+    from a dependency graph: 46 statements over the ODRL, Creative Commons and
+    DALICC action vocabularies. That is what turns "this license permits
+    <code>odrl:sell</code>" and "that license prohibits <code>odrl:commercialize</code>"
+    into a reported conflict.
+  </p>
+
+  <p class="text-muted">
+    <a href="../reasoning/">How reasoning works</a> walks through what the reasoner does
+    with these statements, step by step. To keep a graph of your own, with the
+    statements you decide, use the
+    <a href="https://dalicc.net/dependency-graph/editor">Dependency Graph Editor</a>.
+  </p>
+
+  <div data-flash-region>
+  </div>
+
+  <section class="dg-picker" aria-labelledby="dg-picker-heading">
+    <h2 id="dg-picker-heading">Graphs you can reason with</h2>
+    <ul class="dg-picker__list">
+      <li class="dg-picker__item dg-picker__item--current">
+        <a href="./">DALICC deontic dependency graph</a>
+        <span class="badge badge--neutral">core, default</span>
+        <span class="text-muted">version 4</span>
+      </li>
+    </ul>
+    <p class="field__hint">
+      A core graph is curated by the project, and it is what everybody reasons with. While
+      you are signed in, your own graphs and the ones shared with you appear here too,
+      drafts included. Any of them can be chosen in the License Composer and the License
+      Mixer straight away; <a href="https://dalicc.net/my/dependency-graphs">manage your graphs</a>.
+    </p>
+  </section>
+
+  <div class="tool-actions">
+    <a class="btn btn--ghost" href="https://dalicc.net/dependency-graph.ttl" download>Download as Turtle</a>
+    <a class="btn btn--ghost" href="https://api.dalicc.net/dependencygraph/list">The same data as JSON</a>
+    <a class="btn btn--ghost" href="../index.html">The DALICC vocabulary</a>
+    <a class="btn btn--ghost"
+       href="mailto:tassilo.pellegrini@ustp.at,giray.havur@ustp.at?subject=DALICC%20dependency%20graph%20dg_default">Report an issue</a>
+  </div>
+
+  <h2>DALICC deontic dependency graph</h2>
+  <p class="dg-definition">
+    Named graph <code class="uri">https://dalicc.net/dependencygraph/dg_default</code>.
+  </p>
+
+  <figure class="dg-figure">
+    <div class="dg-canvas" id="dependency-graph-canvas"
+         role="img"
+         aria-label="Circular diagram of the 46 dependency-graph statements. The same statements are listed in the tables below.">
+      <noscript>
+        <p class="field__hint">
+          The diagram is drawn in the browser. The complete list of statements follows
+          below and needs no JavaScript.
+        </p>
+      </noscript>
+    </div>
+    <figcaption>
+      <ul class="dg-legend">
+        <li>
+          <span class="dg-legend__swatch dg-legend__swatch--includedin"
+                aria-hidden="true"></span>
+          odrl:includedIn
+        </li>
+        <li>
+          <span class="dg-legend__swatch dg-legend__swatch--implies"
+                aria-hidden="true"></span>
+          odrl:implies
+        </li>
+        <li>
+          <span class="dg-legend__swatch dg-legend__swatch--sameas"
+                aria-hidden="true"></span>
+          owl:sameAs
+        </li>
+        <li>
+          <span class="dg-legend__swatch dg-legend__swatch--contradicts"
+                aria-hidden="true"></span>
+          dalicc:contradicts
+        </li>
+      </ul>
+    </figcaption>
+  </figure>
+
+  <script type="application/json" id="dependency-graph-data">{"edges": [{"colour": "#ea4a3c", "relation": "http://www.w3.org/ns/odrl/2/implies", "slug": "implies", "source": 3, "target": 19}, {"colour": "#505d66", "relation": "http://www.w3.org/2002/07/owl#sameAs", "slug": "sameas", "source": 3, "target": 2}, {"colour": "#009f7b", "relation": "http://www.w3.org/ns/odrl/2/includedIn", "slug": "includedin", "source": 3, "target": 30}, {"colour": "#505d66", "relation": "http://www.w3.org/2002/07/owl#sameAs", "slug": "sameas", "source": 5, "target": 6}, {"colour": "#009f7b", "relation": "http://www.w3.org/ns/odrl/2/includedIn", "slug": "includedin", "source": 8, "target": 11}, {"colour": "#505d66", "relation": "http://www.w3.org/2002/07/owl#sameAs", "slug": "sameas", "source": 19, "target": 0}, {"colour": "#009f7b", "relation": "http://www.w3.org/ns/odrl/2/includedIn", "slug": "includedin", "source": 19, "target": 30}, {"colour": "#ea4a3c", "relation": "http://www.w3.org/ns/odrl/2/implies", "slug": "implies", "source": 25, "target": 27}, {"colour": "#505d66", "relation": "http://www.w3.org/2002/07/owl#sameAs", "slug": "sameas", "source": 25, "target": 26}, {"colour": "#009f7b", "relation": "http://www.w3.org/ns/odrl/2/includedIn", "slug": "includedin", "source": 25, "target": 30}, {"colour": "#505d66", "relation": "http://www.w3.org/2002/07/owl#sameAs", "slug": "sameas", "source": 27, "target": 1}, {"colour": "#009f7b", "relation": "http://www.w3.org/ns/odrl/2/includedIn", "slug": "includedin", "source": 27, "target": 30}, {"colour": "#ea4a3c", "relation": "http://www.w3.org/ns/odrl/2/implies", "slug": "implies", "source": 4, "target": 6}, {"colour": "#ea4a3c", "relation": "http://www.w3.org/ns/odrl/2/implies", "slug": "implies", "source": 4, "target": 23}, {"colour": "#009f7b", "relation": "http://www.w3.org/ns/odrl/2/includedIn", "slug": "includedin", "source": 4, "target": 29}, {"colour": "#009f7b", "relation": "http://www.w3.org/ns/odrl/2/includedIn", "slug": "includedin", "source": 16, "target": 0}, {"colour": "#009f7b", "relation": "http://www.w3.org/ns/odrl/2/includedIn", "slug": "includedin", "source": 17, "target": 11}, {"colour": "#009f7b", "relation": "http://www.w3.org/ns/odrl/2/includedIn", "slug": "includedin", "source": 24, "target": 23}, {"colour": "#505d66", "relation": "http://www.w3.org/2002/07/owl#sameAs", "slug": "sameas", "source": 28, "target": 15}, {"colour": "#505d66", "relation": "http://www.w3.org/2002/07/owl#sameAs", "slug": "sameas", "source": 0, "target": 19}, {"colour": "#505d66", "relation": "http://www.w3.org/2002/07/owl#sameAs", "slug": "sameas", "source": 1, "target": 27}, {"colour": "#505d66", "relation": "http://www.w3.org/2002/07/owl#sameAs", "slug": "sameas", "source": 2, "target": 3}, {"colour": "#505d66", "relation": "http://www.w3.org/2002/07/owl#sameAs", "slug": "sameas", "source": 6, "target": 5}, {"colour": "#505d66", "relation": "http://www.w3.org/2002/07/owl#sameAs", "slug": "sameas", "source": 7, "target": 22}, {"colour": "#009f7b", "relation": "http://www.w3.org/ns/odrl/2/includedIn", "slug": "includedin", "source": 7, "target": 30}, {"colour": "#ea4a3c", "relation": "http://www.w3.org/ns/odrl/2/implies", "slug": "implies", "source": 9, "target": 8}, {"colour": "#009f7b", "relation": "http://www.w3.org/ns/odrl/2/includedIn", "slug": "includedin", "source": 9, "target": 30}, {"colour": "#009f7b", "relation": "http://www.w3.org/ns/odrl/2/includedIn", "slug": "includedin", "source": 10, "target": 20}, {"colour": "#009f7b", "relation": "http://www.w3.org/ns/odrl/2/includedIn", "slug": "includedin", "source": 10, "target": 30}, {"colour": "#009f7b", "relation": "http://www.w3.org/ns/odrl/2/includedIn", "slug": "includedin", "source": 11, "target": 30}, {"colour": "#c73a2e", "relation": "https://dalicc.net/ns#contradicts", "slug": "contradicts", "source": 12, "target": 6}, {"colour": "#009f7b", "relation": "http://www.w3.org/ns/odrl/2/includedIn", "slug": "includedin", "source": 12, "target": 30}, {"colour": "#009f7b", "relation": "http://www.w3.org/ns/odrl/2/includedIn", "slug": "includedin", "source": 13, "target": 30}, {"colour": "#ea4a3c", "relation": "http://www.w3.org/ns/odrl/2/implies", "slug": "implies", "source": 14, "target": 27}, {"colour": "#009f7b", "relation": "http://www.w3.org/ns/odrl/2/includedIn", "slug": "includedin", "source": 14, "target": 22}, {"colour": "#009f7b", "relation": "http://www.w3.org/ns/odrl/2/includedIn", "slug": "includedin", "source": 14, "target": 30}, {"colour": "#505d66", "relation": "http://www.w3.org/2002/07/owl#sameAs", "slug": "sameas", "source": 15, "target": 28}, {"colour": "#ea4a3c", "relation": "http://www.w3.org/ns/odrl/2/implies", "slug": "implies", "source": 18, "target": 27}, {"colour": "#009f7b", "relation": "http://www.w3.org/ns/odrl/2/includedIn", "slug": "includedin", "source": 18, "target": 30}, {"colour": "#009f7b", "relation": "http://www.w3.org/ns/odrl/2/includedIn", "slug": "includedin", "source": 20, "target": 30}, {"colour": "#009f7b", "relation": "http://www.w3.org/ns/odrl/2/includedIn", "slug": "includedin", "source": 21, "target": 20}, {"colour": "#009f7b", "relation": "http://www.w3.org/ns/odrl/2/includedIn", "slug": "includedin", "source": 21, "target": 30}, {"colour": "#505d66", "relation": "http://www.w3.org/2002/07/owl#sameAs", "slug": "sameas", "source": 22, "target": 7}, {"colour": "#009f7b", "relation": "http://www.w3.org/ns/odrl/2/includedIn", "slug": "includedin", "source": 23, "target": 6}, {"colour": "#009f7b", "relation": "http://www.w3.org/ns/odrl/2/includedIn", "slug": "includedin", "source": 23, "target": 29}, {"colour": "#505d66", "relation": "http://www.w3.org/2002/07/owl#sameAs", "slug": "sameas", "source": 26, "target": 25}], "nodes": [{"curie": "odrl:AttachPolicy", "id": "http://www.w3.org/ns/odrl/2/AttachPolicy", "label": "Attach policy"}, {"curie": "odrl:attachSource", "id": "http://www.w3.org/ns/odrl/2/attachSource", "label": "Attach source"}, {"curie": "odrl:attribute", "id": "http://www.w3.org/ns/odrl/2/attribute", "label": "Attribute"}, {"curie": "cc:Attribution", "id": "http://creativecommons.org/ns#Attribution", "label": "Attribution"}, {"curie": "dalicc:chargeLicenseFee", "id": "https://dalicc.net/ns#chargeLicenseFee", "label": "Charge license fee"}, {"curie": "cc:CommercialUse", "id": "http://creativecommons.org/ns#CommercialUse", "label": "Commercial use"}, {"curie": "odrl:commercialize", "id": "http://www.w3.org/ns/odrl/2/commercialize", "label": "Commercialize"}, {"curie": "odrl:copy", "id": "http://www.w3.org/ns/odrl/2/copy", "label": "Copy"}, {"curie": "cc:DerivativeWorks", "id": "http://creativecommons.org/ns#DerivativeWorks", "label": "Derivative works"}, {"curie": "odrl:derive", "id": "http://www.w3.org/ns/odrl/2/derive", "label": "Derive"}, {"curie": "odrl:display", "id": "http://www.w3.org/ns/odrl/2/display", "label": "Display"}, {"curie": "odrl:distribute", "id": "http://www.w3.org/ns/odrl/2/distribute", "label": "Distribute"}, {"curie": "odrl:ensureExclusivity", "id": "http://www.w3.org/ns/odrl/2/ensureExclusivity", "label": "Ensure exclusivity"}, {"curie": "odrl:execute", "id": "http://www.w3.org/ns/odrl/2/execute", "label": "Execute"}, {"curie": "odrl:extract", "id": "http://www.w3.org/ns/odrl/2/extract", "label": "Extract"}, {"curie": "odrl:grantUse", "id": "http://www.w3.org/ns/odrl/2/grantUse", "label": "Grant use"}, {"curie": "dalicc:modificationNotice", "id": "https://dalicc.net/ns#modificationNotice", "label": "Modification notice"}, {"curie": "dalicc:ModifiedWorks", "id": "https://dalicc.net/ns#ModifiedWorks", "label": "Modified works"}, {"curie": "odrl:modify", "id": "http://www.w3.org/ns/odrl/2/modify", "label": "Modify"}, {"curie": "cc:Notice", "id": "http://creativecommons.org/ns#Notice", "label": "Notice"}, {"curie": "odrl:present", "id": "http://www.w3.org/ns/odrl/2/present", "label": "Present"}, {"curie": "odrl:print", "id": "http://www.w3.org/ns/odrl/2/print", "label": "Print"}, {"curie": "odrl:reproduce", "id": "http://www.w3.org/ns/odrl/2/reproduce", "label": "Reproduce"}, {"curie": "odrl:sell", "id": "http://www.w3.org/ns/odrl/2/sell", "label": "Sell"}, {"curie": "dalicc:sellCopy", "id": "https://dalicc.net/ns#sellCopy", "label": "Sell copy"}, {"curie": "cc:ShareAlike", "id": "http://creativecommons.org/ns#ShareAlike", "label": "Share alike"}, {"curie": "odrl:shareAlike", "id": "http://www.w3.org/ns/odrl/2/shareAlike", "label": "Share alike (ODRL)"}, {"curie": "cc:SourceCode", "id": "http://creativecommons.org/ns#SourceCode", "label": "Source code"}, {"curie": "dalicc:sublicense", "id": "https://dalicc.net/ns#sublicense", "label": "Sublicense"}, {"curie": "odrl:transfer", "id": "http://www.w3.org/ns/odrl/2/transfer", "label": "Transfer"}, {"curie": "odrl:use", "id": "http://www.w3.org/ns/odrl/2/use", "label": "Use"}], "relations": [{"colour": "#009f7b", "curie": "odrl:includedIn", "iri": "http://www.w3.org/ns/odrl/2/includedIn", "label": "included in", "slug": "includedin"}, {"colour": "#ea4a3c", "curie": "odrl:implies", "iri": "http://www.w3.org/ns/odrl/2/implies", "label": "implies", "slug": "implies"}, {"colour": "#505d66", "curie": "owl:sameAs", "iri": "http://www.w3.org/2002/07/owl#sameAs", "label": "same as", "slug": "sameas"}, {"colour": "#c73a2e", "curie": "dalicc:contradicts", "iri": "https://dalicc.net/ns#contradicts", "label": "contradicts", "slug": "contradicts"}]}</script>
+
+  <h2 id="includedin">
+    odrl:includedIn
+    <span class="dg-count">24</span>
+  </h2>
+  <p class="dg-definition">Action subsumption, and therefore hierarchical: exercising the subject action is one way of exercising the object action, so a rule that holds for the broader action also holds for the narrower one.</p>
+  <div class="table-scroll">
+  <table class="dg-table">
+    <thead>
+      <tr>
+        <th scope="col">Subject action</th>
+        <th scope="col">Relation</th>
+        <th scope="col">Object action</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <th scope="row">
+          <a class="dg-term" href="http://creativecommons.org/ns#Attribution"><code>cc:Attribution</code></a>
+<span class="dg-term__label">Attribution</span>
+
+        </th>
+        <td class="dg-relation">
+          <span class="dg-legend__swatch dg-legend__swatch--includedin"
+                aria-hidden="true"></span>
+          <code>odrl:includedIn</code>
+        </td>
+        <td>
+          <a class="dg-term" href="http://www.w3.org/ns/odrl/2/use"><code>odrl:use</code></a>
+<span class="dg-term__label">Use</span>
+
+        </td>
+      </tr>
+      <tr>
+        <th scope="row">
+          <a class="dg-term" href="http://creativecommons.org/ns#DerivativeWorks"><code>cc:DerivativeWorks</code></a>
+<span class="dg-term__label">Derivative works</span>
+
+        </th>
+        <td class="dg-relation">
+          <span class="dg-legend__swatch dg-legend__swatch--includedin"
+                aria-hidden="true"></span>
+          <code>odrl:includedIn</code>
+        </td>
+        <td>
+          <a class="dg-term" href="http://www.w3.org/ns/odrl/2/distribute"><code>odrl:distribute</code></a>
+<span class="dg-term__label">Distribute</span>
+
+        </td>
+      </tr>
+      <tr>
+        <th scope="row">
+          <a class="dg-term" href="http://creativecommons.org/ns#Notice"><code>cc:Notice</code></a>
+<span class="dg-term__label">Notice</span>
+
+        </th>
+        <td class="dg-relation">
+          <span class="dg-legend__swatch dg-legend__swatch--includedin"
+                aria-hidden="true"></span>
+          <code>odrl:includedIn</code>
+        </td>
+        <td>
+          <a class="dg-term" href="http://www.w3.org/ns/odrl/2/use"><code>odrl:use</code></a>
+<span class="dg-term__label">Use</span>
+
+        </td>
+      </tr>
+      <tr>
+        <th scope="row">
+          <a class="dg-term" href="http://creativecommons.org/ns#ShareAlike"><code>cc:ShareAlike</code></a>
+<span class="dg-term__label">Share alike</span>
+
+        </th>
+        <td class="dg-relation">
+          <span class="dg-legend__swatch dg-legend__swatch--includedin"
+                aria-hidden="true"></span>
+          <code>odrl:includedIn</code>
+        </td>
+        <td>
+          <a class="dg-term" href="http://www.w3.org/ns/odrl/2/use"><code>odrl:use</code></a>
+<span class="dg-term__label">Use</span>
+
+        </td>
+      </tr>
+      <tr>
+        <th scope="row">
+          <a class="dg-term" href="http://creativecommons.org/ns#SourceCode"><code>cc:SourceCode</code></a>
+<span class="dg-term__label">Source code</span>
+
+        </th>
+        <td class="dg-relation">
+          <span class="dg-legend__swatch dg-legend__swatch--includedin"
+                aria-hidden="true"></span>
+          <code>odrl:includedIn</code>
+        </td>
+        <td>
+          <a class="dg-term" href="http://www.w3.org/ns/odrl/2/use"><code>odrl:use</code></a>
+<span class="dg-term__label">Use</span>
+
+        </td>
+      </tr>
+      <tr>
+        <th scope="row">
+          <a class="dg-term" href="../index.html#chargeLicenseFee"><code>dalicc:chargeLicenseFee</code></a>
+<span class="dg-term__label">Charge license fee</span>
+
+        </th>
+        <td class="dg-relation">
+          <span class="dg-legend__swatch dg-legend__swatch--includedin"
+                aria-hidden="true"></span>
+          <code>odrl:includedIn</code>
+        </td>
+        <td>
+          <a class="dg-term" href="http://www.w3.org/ns/odrl/2/transfer"><code>odrl:transfer</code></a>
+<span class="dg-term__label">Transfer</span>
+
+        </td>
+      </tr>
+      <tr>
+        <th scope="row">
+          <a class="dg-term" href="../index.html#modificationNotice"><code>dalicc:modificationNotice</code></a>
+<span class="dg-term__label">Modification notice</span>
+
+        </th>
+        <td class="dg-relation">
+          <span class="dg-legend__swatch dg-legend__swatch--includedin"
+                aria-hidden="true"></span>
+          <code>odrl:includedIn</code>
+        </td>
+        <td>
+          <a class="dg-term" href="http://www.w3.org/ns/odrl/2/AttachPolicy"><code>odrl:AttachPolicy</code></a>
+<span class="dg-term__label">Attach policy</span>
+
+        </td>
+      </tr>
+      <tr>
+        <th scope="row">
+          <a class="dg-term" href="../index.html#ModifiedWorks"><code>dalicc:ModifiedWorks</code></a>
+<span class="dg-term__label">Modified works</span>
+
+        </th>
+        <td class="dg-relation">
+          <span class="dg-legend__swatch dg-legend__swatch--includedin"
+                aria-hidden="true"></span>
+          <code>odrl:includedIn</code>
+        </td>
+        <td>
+          <a class="dg-term" href="http://www.w3.org/ns/odrl/2/distribute"><code>odrl:distribute</code></a>
+<span class="dg-term__label">Distribute</span>
+
+        </td>
+      </tr>
+      <tr>
+        <th scope="row">
+          <a class="dg-term" href="../index.html#sellCopy"><code>dalicc:sellCopy</code></a>
+<span class="dg-term__label">Sell copy</span>
+
+        </th>
+        <td class="dg-relation">
+          <span class="dg-legend__swatch dg-legend__swatch--includedin"
+                aria-hidden="true"></span>
+          <code>odrl:includedIn</code>
+        </td>
+        <td>
+          <a class="dg-term" href="http://www.w3.org/ns/odrl/2/sell"><code>odrl:sell</code></a>
+<span class="dg-term__label">Sell</span>
+
+        </td>
+      </tr>
+      <tr>
+        <th scope="row">
+          <a class="dg-term" href="http://www.w3.org/ns/odrl/2/copy"><code>odrl:copy</code></a>
+<span class="dg-term__label">Copy</span>
+
+        </th>
+        <td class="dg-relation">
+          <span class="dg-legend__swatch dg-legend__swatch--includedin"
+                aria-hidden="true"></span>
+          <code>odrl:includedIn</code>
+        </td>
+        <td>
+          <a class="dg-term" href="http://www.w3.org/ns/odrl/2/use"><code>odrl:use</code></a>
+<span class="dg-term__label">Use</span>
+
+        </td>
+      </tr>
+      <tr>
+        <th scope="row">
+          <a class="dg-term" href="http://www.w3.org/ns/odrl/2/derive"><code>odrl:derive</code></a>
+<span class="dg-term__label">Derive</span>
+
+        </th>
+        <td class="dg-relation">
+          <span class="dg-legend__swatch dg-legend__swatch--includedin"
+                aria-hidden="true"></span>
+          <code>odrl:includedIn</code>
+        </td>
+        <td>
+          <a class="dg-term" href="http://www.w3.org/ns/odrl/2/use"><code>odrl:use</code></a>
+<span class="dg-term__label">Use</span>
+
+        </td>
+      </tr>
+      <tr>
+        <th scope="row">
+          <a class="dg-term" href="http://www.w3.org/ns/odrl/2/display"><code>odrl:display</code></a>
+<span class="dg-term__label">Display</span>
+
+        </th>
+        <td class="dg-relation">
+          <span class="dg-legend__swatch dg-legend__swatch--includedin"
+                aria-hidden="true"></span>
+          <code>odrl:includedIn</code>
+        </td>
+        <td>
+          <a class="dg-term" href="http://www.w3.org/ns/odrl/2/present"><code>odrl:present</code></a>
+<span class="dg-term__label">Present</span>
+
+        </td>
+      </tr>
+      <tr>
+        <th scope="row">
+          <a class="dg-term" href="http://www.w3.org/ns/odrl/2/display"><code>odrl:display</code></a>
+<span class="dg-term__label">Display</span>
+
+        </th>
+        <td class="dg-relation">
+          <span class="dg-legend__swatch dg-legend__swatch--includedin"
+                aria-hidden="true"></span>
+          <code>odrl:includedIn</code>
+        </td>
+        <td>
+          <a class="dg-term" href="http://www.w3.org/ns/odrl/2/use"><code>odrl:use</code></a>
+<span class="dg-term__label">Use</span>
+
+        </td>
+      </tr>
+      <tr>
+        <th scope="row">
+          <a class="dg-term" href="http://www.w3.org/ns/odrl/2/distribute"><code>odrl:distribute</code></a>
+<span class="dg-term__label">Distribute</span>
+
+        </th>
+        <td class="dg-relation">
+          <span class="dg-legend__swatch dg-legend__swatch--includedin"
+                aria-hidden="true"></span>
+          <code>odrl:includedIn</code>
+        </td>
+        <td>
+          <a class="dg-term" href="http://www.w3.org/ns/odrl/2/use"><code>odrl:use</code></a>
+<span class="dg-term__label">Use</span>
+
+        </td>
+      </tr>
+      <tr>
+        <th scope="row">
+          <a class="dg-term" href="http://www.w3.org/ns/odrl/2/ensureExclusivity"><code>odrl:ensureExclusivity</code></a>
+<span class="dg-term__label">Ensure exclusivity</span>
+
+        </th>
+        <td class="dg-relation">
+          <span class="dg-legend__swatch dg-legend__swatch--includedin"
+                aria-hidden="true"></span>
+          <code>odrl:includedIn</code>
+        </td>
+        <td>
+          <a class="dg-term" href="http://www.w3.org/ns/odrl/2/use"><code>odrl:use</code></a>
+<span class="dg-term__label">Use</span>
+
+        </td>
+      </tr>
+      <tr>
+        <th scope="row">
+          <a class="dg-term" href="http://www.w3.org/ns/odrl/2/execute"><code>odrl:execute</code></a>
+<span class="dg-term__label">Execute</span>
+
+        </th>
+        <td class="dg-relation">
+          <span class="dg-legend__swatch dg-legend__swatch--includedin"
+                aria-hidden="true"></span>
+          <code>odrl:includedIn</code>
+        </td>
+        <td>
+          <a class="dg-term" href="http://www.w3.org/ns/odrl/2/use"><code>odrl:use</code></a>
+<span class="dg-term__label">Use</span>
+
+        </td>
+      </tr>
+      <tr>
+        <th scope="row">
+          <a class="dg-term" href="http://www.w3.org/ns/odrl/2/extract"><code>odrl:extract</code></a>
+<span class="dg-term__label">Extract</span>
+
+        </th>
+        <td class="dg-relation">
+          <span class="dg-legend__swatch dg-legend__swatch--includedin"
+                aria-hidden="true"></span>
+          <code>odrl:includedIn</code>
+        </td>
+        <td>
+          <a class="dg-term" href="http://www.w3.org/ns/odrl/2/reproduce"><code>odrl:reproduce</code></a>
+<span class="dg-term__label">Reproduce</span>
+
+        </td>
+      </tr>
+      <tr>
+        <th scope="row">
+          <a class="dg-term" href="http://www.w3.org/ns/odrl/2/extract"><code>odrl:extract</code></a>
+<span class="dg-term__label">Extract</span>
+
+        </th>
+        <td class="dg-relation">
+          <span class="dg-legend__swatch dg-legend__swatch--includedin"
+                aria-hidden="true"></span>
+          <code>odrl:includedIn</code>
+        </td>
+        <td>
+          <a class="dg-term" href="http://www.w3.org/ns/odrl/2/use"><code>odrl:use</code></a>
+<span class="dg-term__label">Use</span>
+
+        </td>
+      </tr>
+      <tr>
+        <th scope="row">
+          <a class="dg-term" href="http://www.w3.org/ns/odrl/2/modify"><code>odrl:modify</code></a>
+<span class="dg-term__label">Modify</span>
+
+        </th>
+        <td class="dg-relation">
+          <span class="dg-legend__swatch dg-legend__swatch--includedin"
+                aria-hidden="true"></span>
+          <code>odrl:includedIn</code>
+        </td>
+        <td>
+          <a class="dg-term" href="http://www.w3.org/ns/odrl/2/use"><code>odrl:use</code></a>
+<span class="dg-term__label">Use</span>
+
+        </td>
+      </tr>
+      <tr>
+        <th scope="row">
+          <a class="dg-term" href="http://www.w3.org/ns/odrl/2/present"><code>odrl:present</code></a>
+<span class="dg-term__label">Present</span>
+
+        </th>
+        <td class="dg-relation">
+          <span class="dg-legend__swatch dg-legend__swatch--includedin"
+                aria-hidden="true"></span>
+          <code>odrl:includedIn</code>
+        </td>
+        <td>
+          <a class="dg-term" href="http://www.w3.org/ns/odrl/2/use"><code>odrl:use</code></a>
+<span class="dg-term__label">Use</span>
+
+        </td>
+      </tr>
+      <tr>
+        <th scope="row">
+          <a class="dg-term" href="http://www.w3.org/ns/odrl/2/print"><code>odrl:print</code></a>
+<span class="dg-term__label">Print</span>
+
+        </th>
+        <td class="dg-relation">
+          <span class="dg-legend__swatch dg-legend__swatch--includedin"
+                aria-hidden="true"></span>
+          <code>odrl:includedIn</code>
+        </td>
+        <td>
+          <a class="dg-term" href="http://www.w3.org/ns/odrl/2/present"><code>odrl:present</code></a>
+<span class="dg-term__label">Present</span>
+
+        </td>
+      </tr>
+      <tr>
+        <th scope="row">
+          <a class="dg-term" href="http://www.w3.org/ns/odrl/2/print"><code>odrl:print</code></a>
+<span class="dg-term__label">Print</span>
+
+        </th>
+        <td class="dg-relation">
+          <span class="dg-legend__swatch dg-legend__swatch--includedin"
+                aria-hidden="true"></span>
+          <code>odrl:includedIn</code>
+        </td>
+        <td>
+          <a class="dg-term" href="http://www.w3.org/ns/odrl/2/use"><code>odrl:use</code></a>
+<span class="dg-term__label">Use</span>
+
+        </td>
+      </tr>
+      <tr>
+        <th scope="row">
+          <a class="dg-term" href="http://www.w3.org/ns/odrl/2/sell"><code>odrl:sell</code></a>
+<span class="dg-term__label">Sell</span>
+
+        </th>
+        <td class="dg-relation">
+          <span class="dg-legend__swatch dg-legend__swatch--includedin"
+                aria-hidden="true"></span>
+          <code>odrl:includedIn</code>
+        </td>
+        <td>
+          <a class="dg-term" href="http://www.w3.org/ns/odrl/2/commercialize"><code>odrl:commercialize</code></a>
+<span class="dg-term__label">Commercialize</span>
+
+        </td>
+      </tr>
+      <tr>
+        <th scope="row">
+          <a class="dg-term" href="http://www.w3.org/ns/odrl/2/sell"><code>odrl:sell</code></a>
+<span class="dg-term__label">Sell</span>
+
+        </th>
+        <td class="dg-relation">
+          <span class="dg-legend__swatch dg-legend__swatch--includedin"
+                aria-hidden="true"></span>
+          <code>odrl:includedIn</code>
+        </td>
+        <td>
+          <a class="dg-term" href="http://www.w3.org/ns/odrl/2/transfer"><code>odrl:transfer</code></a>
+<span class="dg-term__label">Transfer</span>
+
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+  <h2 id="implies">
+    odrl:implies
+    <span class="dg-count">7</span>
+  </h2>
+  <p class="dg-definition">Entailment: permitting the subject action necessarily permits the object action too, so a prohibition of the implied action conflicts with a permission of the implying one.</p>
+  <div class="table-scroll">
+  <table class="dg-table">
+    <thead>
+      <tr>
+        <th scope="col">Subject action</th>
+        <th scope="col">Relation</th>
+        <th scope="col">Object action</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <th scope="row">
+          <a class="dg-term" href="http://creativecommons.org/ns#Attribution"><code>cc:Attribution</code></a>
+<span class="dg-term__label">Attribution</span>
+
+        </th>
+        <td class="dg-relation">
+          <span class="dg-legend__swatch dg-legend__swatch--implies"
+                aria-hidden="true"></span>
+          <code>odrl:implies</code>
+        </td>
+        <td>
+          <a class="dg-term" href="http://creativecommons.org/ns#Notice"><code>cc:Notice</code></a>
+<span class="dg-term__label">Notice</span>
+
+        </td>
+      </tr>
+      <tr>
+        <th scope="row">
+          <a class="dg-term" href="http://creativecommons.org/ns#ShareAlike"><code>cc:ShareAlike</code></a>
+<span class="dg-term__label">Share alike</span>
+
+        </th>
+        <td class="dg-relation">
+          <span class="dg-legend__swatch dg-legend__swatch--implies"
+                aria-hidden="true"></span>
+          <code>odrl:implies</code>
+        </td>
+        <td>
+          <a class="dg-term" href="http://creativecommons.org/ns#SourceCode"><code>cc:SourceCode</code></a>
+<span class="dg-term__label">Source code</span>
+
+        </td>
+      </tr>
+      <tr>
+        <th scope="row">
+          <a class="dg-term" href="../index.html#chargeLicenseFee"><code>dalicc:chargeLicenseFee</code></a>
+<span class="dg-term__label">Charge license fee</span>
+
+        </th>
+        <td class="dg-relation">
+          <span class="dg-legend__swatch dg-legend__swatch--implies"
+                aria-hidden="true"></span>
+          <code>odrl:implies</code>
+        </td>
+        <td>
+          <a class="dg-term" href="http://www.w3.org/ns/odrl/2/commercialize"><code>odrl:commercialize</code></a>
+<span class="dg-term__label">Commercialize</span>
+
+        </td>
+      </tr>
+      <tr>
+        <th scope="row">
+          <a class="dg-term" href="../index.html#chargeLicenseFee"><code>dalicc:chargeLicenseFee</code></a>
+<span class="dg-term__label">Charge license fee</span>
+
+        </th>
+        <td class="dg-relation">
+          <span class="dg-legend__swatch dg-legend__swatch--implies"
+                aria-hidden="true"></span>
+          <code>odrl:implies</code>
+        </td>
+        <td>
+          <a class="dg-term" href="http://www.w3.org/ns/odrl/2/sell"><code>odrl:sell</code></a>
+<span class="dg-term__label">Sell</span>
+
+        </td>
+      </tr>
+      <tr>
+        <th scope="row">
+          <a class="dg-term" href="http://www.w3.org/ns/odrl/2/derive"><code>odrl:derive</code></a>
+<span class="dg-term__label">Derive</span>
+
+        </th>
+        <td class="dg-relation">
+          <span class="dg-legend__swatch dg-legend__swatch--implies"
+                aria-hidden="true"></span>
+          <code>odrl:implies</code>
+        </td>
+        <td>
+          <a class="dg-term" href="http://creativecommons.org/ns#DerivativeWorks"><code>cc:DerivativeWorks</code></a>
+<span class="dg-term__label">Derivative works</span>
+
+        </td>
+      </tr>
+      <tr>
+        <th scope="row">
+          <a class="dg-term" href="http://www.w3.org/ns/odrl/2/extract"><code>odrl:extract</code></a>
+<span class="dg-term__label">Extract</span>
+
+        </th>
+        <td class="dg-relation">
+          <span class="dg-legend__swatch dg-legend__swatch--implies"
+                aria-hidden="true"></span>
+          <code>odrl:implies</code>
+        </td>
+        <td>
+          <a class="dg-term" href="http://creativecommons.org/ns#SourceCode"><code>cc:SourceCode</code></a>
+<span class="dg-term__label">Source code</span>
+
+        </td>
+      </tr>
+      <tr>
+        <th scope="row">
+          <a class="dg-term" href="http://www.w3.org/ns/odrl/2/modify"><code>odrl:modify</code></a>
+<span class="dg-term__label">Modify</span>
+
+        </th>
+        <td class="dg-relation">
+          <span class="dg-legend__swatch dg-legend__swatch--implies"
+                aria-hidden="true"></span>
+          <code>odrl:implies</code>
+        </td>
+        <td>
+          <a class="dg-term" href="http://creativecommons.org/ns#SourceCode"><code>cc:SourceCode</code></a>
+<span class="dg-term__label">Source code</span>
+
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+  <h2 id="sameas">
+    owl:sameAs
+    <span class="dg-count">14</span>
+  </h2>
+  <p class="dg-definition">Synonymy: the two actions denote the same act in different vocabularies, so every statement about one is a statement about the other, both ways.</p>
+  <div class="table-scroll">
+  <table class="dg-table">
+    <thead>
+      <tr>
+        <th scope="col">Subject action</th>
+        <th scope="col">Relation</th>
+        <th scope="col">Object action</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <th scope="row">
+          <a class="dg-term" href="http://creativecommons.org/ns#Attribution"><code>cc:Attribution</code></a>
+<span class="dg-term__label">Attribution</span>
+
+        </th>
+        <td class="dg-relation">
+          <span class="dg-legend__swatch dg-legend__swatch--sameas"
+                aria-hidden="true"></span>
+          <code>owl:sameAs</code>
+        </td>
+        <td>
+          <a class="dg-term" href="http://www.w3.org/ns/odrl/2/attribute"><code>odrl:attribute</code></a>
+<span class="dg-term__label">Attribute</span>
+
+        </td>
+      </tr>
+      <tr>
+        <th scope="row">
+          <a class="dg-term" href="http://creativecommons.org/ns#CommercialUse"><code>cc:CommercialUse</code></a>
+<span class="dg-term__label">Commercial use</span>
+
+        </th>
+        <td class="dg-relation">
+          <span class="dg-legend__swatch dg-legend__swatch--sameas"
+                aria-hidden="true"></span>
+          <code>owl:sameAs</code>
+        </td>
+        <td>
+          <a class="dg-term" href="http://www.w3.org/ns/odrl/2/commercialize"><code>odrl:commercialize</code></a>
+<span class="dg-term__label">Commercialize</span>
+
+        </td>
+      </tr>
+      <tr>
+        <th scope="row">
+          <a class="dg-term" href="http://creativecommons.org/ns#Notice"><code>cc:Notice</code></a>
+<span class="dg-term__label">Notice</span>
+
+        </th>
+        <td class="dg-relation">
+          <span class="dg-legend__swatch dg-legend__swatch--sameas"
+                aria-hidden="true"></span>
+          <code>owl:sameAs</code>
+        </td>
+        <td>
+          <a class="dg-term" href="http://www.w3.org/ns/odrl/2/AttachPolicy"><code>odrl:AttachPolicy</code></a>
+<span class="dg-term__label">Attach policy</span>
+
+        </td>
+      </tr>
+      <tr>
+        <th scope="row">
+          <a class="dg-term" href="http://creativecommons.org/ns#ShareAlike"><code>cc:ShareAlike</code></a>
+<span class="dg-term__label">Share alike</span>
+
+        </th>
+        <td class="dg-relation">
+          <span class="dg-legend__swatch dg-legend__swatch--sameas"
+                aria-hidden="true"></span>
+          <code>owl:sameAs</code>
+        </td>
+        <td>
+          <a class="dg-term" href="http://www.w3.org/ns/odrl/2/shareAlike"><code>odrl:shareAlike</code></a>
+<span class="dg-term__label">Share alike (ODRL)</span>
+
+        </td>
+      </tr>
+      <tr>
+        <th scope="row">
+          <a class="dg-term" href="http://creativecommons.org/ns#SourceCode"><code>cc:SourceCode</code></a>
+<span class="dg-term__label">Source code</span>
+
+        </th>
+        <td class="dg-relation">
+          <span class="dg-legend__swatch dg-legend__swatch--sameas"
+                aria-hidden="true"></span>
+          <code>owl:sameAs</code>
+        </td>
+        <td>
+          <a class="dg-term" href="http://www.w3.org/ns/odrl/2/attachSource"><code>odrl:attachSource</code></a>
+<span class="dg-term__label">Attach source</span>
+
+        </td>
+      </tr>
+      <tr>
+        <th scope="row">
+          <a class="dg-term" href="../index.html#sublicense"><code>dalicc:sublicense</code></a>
+<span class="dg-term__label">Sublicense</span>
+
+        </th>
+        <td class="dg-relation">
+          <span class="dg-legend__swatch dg-legend__swatch--sameas"
+                aria-hidden="true"></span>
+          <code>owl:sameAs</code>
+        </td>
+        <td>
+          <a class="dg-term" href="http://www.w3.org/ns/odrl/2/grantUse"><code>odrl:grantUse</code></a>
+<span class="dg-term__label">Grant use</span>
+
+        </td>
+      </tr>
+      <tr>
+        <th scope="row">
+          <a class="dg-term" href="http://www.w3.org/ns/odrl/2/AttachPolicy"><code>odrl:AttachPolicy</code></a>
+<span class="dg-term__label">Attach policy</span>
+
+        </th>
+        <td class="dg-relation">
+          <span class="dg-legend__swatch dg-legend__swatch--sameas"
+                aria-hidden="true"></span>
+          <code>owl:sameAs</code>
+        </td>
+        <td>
+          <a class="dg-term" href="http://creativecommons.org/ns#Notice"><code>cc:Notice</code></a>
+<span class="dg-term__label">Notice</span>
+
+        </td>
+      </tr>
+      <tr>
+        <th scope="row">
+          <a class="dg-term" href="http://www.w3.org/ns/odrl/2/attachSource"><code>odrl:attachSource</code></a>
+<span class="dg-term__label">Attach source</span>
+
+        </th>
+        <td class="dg-relation">
+          <span class="dg-legend__swatch dg-legend__swatch--sameas"
+                aria-hidden="true"></span>
+          <code>owl:sameAs</code>
+        </td>
+        <td>
+          <a class="dg-term" href="http://creativecommons.org/ns#SourceCode"><code>cc:SourceCode</code></a>
+<span class="dg-term__label">Source code</span>
+
+        </td>
+      </tr>
+      <tr>
+        <th scope="row">
+          <a class="dg-term" href="http://www.w3.org/ns/odrl/2/attribute"><code>odrl:attribute</code></a>
+<span class="dg-term__label">Attribute</span>
+
+        </th>
+        <td class="dg-relation">
+          <span class="dg-legend__swatch dg-legend__swatch--sameas"
+                aria-hidden="true"></span>
+          <code>owl:sameAs</code>
+        </td>
+        <td>
+          <a class="dg-term" href="http://creativecommons.org/ns#Attribution"><code>cc:Attribution</code></a>
+<span class="dg-term__label">Attribution</span>
+
+        </td>
+      </tr>
+      <tr>
+        <th scope="row">
+          <a class="dg-term" href="http://www.w3.org/ns/odrl/2/commercialize"><code>odrl:commercialize</code></a>
+<span class="dg-term__label">Commercialize</span>
+
+        </th>
+        <td class="dg-relation">
+          <span class="dg-legend__swatch dg-legend__swatch--sameas"
+                aria-hidden="true"></span>
+          <code>owl:sameAs</code>
+        </td>
+        <td>
+          <a class="dg-term" href="http://creativecommons.org/ns#CommercialUse"><code>cc:CommercialUse</code></a>
+<span class="dg-term__label">Commercial use</span>
+
+        </td>
+      </tr>
+      <tr>
+        <th scope="row">
+          <a class="dg-term" href="http://www.w3.org/ns/odrl/2/copy"><code>odrl:copy</code></a>
+<span class="dg-term__label">Copy</span>
+
+        </th>
+        <td class="dg-relation">
+          <span class="dg-legend__swatch dg-legend__swatch--sameas"
+                aria-hidden="true"></span>
+          <code>owl:sameAs</code>
+        </td>
+        <td>
+          <a class="dg-term" href="http://www.w3.org/ns/odrl/2/reproduce"><code>odrl:reproduce</code></a>
+<span class="dg-term__label">Reproduce</span>
+
+        </td>
+      </tr>
+      <tr>
+        <th scope="row">
+          <a class="dg-term" href="http://www.w3.org/ns/odrl/2/grantUse"><code>odrl:grantUse</code></a>
+<span class="dg-term__label">Grant use</span>
+
+        </th>
+        <td class="dg-relation">
+          <span class="dg-legend__swatch dg-legend__swatch--sameas"
+                aria-hidden="true"></span>
+          <code>owl:sameAs</code>
+        </td>
+        <td>
+          <a class="dg-term" href="../index.html#sublicense"><code>dalicc:sublicense</code></a>
+<span class="dg-term__label">Sublicense</span>
+
+        </td>
+      </tr>
+      <tr>
+        <th scope="row">
+          <a class="dg-term" href="http://www.w3.org/ns/odrl/2/reproduce"><code>odrl:reproduce</code></a>
+<span class="dg-term__label">Reproduce</span>
+
+        </th>
+        <td class="dg-relation">
+          <span class="dg-legend__swatch dg-legend__swatch--sameas"
+                aria-hidden="true"></span>
+          <code>owl:sameAs</code>
+        </td>
+        <td>
+          <a class="dg-term" href="http://www.w3.org/ns/odrl/2/copy"><code>odrl:copy</code></a>
+<span class="dg-term__label">Copy</span>
+
+        </td>
+      </tr>
+      <tr>
+        <th scope="row">
+          <a class="dg-term" href="http://www.w3.org/ns/odrl/2/shareAlike"><code>odrl:shareAlike</code></a>
+<span class="dg-term__label">Share alike (ODRL)</span>
+
+        </th>
+        <td class="dg-relation">
+          <span class="dg-legend__swatch dg-legend__swatch--sameas"
+                aria-hidden="true"></span>
+          <code>owl:sameAs</code>
+        </td>
+        <td>
+          <a class="dg-term" href="http://creativecommons.org/ns#ShareAlike"><code>cc:ShareAlike</code></a>
+<span class="dg-term__label">Share alike</span>
+
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+  <h2 id="contradicts">
+    dalicc:contradicts
+    <span class="dg-count">1</span>
+  </h2>
+  <p class="dg-definition">Mutual exclusion: the two actions cannot both be exercised under one policy, so a permission of one conflicts with a permission of the other.</p>
+  <div class="table-scroll">
+  <table class="dg-table">
+    <thead>
+      <tr>
+        <th scope="col">Subject action</th>
+        <th scope="col">Relation</th>
+        <th scope="col">Object action</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <th scope="row">
+          <a class="dg-term" href="http://www.w3.org/ns/odrl/2/ensureExclusivity"><code>odrl:ensureExclusivity</code></a>
+<span class="dg-term__label">Ensure exclusivity</span>
+
+        </th>
+        <td class="dg-relation">
+          <span class="dg-legend__swatch dg-legend__swatch--contradicts"
+                aria-hidden="true"></span>
+          <code>dalicc:contradicts</code>
+        </td>
+        <td>
+          <a class="dg-term" href="http://www.w3.org/ns/odrl/2/commercialize"><code>odrl:commercialize</code></a>
+<span class="dg-term__label">Commercialize</span>
+
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+
+  <section class="history-box" aria-labelledby="dg-history-heading">
+  <h2 id="dg-history-heading">History</h2>
+  <p class="history-box__lede">
+    The dependency graph has 4 versions. Version 4 is
+    the one served today; every earlier version keeps its own address, so a conclusion drawn
+    from one of them can still be checked against it.
+  </p>
+  <ol class="version-list">
+    <li class="version version--current">
+      <p class="version__head">
+        <span class="version__number">Version 4</span>
+<span class="badge badge--ok">current</span><span class="version__date">2026-09-23</span>        <span class="version__reviewer">Giray Havur</span>
+      </p>
+      <p class="version__summary">The review of 2026-09-23 read every action the vocabulary defines against the axioms that mention it. Eight statements were added, three were removed, and the graph now holds 46. The commercial-use cluster is the substance of the change: the term 579 library statements use was not in the graph at all, so the axioms about selling and charging a fee concluded nothing.</p>
+      <p class="version__links">
+        <a class="btn btn--ghost btn--small" href="./">View</a>
+        <a class="btn btn--slate btn--small"
+           href="https://dalicc.net/dependency-graph.ttl"
+           download>Turtle</a>
+      </p>
+      <details class="collapsible version__changes" id="dg-history-changes-4">
+  <summary class="collapsible__legend">
+    <span class="collapsible__sign" aria-hidden="true"></span>
+    <span>11 changes</span>
+  </summary>
+  <div class="collapsible__body">
+    <ul class="change-list">
+      <li class="change change--added">
+        <p class="change__head">
+          <span class="change__action">added</span>
+          <code class="change__statement">cc:CommercialUse owl:sameAs odrl:commercialize</code>
+        </p>
+        <p class="change__reason">
+          <span class="badge badge--neutral">dependency-graph-review</span>
+          cc:CommercialUse is &#39;income-generating use of any kind, whether direct or indirect&#39; and odrl:commercialize is &#39;use the asset in a business environment&#39;, the reasoning counterpart of commercial use. 579 statements of the library name the first and none names the second, so the three axioms written about odrl:commercialize reached nothing. A license that permits charging a license fee now meets one that prohibits commercial use.
+        </p>
+      </li>
+      <li class="change change--added">
+        <p class="change__head">
+          <span class="change__action">added</span>
+          <code class="change__statement">odrl:commercialize owl:sameAs cc:CommercialUse</code>
+        </p>
+        <p class="change__reason">
+          <span class="badge badge--neutral">dependency-graph-review</span>
+          The inverse spelling, written explicitly because the graph states every owl:sameAs pair in both directions.
+        </p>
+      </li>
+      <li class="change change--added">
+        <p class="change__head">
+          <span class="change__action">added</span>
+          <code class="change__statement">dalicc:sellCopy odrl:includedIn odrl:sell</code>
+        </p>
+        <p class="change__reason">
+          <span class="badge badge--neutral">dependency-graph-review</span>
+          dalicc:sellCopy is &#39;the Assignee may sell the copies of the License Material&#39; and odrl:sell is &#39;trade the asset for consideration&#39;, so selling copies is one way of selling. Through odrl:sell odrl:includedIn odrl:commercialize a prohibition of commercial use now reaches it.
+        </p>
+      </li>
+      <li class="change change--added">
+        <p class="change__head">
+          <span class="change__action">added</span>
+          <code class="change__statement">cc:DerivativeWorks odrl:includedIn odrl:distribute</code>
+        </p>
+        <p class="change__reason">
+          <span class="badge badge--neutral">dependency-graph-review</span>
+          cc:DerivativeWorks is &#39;to distribute the derivative and making it available to the public&#39;, which is one kind of odrl:distribute, &#39;providing the work to the public or making it accessible to anyone else&#39;. A license that forbids distribution now meets one that permits publishing a derivative.
+        </p>
+      </li>
+      <li class="change change--added">
+        <p class="change__head">
+          <span class="change__action">added</span>
+          <code class="change__statement">dalicc:ModifiedWorks odrl:includedIn odrl:distribute</code>
+        </p>
+        <p class="change__reason">
+          <span class="badge badge--neutral">dependency-graph-review</span>
+          dalicc:ModifiedWorks is &#39;distributing a modified version of the work and making it available to the public&#39;, the counterpart of cc:DerivativeWorks for alterations that do not amount to a new work, and it is distribution for the same reason.
+        </p>
+      </li>
+      <li class="change change--added">
+        <p class="change__head">
+          <span class="change__action">added</span>
+          <code class="change__statement">odrl:AttachPolicy owl:sameAs cc:Notice</code>
+        </p>
+        <p class="change__reason">
+          <span class="badge badge--neutral">dependency-graph-review</span>
+          The inverse of cc:Notice owl:sameAs odrl:AttachPolicy. The change log of version 3 says the graph states every owl:sameAs pair in both directions; three pairs did not, and now every one of them does.
+        </p>
+      </li>
+      <li class="change change--added">
+        <p class="change__head">
+          <span class="change__action">added</span>
+          <code class="change__statement">odrl:attachSource owl:sameAs cc:SourceCode</code>
+        </p>
+        <p class="change__reason">
+          <span class="badge badge--neutral">dependency-graph-review</span>
+          The inverse of cc:SourceCode owl:sameAs odrl:attachSource, for the same reason.
+        </p>
+      </li>
+      <li class="change change--added">
+        <p class="change__head">
+          <span class="change__action">added</span>
+          <code class="change__statement">odrl:shareAlike owl:sameAs cc:ShareAlike</code>
+        </p>
+        <p class="change__reason">
+          <span class="badge badge--neutral">dependency-graph-review</span>
+          The inverse of cc:ShareAlike owl:sameAs odrl:shareAlike, for the same reason.
+        </p>
+      </li>
+      <li class="change change--removed">
+        <p class="change__head">
+          <span class="change__action">removed</span>
+          <code class="change__statement">odrl:extract owl:sameAs odrl:copy</code>
+        </p>
+        <p class="change__reason">
+          <span class="badge badge--neutral">dependency-graph-review</span>
+          odrl:extract is &#39;extract part of the asset&#39;, which the term&#39;s own definition places inside odrl:reproduce rather than beside it. Calling it the same act as odrl:copy put extract, copy and reproduce in one equivalence class, so permitting the extraction of a part permitted copying the whole. odrl:extract odrl:includedIn odrl:reproduce carries the conclusions that do hold.
+        </p>
+      </li>
+      <li class="change change--removed">
+        <p class="change__head">
+          <span class="change__action">removed</span>
+          <code class="change__statement">odrl:reproduce odrl:includedIn odrl:copy</code>
+        </p>
+        <p class="change__reason">
+          <span class="badge badge--neutral">dependency-graph-review</span>
+          odrl:copy owl:sameAs odrl:reproduce already says the two names denote one act, so a subsumption between them states nothing and shows the pair twice with two different readings.
+        </p>
+      </li>
+      <li class="change change--removed">
+        <p class="change__head">
+          <span class="change__action">removed</span>
+          <code class="change__statement">odrl:display odrl:includedIn odrl:play</code>
+        </p>
+        <p class="change__reason">
+          <span class="badge badge--neutral">dependency-graph-review</span>
+          odrl:display is &#39;create a static and transient rendition of the work&#39; and odrl:play is &#39;render the asset in an audio or video form&#39;. A static rendition is not an audio or video one, so displaying is not a kind of playing. Both remain kinds of odrl:present.
+        </p>
+      </li>
+    </ul>
+  </div>
+</details>
+    </li>
+    <li class="version">
+      <p class="version__head">
+        <span class="version__number">Version 3</span>
+<span class="version__date">2026-09-15</span>        <span class="version__reviewer">Giray Havur</span>
+      </p>
+      <p class="version__summary">The standard-license addition of 2026-09-15 related the two terms that name the same act: dalicc:sublicense, which 295 records use as a prohibition, and odrl:grantUse, which the permissive records use as a permission.</p>
+      <p class="version__links">
+        <a class="btn btn--ghost btn--small" href="https://dalicc.net/dependencygraph/versions/3">View</a>
+        <a class="btn btn--slate btn--small"
+           href="https://dalicc.net/dependencygraph/versions/3"
+           download>Turtle</a>
+      </p>
+      <details class="collapsible version__changes" id="dg-history-changes-3">
+  <summary class="collapsible__legend">
+    <span class="collapsible__sign" aria-hidden="true"></span>
+    <span>2 changes</span>
+  </summary>
+  <div class="collapsible__body">
+    <ul class="change-list">
+      <li class="change change--added">
+        <p class="change__head">
+          <span class="change__action">added</span>
+          <code class="change__statement">dalicc:sublicense owl:sameAs odrl:grantUse</code>
+        </p>
+        <p class="change__reason">
+          <span class="badge badge--neutral">Review decision</span>
+          Open issue 9 of the content review is decided: the two terms denote the same act, so a bundle of a license that forbids sublicensing with one that permits it must report a conflict instead of no conflict.
+        </p>
+      </li>
+      <li class="change change--added">
+        <p class="change__head">
+          <span class="change__action">added</span>
+          <code class="change__statement">odrl:grantUse owl:sameAs dalicc:sublicense</code>
+        </p>
+        <p class="change__reason">
+          <span class="badge badge--neutral">Review decision</span>
+          The inverse spelling, written explicitly because the graph states every owl:sameAs pair in both directions.
+        </p>
+      </li>
+    </ul>
+  </div>
+</details>
+    </li>
+    <li class="version">
+      <p class="version__head">
+        <span class="version__number">Version 2</span>
+<span class="version__date">2026-09-15</span>        <span class="version__reviewer">Giray Havur</span>
+      </p>
+      <p class="version__summary">The content review of 2026-09-15 removed the pair of axioms that made a reciprocal license which also grants sublicensing contradict itself.</p>
+      <p class="version__links">
+        <a class="btn btn--ghost btn--small" href="https://dalicc.net/dependencygraph/versions/2">View</a>
+        <a class="btn btn--slate btn--small"
+           href="https://dalicc.net/dependencygraph/versions/2"
+           download>Turtle</a>
+      </p>
+      <details class="collapsible version__changes" id="dg-history-changes-2">
+  <summary class="collapsible__legend">
+    <span class="collapsible__sign" aria-hidden="true"></span>
+    <span>2 changes</span>
+  </summary>
+  <div class="collapsible__body">
+    <ul class="change-list">
+      <li class="change change--removed">
+        <p class="change__head">
+          <span class="change__action">removed</span>
+          <code class="change__statement">cc:ShareAlike dalicc:contradicts odrl:grantUse</code>
+        </p>
+        <p class="change__reason">
+          <span class="badge badge--neutral">Review decision</span>
+          Review decision 5: passing the same terms on is the normal way to satisfy a share-alike condition, not a contradiction of it.
+        </p>
+      </li>
+      <li class="change change--removed">
+        <p class="change__head">
+          <span class="change__action">removed</span>
+          <code class="change__statement">odrl:grantUse dalicc:contradicts cc:ShareAlike</code>
+        </p>
+        <p class="change__reason">
+          <span class="badge badge--neutral">Review decision</span>
+          Review decision 5: passing the same terms on is the normal way to satisfy a share-alike condition, not a contradiction of it.
+        </p>
+      </li>
+    </ul>
+  </div>
+</details>
+    </li>
+    <li class="version">
+      <p class="version__head">
+        <span class="version__number">Version 1</span>
+      </p>
+      <p class="version__summary text-muted">
+        The version this model had before the content review of 2026-09-15.
+      </p>
+      <p class="version__links">
+        <a class="btn btn--ghost btn--small" href="https://dalicc.net/dependencygraph/versions/1">View</a>
+        <a class="btn btn--slate btn--small"
+           href="https://dalicc.net/dependencygraph/versions/1"
+           download>Turtle</a>
+      </p>
+    </li>
+  </ol>
+  <p class="history-box__foot text-muted">
+    Every change names the reason behind it: a finding of the content review, one of its
+    library-wide decisions, the metadata that review wrote onto every record, or a hand
+    edit. None of it is legal advice.
+  </p>
+</section>
+
+
+  <hr class="rule-dotted rule-dotted--footer">
+</div>
+    </main>
+  </div>
+
+  <footer class="site-footer">
+    <div class="site-footer__inner">
+      
+      <p class="site-footer__funding">
+        DALICC does not replace legal advice.
+      </p>
+      <p class="site-footer__funding">
+        © 2021-2026 DALICC - Verein zur Förderung der Rechtssicherheit in der
+        Datenbewirtschaftung. All rights reserved.
+      </p>
+      <p class="site-footer__partners">
+        DALICC originated in a research project led by USTP, University of Applied Sciences
+        St. Pölten, with the Vienna University of Economics and Business, the University of
+        Innsbruck / STI International, Höhne, In der Maur &amp; Partner Rechtsanwälte OG and
+        the Semantic Web Company, funded by the
+        <a href="https://www.ffg.at/" target="_blank" rel="noopener noreferrer">Austrian Research
+        Promotion Agency (FFG)</a> and
+        <a href="https://www.netidee.at/" target="_blank" rel="noopener noreferrer">netidee</a>.
+      </p>
+    </div>
+  </footer>
+
+  <button type="button" class="back-to-top" data-visible="false" aria-label="Back to top">
+    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" aria-hidden="true" focusable="false">
+      <path d="M12 19V6m-6 6 6-6 6 6" stroke="currentColor" stroke-width="2"
+            stroke-linecap="round" stroke-linejoin="round"/>
+    </svg>
+  </button>
+
+  <script src="../assets/site/site.js" defer></script>
+  <script src="../assets/site/components.js" defer></script>
+  <script src="../assets/site/dashboard.js" defer></script>
+<script src="../assets/site/graph.js" defer></script>
+</body>
+</html>

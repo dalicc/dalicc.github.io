@@ -1,0 +1,599 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>How reasoning works | DALICC</title>
+  <meta name="description" content="How DALICC decides that two licenses conflict: a license as a list of rules over named actions, the dependency graph that relates those actions, and the direct and derived conflicts that follow from the two.">
+  <link rel="canonical" href="https://dalicc.net/reasoning">
+  <meta property="og:site_name" content="DALICC">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="How reasoning works">
+  <meta property="og:description" content="How DALICC decides that two licenses conflict: a license as a list of rules over named actions, the dependency graph that relates those actions, and the direct and derived conflicts that follow from the two.">
+  <meta property="og:url" content="https://dalicc.net/reasoning">
+  <meta property="og:image" content="https://dalicc.net/static/DALICC_full_logo_RGB.svg?v=3564dd55d12a">
+  <link rel="icon" href="../assets/site/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="../assets/site/favicon.svg">
+  <link rel="stylesheet" href="../assets/site/site.css">
+  <link rel="stylesheet" href="../assets/site/components.css">
+<link rel="stylesheet" href="../assets/site/reasoning.css">
+<style>
+  /* The mirror's navigation is always open: it has no menu button to open it. */
+  .site-nav.mirror-nav { display: block; }
+</style>
+</head>
+<body class="">
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+
+  <header class="site-header">
+    <div class="site-header__inner">
+      <a class="site-logo" href="../index.html">
+        <img src="../assets/DALICC_full_logo_RGB.svg" width="121" height="50"
+             alt="DALICC, the Data Licenses Clearance Center">
+      </a>
+      
+
+      
+
+      <nav class="site-nav mirror-nav" aria-label="This mirror">
+        <ul class="site-nav__list">
+        <li class="site-nav__item"><a class="site-nav__link" href="../index.html">Vocabulary</a></li>
+        <li class="site-nav__item"><a class="site-nav__link" href="../dependency-graph/">Dependency graph</a></li>
+        <li class="site-nav__item site-nav__item--active"><a class="site-nav__link" href="./" aria-current="page">Reasoning</a></li>
+        <li class="site-nav__item"><a class="site-nav__link" href="../dalicc-ns.ttl">Turtle</a></li>
+        <li class="site-nav__item"><a class="site-nav__link" href="../dalicc-ns.jsonld">JSON-LD</a></li>
+        <li class="site-nav__item"><a class="site-nav__link" href="../dalicc-ns.rdf">RDF/XML</a></li>
+        </ul>
+      </nav>
+
+      <div class="site-header__aside">
+        <a class="social-link" href="https://www.linkedin.com/groups/13523102" target="_blank" rel="noopener noreferrer"
+           title="DALICC on LinkedIn">          <svg class="social-link__mark" viewBox="0 0 24 24" fill="currentColor"
+               aria-hidden="true" focusable="false">
+            <path d="M4.98 3.5a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5zM3 9.25h4v11.25H3V9.25zm6.5 0h3.83v1.54h.05c.53-.95 1.84-1.95 3.79-1.95 4.05 0 4.8 2.53 4.8 5.82v5.84h-4v-5.18c0-1.24-.02-2.83-1.78-2.83-1.78 0-2.05 1.35-2.05 2.74v5.27h-4V9.25z"/>
+          </svg>          <span class="visually-hidden">LinkedIn</span>
+        </a>
+        <a class="social-link" href="https://github.com/dalicc/" target="_blank" rel="noopener noreferrer"
+           title="DALICC on GitHub">          <svg class="social-link__mark" viewBox="0 0 24 24" fill="currentColor"
+               aria-hidden="true" focusable="false">
+            <path d="M12 1.75a10.25 10.25 0 0 0-3.24 19.98c.51.1.7-.22.7-.49v-1.9c-2.85.62-3.45-1.2-3.45-1.2-.47-1.18-1.14-1.5-1.14-1.5-.93-.63.07-.62.07-.62 1.03.07 1.57 1.05 1.57 1.05.92 1.57 2.41 1.12 3 .86.09-.67.36-1.12.65-1.38-2.28-.26-4.67-1.14-4.67-5.06 0-1.12.4-2.03 1.05-2.75-.11-.26-.46-1.3.1-2.72 0 0 .86-.27 2.82 1.05a9.8 9.8 0 0 1 5.14 0c1.96-1.32 2.82-1.05 2.82-1.05.56 1.42.21 2.46.1 2.72.66.72 1.05 1.63 1.05 2.75 0 3.93-2.39 4.79-4.67 5.05.37.32.7.94.7 1.9v2.81c0 .27.18.59.7.49A10.25 10.25 0 0 0 12 1.75z"/>
+          </svg>          <span class="visually-hidden">GitHub</span>
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <div class="l-shell">
+    <main id="main-content" tabindex="-1" class="">
+<div class="l-main">
+  <div class="flash flash--info" role="status">
+    <span class="flash__icon" aria-hidden="true">&#8505;</span>
+    <div class="flash__body">
+      <p style="margin:0">Static mirror of https://dalicc.net/ns, vocabulary version 6, generated on 2026-09-23; the live pages may be newer.</p>
+    </div>
+  </div>
+</div>
+
+<div class="l-main">
+  <nav class="breadcrumb" aria-label="Breadcrumb">
+  <ol>
+    <li><a href="../index.html">Home</a></li>
+    <li>
+<span aria-current="page">How reasoning works</span>    </li>
+  </ol>
+</nav>
+
+<h1>How reasoning works</h1>
+<hr class="rule-dotted">
+
+  <nav class="section-links" aria-label="In this section">
+  <a class="section-links__link" href="../dependency-graph/"
+>Dependency Graph Viewer</a>
+  <a class="section-links__link" href="https://dalicc.net/dependency-graph/editor"
+>Dependency Graph Editor</a>
+</nav>
+
+
+  <p class="page-lede">
+    DALICC does not compare licenses word by word. It reads each license as a list of
+    rules over named actions, and it keeps what it knows about those actions in a
+    separate, editable file: the dependency graph. Put the two together and the service
+    can answer two questions: does this license contradict itself, and can these
+    licenses hold for one work at the same time.
+  </p>
+
+  <p class="page-lede">
+    Both questions come up before anything is published, and neither is easy to settle
+    by reading the license text. The <a href="https://dalicc.net/license-composer">License Composer</a>
+    asks the first one for you: it checks a license against itself and names what it
+    finds before you publish. It also runs a test that only makes sense inside a single
+    license, that a license requiring share alike for the whole work does not at the
+    same time permit changing the license without a duty to pick a compliant one,
+    because the work could then leave the license that requires it to stay. The
+    <a href="https://dalicc.net/license-mixer">License Mixer</a> asks the second one over a whole bundle
+    and lists every conflicting pair it finds, direct and derived, with the chain behind
+    it. The API answers both, so a program gets what these pages get. Every one of these
+    checks reasons with a dependency graph, and you choose which graph that is.
+  </p>
+
+  <noscript>
+    <div class="flash flash--info" role="status">
+  <span class="flash__icon" aria-hidden="true">&#8505;</span>
+  <div class="flash__body">
+<p style="margin:0">The walkthrough below needs no JavaScript: all five steps are printed under the picture, and the picture shows the state they end in.</p>  </div>
+</div>
+
+  </noscript>
+
+  <h2>A walkthrough</h2>
+  <p>
+    Two made up licenses, called A and B, and the actions they talk about. The licenses
+    are invented; every relation drawn between the actions is a real statement of the
+    dependency graph DALICC ships with.
+  </p>
+
+  <div class="rsn" data-reasoning-walkthrough data-step="5" data-step-count="5"
+       role="group" aria-label="How reasoning works, in five steps">
+
+    <div class="rsn__stage">
+      <svg class="rsn__svg" viewBox="0 0 720 400" role="img" focusable="false"
+           aria-labelledby="rsn-svg-title" aria-describedby="rsn-svg-desc">
+        <title id="rsn-svg-title">Two license models with the action graph between them</title>
+        <desc id="rsn-svg-desc">License A permits distributing, printing and keeping the
+          work exclusive, and requires attribution. License B prohibits distributing and
+          prohibits use, permits commercializing and requires the license notice. Between
+          the two, arrows from the dependency graph show that printing is a kind of
+          presenting, that presenting and distributing are kinds of use, and that keeping
+          a work exclusive contradicts commercializing it.</desc>
+
+        <defs>
+          <marker id="rsn-arrow" viewBox="0 0 10 10" refX="9" refY="5"
+                  markerWidth="6" markerHeight="6" orient="auto">
+            <path class="rsn-arrow__head" d="M0,1 L9,5 L0,9 z"/>
+          </marker>
+          <marker id="rsn-arrow-hot" viewBox="0 0 10 10" refX="9" refY="5"
+                  markerWidth="6" markerHeight="6" orient="auto">
+            <path class="rsn-arrow__head rsn-arrow__head--hot" d="M0,1 L9,5 L0,9 z"/>
+          </marker>
+          <marker id="rsn-arrow-red" viewBox="0 0 10 10" refX="9" refY="5"
+                  markerWidth="6" markerHeight="6" orient="auto">
+            <path class="rsn-arrow__head rsn-arrow__head--hot" d="M0,1 L9,5 L0,9 z"/>
+          </marker>
+          <marker id="rsn-arrow-red-back" viewBox="0 0 10 10" refX="1" refY="5"
+                  markerWidth="6" markerHeight="6" orient="auto">
+            <path class="rsn-arrow__head rsn-arrow__head--hot" d="M10,1 L1,5 L10,9 z"/>
+          </marker>
+        </defs>
+
+        <g class="rsn-graph">
+          <path class="rsn-edge" id="rsn-edge-print-present" d="M280,104 L294,136"/>
+          <path class="rsn-edge" id="rsn-edge-present-use" d="M320,176 L344,208"/>
+          <path class="rsn-edge" id="rsn-edge-distribute-use" d="M410,104 L374,208"/>
+          <path class="rsn-edge rsn-edge--contradicts" id="rsn-edge-contradicts"
+                d="M300,320 L336,343"/>
+
+          <g class="rsn-node" id="rsn-node-print">
+            <rect class="rsn-node__box" x="238" y="68" width="84" height="36" rx="18"/>
+            <text class="rsn-node__label" x="280" y="91" text-anchor="middle">print</text>
+          </g>
+          <g class="rsn-node" id="rsn-node-distribute">
+            <rect class="rsn-node__box" x="341" y="68" width="138" height="36" rx="18"/>
+            <text class="rsn-node__label" x="410" y="91" text-anchor="middle">distribute</text>
+          </g>
+          <g class="rsn-node" id="rsn-node-present">
+            <rect class="rsn-node__box" x="247" y="140" width="106" height="36" rx="18"/>
+            <text class="rsn-node__label" x="300" y="163" text-anchor="middle">present</text>
+          </g>
+          <g class="rsn-node" id="rsn-node-use">
+            <rect class="rsn-node__box" x="329" y="212" width="62" height="36" rx="18"/>
+            <text class="rsn-node__label" x="360" y="235" text-anchor="middle">use</text>
+          </g>
+          <g class="rsn-node" id="rsn-node-exclusive">
+            <rect class="rsn-node__box" x="225" y="284" width="150" height="36" rx="18"/>
+            <text class="rsn-node__label" x="300" y="307" text-anchor="middle">exclusivity</text>
+          </g>
+          <g class="rsn-node" id="rsn-node-commercial">
+            <rect class="rsn-node__box" x="304" y="346" width="172" height="36" rx="18"/>
+            <text class="rsn-node__label" x="390" y="369" text-anchor="middle">commercialize</text>
+          </g>
+        </g>
+
+        <g class="rsn-cards">
+          <g class="rsn-card" id="rsn-card-a">
+            <rect class="rsn-card__box" x="8" y="44" width="200" height="272" rx="4"/>
+            <rect class="rsn-card__band" x="8" y="44" width="200" height="34" rx="4"/>
+            <text class="rsn-card__name" x="108" y="69" text-anchor="middle">LICENSE A</text>
+
+            <rect class="rsn-row__hi" id="rsn-hi-a1" x="10" y="84" width="196" height="44"/>
+            <circle class="rsn-mark rsn-mark--yes" cx="32" cy="106" r="11"/>
+            <path class="rsn-glyph rsn-glyph--yes" d="M27,106 L30.5,110 L37.5,102"/>
+            <text class="rsn-row__label" x="52" y="113">distribute</text>
+
+            <rect class="rsn-row__hi" id="rsn-hi-a2" x="10" y="142" width="196" height="44"/>
+            <circle class="rsn-mark rsn-mark--yes" cx="32" cy="164" r="11"/>
+            <path class="rsn-glyph rsn-glyph--yes" d="M27,164 L30.5,168 L37.5,160"/>
+            <text class="rsn-row__label" x="52" y="171">print</text>
+
+            <rect class="rsn-row__hi" id="rsn-hi-a3" x="10" y="200" width="196" height="44"/>
+            <circle class="rsn-mark rsn-mark--yes" cx="32" cy="222" r="11"/>
+            <path class="rsn-glyph rsn-glyph--yes" d="M27,222 L30.5,226 L37.5,218"/>
+            <text class="rsn-row__label" x="52" y="229">exclusivity</text>
+
+            <circle class="rsn-mark rsn-mark--duty" cx="32" cy="280" r="11"/>
+            <circle class="rsn-dot" cx="32" cy="280" r="4.5"/>
+            <text class="rsn-row__label" x="52" y="287">attribution</text>
+          </g>
+
+          <g class="rsn-card" id="rsn-card-b">
+            <rect class="rsn-card__box" x="512" y="44" width="200" height="272" rx="4"/>
+            <rect class="rsn-card__band" x="512" y="44" width="200" height="34" rx="4"/>
+            <text class="rsn-card__name" x="612" y="69" text-anchor="middle">LICENSE B</text>
+
+            <rect class="rsn-row__hi" id="rsn-hi-b1" x="514" y="84" width="196" height="44"/>
+            <circle class="rsn-mark rsn-mark--no" cx="536" cy="106" r="11"/>
+            <path class="rsn-glyph rsn-glyph--no" d="M531,101 L541,111 M541,101 L531,111"/>
+            <text class="rsn-row__label" x="556" y="113">distribute</text>
+
+            <rect class="rsn-row__hi" id="rsn-hi-b2" x="514" y="142" width="196" height="44"/>
+            <circle class="rsn-mark rsn-mark--no" cx="536" cy="164" r="11"/>
+            <path class="rsn-glyph rsn-glyph--no" d="M531,159 L541,169 M541,159 L531,169"/>
+            <text class="rsn-row__label" x="556" y="171">use</text>
+
+            <rect class="rsn-row__hi" id="rsn-hi-b3" x="514" y="200" width="196" height="44"/>
+            <circle class="rsn-mark rsn-mark--yes" cx="536" cy="222" r="11"/>
+            <path class="rsn-glyph rsn-glyph--yes" d="M531,222 L534.5,226 L541.5,218"/>
+            <text class="rsn-row__label" x="556" y="229">commercialize</text>
+
+            <circle class="rsn-mark rsn-mark--duty" cx="536" cy="280" r="11"/>
+            <circle class="rsn-dot" cx="536" cy="280" r="4.5"/>
+            <text class="rsn-row__label" x="556" y="287">notice</text>
+          </g>
+        </g>
+
+        <g class="rsn-badge" id="rsn-badge-direct">
+          <rect class="rsn-badge__box" x="352" y="12" width="108" height="32" rx="4"/>
+          <text class="rsn-badge__text" x="406" y="34" text-anchor="middle">CONFLICT</text>
+        </g>
+        <g class="rsn-badge" id="rsn-badge-chain">
+          <rect class="rsn-badge__box" x="398" y="214" width="108" height="32" rx="4"/>
+          <text class="rsn-badge__text" x="452" y="236" text-anchor="middle">CONFLICT</text>
+        </g>
+        <g class="rsn-badge" id="rsn-badge-contradicts">
+          <rect class="rsn-badge__box" x="176" y="348" width="108" height="32" rx="4"/>
+          <text class="rsn-badge__text" x="230" y="370" text-anchor="middle">CONFLICT</text>
+        </g>
+      </svg>
+
+      <p class="rsn__legend">
+        A check mark is a permission, a cross a prohibition, a dot a duty. An arrow
+        between two actions is a statement of the dependency graph, and a red mark is a
+        conflict the checker reports.
+      </p>
+    </div>
+
+    <div class="rsn__panel">
+      <ol class="rsn__steps">
+        <li class="rsn__step" data-step-index="1">
+          <p class="rsn__step-count">Step 1 of 5</p>
+          <h3>The rules of a license</h3>
+          <p>
+            Read by a machine, a license is a list of rules. Every rule says one of three
+            things about one action: it is permitted, it is prohibited, or it is a duty
+            the user takes on. The actions are not free text. They come from a shared
+            vocabulary, so two licenses written years apart by different people still name
+            the same things. The two cards are the two licenses of this example, one rule
+            to a line.
+          </p>
+        </li>
+        <li class="rsn__step" data-step-index="2">
+          <p class="rsn__step-count">Step 2 of 5</p>
+          <h3>The dependency graph</h3>
+          <p>
+            Actions are not independent of each other, and no license says how they
+            relate. That knowledge sits in a file of its own, the dependency graph, and it
+            comes in four kinds. One action can be a kind of another: printing is a kind
+            of presenting, presenting is a kind of use. One action can bring another with
+            it: asking for attribution brings a notice with it. Two names can mean one
+            action: the Creative Commons attribution term and the ODRL one. And two
+            actions can contradict each other, so nobody can be allowed both: keeping a
+            work exclusive and commercializing it. A chain of statements is followed to
+            its end, which is how printing turns out to be a kind of use. Two names for
+            one action are that action throughout, so a statement written about one name
+            holds of the other. Contradicting is never chained with a second
+            contradiction.
+          </p>
+        </li>
+        <li class="rsn__step" data-step-index="3">
+          <p class="rsn__step-count">Step 3 of 5</p>
+          <h3>A direct conflict</h3>
+          <p>
+            The plainest conflict needs no graph at all. License A permits distributing.
+            License B prohibits distributing. One action, one yes and one no, so the two
+            licenses cannot both hold for one work. This is a direct conflict, and the
+            answer names both statements and the licenses they come from.
+          </p>
+        </li>
+        <li class="rsn__step" data-step-index="4">
+          <p class="rsn__step-count">Step 4 of 5</p>
+          <h3>A conflict through a chain</h3>
+          <p>
+            Now nothing matches by name. License A permits printing; License B says
+            nothing about printing, it prohibits use. The graph closes the gap: printing
+            is a kind of presenting, and presenting is a kind of use. Follow the two steps
+            and the permission and the prohibition meet on the same action. This is a
+            derived conflict, and the answer carries the statements of the graph that
+            produced it, so you can see why it was reported.
+          </p>
+        </li>
+        <li class="rsn__step" data-step-index="5">
+          <p class="rsn__step-count">Step 5 of 5</p>
+          <h3>Two permissions that contradict</h3>
+          <p>
+            A conflict does not need a prohibition. The graph says that keeping a work
+            exclusive contradicts commercializing it: no one work can be both. License A
+            permits the first, License B permits the second, and the two permissions
+            cannot stand together, although neither license forbids anything. This one is
+            reported even when both permissions come from the same license, which is how
+            a license is caught contradicting itself. All three conflicts are marked in
+            the picture now, because these two licenses collide in more than one place
+            and a real answer lists every pair it finds, not the first.
+          </p>
+        </li>
+      </ol>
+
+      <div class="rsn__controls" hidden data-reasoning-controls>
+        <button type="button" class="btn btn--ghost btn--small" data-reasoning-prev>
+          Previous
+        </button>
+        <button type="button" class="btn btn--ghost btn--small" data-reasoning-next>
+          Next
+        </button>
+        <ol class="rsn__dots" data-reasoning-dots>
+          <li><button type="button" class="rsn__dot" data-reasoning-go="1">
+            <span class="visually-hidden">Step 1, the rules of a license</span>
+          </button></li>
+          <li><button type="button" class="rsn__dot" data-reasoning-go="2">
+            <span class="visually-hidden">Step 2, the dependency graph</span>
+          </button></li>
+          <li><button type="button" class="rsn__dot" data-reasoning-go="3">
+            <span class="visually-hidden">Step 3, a direct conflict</span>
+          </button></li>
+          <li><button type="button" class="rsn__dot" data-reasoning-go="4">
+            <span class="visually-hidden">Step 4, a conflict through a chain</span>
+          </button></li>
+          <li><button type="button" class="rsn__dot" data-reasoning-go="5">
+            <span class="visually-hidden">Step 5, two permissions that contradict</span>
+          </button></li>
+        </ol>
+        <button type="button" class="btn btn--ghost btn--small" data-reasoning-play
+                aria-pressed="false">
+          Play
+        </button>
+        <p class="rsn__hint">
+          The left and right arrow keys move between the steps while the focus is here.
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <h2>One graph is not the only graph</h2>
+  <p>
+    DALICC ships with a core graph<span class="info">
+  <button type="button" class="info__btn" aria-describedby="reasoning-core-graph">
+    <span aria-hidden="true">?</span><span class="visually-hidden">More information</span>
+  </button>
+  <span class="info__bubble" id="reasoning-core-graph" role="tooltip">A core graph is curated by the project. It is what everybody reasons with unless they choose another graph.</span>
+</span>
+that says how the actions of the vocabulary
+    relate. It is one reading, and not the only defensible one. A second graph can hold
+    a different legal reading of the same actions, the reading of another jurisdiction,
+    or a reading that fits the work of one organisation inside a single jurisdiction.
+    Whichever graph a check runs with, the answer follows that graph and no other.
+  </p>
+  <p>
+    Here is a statement worth disagreeing with. The core graph says that sublicensing
+    and granting use are one act:
+    <code>dalicc:sublicense owl:sameAs odrl:grantUse</code>. A legal team that treats
+    granting use under the same terms and sublicensing under new terms as two different
+    acts takes that statement out of a graph of their own, in both directions, because
+    the core graph writes it both ways round. From then on a license that
+    permits granting use, next to one that prohibits sublicensing, is
+    no longer reported to them as a conflict. The edit runs the other way as well: a
+    graph that adds a statement the core graph leaves out reports pairs the core graph
+    lets through.
+  </p>
+  <p>
+    You do not have to start from nothing. Copy the core graph, change the statements
+    you read differently, and you have a graph of your own with a version behind every
+    save, which you can share with the people you work with and publish once it has
+    settled.
+    The <a href="https://dalicc.net/dependency-graph/editor">Dependency Graph Editor</a> is where that
+    happens, and the manual describes the whole life of a graph under
+    <a href="https://dalicc.net/documentation/users#doc-18-dependency-graphs">Dependency graphs</a>. A
+    graph records a reading of the law; it does not make that reading correct, and
+    nothing here is legal advice.
+  </p>
+
+  <h2>The same thing in the vocabulary</h2>
+  <p>
+    The four kinds of statement have names, and so do the two kinds of answer. This is
+    what you will see in a graph file, in the reported chains and in the API.
+  </p>
+
+  <div class="table-scroll">
+    <table class="rsn-table">
+      <caption class="visually-hidden">The four relations of a dependency graph</caption>
+      <thead>
+        <tr>
+          <th scope="col">Relation</th>
+          <th scope="col">Reads as</th>
+          <th scope="col">A statement of the default graph</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><code>odrl:includedIn</code></td>
+          <td>the first action is a kind of the second</td>
+          <td><code>odrl:print odrl:includedIn odrl:present</code></td>
+        </tr>
+        <tr>
+          <td><code>odrl:implies</code></td>
+          <td>the first action brings the second with it</td>
+          <td><code>cc:Attribution odrl:implies cc:Notice</code></td>
+        </tr>
+        <tr>
+          <td><code>owl:sameAs</code></td>
+          <td>two names for one action</td>
+          <td><code>cc:Attribution owl:sameAs odrl:attribute</code></td>
+        </tr>
+        <tr>
+          <td><code>dalicc:contradicts</code></td>
+          <td>the two cannot both be allowed of one work</td>
+          <td><code>odrl:ensureExclusivity dalicc:contradicts odrl:commercialize</code></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <ul class="rsn-notes">
+    <li>
+      A rule of a license is an <code>odrl:permission</code>, an
+      <code>odrl:prohibition</code> or a duty, and it carries its
+      <code>odrl:action</code>. Actions come from the ODRL, Creative Commons and
+      <a href="../index.html">DALICC</a> vocabularies.
+    </li>
+    <li>
+      <code>odrl:includedIn</code>, <code>odrl:implies</code> and
+      <code>owl:sameAs</code> are followed through chains, so
+      <code>odrl:print odrl:includedIn odrl:use</code> follows from two statements
+      without being written anywhere. A chain may cross from one of them into another:
+      <code>owl:sameAs</code> gives an action a second name, and everything said about
+      the one name is said about the other. <code>dalicc:contradicts</code> is never
+      chained with a second contradiction, but a synonym of either side counts as that
+      side.
+    </li>
+    <li>
+      A permission against a prohibition over the same action is reported as
+      <strong>direct</strong>. A permission against a prohibition that the graph relates,
+      and two permissions the graph says contradict each other, are reported as
+      <strong>derived</strong>, with the statements of the graph that produced them.
+    </li>
+    <li>
+      Each pair is reported once, whichever order the licenses are given in, and the two
+      may be the same license: that is what makes the consistency check possible.
+    </li>
+    <li>
+      Only permissions against prohibitions, and permissions against permissions through
+      <code>dalicc:contradicts</code>, are weighed against each other. Duties are read
+      and reported, and the consistency check does test a duty against a prohibition of
+      the same license, but the compatibility check does not compare the duties of
+      different licenses.
+    </li>
+    <li>
+      Nothing here knows what kind of asset a license covers. The License Mixer checks
+      that on its own, when you name the license you want to publish the result under,
+      and reports a mismatch next to the conflicts.
+    </li>
+    <li>
+      The graph DALICC ships with holds 46 statements. The
+      <a href="../dependency-graph/">Dependency Graph Viewer</a> prints them,
+      <a href="https://dalicc.net/dependency-graph.ttl">the file itself</a> is a download, and the
+      <a href="https://dalicc.net/dependency-graph/editor">Dependency Graph Editor</a> is how you write
+      your own.
+    </li>
+  </ul>
+
+  <h2>Try it</h2>
+  <ul class="rsn-try">
+    <li>
+      <a class="arrow-link" href="https://dalicc.net/license-mixer"><svg width="20" height="20" viewBox="0 0 20 20" fill="none" aria-hidden="true" focusable="false">
+  <circle cx="10" cy="10" r="9" stroke="currentColor" stroke-width="1.5"/>
+  <path d="M6 10h8m-3.2-3.2L14 10l-3.2 3.2" stroke="currentColor" stroke-width="1.5"
+        stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
+ License Mixer</a>
+      <span>Put two or more licenses in a bundle and read the conflicts, direct and
+        derived, with the chain behind each one.</span>
+    </li>
+    <li>
+      <a class="arrow-link" href="https://dalicc.net/license-composer"><svg width="20" height="20" viewBox="0 0 20 20" fill="none" aria-hidden="true" focusable="false">
+  <circle cx="10" cy="10" r="9" stroke="currentColor" stroke-width="1.5"/>
+  <path d="M6 10h8m-3.2-3.2L14 10l-3.2 3.2" stroke="currentColor" stroke-width="1.5"
+        stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
+ License Composer</a>
+      <span>Write a license of your own and check it against itself before you publish
+        it.</span>
+    </li>
+    <li>
+      <a class="arrow-link" href="../dependency-graph/"><svg width="20" height="20" viewBox="0 0 20 20" fill="none" aria-hidden="true" focusable="false">
+  <circle cx="10" cy="10" r="9" stroke="currentColor" stroke-width="1.5"/>
+  <path d="M6 10h8m-3.2-3.2L14 10l-3.2 3.2" stroke="currentColor" stroke-width="1.5"
+        stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
+ Dependency Graph Viewer</a>
+      <span>Read the statements the answers are derived from, grouped by relation.</span>
+    </li>
+    <li>
+      <a class="arrow-link" href="https://dalicc.net/dependency-graph/editor"><svg width="20" height="20" viewBox="0 0 20 20" fill="none" aria-hidden="true" focusable="false">
+  <circle cx="10" cy="10" r="9" stroke="currentColor" stroke-width="1.5"/>
+  <path d="M6 10h8m-3.2-3.2L14 10l-3.2 3.2" stroke="currentColor" stroke-width="1.5"
+        stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
+ Dependency Graph Editor</a>
+      <span>Disagree with a statement? Start from the core graph, change what you
+        disagree with and reason with your version.</span>
+    </li>
+    <li>
+      <a class="arrow-link" href="https://github.com/dalicc/dalicc_production/blob/HEAD/reasoner/README.md"
+         target="_blank" rel="noopener noreferrer"><svg width="20" height="20" viewBox="0 0 20 20" fill="none" aria-hidden="true" focusable="false">
+  <circle cx="10" cy="10" r="9" stroke="currentColor" stroke-width="1.5"/>
+  <path d="M6 10h8m-3.2-3.2L14 10l-3.2 3.2" stroke="currentColor" stroke-width="1.5"
+        stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
+ The reasoner, in detail</a>
+      <span>The developer documentation: the logic program, the external atoms, the
+        request and answer shapes, and the limits.</span>
+    </li>
+  </ul>
+
+  <hr class="rule-dotted rule-dotted--footer">
+</div>
+    </main>
+  </div>
+
+  <footer class="site-footer">
+    <div class="site-footer__inner">
+      
+      <p class="site-footer__funding">
+        DALICC does not replace legal advice.
+      </p>
+      <p class="site-footer__funding">
+        © 2021-2026 DALICC - Verein zur Förderung der Rechtssicherheit in der
+        Datenbewirtschaftung. All rights reserved.
+      </p>
+      <p class="site-footer__partners">
+        DALICC originated in a research project led by USTP, University of Applied Sciences
+        St. Pölten, with the Vienna University of Economics and Business, the University of
+        Innsbruck / STI International, Höhne, In der Maur &amp; Partner Rechtsanwälte OG and
+        the Semantic Web Company, funded by the
+        <a href="https://www.ffg.at/" target="_blank" rel="noopener noreferrer">Austrian Research
+        Promotion Agency (FFG)</a> and
+        <a href="https://www.netidee.at/" target="_blank" rel="noopener noreferrer">netidee</a>.
+      </p>
+    </div>
+  </footer>
+
+  <button type="button" class="back-to-top" data-visible="false" aria-label="Back to top">
+    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" aria-hidden="true" focusable="false">
+      <path d="M12 19V6m-6 6 6-6 6 6" stroke="currentColor" stroke-width="2"
+            stroke-linecap="round" stroke-linejoin="round"/>
+    </svg>
+  </button>
+
+  <script src="../assets/site/site.js" defer></script>
+  <script src="../assets/site/components.js" defer></script>
+  <script src="../assets/site/dashboard.js" defer></script>
+<script src="../assets/site/reasoning.js" defer></script>
+</body>
+</html>

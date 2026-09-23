@@ -1,0 +1,487 @@
+/* SPDX-License-Identifier: AGPL-3.0-only
+ * SPDX-FileCopyrightText: 2021-2026 DALICC - Verein zur Foerderung der Rechtssicherheit in der Datenbewirtschaftung (ZVR 1249185710)
+ */
+/* DALICC site: "How reasoning works" (/reasoning).
+ *
+ * Loaded on top of site.css and components.css, which already carry the buttons, the
+ * tables, the code spans and the dotted rules used here. Only three things are new:
+ * the two column walkthrough, the inline SVG stage, and the two lists of the aside.
+ *
+ * The stage has five states and no script of its own. Every state is a rule keyed on
+ * the data-step attribute of the .rsn element, so static/site/reasoning.js changes
+ * that one attribute and nothing else about the picture. The page is served with
+ * data-step="5", the last state, so a visitor without JavaScript sees a finished
+ * picture next to the five step texts instead of an empty one.
+ *
+ * State five does double duty: it marks the third conflict, which is what its text is
+ * about, and it shows all three conflict badges at once, which makes it the summary of
+ * the whole walkthrough. The alternative, a flat state with every badge and no
+ * emphasis, was tried and says less: it is the state a visitor lands on without
+ * JavaScript, and a picture that still points at something reads better there than one
+ * that points at everything.
+ *
+ * Colours are the tokens of site.css. The two tints below are the red and the green
+ * accent laid over white, and they exist because an SVG shape needs a fill.
+ */
+
+.rsn {
+  --rsn-hot-fill: #fdeceb;
+  --rsn-yes-fill: #eaf7f3;
+  --rsn-dim: 0.22;
+
+  display: grid;
+  grid-template-columns: minmax(0, 1.1fr) minmax(0, 1fr);
+  gap: 32px;
+  align-items: start;
+  margin: 24px 0 40px;
+}
+
+/* ------------------------------------------------------------------- stage */
+
+.rsn__stage {
+  min-width: 0;
+}
+
+.rsn__svg {
+  display: block;
+  width: 100%;
+  max-width: 760px;
+  height: auto;
+  font-family: var(--font-body);
+}
+
+.rsn__legend {
+  max-width: 760px;
+  margin: 10px 0 0;
+  font-size: 15px;
+  color: var(--c-slate-muted);
+}
+
+/* ------------------------------------------------------- steps and stepper */
+
+.rsn__panel {
+  min-width: 0;
+}
+
+.rsn__steps {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.rsn__step p {
+  margin: 0;
+}
+
+.rsn__step:not([hidden]) + .rsn__step:not([hidden]) {
+  margin-top: 22px;
+  padding-top: 20px;
+  border-top: 2px dotted var(--c-rule-strong);
+}
+
+.rsn__step-count {
+  margin: 0 0 2px;
+  font-family: var(--font-display);
+  font-size: 15px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--c-red);
+}
+
+.rsn__step h3 {
+  margin: 0 0 8px;
+  font-size: 24px;
+}
+
+.rsn__controls {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 10px;
+  margin-top: 24px;
+  padding-top: 18px;
+  border-top: 2px dotted var(--c-rule-strong);
+}
+
+/* The stepper is markup the script unhides; [hidden] has to win over the flex box. */
+.rsn__controls[hidden] {
+  display: none;
+}
+
+.rsn__dots {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  list-style: none;
+  margin: 0 4px;
+  padding: 0;
+}
+
+.rsn__dot {
+  display: block;
+  width: 16px;
+  height: 16px;
+  padding: 0;
+  border: 2px solid var(--c-slate-muted);
+  border-radius: 50%;
+  background: transparent;
+  cursor: pointer;
+}
+
+.rsn__dot:hover {
+  border-color: var(--c-red);
+}
+
+.rsn__dot[aria-current="true"] {
+  background: var(--c-red);
+  border-color: var(--c-red);
+}
+
+.rsn__hint {
+  flex: 1 0 100%;
+  margin: 2px 0 0;
+  font-size: 15px;
+  color: var(--c-slate-muted);
+}
+
+/* -------------------------------------------------------- the two licenses */
+
+.rsn-cards,
+.rsn-graph {
+  transition: opacity 0.35s ease;
+}
+
+.rsn-card__box {
+  fill: var(--c-surface);
+  stroke: var(--c-rule-strong);
+  stroke-width: 2;
+}
+
+.rsn-card__band {
+  fill: var(--c-slate);
+}
+
+.rsn-card__name {
+  fill: var(--c-white);
+  font-family: var(--font-display);
+  font-size: 22px;
+  letter-spacing: 0.06em;
+}
+
+.rsn-row__hi {
+  fill: var(--c-peach);
+  opacity: 0;
+  transition: opacity 0.35s ease;
+}
+
+.rsn-row__label {
+  fill: var(--c-ink);
+  font-size: 22px;
+}
+
+.rsn-mark {
+  stroke-width: 2;
+}
+
+.rsn-mark--yes {
+  fill: var(--rsn-yes-fill);
+  stroke: var(--c-green);
+}
+
+.rsn-mark--no {
+  fill: var(--rsn-hot-fill);
+  stroke: var(--c-red);
+}
+
+.rsn-mark--duty {
+  fill: var(--c-surface-alt);
+  stroke: var(--c-slate-muted);
+}
+
+.rsn-glyph {
+  fill: none;
+  stroke-width: 2.4;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.rsn-glyph--yes {
+  stroke: var(--c-green-active);
+}
+
+.rsn-glyph--no {
+  stroke: var(--c-red-dark);
+}
+
+.rsn-dot {
+  fill: var(--c-slate-mid);
+}
+
+/* ---------------------------------------------------------- the action graph */
+
+.rsn-node__box {
+  fill: var(--c-surface-alt);
+  stroke: var(--c-rule-strong);
+  stroke-width: 2;
+  transition: fill 0.3s ease, stroke 0.3s ease;
+}
+
+.rsn-node__label {
+  fill: var(--c-slate-dark);
+  font-size: 22px;
+  transition: fill 0.3s ease;
+}
+
+.rsn-edge {
+  fill: none;
+  stroke: var(--c-slate-muted);
+  stroke-width: 2.4;
+  stroke-linecap: round;
+  stroke-dasharray: 200;
+  stroke-dashoffset: 200;
+  opacity: 0;
+  marker-end: url("#rsn-arrow");
+  transition: stroke-dashoffset 0.7s ease, opacity 0.35s ease, stroke 0.3s ease,
+    stroke-width 0.3s ease;
+}
+
+/* Contradicting is symmetric, so this one has a head at both ends and is red from
+   the start: it is the only statement of a graph that reports a conflict on its own. */
+.rsn-edge--contradicts {
+  stroke: var(--c-red);
+  marker-start: url("#rsn-arrow-red-back");
+  marker-end: url("#rsn-arrow-red");
+}
+
+.rsn-arrow__head {
+  fill: var(--c-slate-muted);
+}
+
+.rsn-arrow__head--hot {
+  fill: var(--c-red);
+}
+
+.rsn-badge {
+  opacity: 0;
+  transition: opacity 0.35s ease;
+}
+
+.rsn-badge__box {
+  fill: var(--c-red);
+}
+
+.rsn-badge__text {
+  fill: var(--c-white);
+  font-family: var(--font-display);
+  font-size: 20px;
+  letter-spacing: 0.08em;
+}
+
+/* ================================================================ the steps */
+
+/* 1. the rules of a license: the two cards, nothing else. */
+.rsn[data-step="1"] .rsn-graph {
+  opacity: var(--rsn-dim);
+}
+
+.rsn[data-step="1"] .rsn-row__hi {
+  opacity: 1;
+}
+
+/* 2. the dependency graph: the actions and every relation between them. */
+.rsn[data-step="2"] .rsn-cards {
+  opacity: 0.45;
+}
+
+.rsn[data-step="2"] .rsn-edge {
+  opacity: 1;
+  stroke-dashoffset: 0;
+}
+
+/* Once drawn, the relations stay drawn. */
+.rsn[data-step="3"] .rsn-edge,
+.rsn[data-step="4"] .rsn-edge,
+.rsn[data-step="5"] .rsn-edge {
+  opacity: 1;
+  stroke-dashoffset: 0;
+}
+
+/* A step about a conflict pushes the relations it does not need into the background.
+   These three rules come after the one above on purpose: same weight, later wins. */
+.rsn[data-step="3"] .rsn-edge,
+.rsn[data-step="4"] .rsn-edge,
+.rsn[data-step="5"] .rsn-edge {
+  opacity: 0.3;
+}
+
+/* 3. a direct conflict: one action, permitted here and prohibited there. */
+.rsn[data-step="3"] #rsn-hi-a1,
+.rsn[data-step="3"] #rsn-hi-b1,
+.rsn[data-step="3"] #rsn-badge-direct {
+  opacity: 1;
+}
+
+.rsn[data-step="3"] #rsn-node-distribute .rsn-node__box {
+  fill: var(--rsn-hot-fill);
+  stroke: var(--c-red);
+}
+
+.rsn[data-step="3"] #rsn-node-distribute .rsn-node__label {
+  fill: var(--c-red-dark);
+}
+
+/* 4. a derived conflict: the permission and the prohibition meet along a chain. */
+.rsn[data-step="4"] #rsn-hi-a2,
+.rsn[data-step="4"] #rsn-hi-b2,
+.rsn[data-step="4"] #rsn-badge-chain {
+  opacity: 1;
+}
+
+.rsn[data-step="4"] #rsn-edge-print-present,
+.rsn[data-step="4"] #rsn-edge-present-use {
+  opacity: 1;
+  stroke: var(--c-red);
+  stroke-width: 3.2;
+  marker-end: url("#rsn-arrow-hot");
+}
+
+.rsn[data-step="4"] #rsn-node-print .rsn-node__box,
+.rsn[data-step="4"] #rsn-node-present .rsn-node__box,
+.rsn[data-step="4"] #rsn-node-use .rsn-node__box {
+  fill: var(--rsn-hot-fill);
+  stroke: var(--c-red);
+}
+
+.rsn[data-step="4"] #rsn-node-print .rsn-node__label,
+.rsn[data-step="4"] #rsn-node-present .rsn-node__label,
+.rsn[data-step="4"] #rsn-node-use .rsn-node__label {
+  fill: var(--c-red-dark);
+}
+
+/* 5. two permissions the graph says cannot both be allowed, and the summary. */
+.rsn[data-step="5"] #rsn-hi-a3,
+.rsn[data-step="5"] #rsn-hi-b3,
+.rsn[data-step="5"] .rsn-badge {
+  opacity: 1;
+}
+
+.rsn[data-step="5"] #rsn-edge-contradicts {
+  opacity: 1;
+  stroke-width: 3.2;
+}
+
+.rsn[data-step="5"] #rsn-node-exclusive .rsn-node__box,
+.rsn[data-step="5"] #rsn-node-commercial .rsn-node__box {
+  fill: var(--rsn-hot-fill);
+  stroke: var(--c-red);
+}
+
+.rsn[data-step="5"] #rsn-node-exclusive .rsn-node__label,
+.rsn[data-step="5"] #rsn-node-commercial .rsn-node__label {
+  fill: var(--c-red-dark);
+}
+
+/* ============================================================== the aside */
+
+.rsn-table code {
+  font-size: 14px;
+}
+
+.rsn-notes {
+  max-width: 54em;
+  margin: 0 0 1.6em;
+  padding-left: 22px;
+}
+
+.rsn-notes li + li {
+  margin-top: 8px;
+}
+
+.rsn-try {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 20px 32px;
+  list-style: none;
+  margin: 0 0 8px;
+  padding: 0;
+}
+
+.rsn-try li {
+  border-top: 2px dotted var(--c-rule-strong);
+  padding-top: 12px;
+}
+
+.rsn-try .arrow-link {
+  font-family: var(--font-display);
+  font-size: 20px;
+  text-transform: uppercase;
+}
+
+.rsn-try span {
+  display: block;
+  margin-top: 4px;
+  font-size: 16px;
+  color: var(--c-ink-soft);
+}
+
+/* ------------------------------------------------------------ narrow screens */
+
+@media (max-width: 768px) {
+  .rsn {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 22px;
+  }
+
+  /* The stage scales with its viewBox, so the labels grow inside the picture rather
+     than shrinking with it. "commercialize", the widest of them, still clears both
+     its card and its node at this size. */
+  .rsn-card__name,
+  .rsn-row__label,
+  .rsn-node__label {
+    font-size: 24px;
+  }
+
+  .rsn-badge__text {
+    font-size: 22px;
+  }
+}
+
+@media (max-width: 450px) {
+  .rsn__step h3 {
+    font-size: 21px;
+  }
+}
+
+/* ----------------------------------------------------------- reduced motion */
+
+/* site.css already shortens every transition to nothing under this preference; the
+   block is repeated here so the stage keeps its behaviour if this file is ever
+   loaded on its own. Each step still changes the picture, it just changes it at once. */
+@media (prefers-reduced-motion: reduce) {
+  .rsn-cards,
+  .rsn-graph,
+  .rsn-row__hi,
+  .rsn-node__box,
+  .rsn-node__label,
+  .rsn-edge,
+  .rsn-badge {
+    transition: none;
+  }
+
+  .rsn-edge {
+    stroke-dasharray: none;
+    stroke-dashoffset: 0;
+  }
+}
+
+/* -------------------------------------------------------------------- print */
+
+@media print {
+  .rsn {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .rsn__controls {
+    display: none;
+  }
+}
