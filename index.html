@@ -1,5 +1,9 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en"
+      data-palette="classic"
+      data-fonts="classic"
+      data-scale="large"
+      data-nav-caps="on">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -11,11 +15,88 @@
   <meta property="og:title" content="DALICC vocabulary">
   <meta property="og:description" content="Reference for the https://dalicc.net/ns# namespace: the actions, duties, policy qualities, clause properties, classes and dependency-graph relations used by the DALICC license library.">
   <meta property="og:url" content="https://dalicc.net/ns">
-  <meta property="og:image" content="https://dalicc.net/static/DALICC_full_logo_RGB.svg?v=3564dd55d12a">
+  <meta property="og:image" content="https://dalicc.net/static/DALICC_full_logo_RGB.svg?v=e3b77d30f4d3">
   <link rel="icon" href="assets/site/favicon.svg" type="image/svg+xml">
   <link rel="apple-touch-icon" href="assets/site/favicon.svg">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+        href="assets/fonts/dalicc-font-webfont.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+        href="assets/fonts/SourceSans3VF-Upright.ttf.woff2">
+  <link rel="stylesheet" href="assets/site/fonts-classic.css">
   <link rel="stylesheet" href="assets/site/site.css">
   <link rel="stylesheet" href="assets/site/components.css">
+  <style>:root {
+  --color-brand: #505d66;
+  --color-brand-dark: #40565b;
+  --color-brand-darker: #2c4247;
+  --color-brand-mid: #5e7479;
+  --color-brand-soft: #c1d5dc;
+  --color-accent: #ea4a3c;
+  --color-accent-strong: #c73a2e;
+  --color-action: #009f7b;
+  --color-action-hover: #14b38f;
+  --color-action-active: #008b67;
+  --color-hero: #5accae;
+  --color-hero-text: #ffffff;
+  --color-hero-button: #40565b;
+  --color-hero-button-hover: #2c4247;
+  --color-band: #fff3ea;
+  --color-page: #ffffff;
+  --color-surface: #ffffff;
+  --color-surface-alt: #f6f9fa;
+  --color-text: #191919;
+  --color-text-soft: #4a4a4a;
+  --color-text-muted: #7c9297;
+  --color-on-brand: #ffffff;
+  --color-on-brand-soft: #dfe8eb;
+  --color-on-brand-faint: #c4d2d7;
+  --color-on-accent: #ffffff;
+  --color-on-action: #ffffff;
+  --color-border: #e6eef0;
+  --color-border-strong: #b3cacf;
+  --color-link: #ea4a3c;
+  --color-link-hover: #c73a2e;
+  --color-focus: #ea4a3c;
+  --color-logo-brand: #505d66;
+  --color-logo-accent: #ea4a3c;
+  --color-ok-surface: #eaf7f3;
+  --color-alert-surface: #fdeeec;
+  --color-warn: #d98c1f;
+  --color-warn-surface: #fdf4e6;
+  --color-graph-surface: #f7fafb;
+  --color-brand-rgb: 80, 93, 102;
+  --color-text-rgb: 25, 25, 25;
+  --color-action-rgb: 0, 159, 123;
+  --font-display: "Dalicc", "Oswald", "Arial Narrow", Arial, sans-serif;
+  --font-body: "Source Sans 3", "Source Sans Pro", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  --font-mono: ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas, monospace;
+  --weight-heading: normal;
+  --transform-heading: uppercase;
+  --tracking-heading: 0.01em;
+  --weight-ui: normal;
+  --tracking-caps: 0.06em;
+  --font-nav: var(--font-display);
+  --transform-nav: uppercase;
+  --tracking-nav: normal;
+  --size-hero: 44px;
+  --size-hero-narrow: 30px;
+  --size-h1: 44px;
+  --size-h1-narrow: 30px;
+  --size-h2: 30px;
+  --size-h2-narrow: 25px;
+  --size-h3: 24px;
+  --size-h3-narrow: 21px;
+  --size-h4: 20px;
+  --size-lede: 19px;
+  --size-body: 18px;
+  --size-ui: 19px;
+  --size-ui-small: 16px;
+  --size-mono: 14px;
+  --size-code: 0.86em;
+  --leading-body: 1.5;
+  --leading-heading: 1.1;
+}
+</style>
 <link rel="stylesheet" href="assets/site/vocabulary.css">
 <link rel="alternate" type="text/turtle" href="dalicc-ns.ttl" title="DALICC vocabulary (Turtle)">
 <style>
@@ -29,8 +110,7 @@
   <header class="site-header">
     <div class="site-header__inner">
       <a class="site-logo" href="index.html">
-        <img src="assets/DALICC_full_logo_RGB.svg" width="121" height="50"
-             alt="DALICC, the Data Licenses Clearance Center">
+        <svg id="Ebene_1" data-name="Ebene 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300.03 123.75"><title>DALICC, the Data Licenses Clearance Center</title><style>.wordmark__dali{fill:var(--color-logo-brand,#505d66)}.wordmark__cc{fill:var(--color-logo-accent,#ea4a3c)}</style><g id="Ebene_2" data-name="Ebene 2"><g id="Ebene_1-2" data-name="Ebene 1-2"><path d="M282.22,76.17a22.35,22.35,0,0,1-26.94-1.42,4.35,4.35,0,0,0-5.85,6.44l.25.21A31.1,31.1,0,0,0,288,82.74l3.82,4.32,6.32-18.91-19.54,4Z" class="wordmark__cc"/><path d="M269.71,35.21a22.33,22.33,0,0,1,12.52,3.85l-3.59,4,19.54,4L291.86,28.2,288,32.5a31,31,0,0,0-18.33-6,31.51,31.51,0,0,0-31.1,31.1A22.17,22.17,0,0,1,216.64,80h-.43a22.4,22.4,0,1,1,14.55-39.44,4.35,4.35,0,1,0,6.34-6,4,4,0,0,0-.7-.6,31.1,31.1,0,1,0-20.2,54.74A30.76,30.76,0,0,0,247.3,58.3q0-.33,0-.66A22.7,22.7,0,0,1,269.71,35.21Z" class="wordmark__cc"/><path d="M123.86,79.29a30.19,30.19,0,0,1-22.12,9.29,29.84,29.84,0,0,1-21.9-9.07,29.86,29.86,0,0,1-9.07-21.9,29.86,29.86,0,0,1,9.07-21.9,31,31,0,0,1,43.79,0,29.82,29.82,0,0,1,9.07,21.9V84.16a4.43,4.43,0,1,1-8.85,0ZM101.74,35.5A22.09,22.09,0,0,0,79.62,57.56v.06a22.1,22.1,0,0,0,22.06,22.12h.06a22.08,22.08,0,0,0,22.12-22.06v-.06A22.09,22.09,0,0,0,101.8,35.5Z" class="wordmark__dali"/><path d="M141.56,4.53a4.32,4.32,0,0,1,1.3-3.12,4.41,4.41,0,0,1,6.24,0h0a4.24,4.24,0,0,1,1.3,3.12v75.2h4.42a4.43,4.43,0,1,1,0,8.85H146a4.44,4.44,0,0,1-4.42-4.42Z" class="wordmark__dali"/><path d="M177.75,13.38a5.31,5.31,0,0,1-1.63,3.9,5.47,5.47,0,0,1-7.73.06l-.07-.06a5.48,5.48,0,0,1-.06-7.74l.06-.06a5.48,5.48,0,0,1,7.74-.06l.06.06A5.31,5.31,0,0,1,177.75,13.38Zm-10,17.69a4.43,4.43,0,1,1,8.85,0V84.16a4.43,4.43,0,1,1-8.85,0Z" class="wordmark__dali"/><path d="M60.63,1.3a4.4,4.4,0,0,0-6.23,0h0a4.32,4.32,0,0,0-1.3,3.12V35.94l-.22-.22A29.81,29.81,0,0,0,31,26.65,29.84,29.84,0,0,0,9.1,35.72,29.89,29.89,0,0,0,0,57.62a29.86,29.86,0,0,0,9.07,21.9A29.87,29.87,0,0,0,31,88.58a29.82,29.82,0,0,0,21.9-9.07l.22-.24v4.89a4.43,4.43,0,1,0,8.85,0V4.42A4.24,4.24,0,0,0,60.63,1.3Zm-14,72A21.3,21.3,0,0,1,31,79.74a21.34,21.34,0,0,1-15.65-6.47,21.37,21.37,0,0,1-6.5-15.65A21.37,21.37,0,0,1,15.32,42,21.34,21.34,0,0,1,31,35.5,21.28,21.28,0,0,1,46.61,42a21.28,21.28,0,0,1,6.47,15.65,21.29,21.29,0,0,1-6.47,15.62Z" class="wordmark__dali"/><path d="M3.34,123.53a1,1,0,0,1-1-1v-16a1,1,0,0,1,1-1H6.06c3.19,0,4.69,1.81,4.69,5.27v7.4c0,3.46-1.49,5.27-4.69,5.27ZM5,108.22v12.67H6c1.41,0,2-.85,2-2.63v-7.4c0-1.78-.59-2.64-2-2.64Z" class="wordmark__dali"/><path d="M19,118.63H16.26l-.93,4.15a1,1,0,0,1-.93.75h-.77a.92.92,0,0,1-1-.88.74.74,0,0,1,0-.26l1.3-5.65,2.42-10.4a1.06,1.06,0,0,1,.93-.75h.58a1,1,0,0,1,.93.75l3.67,16a.93.93,0,0,1-.68,1.14,1,1,0,0,1-.25,0h-.77a1.06,1.06,0,0,1-.93-.75ZM16.87,116h1.49c-.29-1.28-.24-2-.75-4.26Z" class="wordmark__dali"/><path d="M23,106.52a1,1,0,0,1,1-1h7a1,1,0,0,1,1,1v.75a1,1,0,0,1-1,1H28.72v14.32a1,1,0,0,1-1,1H27a1,1,0,0,1-1-1V108.22H23.93a1,1,0,0,1-1-1Z" class="wordmark__dali"/><path d="M38.66,118.63H36l-1,4.15a1,1,0,0,1-.93.75H33.3a.92.92,0,0,1-.95-.88.74.74,0,0,1,0-.26l1.28-5.64,2.42-10.4a1.06,1.06,0,0,1,.93-.75h.58a1,1,0,0,1,.93.75l3.67,16a.93.93,0,0,1-.68,1.14,1,1,0,0,1-.25,0H40.5a1.06,1.06,0,0,1-.93-.75ZM36.56,116h1.49c-.29-1.28-.24-2-.75-4.26Z" class="wordmark__dali"/><path d="M59.49,122.57a1,1,0,0,1-1,1H52.86a1,1,0,0,1-1-1v-16a1,1,0,0,1,1-1h.77a1,1,0,0,1,.93,1v14.35h4a1,1,0,0,1,1,1Z" class="wordmark__dali"/><path d="M64,122.57a1,1,0,0,1-1,1h-.75a1,1,0,0,1-1-1v-16a1,1,0,0,1,1-1H63a1,1,0,0,1,1,1Z" class="wordmark__dali"/><path d="M66,110.78a5.47,5.47,0,0,1,1.44-4.15,4.69,4.69,0,0,1,5.88,0,5.42,5.42,0,0,1,1.41,4.15v.37a1,1,0,0,1-.93,1H73a1,1,0,0,1-1-1v-.37c0-1.78-.58-2.56-1.68-2.56s-1.7.77-1.7,2.56v7.53c0,1.78.56,2.58,1.7,2.58a1.67,1.67,0,0,0,1.22-.48,3.58,3.58,0,0,0,.45-2.1v-.37a1,1,0,0,1,1-1h.77a1,1,0,0,1,.93,1v.37a5.45,5.45,0,0,1-1.39,4.15,4.67,4.67,0,0,1-5.94,0A5.49,5.49,0,0,1,66,118.31Z" class="wordmark__dali"/><path d="M83.4,105.59a1,1,0,0,1,1,1v.72a1,1,0,0,1-1,1H79.32v5h3.35a1,1,0,0,1,1,1V115a1,1,0,0,1-1,1H79.32v5H83.4a1,1,0,0,1,1,1v.72a1,1,0,0,1-1,1H77.65a1,1,0,0,1-1-1v-16a1,1,0,0,1,1-1Z" class="wordmark__dali"/><path d="M93.58,123.53a1.12,1.12,0,0,1-.88-.59L89,113.79v8.78a1,1,0,0,1-1,1h-.77a1,1,0,0,1-1-1v-16a1,1,0,0,1,1-1h.64a1,1,0,0,1,.88.58l3.7,9.16v-8.78a1,1,0,0,1,1-1h.74a1,1,0,0,1,1,1v16a1,1,0,0,1-1,1Z" class="wordmark__dali"/><path d="M97.31,118a1,1,0,0,1,1-1H99a1,1,0,0,1,1,1v.35c0,1.28.24,1.89.61,2.21a1.58,1.58,0,0,0,1.12.35c1.12,0,1.73-.48,1.73-1.89,0-1.25-1.23-2.24-2.53-3.25h0c-1.76-1.38-3.59-2.82-3.59-5.46,0-3,1.57-4.74,4.39-4.74s4.39,1.84,4.39,5.22v.37a1,1,0,0,1-1,1h-.75a1,1,0,0,1-1-1v-.37c0-1.76-.56-2.56-1.73-2.56s-1.73.61-1.73,2,1.31,2.39,2.61,3.41h0c1.76,1.36,3.54,2.72,3.54,5.3,0,3-1.57,4.58-4.39,4.58s-4.39-1.7-4.39-5.19Z" class="wordmark__dali"/><path d="M114.79,105.59a1,1,0,0,1,1,1v.72a1,1,0,0,1-1,1h-4.07v5h3.35a1,1,0,0,1,1,1V115a1,1,0,0,1-1,1h-3.35v5h4.07a1,1,0,0,1,1,1v.72a1,1,0,0,1-1,1H109a1,1,0,0,1-1-1v-16a1,1,0,0,1,1-1Z" class="wordmark__dali"/><path d="M117.51,118a1,1,0,0,1,1-1h.75a1,1,0,0,1,1,1v.35c0,1.28.24,1.89.61,2.21a1.58,1.58,0,0,0,1.12.35c1.12,0,1.73-.48,1.73-1.89,0-1.25-1.23-2.24-2.53-3.25h0c-1.76-1.38-3.59-2.82-3.59-5.46,0-3,1.57-4.74,4.39-4.74s4.39,1.84,4.39,5.22v.37a1,1,0,0,1-1,1h-.75a1,1,0,0,1-1-1v-.37c0-1.76-.56-2.56-1.73-2.56s-1.73.61-1.73,2,1.31,2.39,2.61,3.41h0c1.76,1.36,3.54,2.72,3.54,5.3,0,3-1.57,4.58-4.39,4.58s-4.39-1.7-4.39-5.19Z" class="wordmark__dali"/><path d="M136.05,110.78a5.47,5.47,0,0,1,1.44-4.15,4.69,4.69,0,0,1,5.88,0,5.46,5.46,0,0,1,1.41,4.15v.37a1,1,0,0,1-.93,1h-.77a1,1,0,0,1-1-1v-.37c0-1.78-.59-2.56-1.68-2.56s-1.7.77-1.7,2.56v7.53c0,1.78.56,2.58,1.7,2.58a1.67,1.67,0,0,0,1.22-.48,3.58,3.58,0,0,0,.45-2.1v-.37a1,1,0,0,1,1-1h.77a1,1,0,0,1,.93,1v.37a5.45,5.45,0,0,1-1.38,4.15,4.67,4.67,0,0,1-5.94,0,5.5,5.5,0,0,1-1.41-4.15Z" class="wordmark__dali"/><path d="M154.29,122.57a1,1,0,0,1-1,1h-5.67a1,1,0,0,1-1-1v-16a1,1,0,0,1,1-1h.77a1,1,0,0,1,.93,1v14.35h4a1,1,0,0,1,1,1Z" class="wordmark__dali"/><path d="M162.83,105.59a1,1,0,0,1,1,1v.72a1,1,0,0,1-1,1h-4.07v5h3.35a1,1,0,0,1,1,1V115a1,1,0,0,1-1,1h-3.35v5h4.07a1,1,0,0,1,1,1v.72a1,1,0,0,1-1,1h-5.75a1,1,0,0,1-1-1v-16a1,1,0,0,1,1-1Z" class="wordmark__dali"/><path d="M172.09,118.63h-2.71l-.93,4.15a1,1,0,0,1-.93.75h-.77a.92.92,0,0,1-.95-.88.74.74,0,0,1,0-.26l1.28-5.64,2.42-10.4a1.06,1.06,0,0,1,.93-.75H171a1,1,0,0,1,.93.75l3.67,16a.93.93,0,0,1-.68,1.14,1,1,0,0,1-.25,0h-.77a1.06,1.06,0,0,1-.93-.75ZM170,116h1.49c-.29-1.28-.24-2-.75-4.26Z" class="wordmark__dali"/><path d="M186.25,122.54a1,1,0,0,1-1,1h-.75a1,1,0,0,1-1-1V118.1a1.86,1.86,0,0,0-1.64-2.07,1.45,1.45,0,0,0-.36,0h-1.2v6.52a1,1,0,0,1-.93,1h-.75a1,1,0,0,1-1-1v-16a1,1,0,0,1,1-1H182c3.27,0,4.42,1.65,4.42,5.22a5.23,5.23,0,0,1-1.12,3.81l-.21.21a4.59,4.59,0,0,1,1.14,3.3Zm-5.91-9.21h1.2c1.49,0,2.26-.74,2.26-2.55s-.4-2.56-1.78-2.56h-1.68Z" class="wordmark__dali"/><path d="M194.68,118.63H192l-.93,4.15a1,1,0,0,1-.93.75h-.77a.92.92,0,0,1-1-.88.74.74,0,0,1,0-.26l1.28-5.64,2.42-10.4a1.06,1.06,0,0,1,.93-.75h.58a1,1,0,0,1,.93.75l3.67,16a.93.93,0,0,1-.68,1.14,1,1,0,0,1-.25,0h-.77a1.06,1.06,0,0,1-.93-.75Zm-2.1-2.63h1.49c-.29-1.28-.24-2-.75-4.26Z" class="wordmark__dali"/><path d="M207.54,123.53a1.1,1.1,0,0,1-.88-.59l-3.7-9.16v8.78a1,1,0,0,1-1,1h-.77a1,1,0,0,1-1-1v-16a1,1,0,0,1,1-1h.64a1,1,0,0,1,.88.58l3.7,9.16v-8.78a1,1,0,0,1,1-1h.75a1,1,0,0,1,1,1v16a1,1,0,0,1-1,1Z" class="wordmark__dali"/><path d="M211.3,110.78a5.47,5.47,0,0,1,1.44-4.15,4.69,4.69,0,0,1,5.88,0,5.42,5.42,0,0,1,1.41,4.15v.37a1,1,0,0,1-.93,1h-.77a1,1,0,0,1-1-1v-.37c0-1.78-.58-2.56-1.68-2.56s-1.7.77-1.7,2.56v7.53c0,1.78.56,2.58,1.7,2.58a1.67,1.67,0,0,0,1.22-.48,3.58,3.58,0,0,0,.45-2.1v-.37a1,1,0,0,1,1-1h.77a1,1,0,0,1,.93,1v.37a5.45,5.45,0,0,1-1.39,4.15,4.67,4.67,0,0,1-5.94,0,5.54,5.54,0,0,1-1.41-4.15Z" class="wordmark__dali"/><path d="M228.73,105.59a1,1,0,0,1,1,1v.72a1,1,0,0,1-1,1h-4.07v5H228a1,1,0,0,1,1,1V115a1,1,0,0,1-1,1h-3.35v5h4.07a1,1,0,0,1,1,1v.72a1,1,0,0,1-1,1H223a1,1,0,0,1-1-1v-16a1,1,0,0,1,1-1Z" class="wordmark__dali"/><path d="M239.38,110.78a5.47,5.47,0,0,1,1.44-4.15,4.69,4.69,0,0,1,5.88,0,5.42,5.42,0,0,1,1.41,4.15v.37a1,1,0,0,1-.93,1h-.77a1,1,0,0,1-1-1v-.37c0-1.78-.58-2.56-1.68-2.56s-1.7.77-1.7,2.56v7.53c0,1.78.56,2.58,1.7,2.58a1.67,1.67,0,0,0,1.22-.48,3.58,3.58,0,0,0,.45-2.1v-.37a1,1,0,0,1,1-1h.77a1,1,0,0,1,.93,1v.37a5.45,5.45,0,0,1-1.39,4.15,4.67,4.67,0,0,1-5.94,0,5.54,5.54,0,0,1-1.41-4.15Z" class="wordmark__dali"/><path d="M256.81,105.59a1,1,0,0,1,1,1v.72a1,1,0,0,1-1,1h-4.07v5h3.35a1,1,0,0,1,1,1V115a1,1,0,0,1-1,1h-3.35v5h4.07a1,1,0,0,1,1,1v.72a1,1,0,0,1-1,1h-5.75a1,1,0,0,1-1-1v-16a1,1,0,0,1,1-1Z" class="wordmark__dali"/><path d="M267,123.53a1.12,1.12,0,0,1-.88-.59l-3.7-9.16v8.78a1,1,0,0,1-1,1h-.77a1,1,0,0,1-1-1v-16a1,1,0,0,1,1-1h.64a1,1,0,0,1,.88.58l3.7,9.16v-8.78a1,1,0,0,1,1-1h.74a1,1,0,0,1,1,1v16a1,1,0,0,1-1,1Z" class="wordmark__dali"/><path d="M270.69,106.52a1,1,0,0,1,1-1h7a1,1,0,0,1,1,1v.75a1,1,0,0,1-1,1h-2.18v14.32a1,1,0,0,1-1,1h-.72a1,1,0,0,1-1-1V108.22h-2.16a1,1,0,0,1-1-1Z" class="wordmark__dali"/><path d="M288.32,105.59a1,1,0,0,1,1,1v.72a1,1,0,0,1-1,1h-4.07v5h3.35a1,1,0,0,1,1,1V115a1,1,0,0,1-1,1h-3.35v5h4.07a1,1,0,0,1,1,1v.72a1,1,0,0,1-1,1h-5.75a1,1,0,0,1-1-1v-16a1,1,0,0,1,1-1Z" class="wordmark__dali"/><path d="M299.81,122.54a1,1,0,0,1-1,1h-.75a1,1,0,0,1-1-1V118.1a1.87,1.87,0,0,0-1.62-2.09,1.9,1.9,0,0,0-.34,0h-1.2v6.52a1,1,0,0,1-.93,1h-.75a1,1,0,0,1-1-1v-16a1,1,0,0,1,1-1h3.35c3.27,0,4.42,1.65,4.42,5.22a5.23,5.23,0,0,1-1.12,3.81l-.21.21a4.59,4.59,0,0,1,1.14,3.3Zm-5.91-9.21h1.2c1.49,0,2.26-.74,2.26-2.55s-.4-2.56-1.78-2.56H293.9Z" class="wordmark__dali"/></g></g></svg>
       </a>
       
 
@@ -70,7 +150,7 @@
   <div class="flash flash--info" role="status">
     <span class="flash__icon" aria-hidden="true">&#8505;</span>
     <div class="flash__body">
-      <p style="margin:0">Static mirror of https://dalicc.net/ns, vocabulary version 6, generated on 2026-09-23; the live pages may be newer.</p>
+      <p style="margin:0">Static mirror of https://dalicc.net/ns, vocabulary version 7, generated on 2026-09-23; the live pages may be newer.</p>
     </div>
   </div>
 </div>
@@ -107,7 +187,7 @@
       <a href="https://github.com/dalicc/dalicc.github.io" rel="noopener noreferrer">dalicc.github.io</a>
       (last updated in March 2022). Every definition from that document is reproduced here
       verbatim, and the terms it did not cover have been added.
-107 terms are documented here. Each one
+135 terms are documented here. Each one
       says how much of the 581-license library actually uses it.    </p>
   </div>
 
@@ -179,7 +259,7 @@
     <ul>
       <li>
         <a href="#group-actions">Actions</a>
-        <span class="vocab-toc__count">41</span>
+        <span class="vocab-toc__count">43</span>
       </li>
       <li>
         <a href="#group-duties">Duties and notices</a>
@@ -187,15 +267,15 @@
       </li>
       <li>
         <a href="#group-qualities">Policy qualities</a>
-        <span class="vocab-toc__count">23</span>
+        <span class="vocab-toc__count">38</span>
       </li>
       <li>
         <a href="#group-clauses">Clause properties</a>
-        <span class="vocab-toc__count">21</span>
+        <span class="vocab-toc__count">28</span>
       </li>
       <li>
         <a href="#group-classes">Classes</a>
-        <span class="vocab-toc__count">10</span>
+        <span class="vocab-toc__count">14</span>
       </li>
       <li>
         <a href="#group-relations">Dependency-graph relations</a>
@@ -244,11 +324,13 @@
     <li><a href="#recipientAssent">dalicc:recipientAssent</a></li>
     <li><a href="#recipientRegistrationRequest">dalicc:recipientRegistrationRequest</a></li>
     <li><a href="#redistribute">dalicc:redistribute</a></li>
+    <li><a href="#reverseEngineerForInteroperability">dalicc:reverseEngineerForInteroperability</a></li>
     <li><a href="#royaltyCollectionReserved">dalicc:royaltyCollectionReserved</a></li>
     <li><a href="#sellCopy">dalicc:sellCopy</a></li>
     <li><a href="#standardsConformance">dalicc:standardsConformance</a></li>
     <li><a href="#sublicense">dalicc:sublicense</a></li>
     <li><a href="#suiGenerisDatabaseRights">dalicc:suiGenerisDatabaseRights</a></li>
+    <li><a href="#textAndDataMining">dalicc:textAndDataMining</a></li>
     <li><a href="#useForModelTraining">dalicc:useForModelTraining</a></li>
   </ul>
 
@@ -903,7 +985,7 @@ this term, such a claim ends the patent license, or the whole license, as the te
 <p class="text-muted">Occurs 334 times in 332 licenses, almost always as an odrl:Prohibition: most licenses forbid trademark use.</p>
     <dl class="term-card__meta">
       <dt>Status</dt>
-      <dd>Used in 520 of 581 licenses</dd>
+      <dd>Used in 363 of 581 licenses</dd>
       <dt>See also</dt>
       <dd class="term-card__links">
 <a href="index.html#PromotionSpecification"><code>dalicc:PromotionSpecification</code></a><a href="index.html#trademarkNotice"><code>dalicc:trademarkNotice</code></a>      </dd>
@@ -1050,6 +1132,28 @@ and report the modifications they make to it, so that the steward can keep a rec
       </dd>
     </dl>
   </section>
+  <section class="term-card" id="reverseEngineerForInteroperability">
+    <h3>
+      Reverse engineer for interoperability
+<span class="term-card__kind">dalicc:RuleAction</span><span class="term-card__kind">odrl:Action</span><span class="term-card__kind">skos:Concept</span>    </h3>
+
+    <p class="term-card__iri">
+      <code>https://dalicc.net/ns#reverseEngineerForInteroperability</code>
+      <button type="button" class="term-card__copy" data-copy="https://dalicc.net/ns#reverseEngineerForInteroperability"
+              aria-label="Copy the IRI of Reverse engineer for interoperability to the clipboard">Copy</button>
+    </p>
+
+<p class="term-card__definition">Decompiling or otherwise analysing a program so far as is necessary to obtain
+the information needed to make an independently created program work with it. It is narrower
+than reverse engineering at large: the purpose is interoperability and nothing else.</p><p class="text-muted">Added with version 7 of the vocabulary so that the European interoperability exception can be stated as a default rule; not used by any license in the current library.</p>
+    <dl class="term-card__meta">
+      <dt>Status</dt>
+      <dd>Not used in the current library</dd>
+      <dt>See also</dt>
+      <dd class="term-card__links">
+<a href="http://creativecommons.org/ns#SourceCode" rel="noopener noreferrer"><code>cc:SourceCode</code></a><a href="index.html#textAndDataMining"><code>dalicc:textAndDataMining</code></a><a href="http://www.w3.org/ns/odrl/2/extract" rel="noopener noreferrer"><code>odrl:extract</code></a>      </dd>
+    </dl>
+  </section>
   <section class="term-card" id="royaltyCollectionReserved">
     <h3>
       Royalty collection reserved
@@ -1161,10 +1265,33 @@ obtaining, verifying or presenting the contents of a database, separately from a
 in the database or in its contents.</p><p class="text-muted">Added by the license library review of 2026-09-15, which recorded the clause as a vocabulary gap. Applied to 8 license records by the standard-license addition of 2026-09-15.</p>
     <dl class="term-card__meta">
       <dt>Status</dt>
-      <dd>Used in 8 of 581 licenses</dd>
+      <dd>Used in 98 of 581 licenses</dd>
       <dt>See also</dt>
       <dd class="term-card__links">
 <a href="index.html#databaseRightWaiver"><code>dalicc:databaseRightWaiver</code></a><a href="http://purl.org/dc/dcmitype/Dataset" rel="noopener noreferrer"><code>dcmitype:Dataset</code></a><a href="http://www.w3.org/ns/odrl/2/extract" rel="noopener noreferrer"><code>odrl:extract</code></a>      </dd>
+    </dl>
+  </section>
+  <section class="term-card" id="textAndDataMining">
+    <h3>
+      Text and data mining
+<span class="term-card__kind">dalicc:RuleAction</span><span class="term-card__kind">odrl:Action</span><span class="term-card__kind">skos:Concept</span>    </h3>
+
+    <p class="term-card__iri">
+      <code>https://dalicc.net/ns#textAndDataMining</code>
+      <button type="button" class="term-card__copy" data-copy="https://dalicc.net/ns#textAndDataMining"
+              aria-label="Copy the IRI of Text and data mining to the clipboard">Copy</button>
+    </p>
+
+<p class="term-card__definition">Automated analysis of the work in digital form to generate information about
+patterns, trends and correlations in it, which is the act the European and British mining
+exceptions describe. It covers the copying a mining run makes, whether or not a model is trained
+from the result.</p><p class="text-muted">Added with version 7 of the vocabulary so that the mining exceptions can be stated as default rules; not used by any license in the current library. dalicc:useForModelTraining stays the narrower act of training a system on the work.</p>
+    <dl class="term-card__meta">
+      <dt>Status</dt>
+      <dd>Not used in the current library</dd>
+      <dt>See also</dt>
+      <dd class="term-card__links">
+<a href="index.html#useForModelTraining"><code>dalicc:useForModelTraining</code></a><a href="http://www.w3.org/ns/odrl/2/extract" rel="noopener noreferrer"><code>odrl:extract</code></a><a href="http://www.w3.org/ns/odrl/2/reproduce" rel="noopener noreferrer"><code>odrl:reproduce</code></a>      </dd>
     </dl>
   </section>
   <section class="term-card" id="useForModelTraining">
@@ -1406,19 +1533,32 @@ Work and reproducing the content of the notice file.</p><p class="text-muted">De
   <hr class="rule-dotted">
 <p class="page-lede">Values that describe the license itself: how long it is valid, where it is valid, whether it can be revoked, whether it costs anything.</p>
   <ul class="term-index" aria-label="Terms in Policy qualities">
+    <li><a href="#Adopted">dalicc:Adopted</a></li>
     <li><a href="#alternativeConditionSet">dalicc:alternativeConditionSet</a></li>
     <li><a href="#Approved">dalicc:Approved</a></li>
     <li><a href="#Audited">dalicc:Audited</a></li>
+    <li><a href="#BR">dalicc:BR</a></li>
+    <li><a href="#CN">dalicc:CN</a></li>
     <li><a href="#compatibleLicenseTest">dalicc:compatibleLicenseTest</a></li>
     <li><a href="#Created">dalicc:Created</a></li>
     <li><a href="#curePeriod">dalicc:curePeriod</a></li>
+    <li><a href="#EU">dalicc:EU</a></li>
     <li><a href="#fieldOfUseRestriction">dalicc:fieldOfUseRestriction</a></li>
+    <li><a href="#FromDefaultRule">dalicc:FromDefaultRule</a></li>
+    <li><a href="#FromText">dalicc:FromText</a></li>
     <li><a href="#governingLaw">dalicc:governingLaw</a></li>
     <li><a href="#governmentRightsLimitation">dalicc:governmentRightsLimitation</a></li>
+    <li><a href="#GrantedByDefault">dalicc:GrantedByDefault</a></li>
+    <li><a href="#IN">dalicc:IN</a></li>
     <li><a href="#irrevocable">dalicc:irrevocable</a></li>
+    <li><a href="#JP">dalicc:JP</a></li>
+    <li><a href="#NotGrantedByDefault">dalicc:NotGrantedByDefault</a></li>
+    <li><a href="#NotWaivable">dalicc:NotWaivable</a></li>
     <li><a href="#patentFree">dalicc:patentFree</a></li>
     <li><a href="#perpetual">dalicc:perpetual</a></li>
+    <li><a href="#Proposed">dalicc:Proposed</a></li>
     <li><a href="#reciprocityScope">dalicc:reciprocityScope</a></li>
+    <li><a href="#RequiredByDefault">dalicc:RequiredByDefault</a></li>
     <li><a href="#Reviewed">dalicc:Reviewed</a></li>
     <li><a href="#royaltyFree">dalicc:royaltyFree</a></li>
     <li><a href="#royalityFree">dalicc:royalityFree</a></li>
@@ -1428,9 +1568,32 @@ Work and reproducing the content of the notice file.</p><p class="text-muted">De
     <li><a href="#specifyPeriod">dalicc:specifyPeriod</a></li>
     <li><a href="#terminationOnBreach">dalicc:terminationOnBreach</a></li>
     <li><a href="#testFixture">dalicc:testFixture</a></li>
+    <li><a href="#GB">dalicc:GB</a></li>
+    <li><a href="#US">dalicc:US</a></li>
     <li><a href="#worldwide">dalicc:worldwide</a></li>
   </ul>
 
+  <section class="term-card" id="Adopted">
+    <h3>
+      Adopted
+<span class="term-card__kind">dalicc:RuleStatus</span><span class="term-card__kind">skos:Concept</span>    </h3>
+
+    <p class="term-card__iri">
+      <code>https://dalicc.net/ns#Adopted</code>
+      <button type="button" class="term-card__copy" data-copy="https://dalicc.net/ns#Adopted"
+              aria-label="Copy the IRI of Adopted to the clipboard">Copy</button>
+    </p>
+
+<p class="term-card__definition">The rule takes part in reasoning under every graph that carries it. Only a rule
+the library has adopted is applied when a reader chooses nothing.</p>
+    <dl class="term-card__meta">
+      <dt>Status</dt>
+      <dd>Used by 1 dependency-graph axioms</dd>
+      <dt>See also</dt>
+      <dd class="term-card__links">
+<a href="index.html#Proposed"><code>dalicc:Proposed</code></a><a href="index.html#ruleStatus"><code>dalicc:ruleStatus</code></a>      </dd>
+    </dl>
+  </section>
   <section class="term-card" id="alternativeConditionSet">
     <h3>
       Alternative condition set
@@ -1491,6 +1654,46 @@ the alternatives are quoted and this property records that they are alternatives
       <dt>See also</dt>
       <dd class="term-card__links">
 <a href="index.html#reviewStatus"><code>dalicc:reviewStatus</code></a>      </dd>
+    </dl>
+  </section>
+  <section class="term-card" id="BR">
+    <h3>
+      Brazil
+<span class="term-card__kind">dalicc:Jurisdiction</span><span class="term-card__kind">skos:Concept</span>    </h3>
+
+    <p class="term-card__iri">
+      <code>https://dalicc.net/ns#BR</code>
+      <button type="button" class="term-card__copy" data-copy="https://dalicc.net/ns#BR"
+              aria-label="Copy the IRI of Brazil to the clipboard">Copy</button>
+    </p>
+
+<p class="term-card__definition">The Federative Republic of Brazil.</p>
+    <dl class="term-card__meta">
+      <dt>Status</dt>
+      <dd>Not used in the current library</dd>
+      <dt>See also</dt>
+      <dd class="term-card__links">
+<a href="http://creativecommons.org/ns#jurisdiction" rel="noopener noreferrer"><code>cc:jurisdiction</code></a>      </dd>
+    </dl>
+  </section>
+  <section class="term-card" id="CN">
+    <h3>
+      China
+<span class="term-card__kind">dalicc:Jurisdiction</span><span class="term-card__kind">skos:Concept</span>    </h3>
+
+    <p class="term-card__iri">
+      <code>https://dalicc.net/ns#CN</code>
+      <button type="button" class="term-card__copy" data-copy="https://dalicc.net/ns#CN"
+              aria-label="Copy the IRI of China to the clipboard">Copy</button>
+    </p>
+
+<p class="term-card__definition">The People&#39;s Republic of China, excluding the special administrative regions, whose copyright law is separate.</p>
+    <dl class="term-card__meta">
+      <dt>Status</dt>
+      <dd>Not used in the current library</dd>
+      <dt>See also</dt>
+      <dd class="term-card__links">
+<a href="http://creativecommons.org/ns#jurisdiction" rel="noopener noreferrer"><code>cc:jurisdiction</code></a>      </dd>
     </dl>
   </section>
   <section class="term-card" id="compatibleLicenseTest">
@@ -1557,6 +1760,28 @@ dalicc:terminatesOnBreach says the termination is immediate.</p><p class="text-m
 <a href="index.html#terminatesOnBreach"><code>dalicc:terminatesOnBreach</code></a>      </dd>
     </dl>
   </section>
+  <section class="term-card" id="EU">
+    <h3>
+      European Union
+<span class="term-card__kind">dalicc:Jurisdiction</span><span class="term-card__kind">skos:Concept</span>    </h3>
+
+    <p class="term-card__iri">
+      <code>https://dalicc.net/ns#EU</code>
+      <button type="button" class="term-card__copy" data-copy="https://dalicc.net/ns#EU"
+              aria-label="Copy the IRI of European Union to the clipboard">Copy</button>
+    </p>
+
+<p class="term-card__definition">The member states of the European Union. A rule in this jurisdiction rests on
+a Union instrument, which reaches every member state once it is transposed; where a member state
+differs, a rule for that country says so.</p><p class="text-muted">27 member states. The United Kingdom left the Union in 2020 and is dalicc:GB, which keeps some of the same law and has diverged in others.</p>
+    <dl class="term-card__meta">
+      <dt>Status</dt>
+      <dd>Not used in the current library</dd>
+      <dt>See also</dt>
+      <dd class="term-card__links">
+<a href="http://creativecommons.org/ns#jurisdiction" rel="noopener noreferrer"><code>cc:jurisdiction</code></a><a href="index.html#worldwide"><code>dalicc:worldwide</code></a>      </dd>
+    </dl>
+  </section>
   <section class="term-card" id="fieldOfUseRestriction">
     <h3>
       Field of use restriction
@@ -1577,6 +1802,48 @@ this property names the field.</p><p class="text-muted">Added by the standard-li
       <dt>See also</dt>
       <dd class="term-card__links">
 <a href="http://creativecommons.org/ns#CommercialUse" rel="noopener noreferrer"><code>cc:CommercialUse</code></a><a href="index.html#computationalUseOnly"><code>dalicc:computationalUseOnly</code></a>      </dd>
+    </dl>
+  </section>
+  <section class="term-card" id="FromDefaultRule">
+    <h3>
+      From a default rule
+<span class="term-card__kind">dalicc:StatementOrigin</span><span class="term-card__kind">skos:Concept</span>    </h3>
+
+    <p class="term-card__iri">
+      <code>https://dalicc.net/ns#FromDefaultRule</code>
+      <button type="button" class="term-card__copy" data-copy="https://dalicc.net/ns#FromDefaultRule"
+              aria-label="Copy the IRI of From a default rule to the clipboard">Copy</button>
+    </p>
+
+<p class="term-card__definition">The statement was derived, for an action the license is silent on, by a
+dalicc:DefaultRule of the dependency graph the check ran under. The rule that produced it is
+named beside it.</p>
+    <dl class="term-card__meta">
+      <dt>Status</dt>
+      <dd>Not used in the current library</dd>
+      <dt>See also</dt>
+      <dd class="term-card__links">
+<a href="index.html#DefaultRule"><code>dalicc:DefaultRule</code></a><a href="index.html#FromText"><code>dalicc:FromText</code></a>      </dd>
+    </dl>
+  </section>
+  <section class="term-card" id="FromText">
+    <h3>
+      From the text
+<span class="term-card__kind">dalicc:StatementOrigin</span><span class="term-card__kind">skos:Concept</span>    </h3>
+
+    <p class="term-card__iri">
+      <code>https://dalicc.net/ns#FromText</code>
+      <button type="button" class="term-card__copy" data-copy="https://dalicc.net/ns#FromText"
+              aria-label="Copy the IRI of From the text to the clipboard">Copy</button>
+    </p>
+
+<p class="term-card__definition">The statement is modelled from a sentence of the license text, which is what every curated record holds.</p>
+    <dl class="term-card__meta">
+      <dt>Status</dt>
+      <dd>Not used in the current library</dd>
+      <dt>See also</dt>
+      <dd class="term-card__links">
+<a href="index.html#FromDefaultRule"><code>dalicc:FromDefaultRule</code></a><a href="index.html#statementOrigin"><code>dalicc:statementOrigin</code></a>      </dd>
     </dl>
   </section>
   <section class="term-card" id="governingLaw">
@@ -1622,6 +1889,48 @@ making the governing law depend on which government the licensee is.</p><p class
 <a href="index.html#additionalClauses"><code>dalicc:additionalClauses</code></a><a href="index.html#governingLaw"><code>dalicc:governingLaw</code></a>      </dd>
     </dl>
   </section>
+  <section class="term-card" id="GrantedByDefault">
+    <h3>
+      Granted by default
+<span class="term-card__kind">dalicc:DefaultOutcome</span><span class="term-card__kind">skos:Concept</span>    </h3>
+
+    <p class="term-card__iri">
+      <code>https://dalicc.net/ns#GrantedByDefault</code>
+      <button type="button" class="term-card__copy" data-copy="https://dalicc.net/ns#GrantedByDefault"
+              aria-label="Copy the IRI of Granted by default to the clipboard">Copy</button>
+    </p>
+
+<p class="term-card__definition">The action is permitted unless the license prohibits it, for example because a
+statutory exception allows it whatever the license says. A check under a graph that adopts the
+rule reads the silence as a permission and marks the finding as coming from the rule.</p>
+    <dl class="term-card__meta">
+      <dt>Status</dt>
+      <dd>Not used in the current library</dd>
+      <dt>See also</dt>
+      <dd class="term-card__links">
+<a href="index.html#NotGrantedByDefault"><code>dalicc:NotGrantedByDefault</code></a><a href="index.html#NotWaivable"><code>dalicc:NotWaivable</code></a>      </dd>
+    </dl>
+  </section>
+  <section class="term-card" id="IN">
+    <h3>
+      India
+<span class="term-card__kind">dalicc:Jurisdiction</span><span class="term-card__kind">skos:Concept</span>    </h3>
+
+    <p class="term-card__iri">
+      <code>https://dalicc.net/ns#IN</code>
+      <button type="button" class="term-card__copy" data-copy="https://dalicc.net/ns#IN"
+              aria-label="Copy the IRI of India to the clipboard">Copy</button>
+    </p>
+
+<p class="term-card__definition">The Republic of India.</p>
+    <dl class="term-card__meta">
+      <dt>Status</dt>
+      <dd>Not used in the current library</dd>
+      <dt>See also</dt>
+      <dd class="term-card__links">
+<a href="http://creativecommons.org/ns#jurisdiction" rel="noopener noreferrer"><code>cc:jurisdiction</code></a>      </dd>
+    </dl>
+  </section>
   <section class="term-card" id="irrevocable">
     <h3>
       Irrevocable
@@ -1643,6 +1952,70 @@ be terminated for convenience, but still may be terminated for breach.</p><p cla
         <a href="https://github.com/dalicc/dalicc.github.io" rel="noopener noreferrer">the 2022 DALICC
         vocabulary documentation</a>, verbatim
       </dd>
+    </dl>
+  </section>
+  <section class="term-card" id="JP">
+    <h3>
+      Japan
+<span class="term-card__kind">dalicc:Jurisdiction</span><span class="term-card__kind">skos:Concept</span>    </h3>
+
+    <p class="term-card__iri">
+      <code>https://dalicc.net/ns#JP</code>
+      <button type="button" class="term-card__copy" data-copy="https://dalicc.net/ns#JP"
+              aria-label="Copy the IRI of Japan to the clipboard">Copy</button>
+    </p>
+
+<p class="term-card__definition">Japan.</p>
+    <dl class="term-card__meta">
+      <dt>Status</dt>
+      <dd>Not used in the current library</dd>
+      <dt>See also</dt>
+      <dd class="term-card__links">
+<a href="http://creativecommons.org/ns#jurisdiction" rel="noopener noreferrer"><code>cc:jurisdiction</code></a>      </dd>
+    </dl>
+  </section>
+  <section class="term-card" id="NotGrantedByDefault">
+    <h3>
+      Not granted by default
+<span class="term-card__kind">dalicc:DefaultOutcome</span><span class="term-card__kind">skos:Concept</span>    </h3>
+
+    <p class="term-card__iri">
+      <code>https://dalicc.net/ns#NotGrantedByDefault</code>
+      <button type="button" class="term-card__copy" data-copy="https://dalicc.net/ns#NotGrantedByDefault"
+              aria-label="Copy the IRI of Not granted by default to the clipboard">Copy</button>
+    </p>
+
+<p class="term-card__definition">The action is not permitted unless the license permits it. A license that says
+nothing grants nothing, so a check under a graph that adopts the rule reads the silence as a
+prohibition and marks the finding as coming from the rule.</p>
+    <dl class="term-card__meta">
+      <dt>Status</dt>
+      <dd>Used by 1 dependency-graph axioms</dd>
+      <dt>See also</dt>
+      <dd class="term-card__links">
+<a href="index.html#GrantedByDefault"><code>dalicc:GrantedByDefault</code></a><a href="index.html#defaultOutcome"><code>dalicc:defaultOutcome</code></a>      </dd>
+    </dl>
+  </section>
+  <section class="term-card" id="NotWaivable">
+    <h3>
+      Not waivable
+<span class="term-card__kind">dalicc:DefaultOutcome</span><span class="term-card__kind">skos:Concept</span>    </h3>
+
+    <p class="term-card__iri">
+      <code>https://dalicc.net/ns#NotWaivable</code>
+      <button type="button" class="term-card__copy" data-copy="https://dalicc.net/ns#NotWaivable"
+              aria-label="Copy the IRI of Not waivable to the clipboard">Copy</button>
+    </p>
+
+<p class="term-card__definition">A statement of the license to the contrary has no effect in that jurisdiction.
+The reasoner reports it as a finding when the license prohibits the action; it never silently
+overrides what the license says, because what the license says is what the record models.</p>
+    <dl class="term-card__meta">
+      <dt>Status</dt>
+      <dd>Not used in the current library</dd>
+      <dt>See also</dt>
+      <dd class="term-card__links">
+<a href="index.html#GrantedByDefault"><code>dalicc:GrantedByDefault</code></a><a href="index.html#moralRightsRestriction"><code>dalicc:moralRightsRestriction</code></a>      </dd>
     </dl>
   </section>
   <section class="term-card" id="patentFree">
@@ -1696,6 +2069,27 @@ Contribution(s) with the Licensed Material to which such Contribution(s) was sub
       </dd>
     </dl>
   </section>
+  <section class="term-card" id="Proposed">
+    <h3>
+      Proposed
+<span class="term-card__kind">dalicc:RuleStatus</span><span class="term-card__kind">skos:Concept</span>    </h3>
+
+    <p class="term-card__iri">
+      <code>https://dalicc.net/ns#Proposed</code>
+      <button type="button" class="term-card__copy" data-copy="https://dalicc.net/ns#Proposed"
+              aria-label="Copy the IRI of Proposed to the clipboard">Copy</button>
+    </p>
+
+<p class="term-card__definition">The rule is written down for review and is not part of any default check.
+Choosing the graph it lives in is the reader&#39;s request to see what it would do.</p><p class="text-muted">A proposed rule is a question for the association&#39;s legal reviewer and not legal advice.</p>
+    <dl class="term-card__meta">
+      <dt>Status</dt>
+      <dd>Not used in the current library</dd>
+      <dt>See also</dt>
+      <dd class="term-card__links">
+<a href="index.html#Adopted"><code>dalicc:Adopted</code></a><a href="index.html#ruleStatus"><code>dalicc:ruleStatus</code></a>      </dd>
+    </dl>
+  </section>
   <section class="term-card" id="reciprocityScope">
     <h3>
       Reciprocity scope
@@ -1716,6 +2110,28 @@ attachment level of the cc:ShareAlike duty says in structure.</p><p class="text-
       <dt>See also</dt>
       <dd class="term-card__links">
 <a href="http://creativecommons.org/ns#ShareAlike" rel="noopener noreferrer"><code>cc:ShareAlike</code></a><a href="index.html#shareAlikeVersionQualifier"><code>dalicc:shareAlikeVersionQualifier</code></a>      </dd>
+    </dl>
+  </section>
+  <section class="term-card" id="RequiredByDefault">
+    <h3>
+      Required by default
+<span class="term-card__kind">dalicc:DefaultOutcome</span><span class="term-card__kind">skos:Concept</span>    </h3>
+
+    <p class="term-card__iri">
+      <code>https://dalicc.net/ns#RequiredByDefault</code>
+      <button type="button" class="term-card__copy" data-copy="https://dalicc.net/ns#RequiredByDefault"
+              aria-label="Copy the IRI of Required by default to the clipboard">Copy</button>
+    </p>
+
+<p class="term-card__definition">A duty applies unless the license waives it. A check under a graph that adopts
+the rule reads the silence as a license-wide duty and marks the finding as coming from the
+rule.</p>
+    <dl class="term-card__meta">
+      <dt>Status</dt>
+      <dd>Not used in the current library</dd>
+      <dt>See also</dt>
+      <dd class="term-card__links">
+<a href="index.html#NotWaivable"><code>dalicc:NotWaivable</code></a><a href="http://www.w3.org/ns/odrl/2/duty" rel="noopener noreferrer"><code>odrl:duty</code></a>      </dd>
     </dl>
   </section>
   <section class="term-card" id="Reviewed">
@@ -1923,6 +2339,46 @@ search results and counts.</p>
 <a href="index.html#recordStatus"><code>dalicc:recordStatus</code></a>      </dd>
     </dl>
   </section>
+  <section class="term-card" id="GB">
+    <h3>
+      United Kingdom
+<span class="term-card__kind">dalicc:Jurisdiction</span><span class="term-card__kind">skos:Concept</span>    </h3>
+
+    <p class="term-card__iri">
+      <code>https://dalicc.net/ns#GB</code>
+      <button type="button" class="term-card__copy" data-copy="https://dalicc.net/ns#GB"
+              aria-label="Copy the IRI of United Kingdom to the clipboard">Copy</button>
+    </p>
+
+<p class="term-card__definition">The United Kingdom of Great Britain and Northern Ireland, which kept the database right and the mining exception it had as a member state and has diverged since.</p>
+    <dl class="term-card__meta">
+      <dt>Status</dt>
+      <dd>Not used in the current library</dd>
+      <dt>See also</dt>
+      <dd class="term-card__links">
+<a href="http://creativecommons.org/ns#jurisdiction" rel="noopener noreferrer"><code>cc:jurisdiction</code></a><a href="index.html#EU"><code>dalicc:EU</code></a>      </dd>
+    </dl>
+  </section>
+  <section class="term-card" id="US">
+    <h3>
+      United States
+<span class="term-card__kind">dalicc:Jurisdiction</span><span class="term-card__kind">skos:Concept</span>    </h3>
+
+    <p class="term-card__iri">
+      <code>https://dalicc.net/ns#US</code>
+      <button type="button" class="term-card__copy" data-copy="https://dalicc.net/ns#US"
+              aria-label="Copy the IRI of United States to the clipboard">Copy</button>
+    </p>
+
+<p class="term-card__definition">The United States of America, whose copyright law is federal.</p>
+    <dl class="term-card__meta">
+      <dt>Status</dt>
+      <dd>Not used in the current library</dd>
+      <dt>See also</dt>
+      <dd class="term-card__links">
+<a href="http://creativecommons.org/ns#jurisdiction" rel="noopener noreferrer"><code>cc:jurisdiction</code></a>      </dd>
+    </dl>
+  </section>
   <section class="term-card" id="worldwide">
     <h3>
       Worldwide
@@ -1955,7 +2411,11 @@ search results and counts.</p>
 <p class="page-lede">Properties that carry the verbatim legal text of a clause that the ODRL policy cannot express, plus the provenance of the license.</p>
   <ul class="term-index" aria-label="Terms in Clause properties">
     <li><a href="#additionalClauses">dalicc:additionalClauses</a></li>
+    <li><a href="#appliesTo">dalicc:appliesTo</a></li>
     <li><a href="#composedOf">dalicc:composedOf</a></li>
+    <li><a href="#defaultOutcome">dalicc:defaultOutcome</a></li>
+    <li><a href="#extendsGraph">dalicc:extendsGraph</a></li>
+    <li><a href="#inJurisdiction">dalicc:inJurisdiction</a></li>
     <li><a href="#jurisdictionPortOf">dalicc:jurisdictionPortOf</a></li>
     <li><a href="#licenseOwner">dalicc:licenseOwner</a></li>
     <li><a href="#licenseText">dalicc:licenseText</a></li>
@@ -1966,6 +2426,9 @@ search results and counts.</p>
     <li><a href="#recordStatus">dalicc:recordStatus</a></li>
     <li><a href="#reviewStatus">dalicc:reviewStatus</a></li>
     <li><a href="#reviewedOn">dalicc:reviewedOn</a></li>
+    <li><a href="#ruleBasis">dalicc:ruleBasis</a></li>
+    <li><a href="#ruleStatus">dalicc:ruleStatus</a></li>
+    <li><a href="#statementOrigin">dalicc:statementOrigin</a></li>
     <li><a href="#sublicenseSurvival">dalicc:sublicenseSurvival</a></li>
     <li><a href="#terminatesOnBreach">dalicc:terminatesOnBreach</a></li>
     <li><a href="#translationOf">dalicc:translationOf</a></li>
@@ -1994,6 +2457,26 @@ search results and counts.</p>
       <dd>Used in 244 of 581 licenses</dd>
     </dl>
   </section>
+  <section class="term-card" id="appliesTo">
+    <h3>
+      Applies to
+<span class="term-card__kind">owl:ObjectProperty</span>    </h3>
+
+    <p class="term-card__iri">
+      <code>https://dalicc.net/ns#appliesTo</code>
+      <button type="button" class="term-card__copy" data-copy="https://dalicc.net/ns#appliesTo"
+              aria-label="Copy the IRI of Applies to to the clipboard">Copy</button>
+    </p>
+
+<p class="term-card__definition">Relates a default rule to the action it is about.</p>
+    <dl class="term-card__meta">
+      <dt>Status</dt>
+      <dd>Used by 1 dependency-graph axioms</dd>
+      <dt>See also</dt>
+      <dd class="term-card__links">
+<a href="index.html#DefaultRule"><code>dalicc:DefaultRule</code></a><a href="http://www.w3.org/ns/odrl/2/action" rel="noopener noreferrer"><code>odrl:action</code></a>      </dd>
+    </dl>
+  </section>
   <section class="term-card" id="composedOf">
     <h3>
       Composed of
@@ -2014,6 +2497,73 @@ compatibility answer for the stack is the conjunction of the answers for its par
       <dt>See also</dt>
       <dd class="term-card__links">
 <a href="index.html#jurisdictionPortOf"><code>dalicc:jurisdictionPortOf</code></a><a href="http://purl.org/dc/terms/hasPart" rel="noopener noreferrer"><code>dct:hasPart</code></a>      </dd>
+    </dl>
+  </section>
+  <section class="term-card" id="defaultOutcome">
+    <h3>
+      Default outcome
+<span class="term-card__kind">owl:ObjectProperty</span>    </h3>
+
+    <p class="term-card__iri">
+      <code>https://dalicc.net/ns#defaultOutcome</code>
+      <button type="button" class="term-card__copy" data-copy="https://dalicc.net/ns#defaultOutcome"
+              aria-label="Copy the IRI of Default outcome to the clipboard">Copy</button>
+    </p>
+
+<p class="term-card__definition">Relates a default rule to what it concludes about an action the license does
+not mention: dalicc:NotGrantedByDefault, dalicc:GrantedByDefault, dalicc:RequiredByDefault or
+dalicc:NotWaivable.</p>
+    <dl class="term-card__meta">
+      <dt>Status</dt>
+      <dd>Used by 1 dependency-graph axioms</dd>
+      <dt>See also</dt>
+      <dd class="term-card__links">
+<a href="index.html#DefaultOutcome"><code>dalicc:DefaultOutcome</code></a>      </dd>
+    </dl>
+  </section>
+  <section class="term-card" id="extendsGraph">
+    <h3>
+      Extends graph
+<span class="term-card__kind">owl:ObjectProperty</span>    </h3>
+
+    <p class="term-card__iri">
+      <code>https://dalicc.net/ns#extendsGraph</code>
+      <button type="button" class="term-card__copy" data-copy="https://dalicc.net/ns#extendsGraph"
+              aria-label="Copy the IRI of Extends graph to the clipboard">Copy</button>
+    </p>
+
+<p class="term-card__definition">Relates a dependency graph to a graph whose statements it is read together
+with. A jurisdiction graph carries its own default rules and extends the core graph, so a check
+under it sees the core axioms, the adopted rules and the proposed rules of that jurisdiction,
+and the core graph stays the single place its axioms are written.</p><p class="text-muted">Read by app/services/depgraph.py and by the reasoner&#39;s dependency-graph atom, which follow it one step; a graph that extends a graph that extends a third is not resolved further.</p>
+    <dl class="term-card__meta">
+      <dt>Status</dt>
+      <dd>Not used in the current library</dd>
+      <dt>See also</dt>
+      <dd class="term-card__links">
+<a href="index.html#DefaultRule"><code>dalicc:DefaultRule</code></a><a href="index.html#DependencyRelation"><code>dalicc:DependencyRelation</code></a>      </dd>
+    </dl>
+  </section>
+  <section class="term-card" id="inJurisdiction">
+    <h3>
+      In jurisdiction
+<span class="term-card__kind">owl:ObjectProperty</span>    </h3>
+
+    <p class="term-card__iri">
+      <code>https://dalicc.net/ns#inJurisdiction</code>
+      <button type="button" class="term-card__copy" data-copy="https://dalicc.net/ns#inJurisdiction"
+              aria-label="Copy the IRI of In jurisdiction to the clipboard">Copy</button>
+    </p>
+
+<p class="term-card__definition">Relates a default rule to the territory it holds in: dalicc:worldwide, one of
+the region concepts this vocabulary defines, or a BPI country IRI, which is the scheme
+cc:jurisdiction uses on the records.</p>
+    <dl class="term-card__meta">
+      <dt>Status</dt>
+      <dd>Used by 1 dependency-graph axioms</dd>
+      <dt>See also</dt>
+      <dd class="term-card__links">
+<a href="http://creativecommons.org/ns#jurisdiction" rel="noopener noreferrer"><code>cc:jurisdiction</code></a><a href="index.html#Jurisdiction"><code>dalicc:Jurisdiction</code></a>      </dd>
     </dl>
   </section>
   <section class="term-card" id="jurisdictionPortOf">
@@ -2222,6 +2772,71 @@ later version of the same license. False says the record models the named versio
 <a href="index.html#reviewStatus"><code>dalicc:reviewStatus</code></a><a href="http://purl.org/dc/terms/modified" rel="noopener noreferrer"><code>dct:modified</code></a>      </dd>
     </dl>
   </section>
+  <section class="term-card" id="ruleBasis">
+    <h3>
+      Rule basis
+<span class="term-card__kind">owl:DatatypeProperty</span>    </h3>
+
+    <p class="term-card__iri">
+      <code>https://dalicc.net/ns#ruleBasis</code>
+      <button type="button" class="term-card__copy" data-copy="https://dalicc.net/ns#ruleBasis"
+              aria-label="Copy the IRI of Rule basis to the clipboard">Copy</button>
+    </p>
+
+<p class="term-card__definition">The legal source a default rule rests on, named in words: a statute and its
+article, a directive, or a general principle. It is a citation a reader can check, not a holding
+and not legal advice.</p>
+    <dl class="term-card__meta">
+      <dt>Status</dt>
+      <dd>Used by 1 dependency-graph axioms</dd>
+      <dt>See also</dt>
+      <dd class="term-card__links">
+<a href="index.html#DefaultRule"><code>dalicc:DefaultRule</code></a><a href="http://purl.org/dc/terms/date" rel="noopener noreferrer"><code>dct:date</code></a>      </dd>
+    </dl>
+  </section>
+  <section class="term-card" id="ruleStatus">
+    <h3>
+      Rule status
+<span class="term-card__kind">owl:ObjectProperty</span>    </h3>
+
+    <p class="term-card__iri">
+      <code>https://dalicc.net/ns#ruleStatus</code>
+      <button type="button" class="term-card__copy" data-copy="https://dalicc.net/ns#ruleStatus"
+              aria-label="Copy the IRI of Rule status to the clipboard">Copy</button>
+    </p>
+
+<p class="term-card__definition">Relates a default rule to whether it takes part in reasoning by default
+(dalicc:Adopted) or is written down for review (dalicc:Proposed).</p>
+    <dl class="term-card__meta">
+      <dt>Status</dt>
+      <dd>Used by 1 dependency-graph axioms</dd>
+      <dt>See also</dt>
+      <dd class="term-card__links">
+<a href="index.html#RuleStatus"><code>dalicc:RuleStatus</code></a>      </dd>
+    </dl>
+  </section>
+  <section class="term-card" id="statementOrigin">
+    <h3>
+      Statement origin
+<span class="term-card__kind">owl:ObjectProperty</span>    </h3>
+
+    <p class="term-card__iri">
+      <code>https://dalicc.net/ns#statementOrigin</code>
+      <button type="button" class="term-card__copy" data-copy="https://dalicc.net/ns#statementOrigin"
+              aria-label="Copy the IRI of Statement origin to the clipboard">Copy</button>
+    </p>
+
+<p class="term-card__definition">Relates a deontic statement in a result or a document to where it came from:
+dalicc:FromText or dalicc:FromDefaultRule. It is written by the reasoner and by the services that
+build a result, never by a curated record.</p>
+    <dl class="term-card__meta">
+      <dt>Status</dt>
+      <dd>Not used in the current library</dd>
+      <dt>See also</dt>
+      <dd class="term-card__links">
+<a href="index.html#DefaultRule"><code>dalicc:DefaultRule</code></a><a href="index.html#StatementOrigin"><code>dalicc:StatementOrigin</code></a>      </dd>
+    </dl>
+  </section>
   <section class="term-card" id="sublicenseSurvival">
     <h3>
       Sublicense survival
@@ -2416,6 +3031,8 @@ and on the strength of which finding or decision.</p><p class="text-muted">Carri
   <ul class="term-index" aria-label="Terms in Classes">
     <li><a href="#AssetType">dalicc:AssetType</a></li>
     <li><a href="#CreativeWork">dalicc:CreativeWork</a></li>
+    <li><a href="#DefaultOutcome">dalicc:DefaultOutcome</a></li>
+    <li><a href="#DefaultRule">dalicc:DefaultRule</a></li>
     <li><a href="#DependencyRelation">dalicc:DependencyRelation</a></li>
     <li><a href="#DutyAction">dalicc:DutyAction</a></li>
     <li><a href="#Hardware">dalicc:Hardware</a></li>
@@ -2423,6 +3040,8 @@ and on the strength of which finding or decision.</p><p class="text-muted">Carri
     <li><a href="#RecordStatus">dalicc:RecordStatus</a></li>
     <li><a href="#ReviewStatus">dalicc:ReviewStatus</a></li>
     <li><a href="#RuleAction">dalicc:RuleAction</a></li>
+    <li><a href="#RuleStatus">dalicc:RuleStatus</a></li>
+    <li><a href="#StatementOrigin">dalicc:StatementOrigin</a></li>
     <li><a href="#ValidityType">dalicc:ValidityType</a></li>
   </ul>
 
@@ -2473,6 +3092,52 @@ audio, images, animations, video and interactive content.</p><p class="text-mute
         <a href="https://github.com/dalicc/dalicc.github.io" rel="noopener noreferrer">the 2022 DALICC
         vocabulary documentation</a>, verbatim
       </dd>
+    </dl>
+  </section>
+  <section class="term-card" id="DefaultOutcome">
+    <h3>
+      Default outcome
+<span class="term-card__kind">owl:Class</span>    </h3>
+
+    <p class="term-card__iri">
+      <code>https://dalicc.net/ns#DefaultOutcome</code>
+      <button type="button" class="term-card__copy" data-copy="https://dalicc.net/ns#DefaultOutcome"
+              aria-label="Copy the IRI of Default outcome to the clipboard">Copy</button>
+    </p>
+
+<p class="term-card__definition">What a default rule concludes about an action the license does not mention:
+that it is not granted, that it is granted, that it is required, or that a statement of the
+license to the contrary has no effect.</p>
+    <dl class="term-card__meta">
+      <dt>Status</dt>
+      <dd>Not used in the current library</dd>
+      <dt>See also</dt>
+      <dd class="term-card__links">
+<a href="index.html#DefaultRule"><code>dalicc:DefaultRule</code></a><a href="index.html#defaultOutcome"><code>dalicc:defaultOutcome</code></a>      </dd>
+    </dl>
+  </section>
+  <section class="term-card" id="DefaultRule">
+    <h3>
+      Default rule
+<span class="term-card__kind">owl:Class</span>    </h3>
+
+    <p class="term-card__iri">
+      <code>https://dalicc.net/ns#DefaultRule</code>
+      <button type="button" class="term-card__copy" data-copy="https://dalicc.net/ns#DefaultRule"
+              aria-label="Copy the IRI of Default rule to the clipboard">Copy</button>
+    </p>
+
+<p class="term-card__definition">A rule about an action a license is silent on: what applies when the license
+neither permits, prohibits nor requires that action. A rule names the action (dalicc:appliesTo),
+the outcome (dalicc:defaultOutcome), the territory it holds in (dalicc:inJurisdiction), the
+statute or principle it rests on (dalicc:ruleBasis) and whether it is adopted or only proposed
+(dalicc:ruleStatus).</p><p class="text-muted">Instances live in the dependency graphs of licensedata/dependencygraph/, beside the axioms, because a graph is the layer of statements about actions and can be chosen per check.</p><p class="text-muted">Nothing a rule states is legal advice. An adopted rule is the library&#39;s reading of a legal default, a proposed one is a question for a legal reviewer, and what a license means is decided by its text.</p>
+    <dl class="term-card__meta">
+      <dt>Status</dt>
+      <dd>Used by 1 dependency-graph axioms</dd>
+      <dt>See also</dt>
+      <dd class="term-card__links">
+<a href="index.html#DefaultOutcome"><code>dalicc:DefaultOutcome</code></a><a href="index.html#DependencyRelation"><code>dalicc:DependencyRelation</code></a><a href="index.html#RuleStatus"><code>dalicc:RuleStatus</code></a>      </dd>
     </dl>
   </section>
   <section class="term-card" id="DependencyRelation">
@@ -2621,6 +3286,48 @@ odrl:Prohibition: something the licensee may or may not do.</p><p class="text-mu
       <dt>See also</dt>
       <dd class="term-card__links">
 <a href="index.html#DutyAction"><code>dalicc:DutyAction</code></a><a href="http://www.w3.org/ns/odrl/2/Action" rel="noopener noreferrer"><code>odrl:Action</code></a>      </dd>
+    </dl>
+  </section>
+  <section class="term-card" id="RuleStatus">
+    <h3>
+      Rule status
+<span class="term-card__kind">owl:Class</span>    </h3>
+
+    <p class="term-card__iri">
+      <code>https://dalicc.net/ns#RuleStatus</code>
+      <button type="button" class="term-card__copy" data-copy="https://dalicc.net/ns#RuleStatus"
+              aria-label="Copy the IRI of Rule status to the clipboard">Copy</button>
+    </p>
+
+<p class="term-card__definition">Whether a default rule takes part in reasoning by default (dalicc:Adopted) or
+is written down for review and applies only when its graph is chosen (dalicc:Proposed).</p>
+    <dl class="term-card__meta">
+      <dt>Status</dt>
+      <dd>Not used in the current library</dd>
+      <dt>See also</dt>
+      <dd class="term-card__links">
+<a href="index.html#DefaultRule"><code>dalicc:DefaultRule</code></a><a href="index.html#ruleStatus"><code>dalicc:ruleStatus</code></a>      </dd>
+    </dl>
+  </section>
+  <section class="term-card" id="StatementOrigin">
+    <h3>
+      Statement origin
+<span class="term-card__kind">owl:Class</span>    </h3>
+
+    <p class="term-card__iri">
+      <code>https://dalicc.net/ns#StatementOrigin</code>
+      <button type="button" class="term-card__copy" data-copy="https://dalicc.net/ns#StatementOrigin"
+              aria-label="Copy the IRI of Statement origin to the clipboard">Copy</button>
+    </p>
+
+<p class="term-card__definition">Where a deontic statement in a result or a document came from: the text of the
+license, or a default rule applied to an action the text is silent on.</p><p class="text-muted">Used in compatibility and consistency results and in the documents built from them, never in a curated record: a record states what its text states.</p>
+    <dl class="term-card__meta">
+      <dt>Status</dt>
+      <dd>Not used in the current library</dd>
+      <dt>See also</dt>
+      <dd class="term-card__links">
+<a href="index.html#DefaultRule"><code>dalicc:DefaultRule</code></a><a href="index.html#statementOrigin"><code>dalicc:statementOrigin</code></a>      </dd>
     </dl>
   </section>
   <section class="term-card" id="ValidityType">
@@ -2852,21 +3559,235 @@ rel="noopener noreferrer">SPDX</a>
   <section class="history-box" aria-labelledby="ns-history-heading">
   <h2 id="ns-history-heading">History</h2>
   <p class="history-box__lede">
-    The vocabulary has 6 versions. Version 6 is
+    The vocabulary has 7 versions. Version 7 is
     the one served today; every earlier version keeps its own address, so a conclusion drawn
     from one of them can still be checked against it.
   </p>
   <ol class="version-list">
     <li class="version version--current">
       <p class="version__head">
-        <span class="version__number">Version 6</span>
+        <span class="version__number">Version 7</span>
 <span class="badge badge--ok">current</span><span class="version__date">2026-09-23</span>        <span class="version__reviewer">Giray Havur</span>
       </p>
-      <p class="version__summary">The records for the licences GitHub projects use brought two relations the vocabulary could not express: what a variant is a variant of, and what an SPDX exception permits.</p>
+      <p class="version__summary">A curated record states what its text states. Version 7 adds the terms for the other half of the question, what applies to an action a licence says nothing about: a rule class with an outcome, a jurisdiction, a legal basis and a status, the two origins a derived statement carries in a result, seven region jurisdictions for the biggest markets, and the two actions the jurisdiction proposals needed.</p>
       <p class="version__links">
         <a class="btn btn--ghost btn--small" href="index.html">View</a>
         <a class="btn btn--slate btn--small"
            href="dalicc-ns.ttl"
+           download>Turtle</a>
+      </p>
+      <details class="collapsible version__changes" id="ns-history-changes-7">
+  <summary class="collapsible__legend">
+    <span class="collapsible__sign" aria-hidden="true"></span>
+    <span>19 changes</span>
+  </summary>
+  <div class="collapsible__body">
+    <ul class="change-list">
+      <li class="change change--changed">
+        <p class="change__head">
+          <span class="change__action">changed</span>
+          <code class="change__statement">owl:versionInfo &#34;7.0&#34;</code>
+        </p>
+        <p class="change__previous">was <code>owl:versionInfo &#34;6.0&#34;</code></p>
+        <p class="change__reason">
+          <span class="badge badge--neutral">Model history</span>
+          Version 6 is archived next to this change log and owl:priorVersion names it.
+        </p>
+      </li>
+      <li class="change change--added">
+        <p class="change__head">
+          <span class="change__action">added</span>
+          <code class="change__statement">term dalicc:DefaultRule</code>
+        </p>
+        <p class="change__reason">
+          <span class="badge badge--neutral">Manual edit</span>
+          The open proposal of the licence review asked for a mechanism to close the world of unspoken actions, and for that mechanism to vary by jurisdiction. A rule is that mechanism: it names one action, one outcome, one territory, the legal source it rests on and whether the library has adopted it.
+        </p>
+      </li>
+      <li class="change change--added">
+        <p class="change__head">
+          <span class="change__action">added</span>
+          <code class="change__statement">term dalicc:DefaultOutcome</code>
+        </p>
+        <p class="change__reason">
+          <span class="badge badge--neutral">Manual edit</span>
+          The class of the four values a rule concludes with, so the outcome is a controlled value rather than a free string.
+        </p>
+      </li>
+      <li class="change change--added">
+        <p class="change__head">
+          <span class="change__action">added</span>
+          <code class="change__statement">term dalicc:NotGrantedByDefault</code>
+        </p>
+        <p class="change__reason">
+          <span class="badge badge--neutral">Manual edit</span>
+          The action is not permitted unless the licence permits it. This is the outcome the endorsement rule uses: a copyright licence that is silent grants no right to use the licensor&#39;s name.
+        </p>
+      </li>
+      <li class="change change--added">
+        <p class="change__head">
+          <span class="change__action">added</span>
+          <code class="change__statement">term dalicc:GrantedByDefault</code>
+        </p>
+        <p class="change__reason">
+          <span class="badge badge--neutral">Manual edit</span>
+          The action is permitted unless the licence prohibits it, which is what a statutory exception does. The European mining exceptions and the interoperability exception are written with it.
+        </p>
+      </li>
+      <li class="change change--added">
+        <p class="change__head">
+          <span class="change__action">added</span>
+          <code class="change__statement">term dalicc:RequiredByDefault</code>
+        </p>
+        <p class="change__reason">
+          <span class="badge badge--neutral">Manual edit</span>
+          A duty applies unless the licence waives it, so that a jurisdiction whose law imposes a duty on every licensee can be stated.
+        </p>
+      </li>
+      <li class="change change--added">
+        <p class="change__head">
+          <span class="change__action">added</span>
+          <code class="change__statement">term dalicc:NotWaivable</code>
+        </p>
+        <p class="change__reason">
+          <span class="badge badge--neutral">Manual edit</span>
+          A statement of the licence to the contrary has no effect in that jurisdiction. The reasoner reports it as a finding and never overrides the record, because the record models the text.
+        </p>
+      </li>
+      <li class="change change--added">
+        <p class="change__head">
+          <span class="change__action">added</span>
+          <code class="change__statement">term dalicc:RuleStatus, with dalicc:Adopted and dalicc:Proposed</code>
+        </p>
+        <p class="change__reason">
+          <span class="badge badge--neutral">Manual edit</span>
+          Only an adopted rule takes part in a check a reader did not ask for. Every jurisdiction rule of this version is proposed, so nothing changes for a reader who chooses nothing.
+        </p>
+      </li>
+      <li class="change change--added">
+        <p class="change__head">
+          <span class="change__action">added</span>
+          <code class="change__statement">term dalicc:StatementOrigin, with dalicc:FromText and dalicc:FromDefaultRule</code>
+        </p>
+        <p class="change__reason">
+          <span class="badge badge--neutral">Manual edit</span>
+          A result that mixes what the text says with what a rule supplies has to say which is which, on every finding.
+        </p>
+      </li>
+      <li class="change change--added">
+        <p class="change__head">
+          <span class="change__action">added</span>
+          <code class="change__statement">term dalicc:appliesTo</code>
+        </p>
+        <p class="change__reason">
+          <span class="badge badge--neutral">Manual edit</span>
+          The action a rule is about.
+        </p>
+      </li>
+      <li class="change change--added">
+        <p class="change__head">
+          <span class="change__action">added</span>
+          <code class="change__statement">term dalicc:defaultOutcome</code>
+        </p>
+        <p class="change__reason">
+          <span class="badge badge--neutral">Manual edit</span>
+          The outcome a rule concludes with.
+        </p>
+      </li>
+      <li class="change change--added">
+        <p class="change__head">
+          <span class="change__action">added</span>
+          <code class="change__statement">term dalicc:inJurisdiction</code>
+        </p>
+        <p class="change__reason">
+          <span class="badge badge--neutral">Manual edit</span>
+          The territory a rule holds in: dalicc:worldwide, a region, or a BPI country IRI, which is the scheme cc:jurisdiction already uses on the records.
+        </p>
+      </li>
+      <li class="change change--added">
+        <p class="change__head">
+          <span class="change__action">added</span>
+          <code class="change__statement">term dalicc:ruleBasis</code>
+        </p>
+        <p class="change__reason">
+          <span class="badge badge--neutral">Manual edit</span>
+          The statute, directive or principle a rule rests on, named in words so a reader can check it. It is a citation, not a holding.
+        </p>
+      </li>
+      <li class="change change--added">
+        <p class="change__head">
+          <span class="change__action">added</span>
+          <code class="change__statement">term dalicc:ruleStatus</code>
+        </p>
+        <p class="change__reason">
+          <span class="badge badge--neutral">Manual edit</span>
+          Whether a rule is adopted or proposed.
+        </p>
+      </li>
+      <li class="change change--added">
+        <p class="change__head">
+          <span class="change__action">added</span>
+          <code class="change__statement">term dalicc:statementOrigin</code>
+        </p>
+        <p class="change__reason">
+          <span class="badge badge--neutral">Manual edit</span>
+          Written into results and documents, never into a curated record.
+        </p>
+      </li>
+      <li class="change change--added">
+        <p class="change__head">
+          <span class="change__action">added</span>
+          <code class="change__statement">term dalicc:extendsGraph</code>
+        </p>
+        <p class="change__reason">
+          <span class="badge badge--neutral">Manual edit</span>
+          A jurisdiction graph holds its own rules and is read together with the core graph. Without this property the core axioms would have to be copied into seven files, and the next graph review would have to edit eight.
+        </p>
+      </li>
+      <li class="change change--added">
+        <p class="change__head">
+          <span class="change__action">added</span>
+          <code class="change__statement">terms dalicc:EU, dalicc:US, dalicc:CN, dalicc:GB, dalicc:JP, dalicc:IN and dalicc:BR</code>
+        </p>
+        <p class="change__reason">
+          <span class="badge badge--neutral">Manual edit</span>
+          cc:jurisdiction names a BPI country or dalicc:worldwide, and the law a default rule rests on is usually written for a region. Each region is a dalicc:Jurisdiction whose members are named with the BPI country IRIs the records use.
+        </p>
+      </li>
+      <li class="change change--added">
+        <p class="change__head">
+          <span class="change__action">added</span>
+          <code class="change__statement">term dalicc:textAndDataMining</code>
+        </p>
+        <p class="change__reason">
+          <span class="badge badge--neutral">Manual edit</span>
+          The European and British mining exceptions describe the automated analysis of a work, which is wider than training a model on it. dalicc:useForModelTraining keeps its narrower meaning and no record uses the new term.
+        </p>
+      </li>
+      <li class="change change--added">
+        <p class="change__head">
+          <span class="change__action">added</span>
+          <code class="change__statement">term dalicc:reverseEngineerForInteroperability</code>
+        </p>
+        <p class="change__reason">
+          <span class="badge badge--neutral">Manual edit</span>
+          Article 6 of the European Software Directive allows decompilation for interoperability and forbids a contract from taking it away, which needs an action of its own; reverse engineering at large is a different act.
+        </p>
+      </li>
+    </ul>
+  </div>
+</details>
+    </li>
+    <li class="version">
+      <p class="version__head">
+        <span class="version__number">Version 6</span>
+<span class="version__date">2026-09-23</span>        <span class="version__reviewer">Giray Havur</span>
+      </p>
+      <p class="version__summary">The records for the licences GitHub projects use brought two relations the vocabulary could not express: what a variant is a variant of, and what an SPDX exception permits.</p>
+      <p class="version__links">
+        <a class="btn btn--ghost btn--small" href="https://dalicc.net/ns/versions/6">View</a>
+        <a class="btn btn--slate btn--small"
+           href="https://dalicc.net/ns/versions/6"
            download>Turtle</a>
       </p>
       <details class="collapsible version__changes" id="ns-history-changes-6">
@@ -3743,23 +4664,42 @@ rel="noopener noreferrer">SPDX</a>
     under. The definition on it is the definition above.
   </p>
   <ul class="term-index" aria-label="Term pages">
+    <li><a href="ns/Adopted/">dalicc:Adopted</a></li>
     <li><a href="ns/Approved/">dalicc:Approved</a></li>
     <li><a href="ns/AssetType/">dalicc:AssetType</a></li>
     <li><a href="ns/Audited/">dalicc:Audited</a></li>
+    <li><a href="ns/BR/">dalicc:BR</a></li>
+    <li><a href="ns/CN/">dalicc:CN</a></li>
     <li><a href="ns/ChangeLicense/">dalicc:ChangeLicense</a></li>
     <li><a href="ns/Created/">dalicc:Created</a></li>
     <li><a href="ns/CreativeWork/">dalicc:CreativeWork</a></li>
+    <li><a href="ns/DefaultOutcome/">dalicc:DefaultOutcome</a></li>
+    <li><a href="ns/DefaultRule/">dalicc:DefaultRule</a></li>
     <li><a href="ns/DependencyRelation/">dalicc:DependencyRelation</a></li>
     <li><a href="ns/DutyAction/">dalicc:DutyAction</a></li>
+    <li><a href="ns/EU/">dalicc:EU</a></li>
+    <li><a href="ns/FromDefaultRule/">dalicc:FromDefaultRule</a></li>
+    <li><a href="ns/FromText/">dalicc:FromText</a></li>
+    <li><a href="ns/GB/">dalicc:GB</a></li>
+    <li><a href="ns/GrantedByDefault/">dalicc:GrantedByDefault</a></li>
     <li><a href="ns/Hardware/">dalicc:Hardware</a></li>
+    <li><a href="ns/IN/">dalicc:IN</a></li>
+    <li><a href="ns/JP/">dalicc:JP</a></li>
     <li><a href="ns/Jurisdiction/">dalicc:Jurisdiction</a></li>
     <li><a href="ns/LiabilityLimitation/">dalicc:LiabilityLimitation</a></li>
     <li><a href="ns/ModifiedWorks/">dalicc:ModifiedWorks</a></li>
+    <li><a href="ns/NotGrantedByDefault/">dalicc:NotGrantedByDefault</a></li>
+    <li><a href="ns/NotWaivable/">dalicc:NotWaivable</a></li>
     <li><a href="ns/PromotionSpecification/">dalicc:PromotionSpecification</a></li>
+    <li><a href="ns/Proposed/">dalicc:Proposed</a></li>
     <li><a href="ns/RecordStatus/">dalicc:RecordStatus</a></li>
+    <li><a href="ns/RequiredByDefault/">dalicc:RequiredByDefault</a></li>
     <li><a href="ns/ReviewStatus/">dalicc:ReviewStatus</a></li>
     <li><a href="ns/Reviewed/">dalicc:Reviewed</a></li>
     <li><a href="ns/RuleAction/">dalicc:RuleAction</a></li>
+    <li><a href="ns/RuleStatus/">dalicc:RuleStatus</a></li>
+    <li><a href="ns/StatementOrigin/">dalicc:StatementOrigin</a></li>
+    <li><a href="ns/US/">dalicc:US</a></li>
     <li><a href="ns/ValidityType/">dalicc:ValidityType</a></li>
     <li><a href="ns/WarrantyDisclaimer/">dalicc:WarrantyDisclaimer</a></li>
     <li><a href="ns/WarrantyOrLiabilityAcceptance/">dalicc:WarrantyOrLiabilityAcceptance</a></li>
@@ -3768,6 +4708,7 @@ rel="noopener noreferrer">SPDX</a>
     <li><a href="ns/additionalClauses/">dalicc:additionalClauses</a></li>
     <li><a href="ns/advertisingAcknowledgement/">dalicc:advertisingAcknowledgement</a></li>
     <li><a href="ns/alternativeConditionSet/">dalicc:alternativeConditionSet</a></li>
+    <li><a href="ns/appliesTo/">dalicc:appliesTo</a></li>
     <li><a href="ns/applyTechnicalProtectionMeasures/">dalicc:applyTechnicalProtectionMeasures</a></li>
     <li><a href="ns/attachoffer/">dalicc:attachoffer</a></li>
     <li><a href="ns/attributionNotice/">dalicc:attributionNotice</a></li>
@@ -3784,14 +4725,17 @@ rel="noopener noreferrer">SPDX</a>
     <li><a href="ns/covenantNotToSue/">dalicc:covenantNotToSue</a></li>
     <li><a href="ns/curePeriod/">dalicc:curePeriod</a></li>
     <li><a href="ns/databaseRightWaiver/">dalicc:databaseRightWaiver</a></li>
+    <li><a href="ns/defaultOutcome-2/">dalicc:defaultOutcome</a></li>
     <li><a href="ns/derivativeDatabaseAccess/">dalicc:derivativeDatabaseAccess</a></li>
     <li><a href="ns/downstreamOffer/">dalicc:downstreamOffer</a></li>
     <li><a href="ns/exceptedCombination/">dalicc:exceptedCombination</a></li>
     <li><a href="ns/exemptedMaterial/">dalicc:exemptedMaterial</a></li>
     <li><a href="ns/exportControlNotice/">dalicc:exportControlNotice</a></li>
+    <li><a href="ns/extendsGraph/">dalicc:extendsGraph</a></li>
     <li><a href="ns/fieldOfUseRestriction/">dalicc:fieldOfUseRestriction</a></li>
     <li><a href="ns/governingLaw/">dalicc:governingLaw</a></li>
     <li><a href="ns/governmentRightsLimitation/">dalicc:governmentRightsLimitation</a></li>
+    <li><a href="ns/inJurisdiction/">dalicc:inJurisdiction</a></li>
     <li><a href="ns/includeNoticeFile/">dalicc:includeNoticeFile</a></li>
     <li><a href="ns/irrevocable/">dalicc:irrevocable</a></li>
     <li><a href="ns/jurisdictionPortOf/">dalicc:jurisdictionPortOf</a></li>
@@ -3822,23 +4766,28 @@ rel="noopener noreferrer">SPDX</a>
     <li><a href="ns/recordStatus-2/">dalicc:recordStatus</a></li>
     <li><a href="ns/redistribute/">dalicc:redistribute</a></li>
     <li><a href="ns/rename/">dalicc:rename</a></li>
+    <li><a href="ns/reverseEngineerForInteroperability/">dalicc:reverseEngineerForInteroperability</a></li>
     <li><a href="ns/reviewStatus-2/">dalicc:reviewStatus</a></li>
     <li><a href="ns/reviewedOn/">dalicc:reviewedOn</a></li>
     <li><a href="ns/royalityFree/">dalicc:royalityFree</a></li>
     <li><a href="ns/royaltyCollectionReserved/">dalicc:royaltyCollectionReserved</a></li>
     <li><a href="ns/royaltyFree/">dalicc:royaltyFree</a></li>
+    <li><a href="ns/ruleBasis/">dalicc:ruleBasis</a></li>
+    <li><a href="ns/ruleStatus-2/">dalicc:ruleStatus</a></li>
     <li><a href="ns/sellCopy/">dalicc:sellCopy</a></li>
     <li><a href="ns/shareAlikeVersionQualifier/">dalicc:shareAlikeVersionQualifier</a></li>
     <li><a href="ns/sourcePublicationPeriod/">dalicc:sourcePublicationPeriod</a></li>
     <li><a href="ns/specifyDate/">dalicc:specifyDate</a></li>
     <li><a href="ns/specifyPeriod/">dalicc:specifyPeriod</a></li>
     <li><a href="ns/standardsConformance/">dalicc:standardsConformance</a></li>
+    <li><a href="ns/statementOrigin-2/">dalicc:statementOrigin</a></li>
     <li><a href="ns/sublicense/">dalicc:sublicense</a></li>
     <li><a href="ns/sublicenseSurvival/">dalicc:sublicenseSurvival</a></li>
     <li><a href="ns/suiGenerisDatabaseRights/">dalicc:suiGenerisDatabaseRights</a></li>
     <li><a href="ns/terminatesOnBreach/">dalicc:terminatesOnBreach</a></li>
     <li><a href="ns/terminationOnBreach/">dalicc:terminationOnBreach</a></li>
     <li><a href="ns/testFixture/">dalicc:testFixture</a></li>
+    <li><a href="ns/textAndDataMining/">dalicc:textAndDataMining</a></li>
     <li><a href="ns/trademarkNotice/">dalicc:trademarkNotice</a></li>
     <li><a href="ns/translationOf/">dalicc:translationOf</a></li>
     <li><a href="ns/useForModelTraining/">dalicc:useForModelTraining</a></li>
@@ -3863,10 +4812,10 @@ rel="noopener noreferrer">SPDX</a>
         Datenbewirtschaftung. All rights reserved.
       </p>
       <p class="site-footer__partners">
-        DALICC originated in a research project led by USTP, University of Applied Sciences
-        St. Pölten, with the Vienna University of Economics and Business, the University of
-        Innsbruck / STI International, Höhne, In der Maur &amp; Partner Rechtsanwälte OG and
-        the Semantic Web Company, funded by the
+        DALICC originated in a research project led by USTP (Hochschule für Angewandte
+        Wissenschaften St. Pölten GmbH), with the Vienna University of Economics and
+        Business, the University of Innsbruck / STI International, Höhne, In der Maur
+        &amp; Partner Rechtsanwälte OG and the Semantic Web Company, funded by the
         <a href="https://www.ffg.at/" target="_blank" rel="noopener noreferrer">Austrian Research
         Promotion Agency (FFG)</a> and
         <a href="https://www.netidee.at/" target="_blank" rel="noopener noreferrer">netidee</a>.

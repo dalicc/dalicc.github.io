@@ -116,7 +116,7 @@
 /* Set by vocabulary.js when the card is the one named in the URL fragment. */
 .term-card[data-targeted="true"] {
   border-color: var(--c-green);
-  box-shadow: 0 0 0 3px rgba(0, 159, 123, 0.18);
+  box-shadow: var(--ring-action);
 }
 
 .term-card__flag {

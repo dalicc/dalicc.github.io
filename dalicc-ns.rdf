@@ -42,7 +42,7 @@ object action, so a permission or prohibition on the object also covers the subj
 extends ODRL 2.2 and the Creative Commons Rights Expression Language with the actions, duty
 actions, clause properties and controlled values that the DALICC licenses require and that
 neither vocabulary provides.</dct:description>
-    <dct:hasVersion>6</dct:hasVersion>
+    <dct:hasVersion>7</dct:hasVersion>
     <dct:license rdf:resource="http://creativecommons.org/licenses/by/4.0/"/>
     <dct:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2026-09-23</dct:modified>
     <dct:publisher>DALICC</dct:publisher>
@@ -65,8 +65,20 @@ in the production triple store; it denotes the same terms but must not be used i
     <owl:priorVersion rdf:resource="https://dalicc.net/ns/versions/3"/>
     <owl:priorVersion rdf:resource="https://dalicc.net/ns/versions/4"/>
     <owl:priorVersion rdf:resource="https://dalicc.net/ns/versions/5"/>
-    <owl:versionInfo>6.0</owl:versionInfo>
+    <owl:priorVersion rdf:resource="https://dalicc.net/ns/versions/6"/>
+    <owl:versionInfo>7.0</owl:versionInfo>
     <dalicc:versionHistory rdf:resource="https://dalicc.net/ns/versions"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://dalicc.net/ns#Adopted">
+    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+    <rdf:type rdf:resource="https://dalicc.net/ns#RuleStatus"/>
+    <rdfs:comment xml:lang="en">The rule takes part in reasoning under every graph that carries it. Only a rule
+the library has adopted is applied when a reader chooses nothing.</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource="https://dalicc.net/ns#"/>
+    <rdfs:label xml:lang="en">Adopted</rdfs:label>
+    <rdfs:seeAlso rdf:resource="https://dalicc.net/ns#Proposed"/>
+    <rdfs:seeAlso rdf:resource="https://dalicc.net/ns#ruleStatus"/>
+    <skos:prefLabel xml:lang="en">adopted</skos:prefLabel>
   </rdf:Description>
   <rdf:Description rdf:about="https://dalicc.net/ns#Approved">
     <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
@@ -96,6 +108,26 @@ dcmitype:Dataset and the two asset types this vocabulary defines.</rdfs:comment>
     <rdfs:label xml:lang="en">Audited</rdfs:label>
     <rdfs:seeAlso rdf:resource="https://dalicc.net/ns#reviewStatus"/>
     <skos:prefLabel xml:lang="en">Audited</skos:prefLabel>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://dalicc.net/ns#BR">
+    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+    <rdf:type rdf:resource="https://dalicc.net/ns#Jurisdiction"/>
+    <rdfs:comment xml:lang="en">The Federative Republic of Brazil.</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource="https://dalicc.net/ns#"/>
+    <rdfs:label xml:lang="en">Brazil</rdfs:label>
+    <rdfs:seeAlso rdf:resource="http://creativecommons.org/ns#jurisdiction"/>
+    <skos:member rdf:resource="http://www.bpiresearch.com/BPMO/2004/03/03/cdl/Countries#Brazil"/>
+    <skos:prefLabel xml:lang="en">BR</skos:prefLabel>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://dalicc.net/ns#CN">
+    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+    <rdf:type rdf:resource="https://dalicc.net/ns#Jurisdiction"/>
+    <rdfs:comment xml:lang="en">The People's Republic of China, excluding the special administrative regions, whose copyright law is separate.</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource="https://dalicc.net/ns#"/>
+    <rdfs:label xml:lang="en">China</rdfs:label>
+    <rdfs:seeAlso rdf:resource="http://creativecommons.org/ns#jurisdiction"/>
+    <skos:member rdf:resource="http://www.bpiresearch.com/BPMO/2004/03/03/cdl/Countries#China"/>
+    <skos:prefLabel xml:lang="en">CN</skos:prefLabel>
   </rdf:Description>
   <rdf:Description rdf:about="https://dalicc.net/ns#ChangeLicense">
     <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
@@ -135,6 +167,31 @@ audio, images, animations, video and interactive content.</rdfs:comment>
     <rdfs:seeAlso rdf:resource="http://purl.org/dc/dcmitype/Text"/>
     <skos:scopeNote xml:lang="en">Used as a value of dct:type on the odrl:AssetCollection that an odrl:Set targets, alongside dcmitype:Dataset and dcmitype:Software.</skos:scopeNote>
   </rdf:Description>
+  <rdf:Description rdf:about="https://dalicc.net/ns#DefaultOutcome">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:comment xml:lang="en">What a default rule concludes about an action the license does not mention:
+that it is not granted, that it is granted, that it is required, or that a statement of the
+license to the contrary has no effect.</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource="https://dalicc.net/ns#"/>
+    <rdfs:label xml:lang="en">Default outcome</rdfs:label>
+    <rdfs:seeAlso rdf:resource="https://dalicc.net/ns#DefaultRule"/>
+    <rdfs:seeAlso rdf:resource="https://dalicc.net/ns#defaultOutcome"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://dalicc.net/ns#DefaultRule">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:comment xml:lang="en">A rule about an action a license is silent on: what applies when the license
+neither permits, prohibits nor requires that action. A rule names the action (dalicc:appliesTo),
+the outcome (dalicc:defaultOutcome), the territory it holds in (dalicc:inJurisdiction), the
+statute or principle it rests on (dalicc:ruleBasis) and whether it is adopted or only proposed
+(dalicc:ruleStatus).</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource="https://dalicc.net/ns#"/>
+    <rdfs:label xml:lang="en">Default rule</rdfs:label>
+    <rdfs:seeAlso rdf:resource="https://dalicc.net/ns#DefaultOutcome"/>
+    <rdfs:seeAlso rdf:resource="https://dalicc.net/ns#DependencyRelation"/>
+    <rdfs:seeAlso rdf:resource="https://dalicc.net/ns#RuleStatus"/>
+    <skos:note xml:lang="en">Nothing a rule states is legal advice. An adopted rule is the library's reading of a legal default, a proposed one is a question for a legal reviewer, and what a license means is decided by its text.</skos:note>
+    <skos:scopeNote xml:lang="en">Instances live in the dependency graphs of licensedata/dependencygraph/, beside the axioms, because a graph is the layer of statements about actions and can be chosen per check.</skos:scopeNote>
+  </rdf:Description>
   <rdf:Description rdf:about="https://dalicc.net/ns#DependencyRelation">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
     <rdfs:comment xml:lang="en">A relation between two actions that the DALICC compatibility checker reasons
@@ -154,6 +211,91 @@ to one permission or carried by the license as a whole: something the licensee m
     <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/odrl/2/Action"/>
     <skos:scopeNote xml:lang="en">Read by app/services/vocab.py. An action can be both a rule action and a duty action: dalicc:noWarrantyNotice is a permission on AFL-3.0 and a duty on Frameworx-1.0.</skos:scopeNote>
   </rdf:Description>
+  <rdf:Description rdf:about="https://dalicc.net/ns#EU">
+    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+    <rdf:type rdf:resource="https://dalicc.net/ns#Jurisdiction"/>
+    <rdfs:comment xml:lang="en">The member states of the European Union. A rule in this jurisdiction rests on
+a Union instrument, which reaches every member state once it is transposed; where a member state
+differs, a rule for that country says so.</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource="https://dalicc.net/ns#"/>
+    <rdfs:label xml:lang="en">European Union</rdfs:label>
+    <rdfs:seeAlso rdf:resource="http://creativecommons.org/ns#jurisdiction"/>
+    <rdfs:seeAlso rdf:resource="https://dalicc.net/ns#worldwide"/>
+    <skos:member rdf:resource="http://www.bpiresearch.com/BPMO/2004/03/03/cdl/Countries#Austria"/>
+    <skos:member rdf:resource="http://www.bpiresearch.com/BPMO/2004/03/03/cdl/Countries#Belgium"/>
+    <skos:member rdf:resource="http://www.bpiresearch.com/BPMO/2004/03/03/cdl/Countries#Bulgaria"/>
+    <skos:member rdf:resource="http://www.bpiresearch.com/BPMO/2004/03/03/cdl/Countries#Croatia"/>
+    <skos:member rdf:resource="http://www.bpiresearch.com/BPMO/2004/03/03/cdl/Countries#Cyprus"/>
+    <skos:member rdf:resource="http://www.bpiresearch.com/BPMO/2004/03/03/cdl/Countries#Czechia"/>
+    <skos:member rdf:resource="http://www.bpiresearch.com/BPMO/2004/03/03/cdl/Countries#Denmark"/>
+    <skos:member rdf:resource="http://www.bpiresearch.com/BPMO/2004/03/03/cdl/Countries#Estonia"/>
+    <skos:member rdf:resource="http://www.bpiresearch.com/BPMO/2004/03/03/cdl/Countries#Finland"/>
+    <skos:member rdf:resource="http://www.bpiresearch.com/BPMO/2004/03/03/cdl/Countries#France"/>
+    <skos:member rdf:resource="http://www.bpiresearch.com/BPMO/2004/03/03/cdl/Countries#Germany"/>
+    <skos:member rdf:resource="http://www.bpiresearch.com/BPMO/2004/03/03/cdl/Countries#Greece"/>
+    <skos:member rdf:resource="http://www.bpiresearch.com/BPMO/2004/03/03/cdl/Countries#Hungary"/>
+    <skos:member rdf:resource="http://www.bpiresearch.com/BPMO/2004/03/03/cdl/Countries#Ireland"/>
+    <skos:member rdf:resource="http://www.bpiresearch.com/BPMO/2004/03/03/cdl/Countries#Italy"/>
+    <skos:member rdf:resource="http://www.bpiresearch.com/BPMO/2004/03/03/cdl/Countries#Latvia"/>
+    <skos:member rdf:resource="http://www.bpiresearch.com/BPMO/2004/03/03/cdl/Countries#Lithuania"/>
+    <skos:member rdf:resource="http://www.bpiresearch.com/BPMO/2004/03/03/cdl/Countries#Luxembourg"/>
+    <skos:member rdf:resource="http://www.bpiresearch.com/BPMO/2004/03/03/cdl/Countries#Malta"/>
+    <skos:member rdf:resource="http://www.bpiresearch.com/BPMO/2004/03/03/cdl/Countries#Netherlands"/>
+    <skos:member rdf:resource="http://www.bpiresearch.com/BPMO/2004/03/03/cdl/Countries#Poland"/>
+    <skos:member rdf:resource="http://www.bpiresearch.com/BPMO/2004/03/03/cdl/Countries#Portugal"/>
+    <skos:member rdf:resource="http://www.bpiresearch.com/BPMO/2004/03/03/cdl/Countries#Romania"/>
+    <skos:member rdf:resource="http://www.bpiresearch.com/BPMO/2004/03/03/cdl/Countries#Slovakia"/>
+    <skos:member rdf:resource="http://www.bpiresearch.com/BPMO/2004/03/03/cdl/Countries#Slovenia"/>
+    <skos:member rdf:resource="http://www.bpiresearch.com/BPMO/2004/03/03/cdl/Countries#Spain"/>
+    <skos:member rdf:resource="http://www.bpiresearch.com/BPMO/2004/03/03/cdl/Countries#Sweden"/>
+    <skos:prefLabel xml:lang="en">EU</skos:prefLabel>
+    <skos:scopeNote xml:lang="en">27 member states. The United Kingdom left the Union in 2020 and is dalicc:GB, which keeps some of the same law and has diverged in others.</skos:scopeNote>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://dalicc.net/ns#FromDefaultRule">
+    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+    <rdf:type rdf:resource="https://dalicc.net/ns#StatementOrigin"/>
+    <rdfs:comment xml:lang="en">The statement was derived, for an action the license is silent on, by a
+dalicc:DefaultRule of the dependency graph the check ran under. The rule that produced it is
+named beside it.</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource="https://dalicc.net/ns#"/>
+    <rdfs:label xml:lang="en">From a default rule</rdfs:label>
+    <rdfs:seeAlso rdf:resource="https://dalicc.net/ns#DefaultRule"/>
+    <rdfs:seeAlso rdf:resource="https://dalicc.net/ns#FromText"/>
+    <skos:prefLabel xml:lang="en">fromDefaultRule</skos:prefLabel>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://dalicc.net/ns#FromText">
+    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+    <rdf:type rdf:resource="https://dalicc.net/ns#StatementOrigin"/>
+    <rdfs:comment xml:lang="en">The statement is modelled from a sentence of the license text, which is what every curated record holds.</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource="https://dalicc.net/ns#"/>
+    <rdfs:label xml:lang="en">From the text</rdfs:label>
+    <rdfs:seeAlso rdf:resource="https://dalicc.net/ns#FromDefaultRule"/>
+    <rdfs:seeAlso rdf:resource="https://dalicc.net/ns#statementOrigin"/>
+    <skos:prefLabel xml:lang="en">fromText</skos:prefLabel>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://dalicc.net/ns#GB">
+    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+    <rdf:type rdf:resource="https://dalicc.net/ns#Jurisdiction"/>
+    <rdfs:comment xml:lang="en">The United Kingdom of Great Britain and Northern Ireland, which kept the database right and the mining exception it had as a member state and has diverged since.</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource="https://dalicc.net/ns#"/>
+    <rdfs:label xml:lang="en">United Kingdom</rdfs:label>
+    <rdfs:seeAlso rdf:resource="http://creativecommons.org/ns#jurisdiction"/>
+    <rdfs:seeAlso rdf:resource="https://dalicc.net/ns#EU"/>
+    <skos:member rdf:resource="http://www.bpiresearch.com/BPMO/2004/03/03/cdl/Countries#UnitedKingdom"/>
+    <skos:prefLabel xml:lang="en">GB</skos:prefLabel>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://dalicc.net/ns#GrantedByDefault">
+    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+    <rdf:type rdf:resource="https://dalicc.net/ns#DefaultOutcome"/>
+    <rdfs:comment xml:lang="en">The action is permitted unless the license prohibits it, for example because a
+statutory exception allows it whatever the license says. A check under a graph that adopts the
+rule reads the silence as a permission and marks the finding as coming from the rule.</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource="https://dalicc.net/ns#"/>
+    <rdfs:label xml:lang="en">Granted by default</rdfs:label>
+    <rdfs:seeAlso rdf:resource="https://dalicc.net/ns#NotGrantedByDefault"/>
+    <rdfs:seeAlso rdf:resource="https://dalicc.net/ns#NotWaivable"/>
+    <skos:prefLabel xml:lang="en">grantedByDefault</skos:prefLabel>
+  </rdf:Description>
   <rdf:Description rdf:about="https://dalicc.net/ns#Hardware">
     <dct:source rdf:resource="https://dalicc.net/licenselibrary/CERN-OHL-S-2.0"/>
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
@@ -166,6 +308,26 @@ hardware licenses govern the design material and reach the product made from it.
     <rdfs:seeAlso rdf:resource="http://purl.org/dc/dcmitype/Software"/>
     <rdfs:seeAlso rdf:resource="https://dalicc.net/ns#CreativeWork"/>
     <skos:scopeNote xml:lang="en">Used as a value of dct:type on the odrl:AssetCollection that an odrl:Set targets, alongside dcmitype:Software, dcmitype:Dataset and dalicc:CreativeWork. Carried by the three CERN Open Hardware Licence records.</skos:scopeNote>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://dalicc.net/ns#IN">
+    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+    <rdf:type rdf:resource="https://dalicc.net/ns#Jurisdiction"/>
+    <rdfs:comment xml:lang="en">The Republic of India.</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource="https://dalicc.net/ns#"/>
+    <rdfs:label xml:lang="en">India</rdfs:label>
+    <rdfs:seeAlso rdf:resource="http://creativecommons.org/ns#jurisdiction"/>
+    <skos:member rdf:resource="http://www.bpiresearch.com/BPMO/2004/03/03/cdl/Countries#India"/>
+    <skos:prefLabel xml:lang="en">IN</skos:prefLabel>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://dalicc.net/ns#JP">
+    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+    <rdf:type rdf:resource="https://dalicc.net/ns#Jurisdiction"/>
+    <rdfs:comment xml:lang="en">Japan.</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource="https://dalicc.net/ns#"/>
+    <rdfs:label xml:lang="en">Japan</rdfs:label>
+    <rdfs:seeAlso rdf:resource="http://creativecommons.org/ns#jurisdiction"/>
+    <skos:member rdf:resource="http://www.bpiresearch.com/BPMO/2004/03/03/cdl/Countries#Japan"/>
+    <skos:prefLabel xml:lang="en">JP</skos:prefLabel>
   </rdf:Description>
   <rdf:Description rdf:about="https://dalicc.net/ns#Jurisdiction">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
@@ -196,6 +358,30 @@ derivative work.</rdfs:comment>
     <rdfs:seeAlso rdf:resource="http://www.w3.org/ns/odrl/2/modify"/>
     <skos:scopeNote xml:lang="en">Occurs in 320 of 343 licenses as an odrl:Permission.</skos:scopeNote>
   </rdf:Description>
+  <rdf:Description rdf:about="https://dalicc.net/ns#NotGrantedByDefault">
+    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+    <rdf:type rdf:resource="https://dalicc.net/ns#DefaultOutcome"/>
+    <rdfs:comment xml:lang="en">The action is not permitted unless the license permits it. A license that says
+nothing grants nothing, so a check under a graph that adopts the rule reads the silence as a
+prohibition and marks the finding as coming from the rule.</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource="https://dalicc.net/ns#"/>
+    <rdfs:label xml:lang="en">Not granted by default</rdfs:label>
+    <rdfs:seeAlso rdf:resource="https://dalicc.net/ns#GrantedByDefault"/>
+    <rdfs:seeAlso rdf:resource="https://dalicc.net/ns#defaultOutcome"/>
+    <skos:prefLabel xml:lang="en">notGrantedByDefault</skos:prefLabel>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://dalicc.net/ns#NotWaivable">
+    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+    <rdf:type rdf:resource="https://dalicc.net/ns#DefaultOutcome"/>
+    <rdfs:comment xml:lang="en">A statement of the license to the contrary has no effect in that jurisdiction.
+The reasoner reports it as a finding when the license prohibits the action; it never silently
+overrides what the license says, because what the license says is what the record models.</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource="https://dalicc.net/ns#"/>
+    <rdfs:label xml:lang="en">Not waivable</rdfs:label>
+    <rdfs:seeAlso rdf:resource="https://dalicc.net/ns#GrantedByDefault"/>
+    <rdfs:seeAlso rdf:resource="https://dalicc.net/ns#moralRightsRestriction"/>
+    <skos:prefLabel xml:lang="en">notWaivable</skos:prefLabel>
+  </rdf:Description>
   <rdf:Description rdf:about="https://dalicc.net/ns#PromotionSpecification">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
     <rdfs:comment xml:lang="en">The verbatim acknowledgement text that the license requires the licensee to reproduce when promoting a product that contains the work.</rdfs:comment>
@@ -205,12 +391,36 @@ derivative work.</rdfs:comment>
     <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
     <rdfs:seeAlso rdf:resource="https://dalicc.net/ns#promote"/>
   </rdf:Description>
+  <rdf:Description rdf:about="https://dalicc.net/ns#Proposed">
+    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+    <rdf:type rdf:resource="https://dalicc.net/ns#RuleStatus"/>
+    <rdfs:comment xml:lang="en">The rule is written down for review and is not part of any default check.
+Choosing the graph it lives in is the reader's request to see what it would do.</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource="https://dalicc.net/ns#"/>
+    <rdfs:label xml:lang="en">Proposed</rdfs:label>
+    <rdfs:seeAlso rdf:resource="https://dalicc.net/ns#Adopted"/>
+    <rdfs:seeAlso rdf:resource="https://dalicc.net/ns#ruleStatus"/>
+    <skos:note xml:lang="en">A proposed rule is a question for the association's legal reviewer and not legal advice.</skos:note>
+    <skos:prefLabel xml:lang="en">proposed</skos:prefLabel>
+  </rdf:Description>
   <rdf:Description rdf:about="https://dalicc.net/ns#RecordStatus">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
     <rdfs:comment xml:lang="en">The editorial state of a library record, as distinct from the state of the license it models. Used to mark records that are not published licenses.</rdfs:comment>
     <rdfs:isDefinedBy rdf:resource="https://dalicc.net/ns#"/>
     <rdfs:label xml:lang="en">Record status</rdfs:label>
     <rdfs:seeAlso rdf:resource="https://dalicc.net/ns#recordStatus"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://dalicc.net/ns#RequiredByDefault">
+    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+    <rdf:type rdf:resource="https://dalicc.net/ns#DefaultOutcome"/>
+    <rdfs:comment xml:lang="en">A duty applies unless the license waives it. A check under a graph that adopts
+the rule reads the silence as a license-wide duty and marks the finding as coming from the
+rule.</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource="https://dalicc.net/ns#"/>
+    <rdfs:label xml:lang="en">Required by default</rdfs:label>
+    <rdfs:seeAlso rdf:resource="http://www.w3.org/ns/odrl/2/duty"/>
+    <rdfs:seeAlso rdf:resource="https://dalicc.net/ns#NotWaivable"/>
+    <skos:prefLabel xml:lang="en">requiredByDefault</skos:prefLabel>
   </rdf:Description>
   <rdf:Description rdf:about="https://dalicc.net/ns#ReviewStatus">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
@@ -239,6 +449,35 @@ odrl:Prohibition: something the licensee may or may not do.</rdfs:comment>
     <rdfs:seeAlso rdf:resource="https://dalicc.net/ns#DutyAction"/>
     <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/odrl/2/Action"/>
     <skos:scopeNote xml:lang="en">Read by app/services/vocab.py, which offers only rule actions as permissions and prohibitions in the composer and in the search questionnaire.</skos:scopeNote>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://dalicc.net/ns#RuleStatus">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:comment xml:lang="en">Whether a default rule takes part in reasoning by default (dalicc:Adopted) or
+is written down for review and applies only when its graph is chosen (dalicc:Proposed).</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource="https://dalicc.net/ns#"/>
+    <rdfs:label xml:lang="en">Rule status</rdfs:label>
+    <rdfs:seeAlso rdf:resource="https://dalicc.net/ns#DefaultRule"/>
+    <rdfs:seeAlso rdf:resource="https://dalicc.net/ns#ruleStatus"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://dalicc.net/ns#StatementOrigin">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:comment xml:lang="en">Where a deontic statement in a result or a document came from: the text of the
+license, or a default rule applied to an action the text is silent on.</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource="https://dalicc.net/ns#"/>
+    <rdfs:label xml:lang="en">Statement origin</rdfs:label>
+    <rdfs:seeAlso rdf:resource="https://dalicc.net/ns#DefaultRule"/>
+    <rdfs:seeAlso rdf:resource="https://dalicc.net/ns#statementOrigin"/>
+    <skos:scopeNote xml:lang="en">Used in compatibility and consistency results and in the documents built from them, never in a curated record: a record states what its text states.</skos:scopeNote>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://dalicc.net/ns#US">
+    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+    <rdf:type rdf:resource="https://dalicc.net/ns#Jurisdiction"/>
+    <rdfs:comment xml:lang="en">The United States of America, whose copyright law is federal.</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource="https://dalicc.net/ns#"/>
+    <rdfs:label xml:lang="en">United States</rdfs:label>
+    <rdfs:seeAlso rdf:resource="http://creativecommons.org/ns#jurisdiction"/>
+    <skos:member rdf:resource="http://www.bpiresearch.com/BPMO/2004/03/03/cdl/Countries#UnitedStates"/>
+    <skos:prefLabel xml:lang="en">US</skos:prefLabel>
   </rdf:Description>
   <rdf:Description rdf:about="https://dalicc.net/ns#ValidityType">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
@@ -324,6 +563,16 @@ the alternatives are quoted and this property records that they are alternatives
     <rdfs:seeAlso rdf:resource="http://www.w3.org/ns/odrl/2/duty"/>
     <rdfs:seeAlso rdf:resource="https://dalicc.net/ns#additionalClauses"/>
     <skos:note xml:lang="en">Added by the standard-license addition of 2026-09-15, which recorded the clause as a vocabulary gap. Applied to 3 license records by the standard-license addition of 2026-09-15.</skos:note>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://dalicc.net/ns#appliesTo">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:comment xml:lang="en">Relates a default rule to the action it is about.</rdfs:comment>
+    <rdfs:domain rdf:resource="https://dalicc.net/ns#DefaultRule"/>
+    <rdfs:isDefinedBy rdf:resource="https://dalicc.net/ns#"/>
+    <rdfs:label xml:lang="en">Applies to</rdfs:label>
+    <rdfs:range rdf:resource="http://www.w3.org/ns/odrl/2/Action"/>
+    <rdfs:seeAlso rdf:resource="http://www.w3.org/ns/odrl/2/action"/>
+    <rdfs:seeAlso rdf:resource="https://dalicc.net/ns#DefaultRule"/>
   </rdf:Description>
   <rdf:Description rdf:about="https://dalicc.net/ns#applyTechnicalProtectionMeasures">
     <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
@@ -534,6 +783,17 @@ protected by that right alone.</rdfs:comment>
     <rdfs:seeAlso rdf:resource="https://dalicc.net/ns#suiGenerisDatabaseRights"/>
     <skos:note xml:lang="en">Added by the license library review of 2026-09-15, which recorded the clause as a vocabulary gap. Defined here so the gap is named; the review applied it to no license record.</skos:note>
   </rdf:Description>
+  <rdf:Description rdf:about="https://dalicc.net/ns#defaultOutcome">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:comment xml:lang="en">Relates a default rule to what it concludes about an action the license does
+not mention: dalicc:NotGrantedByDefault, dalicc:GrantedByDefault, dalicc:RequiredByDefault or
+dalicc:NotWaivable.</rdfs:comment>
+    <rdfs:domain rdf:resource="https://dalicc.net/ns#DefaultRule"/>
+    <rdfs:isDefinedBy rdf:resource="https://dalicc.net/ns#"/>
+    <rdfs:label xml:lang="en">Default outcome</rdfs:label>
+    <rdfs:range rdf:resource="https://dalicc.net/ns#DefaultOutcome"/>
+    <rdfs:seeAlso rdf:resource="https://dalicc.net/ns#DefaultOutcome"/>
+  </rdf:Description>
   <rdf:Description rdf:about="https://dalicc.net/ns#derivativeDatabaseAccess">
     <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
     <rdf:type rdf:resource="http://www.w3.org/ns/odrl/2/Action"/>
@@ -598,6 +858,18 @@ the notice of them on to every recipient.</rdfs:comment>
     <skos:note xml:lang="en">Added by the standard-license addition of 2026-09-15, which recorded the clause as a vocabulary gap. Applied to 3 license records by the standard-license addition of 2026-09-15.</skos:note>
     <skos:scopeNote xml:lang="en">Carried by NASA-1.3, RPL-1.1 and RPL-1.5.</skos:scopeNote>
   </rdf:Description>
+  <rdf:Description rdf:about="https://dalicc.net/ns#extendsGraph">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:comment xml:lang="en">Relates a dependency graph to a graph whose statements it is read together
+with. A jurisdiction graph carries its own default rules and extends the core graph, so a check
+under it sees the core axioms, the adopted rules and the proposed rules of that jurisdiction,
+and the core graph stays the single place its axioms are written.</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource="https://dalicc.net/ns#"/>
+    <rdfs:label xml:lang="en">Extends graph</rdfs:label>
+    <rdfs:seeAlso rdf:resource="https://dalicc.net/ns#DefaultRule"/>
+    <rdfs:seeAlso rdf:resource="https://dalicc.net/ns#DependencyRelation"/>
+    <skos:scopeNote xml:lang="en">Read by app/services/depgraph.py and by the reasoner's dependency-graph atom, which follow it one step; a graph that extends a graph that extends a third is not resolved further.</skos:scopeNote>
+  </rdf:Description>
   <rdf:Description rdf:about="https://dalicc.net/ns#fieldOfUseRestriction">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AnnotationProperty"/>
     <rdfs:comment xml:lang="en">The field of activity a license confines the licensee to, as a short literal.
@@ -632,6 +904,18 @@ making the governing law depend on which government the licensee is.</rdfs:comme
     <rdfs:seeAlso rdf:resource="https://dalicc.net/ns#additionalClauses"/>
     <rdfs:seeAlso rdf:resource="https://dalicc.net/ns#governingLaw"/>
     <skos:note xml:lang="en">Added by the standard-license addition of 2026-09-15, which recorded the clause as a vocabulary gap. Applied to 1 license record by the standard-license addition of 2026-09-15.</skos:note>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://dalicc.net/ns#inJurisdiction">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:comment xml:lang="en">Relates a default rule to the territory it holds in: dalicc:worldwide, one of
+the region concepts this vocabulary defines, or a BPI country IRI, which is the scheme
+cc:jurisdiction uses on the records.</rdfs:comment>
+    <rdfs:domain rdf:resource="https://dalicc.net/ns#DefaultRule"/>
+    <rdfs:isDefinedBy rdf:resource="https://dalicc.net/ns#"/>
+    <rdfs:label xml:lang="en">In jurisdiction</rdfs:label>
+    <rdfs:range rdf:resource="https://dalicc.net/ns#Jurisdiction"/>
+    <rdfs:seeAlso rdf:resource="http://creativecommons.org/ns#jurisdiction"/>
+    <rdfs:seeAlso rdf:resource="https://dalicc.net/ns#Jurisdiction"/>
   </rdf:Description>
   <rdf:Description rdf:about="https://dalicc.net/ns#includeNoticeFile">
     <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
@@ -1011,6 +1295,20 @@ be clearly distinguished from the original work.</rdfs:comment>
     <rdfs:seeAlso rdf:resource="http://www.w3.org/ns/odrl/2/derive"/>
     <rdfs:seeAlso rdf:resource="https://dalicc.net/ns#ModifiedWorks"/>
   </rdf:Description>
+  <rdf:Description rdf:about="https://dalicc.net/ns#reverseEngineerForInteroperability">
+    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+    <rdf:type rdf:resource="http://www.w3.org/ns/odrl/2/Action"/>
+    <rdf:type rdf:resource="https://dalicc.net/ns#RuleAction"/>
+    <rdfs:comment xml:lang="en">Decompiling or otherwise analysing a program so far as is necessary to obtain
+the information needed to make an independently created program work with it. It is narrower
+than reverse engineering at large: the purpose is interoperability and nothing else.</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource="https://dalicc.net/ns#"/>
+    <rdfs:label xml:lang="en">Reverse engineer for interoperability</rdfs:label>
+    <rdfs:seeAlso rdf:resource="http://creativecommons.org/ns#SourceCode"/>
+    <rdfs:seeAlso rdf:resource="http://www.w3.org/ns/odrl/2/extract"/>
+    <rdfs:seeAlso rdf:resource="https://dalicc.net/ns#textAndDataMining"/>
+    <skos:note xml:lang="en">Added with version 7 of the vocabulary so that the European interoperability exception can be stated as a default rule; not used by any license in the current library.</skos:note>
+  </rdf:Description>
   <rdf:Description rdf:about="https://dalicc.net/ns#reviewStatus">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
     <rdfs:comment xml:lang="en">Relates a library record to how far it has come in the editorial review workflow.</rdfs:comment>
@@ -1081,6 +1379,28 @@ period of use or sales.</rdfs:comment>
     <skos:note xml:lang="en">Defined in the 2022 documentation; not used by any license in the current library. The documentation spells the term dalicc:royalityFree; this is the corrected, canonical spelling.</skos:note>
     <skos:prefLabel xml:lang="en">royaltyFree</skos:prefLabel>
   </rdf:Description>
+  <rdf:Description rdf:about="https://dalicc.net/ns#ruleBasis">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:comment xml:lang="en">The legal source a default rule rests on, named in words: a statute and its
+article, a directive, or a general principle. It is a citation a reader can check, not a holding
+and not legal advice.</rdfs:comment>
+    <rdfs:domain rdf:resource="https://dalicc.net/ns#DefaultRule"/>
+    <rdfs:isDefinedBy rdf:resource="https://dalicc.net/ns#"/>
+    <rdfs:label xml:lang="en">Rule basis</rdfs:label>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:seeAlso rdf:resource="http://purl.org/dc/terms/date"/>
+    <rdfs:seeAlso rdf:resource="https://dalicc.net/ns#DefaultRule"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://dalicc.net/ns#ruleStatus">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:comment xml:lang="en">Relates a default rule to whether it takes part in reasoning by default
+(dalicc:Adopted) or is written down for review (dalicc:Proposed).</rdfs:comment>
+    <rdfs:domain rdf:resource="https://dalicc.net/ns#DefaultRule"/>
+    <rdfs:isDefinedBy rdf:resource="https://dalicc.net/ns#"/>
+    <rdfs:label xml:lang="en">Rule status</rdfs:label>
+    <rdfs:range rdf:resource="https://dalicc.net/ns#RuleStatus"/>
+    <rdfs:seeAlso rdf:resource="https://dalicc.net/ns#RuleStatus"/>
+  </rdf:Description>
   <rdf:Description rdf:about="https://dalicc.net/ns#sellCopy">
     <dct:source rdf:resource="https://dalicc.github.io/"/>
     <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
@@ -1150,6 +1470,17 @@ that a conforming modification does not carry.</rdfs:comment>
     <rdfs:seeAlso rdf:resource="https://dalicc.net/ns#modificationNotice"/>
     <skos:note xml:lang="en">Added by the standard-license addition of 2026-09-15, which recorded the clause as a vocabulary gap. Applied to 1 license record by the standard-license addition of 2026-09-15.</skos:note>
     <skos:scopeNote xml:lang="en">Carried by SISSL, whose reciprocity is triggered not by modification but by a modification that departs from the named Standard.</skos:scopeNote>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://dalicc.net/ns#statementOrigin">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:comment xml:lang="en">Relates a deontic statement in a result or a document to where it came from:
+dalicc:FromText or dalicc:FromDefaultRule. It is written by the reasoner and by the services that
+build a result, never by a curated record.</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource="https://dalicc.net/ns#"/>
+    <rdfs:label xml:lang="en">Statement origin</rdfs:label>
+    <rdfs:range rdf:resource="https://dalicc.net/ns#StatementOrigin"/>
+    <rdfs:seeAlso rdf:resource="https://dalicc.net/ns#DefaultRule"/>
+    <rdfs:seeAlso rdf:resource="https://dalicc.net/ns#StatementOrigin"/>
   </rdf:Description>
   <rdf:Description rdf:about="https://dalicc.net/ns#sublicense">
     <dct:source rdf:resource="https://dalicc.github.io/"/>
@@ -1225,6 +1556,21 @@ search results and counts.</rdfs:comment>
     <rdfs:label xml:lang="en">Test fixture</rdfs:label>
     <rdfs:seeAlso rdf:resource="https://dalicc.net/ns#recordStatus"/>
     <skos:prefLabel xml:lang="en">testFixture</skos:prefLabel>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://dalicc.net/ns#textAndDataMining">
+    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+    <rdf:type rdf:resource="http://www.w3.org/ns/odrl/2/Action"/>
+    <rdf:type rdf:resource="https://dalicc.net/ns#RuleAction"/>
+    <rdfs:comment xml:lang="en">Automated analysis of the work in digital form to generate information about
+patterns, trends and correlations in it, which is the act the European and British mining
+exceptions describe. It covers the copying a mining run makes, whether or not a model is trained
+from the result.</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource="https://dalicc.net/ns#"/>
+    <rdfs:label xml:lang="en">Text and data mining</rdfs:label>
+    <rdfs:seeAlso rdf:resource="http://www.w3.org/ns/odrl/2/extract"/>
+    <rdfs:seeAlso rdf:resource="http://www.w3.org/ns/odrl/2/reproduce"/>
+    <rdfs:seeAlso rdf:resource="https://dalicc.net/ns#useForModelTraining"/>
+    <skos:note xml:lang="en">Added with version 7 of the vocabulary so that the mining exceptions can be stated as default rules; not used by any license in the current library. dalicc:useForModelTraining stays the narrower act of training a system on the work.</skos:note>
   </rdf:Description>
   <rdf:Description rdf:about="https://dalicc.net/ns#trademarkNotice">
     <dct:source rdf:resource="https://dalicc.github.io/"/>

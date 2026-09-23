@@ -25,8 +25,8 @@
  */
 
 .rsn {
-  --rsn-hot-fill: #fdeceb;
-  --rsn-yes-fill: #eaf7f3;
+  --rsn-hot-fill: var(--color-alert-surface);
+  --rsn-yes-fill: var(--color-ok-surface);
   --rsn-dim: 0.22;
 
   display: grid;

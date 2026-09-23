@@ -10,105 +10,188 @@
  * the current release of the family the old theme called Source Sans Pro; both files
  * are served by this site.
  *
+ * The faces themselves are declared elsewhere: one stylesheet per font set under
+ * app/static/site/fonts-*.css, of which a page links exactly one, so a visitor never
+ * downloads a family the site is not wearing.  app/services/appearance.py writes
+ * those files and says which set is which.
+ *
  * Light theme only. Every colour is stated explicitly so the page never inherits a
  * host or user-agent colour.
  *
- * Load order: site.css, then components.css.
+ * Load order: fonts-<set>.css, site.css, components.css, then the style element in
+ * the head that carries the chosen palette, font set and type scale.
  */
-
-/* ------------------------------------------------------------------ fonts */
-
-@font-face {
-  font-family: "Dalicc";
-  src:
-    url("../fonts/dalicc-font-webfont.woff2") format("woff2"),
-    url("../fonts/dalicc-font-webfont.woff") format("woff");
-  font-weight: normal;
-  font-style: normal;
-  font-display: swap;
-}
-
-/* Source Sans 3 is shipped with the site as well, so a page load asks no other host
- * for anything.  Two files carry the four faces the pages use (400, 600, 700 and 400
- * italic): each is the variable font, whose weight axis covers the whole range, which
- * is why one "src" stands for three weights.  The files are the official release,
- * under SIL OFL 1.1; the licence text sits beside them in
- * app/static/fonts/SourceSans3-OFL.txt and the version is recorded in THIRD_PARTY.md.
- *
- * The addresses carry no fingerprint, because static_url() writes the fingerprint into
- * a template and a stylesheet is not a template.  The mount answers a bare address
- * with "Cache-Control: no-cache", so a browser reuses the file after one revalidation
- * that returns 304 and no bytes.  For a file that changes about never that is the right
- * trade; see docs/WEBSITE.md.
- */
-
-@font-face {
-  font-family: "Source Sans 3";
-  src: url("../fonts/SourceSans3VF-Upright.ttf.woff2") format("woff2");
-  font-weight: 200 900;
-  font-style: normal;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: "Source Sans 3";
-  src: url("../fonts/SourceSans3VF-Italic.ttf.woff2") format("woff2");
-  font-weight: 200 900;
-  font-style: italic;
-  font-display: swap;
-}
 
 /* ----------------------------------------------------------------- tokens */
+
+/* Roles, not colours.
+ *
+ * Every colour, every family and every type size below is named for what it is for,
+ * never for what it looks like.  --color-accent is the colour that carries an action:
+ * it is red here and coral in the Institutional Navy palette.  A rule asks for the
+ * role, which is what lets one stored word repaint the whole site.
+ *
+ * The values in this block are the defaults, and the defaults are the site as it has
+ * always looked.  The head of every page writes the chosen palette, font set and type
+ * scale over them in a small style element, so this file stays one cacheable
+ * stylesheet whatever the site is wearing.  docs/WEBSITE.md, "Typography and colour",
+ * explains the roles and what may be put in them.
+ *
+ * No colour and no font family is written anywhere else in this file or in any other
+ * stylesheet under app/static/site: tests/unit/test_appearance.py reads them all and
+ * fails on one.
+ */
 
 :root {
   color-scheme: light;
 
-  /* brand */
-  --c-red: #ea4a3c;
-  --c-red-dark: #c73a2e;
-  --c-green: #009f7b;
-  --c-green-hover: #14b38f;
-  --c-green-active: #008b67;
-  --c-mint: #5accae;
-  --c-peach: #fff3ea;
+  /* the brand: the wordmark, the headings, the footer, the menu */
+  --color-brand: #505d66;
+  --color-brand-dark: #40565b;
+  --color-brand-darker: #2c4247;
+  --color-brand-mid: #5e7479;
+  --color-brand-soft: #c1d5dc;
 
-  /* slate family */
-  --c-slate: #505d66;
-  --c-slate-muted: #7c9297;
-  --c-slate-dark: #40565b;
-  --c-slate-dark-hover: #2c4247;
-  --c-slate-mid: #5e7479;
+  /* the accent: the band under the header, links, the API pill, the social marks */
+  --color-accent: #ea4a3c;
+  --color-accent-strong: #c73a2e;
 
-  /* chrome */
-  --c-ink: #191919;
-  --c-ink-soft: #4a4a4a;
-  --c-page: #ffffff;
-  --c-surface: #ffffff;
-  --c-surface-alt: #f6f9fa;
-  --c-rule: #e6eef0;
-  --c-rule-strong: #b3cacf;
-  --c-pale-blue: #c1d5dc;
-  --c-white: #ffffff;
+  /* the action: the primary button */
+  --color-action: #009f7b;
+  --color-action-hover: #14b38f;
+  --color-action-active: #008b67;
 
-  /* type */
+  /* the two bands of the home page */
+  --color-hero: #5accae;
+  --color-hero-text: #ffffff;
+  --color-hero-button: #40565b;
+  --color-hero-button-hover: #2c4247;
+  --color-band: #fff3ea;
+
+  /* surfaces */
+  --color-page: #ffffff;
+  --color-surface: #ffffff;
+  --color-surface-alt: #f6f9fa;
+  --color-graph-surface: #f7fafb;
+
+  /* text */
+  --color-text: #191919;
+  --color-text-soft: #4a4a4a;
+  --color-text-muted: #7c9297;
+
+  /* text and marks on a filled shape */
+  --color-on-brand: #ffffff;
+  --color-on-brand-soft: #dfe8eb;
+  --color-on-brand-faint: #c4d2d7;
+  --color-on-accent: #ffffff;
+  --color-on-action: #ffffff;
+
+  /* rules and edges */
+  --color-border: #e6eef0;
+  --color-border-strong: #b3cacf;
+
+  /* links and the focus ring */
+  --color-link: #ea4a3c;
+  --color-link-hover: #c73a2e;
+  --color-focus: #ea4a3c;
+
+  /* the wordmark: its two halves are drawn from these, so a palette recolours it */
+  --color-logo-brand: #505d66;
+  --color-logo-accent: #ea4a3c;
+
+  /* what a panel says about itself */
+  --color-ok-surface: #eaf7f3;
+  --color-alert-surface: #fdeeec;
+  --color-warn: #d98c1f;
+  --color-warn-surface: #fdf4e6;
+
+  /* Three colours are also needed as bare channels: a shadow, a scrim and a ring are
+     the same colour at an opacity.  The head derives them from the colours above. */
+  --color-brand-rgb: 80, 93, 102;
+  --color-text-rgb: 25, 25, 25;
+  --color-action-rgb: 0, 159, 123;
+
+  /* the three families: the display face, the reading face, the identifier face */
   --font-display: "Dalicc", "Oswald", "Arial Narrow", Arial, sans-serif;
   --font-body: "Source Sans 3", "Source Sans Pro", -apple-system, BlinkMacSystemFont,
     "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
   --font-mono: ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas, monospace;
 
-  --fs-body: 18px;
-  --lh-body: 1.5;
+  /* how a heading, a small capital label and a menu word are set */
+  --weight-heading: normal;
+  --transform-heading: uppercase;
+  --tracking-heading: 0.01em;
+  --weight-ui: normal;
+  --tracking-caps: 0.06em;
+  --font-nav: var(--font-display);
+  --transform-nav: uppercase;
+  --tracking-nav: normal;
+
+  /* the type scale; the three "narrow" sizes are the same headings on a phone */
+  --size-hero: 44px;
+  --size-hero-narrow: 30px;
+  --size-h1: 44px;
+  --size-h1-narrow: 30px;
+  --size-h2: 30px;
+  --size-h2-narrow: 25px;
+  --size-h3: 24px;
+  --size-h3-narrow: 21px;
+  --size-h4: 20px;
+  --size-lede: 19px;
+  --size-body: 18px;
+  --size-ui: 19px;
+  --size-ui-small: 16px;
+  --size-mono: 14px;
+  --size-code: 0.86em;
+  --leading-body: 1.5;
+  --leading-heading: 1.1;
+
+  /* The older colour names.  Every page stylesheet is written in them, so each one is
+     an alias of the role it belongs to and follows a palette without being touched.
+     A rule written from here on uses the role name. */
+  --c-red: var(--color-accent);
+  --c-red-dark: var(--color-accent-strong);
+  --c-green: var(--color-action);
+  --c-green-hover: var(--color-action-hover);
+  --c-green-active: var(--color-action-active);
+  --c-mint: var(--color-hero);
+  --c-peach: var(--color-band);
+  --c-slate: var(--color-brand);
+  --c-slate-muted: var(--color-text-muted);
+  --c-slate-dark: var(--color-brand-dark);
+  --c-slate-dark-hover: var(--color-brand-darker);
+  --c-slate-mid: var(--color-brand-mid);
+  --c-ink: var(--color-text);
+  --c-ink-soft: var(--color-text-soft);
+  --c-page: var(--color-page);
+  --c-surface: var(--color-surface);
+  --c-surface-alt: var(--color-surface-alt);
+  --c-rule: var(--color-border);
+  --c-rule-strong: var(--color-border-strong);
+  --c-pale-blue: var(--color-brand-soft);
+  /* The one name that means a colour and not a role: white is white in every palette,
+     and a rule that wants the paper under a card asks for --color-surface instead. */
+  --c-white: #ffffff;
+  --fs-body: var(--size-body);
+  --lh-body: var(--leading-body);
 
   /* layout */
   --content-max: 1024px;
   --wide-max: 1240px;
   --gutter: 24px;
   --band-pad: 64px;
-  --red-band: 30px;
+  --accent-band: 30px;
 
   --radius: 2px;
-  --shadow-card: 0 1px 2px rgba(80, 93, 102, 0.12);
-  --focus-ring: 3px solid var(--c-red);
+  --shadow-card: 0 1px 2px rgba(var(--color-brand-rgb), 0.12);
+  --shadow-panel: 0 6px 18px rgba(var(--color-brand-rgb), 0.18);
+  --shadow-drop: 0 4px 14px rgba(var(--color-text-rgb), 0.25);
+  --shadow-float: 0 2px 8px rgba(var(--color-text-rgb), 0.25);
+  --shadow-modal: 0 10px 40px rgba(var(--color-text-rgb), 0.35);
+  --scrim: rgba(var(--color-text-rgb), 0.45);
+  --scrim-strong: rgba(var(--color-text-rgb), 0.55);
+  --ring-action: 0 0 0 3px rgba(var(--color-action-rgb), 0.18);
+  --focus-ring: 3px solid var(--color-focus);
 }
 
 /* ------------------------------------------------------------------ reset */
@@ -126,11 +209,11 @@ html {
 
 body {
   margin: 0;
-  background: var(--c-page);
-  color: var(--c-ink);
+  background: var(--color-page);
+  color: var(--color-text);
   font-family: var(--font-body);
-  font-size: var(--fs-body);
-  line-height: var(--lh-body);
+  font-size: var(--size-body);
+  line-height: var(--leading-body);
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -152,37 +235,37 @@ h4,
 h5,
 h6 {
   font-family: var(--font-display);
-  font-weight: normal;
-  text-transform: uppercase;
-  color: var(--c-slate);
-  letter-spacing: 0.01em;
+  font-weight: var(--weight-heading);
+  text-transform: var(--transform-heading);
+  color: var(--color-brand);
+  letter-spacing: var(--tracking-heading);
   margin: 0 0 0.5em;
-  line-height: 1.1;
+  line-height: var(--leading-heading);
 }
 
 h1 {
-  font-size: 44px;
+  font-size: var(--size-h1);
   margin-bottom: 18px;
 }
 
 h2 {
-  font-size: 30px;
+  font-size: var(--size-h2);
   margin-top: 1.6em;
 }
 
 h3 {
-  font-size: 24px;
+  font-size: var(--size-h3);
   margin-top: 1.5em;
 }
 
 h4 {
-  font-size: 20px;
+  font-size: var(--size-h4);
   margin-top: 1.4em;
 }
 
 h5,
 h6 {
-  font-size: 18px;
+  font-size: var(--size-body);
   margin-top: 1.3em;
 }
 
@@ -191,12 +274,12 @@ p {
 }
 
 a {
-  color: var(--c-red);
+  color: var(--color-link);
   text-decoration: none;
 }
 
 a:hover {
-  color: var(--c-red-dark);
+  color: var(--color-link-hover);
   text-decoration: underline;
 }
 
@@ -230,7 +313,7 @@ code,
 kbd,
 pre {
   font-family: var(--font-mono);
-  font-size: 0.86em;
+  font-size: var(--size-code);
 }
 
 code {
@@ -293,7 +376,7 @@ hr {
 table {
   border-collapse: collapse;
   width: 100%;
-  font-size: 16px;
+  font-size: var(--size-ui-small);
 }
 
 th,
@@ -305,11 +388,11 @@ td {
 }
 
 thead th {
-  background: var(--c-slate);
-  color: var(--c-white);
+  background: var(--color-brand);
+  color: var(--color-on-brand);
   font-family: var(--font-display);
   text-transform: uppercase;
-  font-weight: normal;
+  font-weight: var(--weight-ui);
   letter-spacing: 0.03em;
 }
 
@@ -372,8 +455,8 @@ tbody tr:nth-child(even) {
 /* ----------------------------------------------------------------- header */
 
 .site-header {
-  background: var(--c-white);
-  border-bottom: var(--red-band) solid var(--c-red);
+  background: var(--color-surface);
+  border-bottom: var(--accent-band) solid var(--color-accent);
 }
 
 .site-header__inner {
@@ -393,12 +476,23 @@ tbody tr:nth-child(even) {
   flex: 0 0 auto;
 }
 
-.site-logo img {
+/* The wordmark is drawn into the page (app.core.templates.site_logo), so the two
+   halves take their colour from the palette: the file states the original slate and
+   red as the fallback, which is what an <img> of it and the og:image still use. */
+.site-logo svg {
   display: block;
   /* The clean wordmark has no canvas around it, so 121px here is the same rendered
      size the 160px file with the beta mark had. */
   width: 121px;
   height: auto;
+}
+
+.site-logo .wordmark__dali {
+  fill: var(--color-logo-brand);
+}
+
+.site-logo .wordmark__cc {
+  fill: var(--color-logo-accent);
 }
 
 .site-logo:focus-visible {
@@ -527,10 +621,12 @@ tbody tr:nth-child(even) {
   align-items: center;
   gap: 6px;
   padding: 10px 12px;
-  font-family: var(--font-display);
-  font-size: 19px;
-  text-transform: uppercase;
-  color: var(--c-slate);
+  font-family: var(--font-nav);
+  font-size: var(--size-ui);
+  font-weight: var(--weight-ui);
+  text-transform: var(--transform-nav);
+  letter-spacing: var(--tracking-nav);
+  color: var(--color-brand);
   white-space: nowrap;
 }
 
@@ -558,7 +654,7 @@ tbody tr:nth-child(even) {
   border: 1px solid var(--c-red);
   border-radius: 999px;
   color: var(--c-red);
-  font-size: 17px;
+  font-size: calc(var(--size-ui) - 2px);
 }
 
 .site-nav__link--button:hover,
@@ -649,7 +745,7 @@ tbody tr:nth-child(even) {
   background: var(--c-white);
   border: 1px solid var(--c-rule-strong);
   border-top: 3px solid var(--c-red);
-  box-shadow: 0 6px 18px rgba(80, 93, 102, 0.18);
+  box-shadow: var(--shadow-panel);
   z-index: 60;
   display: none;
 }
@@ -894,10 +990,11 @@ tbody tr:nth-child(even) {
   padding: 11px 22px;
   border: 0;
   border-radius: var(--radius);
-  background: var(--c-green);
-  color: var(--c-white);
+  background: var(--color-action);
+  color: var(--color-on-action);
   font-family: var(--font-display);
-  font-size: 19px;
+  font-size: var(--size-ui);
+  font-weight: var(--weight-ui);
   text-transform: uppercase;
   letter-spacing: 0.02em;
   cursor: pointer;
@@ -944,7 +1041,7 @@ tbody tr:nth-child(even) {
 
 .btn.btn--small {
   padding: 7px 14px;
-  font-size: 16px;
+  font-size: var(--size-ui-small);
 }
 
 .btn.btn--ghost.btn--small {
@@ -956,8 +1053,8 @@ tbody tr:nth-child(even) {
   display: inline-flex;
   align-items: center;
   gap: 8px;
-  color: var(--c-red);
-  font-size: 17px;
+  color: var(--color-link);
+  font-size: calc(var(--size-body) - 1px);
 }
 
 .arrow-link svg {
@@ -1082,7 +1179,7 @@ textarea {
 .site-footer__funding {
   font-size: 16px;
   line-height: 1.6;
-  color: #dfe8eb;
+  color: var(--color-on-brand-soft);
   max-width: 760px;
   margin: 0 auto 18px;
 }
@@ -1095,7 +1192,7 @@ textarea {
 
 .site-footer__partners {
   font-size: 15px;
-  color: #c4d2d7;
+  color: var(--color-on-brand-faint);
   max-width: 820px;
   margin: 0 auto;
 }
@@ -1117,7 +1214,7 @@ textarea {
   justify-content: center;
   cursor: pointer;
   z-index: 70;
-  box-shadow: 0 2px 8px rgba(25, 25, 25, 0.25);
+  box-shadow: var(--shadow-float);
 }
 
 .back-to-top[data-visible="true"] {
@@ -1131,8 +1228,8 @@ textarea {
 /* ------------------------------------------------------------ home page */
 
 .hero {
-  background: var(--c-mint);
-  color: var(--c-white);
+  background: var(--color-hero);
+  color: var(--color-hero-text);
 }
 
 /* No padding above or below: the Hype scene carries its own 500px of canvas and the
@@ -1154,23 +1251,26 @@ textarea {
 }
 
 .hero__copy h1 {
-  color: var(--c-white);
-  font-size: 44px;
+  color: var(--color-hero-text);
+  font-size: var(--size-hero);
   margin-bottom: 20px;
 }
 
 .hero__copy p {
-  font-size: 19px;
+  font-size: var(--size-lede);
   margin-bottom: 26px;
   max-width: 34em;
 }
 
+/* The call to action sits on the hero band, so it is a role of its own: the green of
+   the rest of the site would disappear into the mint here, and a palette whose accent
+   reads well on its own hero band puts the accent here instead. */
 .hero .btn {
-  background: var(--c-slate-dark);
+  background: var(--color-hero-button);
 }
 
 .hero .btn:hover {
-  background: var(--c-slate-dark-hover);
+  background: var(--color-hero-button-hover);
 }
 
 /* The Tumult Hype scene is 660x500 and needs JavaScript; below 768px (and with
@@ -1294,10 +1394,10 @@ textarea {
 .numbers__label {
   display: block;
   margin-top: 8px;
-  font-size: 16px;
-  color: var(--c-slate);
+  font-size: var(--size-ui-small);
+  color: var(--color-brand);
   text-transform: uppercase;
-  letter-spacing: 0.06em;
+  letter-spacing: var(--tracking-caps);
 }
 
 .numbers__note {
@@ -1354,7 +1454,7 @@ textarea {
 }
 
 .page-lede {
-  font-size: 19px;
+  font-size: var(--size-lede);
   color: var(--c-ink-soft);
   max-width: 54em;
   margin-bottom: 28px;
@@ -1596,7 +1696,7 @@ a.tag:hover {
 
 .license-list__id {
   font-family: var(--font-mono);
-  font-size: 14px;
+  font-size: var(--size-mono);
   font-weight: normal;
   color: var(--c-slate-muted);
 }
@@ -1732,8 +1832,8 @@ a.tag:hover {
   display: inline-block;
   font-size: 13px;
   text-transform: uppercase;
-  letter-spacing: 0.06em;
-  color: var(--c-white);
+  letter-spacing: var(--tracking-caps);
+  color: var(--color-on-brand);
   background: var(--c-slate-muted);
   padding: 2px 8px;
   border-radius: 999px;
@@ -1965,7 +2065,7 @@ a.tag:hover {
 
   .site-nav__link {
     padding: 10px 8px;
-    font-size: 18px;
+    font-size: calc(var(--size-ui) - 1px);
   }
 
   .site-nav__caret {
@@ -2070,19 +2170,19 @@ a.tag:hover {
 @media (max-width: 768px) {
   :root {
     --band-pad: 40px;
-    --red-band: 18px;
+    --accent-band: 18px;
   }
 
   h1 {
-    font-size: 30px;
+    font-size: var(--size-h1-narrow);
   }
 
   h2 {
-    font-size: 25px;
+    font-size: var(--size-h2-narrow);
   }
 
   h3 {
-    font-size: 21px;
+    font-size: var(--size-h3-narrow);
   }
 
   /* On a phone the header is too narrow for the icons next to the Menu button, so
@@ -2102,7 +2202,7 @@ a.tag:hover {
   }
 
   .hero__copy h1 {
-    font-size: 30px;
+    font-size: var(--size-hero-narrow);
   }
 }
 
@@ -2113,10 +2213,10 @@ a.tag:hover {
   }
 
   body {
-    font-size: 17px;
+    font-size: calc(var(--size-body) - 1px);
   }
 
-  .site-logo img {
+  .site-logo svg {
     width: 100px;
   }
 
@@ -2134,11 +2234,11 @@ a.tag:hover {
 
 @media (max-width: 450px) {
   h1 {
-    font-size: 26px;
+    font-size: calc(var(--size-h1-narrow) - 4px);
   }
 
   .hero__copy h1 {
-    font-size: 26px;
+    font-size: calc(var(--size-hero-narrow) - 4px);
   }
 
   .back-to-top {

@@ -50,17 +50,17 @@
 
 .flash--success {
   border-color: var(--c-green);
-  background: #eaf7f3;
+  background: var(--color-ok-surface);
 }
 
 .flash--error {
   border-color: var(--c-red);
-  background: #fdeeec;
+  background: var(--color-alert-surface);
 }
 
 .flash--warning {
-  border-color: #d98c1f;
-  background: #fdf4e6;
+  border-color: var(--color-warn);
+  background: var(--color-warn-surface);
 }
 
 .flash--info {
@@ -116,7 +116,7 @@
   line-height: 1.45;
   padding: 10px 13px;
   border-radius: var(--radius);
-  box-shadow: 0 4px 14px rgba(25, 25, 25, 0.25);
+  box-shadow: var(--shadow-drop);
   text-align: left;
   font-weight: normal;
   text-transform: none;
@@ -503,13 +503,13 @@
 }
 
 .badge--ok {
-  background: #eaf7f3;
+  background: var(--color-ok-surface);
   border-color: var(--c-green);
   color: var(--c-green-active);
 }
 
 .badge--warn {
-  background: #fdeeec;
+  background: var(--color-alert-surface);
   border-color: var(--c-red);
   color: var(--c-red-dark);
 }
@@ -583,7 +583,7 @@
   align-items: center;
   justify-content: center;
   padding: 16px;
-  background: rgba(25, 25, 25, 0.45);
+  background: var(--scrim);
 }
 
 .disclaimer[hidden] {
@@ -596,7 +596,7 @@
   max-height: 90vh;
   overflow-y: auto;
   border-top: 26px solid var(--c-red);
-  box-shadow: 0 10px 40px rgba(25, 25, 25, 0.35);
+  box-shadow: var(--shadow-modal);
   padding: 26px 28px 28px;
 }
 
@@ -632,7 +632,7 @@
   background: var(--c-white);
   border: 1px solid var(--c-rule-strong);
   border-top: 3px solid var(--c-green);
-  box-shadow: 0 6px 18px rgba(80, 93, 102, 0.18);
+  box-shadow: var(--shadow-panel);
   max-height: 320px;
   overflow-y: auto;
 }

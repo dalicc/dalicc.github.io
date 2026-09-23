@@ -1,0 +1,41 @@
+/* SPDX-License-Identifier: AGPL-3.0-only
+ * SPDX-FileCopyrightText: 2021-2026 DALICC - Verein zur Foerderung der Rechtssicherheit in der Datenbewirtschaftung (ZVR 1249185710)
+ */
+
+/* The Classic font set: the faces this set needs, and no others.
+ *
+ * The house display face in capitals over Source Sans 3, with the reader's
+ * own monospace for identifiers. This is the site as it stands.
+ *
+ * Every file is served from /static/fonts by this site, so opening a page
+ * asks no other host for anything.  The licence of each family sits beside
+ * the file and the version and the checksum are recorded in THIRD_PARTY.md.
+ *
+ * Written by app.services.appearance.face_stylesheet; edit the font set
+ * there and write the file out again rather than editing this file.
+ */
+
+@font-face {
+  font-family: "Dalicc";
+  src: url("../fonts/dalicc-font-webfont.woff2") format("woff2"),
+    url("../fonts/dalicc-font-webfont.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Source Sans 3";
+  src: url("../fonts/SourceSans3VF-Upright.ttf.woff2") format("woff2");
+  font-weight: 200 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Source Sans 3";
+  src: url("../fonts/SourceSans3VF-Italic.ttf.woff2") format("woff2");
+  font-weight: 200 900;
+  font-style: italic;
+  font-display: swap;
+}

@@ -14,8 +14,8 @@
 .dg-picker {
   margin: 24px 0;
   padding: 16px 20px;
-  background: #f7fafb;
-  border: 1px solid #e6eef0;
+  background: var(--color-graph-surface);
+  border: 1px solid var(--c-rule);
 }
 
 .dg-picker h2 {
@@ -35,7 +35,7 @@
   gap: 8px;
   align-items: baseline;
   padding: 6px 0;
-  border-bottom: 1px solid #e6eef0;
+  border-bottom: 1px solid var(--c-rule);
 }
 
 .dg-picker__item:last-child {
@@ -49,13 +49,13 @@
 /* ---------------------------------------------------- CURIE-first term cells */
 
 .dg-term {
-  font-family: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, monospace;
+  font-family: var(--font-mono);
   font-size: 0.95em;
 }
 
 .dg-term__label {
   display: block;
-  color: #7c9297;
+  color: var(--c-slate-muted);
   font-size: 14px;
 }
 
@@ -80,8 +80,8 @@
   align-items: flex-end;
   margin: 0 0 24px;
   padding: 12px 16px;
-  background: #f7fafb;
-  border: 1px solid #e6eef0;
+  background: var(--color-graph-surface);
+  border: 1px solid var(--c-rule);
 }
 
 .dg-select .field {
@@ -110,7 +110,7 @@
 }
 
 .dg-editor__row--bad td {
-  background: #fff3ea;
+  background: var(--c-peach);
 }
 
 .dg-editor__error td {
@@ -121,7 +121,7 @@
 .dg-editor__publish {
   margin: 24px 0;
   padding: 12px 16px;
-  border: 1px solid #e6eef0;
+  border: 1px solid var(--c-rule);
 }
 
 .dg-editor__publish legend {
@@ -135,7 +135,7 @@
 
 .dg-editor__import textarea {
   width: 100%;
-  font-family: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, monospace;
+  font-family: var(--font-mono);
   font-size: 14px;
 }
 
@@ -150,7 +150,7 @@
 
 .dg-relations dd {
   margin: 0;
-  color: #40565b;
+  color: var(--c-slate-dark);
 }
 
 @media (max-width: 604px) {

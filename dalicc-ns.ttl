@@ -1,3 +1,4 @@
+@prefix bpicounty: <http://www.bpiresearch.com/BPMO/2004/03/03/cdl/Countries#> .
 @prefix cc: <http://creativecommons.org/ns#> .
 @prefix dalicc: <https://dalicc.net/ns#> .
 @prefix dcmitype: <http://purl.org/dc/dcmitype/> .
@@ -35,6 +36,34 @@ odrl:includedIn a dalicc:DependencyRelation ;
 object action, so a permission or prohibition on the object also covers the subject
 (odrl:sell includedIn odrl:commercialize). 23 statements in the default dependency graph."""@en .
 
+dalicc:BR a skos:Concept,
+        dalicc:Jurisdiction ;
+    rdfs:label "Brazil"@en ;
+    rdfs:comment "The Federative Republic of Brazil."@en ;
+    rdfs:isDefinedBy dalicc: ;
+    rdfs:seeAlso cc:jurisdiction ;
+    skos:member bpicounty:Brazil ;
+    skos:prefLabel "BR"@en .
+
+dalicc:CN a skos:Concept,
+        dalicc:Jurisdiction ;
+    rdfs:label "China"@en ;
+    rdfs:comment "The People's Republic of China, excluding the special administrative regions, whose copyright law is separate."@en ;
+    rdfs:isDefinedBy dalicc: ;
+    rdfs:seeAlso cc:jurisdiction ;
+    skos:member bpicounty:China ;
+    skos:prefLabel "CN"@en .
+
+dalicc:GB a skos:Concept,
+        dalicc:Jurisdiction ;
+    rdfs:label "United Kingdom"@en ;
+    rdfs:comment "The United Kingdom of Great Britain and Northern Ireland, which kept the database right and the mining exception it had as a member state and has diverged since."@en ;
+    rdfs:isDefinedBy dalicc: ;
+    rdfs:seeAlso cc:jurisdiction,
+        dalicc:EU ;
+    skos:member bpicounty:UnitedKingdom ;
+    skos:prefLabel "GB"@en .
+
 dalicc:Hardware a owl:Class,
         dalicc:AssetType ;
     rdfs:label "Hardware"@en ;
@@ -47,6 +76,24 @@ hardware licenses govern the design material and reach the product made from it.
         dalicc:CreativeWork ;
     skos:scopeNote "Used as a value of dct:type on the odrl:AssetCollection that an odrl:Set targets, alongside dcmitype:Software, dcmitype:Dataset and dalicc:CreativeWork. Carried by the three CERN Open Hardware Licence records."@en .
 
+dalicc:IN a skos:Concept,
+        dalicc:Jurisdiction ;
+    rdfs:label "India"@en ;
+    rdfs:comment "The Republic of India."@en ;
+    rdfs:isDefinedBy dalicc: ;
+    rdfs:seeAlso cc:jurisdiction ;
+    skos:member bpicounty:India ;
+    skos:prefLabel "IN"@en .
+
+dalicc:JP a skos:Concept,
+        dalicc:Jurisdiction ;
+    rdfs:label "Japan"@en ;
+    rdfs:comment "Japan."@en ;
+    rdfs:isDefinedBy dalicc: ;
+    rdfs:seeAlso cc:jurisdiction ;
+    skos:member bpicounty:Japan ;
+    skos:prefLabel "JP"@en .
+
 dalicc:LiabilityLimitation a owl:DatatypeProperty ;
     rdfs:label "Limitation of liability"@en ;
     rdfs:comment "The verbatim text of the limitation-of-liability clause of the license. The work comes with a limitation of liability."@en ;
@@ -54,6 +101,26 @@ dalicc:LiabilityLimitation a owl:DatatypeProperty ;
     rdfs:isDefinedBy dalicc: ;
     rdfs:range xsd:string ;
     skos:scopeNote "Present on 301 of 343 licenses."@en .
+
+dalicc:RequiredByDefault a skos:Concept,
+        dalicc:DefaultOutcome ;
+    rdfs:label "Required by default"@en ;
+    rdfs:comment """A duty applies unless the license waives it. A check under a graph that adopts
+the rule reads the silence as a license-wide duty and marks the finding as coming from the
+rule."""@en ;
+    rdfs:isDefinedBy dalicc: ;
+    rdfs:seeAlso odrl:duty,
+        dalicc:NotWaivable ;
+    skos:prefLabel "requiredByDefault"@en .
+
+dalicc:US a skos:Concept,
+        dalicc:Jurisdiction ;
+    rdfs:label "United States"@en ;
+    rdfs:comment "The United States of America, whose copyright law is federal."@en ;
+    rdfs:isDefinedBy dalicc: ;
+    rdfs:seeAlso cc:jurisdiction ;
+    skos:member bpicounty:UnitedStates ;
+    skos:prefLabel "US"@en .
 
 dalicc:WarrantyOrLiabilityAcceptance a owl:DatatypeProperty ;
     rdfs:label "Warranty or liability acceptance"@en ;
@@ -86,6 +153,15 @@ the alternatives are quoted and this property records that they are alternatives
     rdfs:seeAlso odrl:duty,
         dalicc:additionalClauses ;
     skos:note "Added by the standard-license addition of 2026-09-15, which recorded the clause as a vocabulary gap. Applied to 3 license records by the standard-license addition of 2026-09-15."@en .
+
+dalicc:appliesTo a owl:ObjectProperty ;
+    rdfs:label "Applies to"@en ;
+    rdfs:comment "Relates a default rule to the action it is about."@en ;
+    rdfs:domain dalicc:DefaultRule ;
+    rdfs:isDefinedBy dalicc: ;
+    rdfs:range odrl:Action ;
+    rdfs:seeAlso odrl:action,
+        dalicc:DefaultRule .
 
 dalicc:applyTechnicalProtectionMeasures a skos:Concept,
         odrl:Action,
@@ -212,6 +288,17 @@ the notice of them on to every recipient."""@en ;
     skos:note "Added by the standard-license addition of 2026-09-15, which recorded the clause as a vocabulary gap. Applied to 3 license records by the standard-license addition of 2026-09-15."@en ;
     skos:scopeNote "Carried by NASA-1.3, RPL-1.1 and RPL-1.5."@en .
 
+dalicc:extendsGraph a owl:ObjectProperty ;
+    rdfs:label "Extends graph"@en ;
+    rdfs:comment """Relates a dependency graph to a graph whose statements it is read together
+with. A jurisdiction graph carries its own default rules and extends the core graph, so a check
+under it sees the core axioms, the adopted rules and the proposed rules of that jurisdiction,
+and the core graph stays the single place its axioms are written."""@en ;
+    rdfs:isDefinedBy dalicc: ;
+    rdfs:seeAlso dalicc:DefaultRule,
+        dalicc:DependencyRelation ;
+    skos:scopeNote "Read by app/services/depgraph.py and by the reasoner's dependency-graph atom, which follow it one step; a graph that extends a graph that extends a third is not resolved further."@en .
+
 dalicc:governmentRightsLimitation a owl:AnnotationProperty ;
     rdfs:label "Government rights limitation"@en ;
     rdfs:comment """A clause limiting the rights a government end user acquires in the work, or
@@ -221,6 +308,17 @@ making the governing law depend on which government the licensee is."""@en ;
     rdfs:seeAlso dalicc:additionalClauses,
         dalicc:governingLaw ;
     skos:note "Added by the standard-license addition of 2026-09-15, which recorded the clause as a vocabulary gap. Applied to 1 license record by the standard-license addition of 2026-09-15."@en .
+
+dalicc:inJurisdiction a owl:ObjectProperty ;
+    rdfs:label "In jurisdiction"@en ;
+    rdfs:comment """Relates a default rule to the territory it holds in: dalicc:worldwide, one of
+the region concepts this vocabulary defines, or a BPI country IRI, which is the scheme
+cc:jurisdiction uses on the records."""@en ;
+    rdfs:domain dalicc:DefaultRule ;
+    rdfs:isDefinedBy dalicc: ;
+    rdfs:range dalicc:Jurisdiction ;
+    rdfs:seeAlso cc:jurisdiction,
+        dalicc:Jurisdiction .
 
 dalicc:includeNoticeFile a skos:Concept,
         odrl:Action,
@@ -408,6 +506,19 @@ be clearly distinguished from the original work."""@en ;
     rdfs:seeAlso odrl:derive,
         dalicc:ModifiedWorks .
 
+dalicc:reverseEngineerForInteroperability a skos:Concept,
+        odrl:Action,
+        dalicc:RuleAction ;
+    rdfs:label "Reverse engineer for interoperability"@en ;
+    rdfs:comment """Decompiling or otherwise analysing a program so far as is necessary to obtain
+the information needed to make an independently created program work with it. It is narrower
+than reverse engineering at large: the purpose is interoperability and nothing else."""@en ;
+    rdfs:isDefinedBy dalicc: ;
+    rdfs:seeAlso cc:SourceCode,
+        odrl:extract,
+        dalicc:textAndDataMining ;
+    skos:note "Added with version 7 of the vocabulary so that the European interoperability exception can be stated as a default rule; not used by any license in the current library."@en .
+
 dalicc:royaltyCollectionReserved a skos:Concept,
         odrl:Action,
         dalicc:DutyAction,
@@ -420,6 +531,17 @@ instead, the statement is absent."""@en ;
     rdfs:seeAlso cc:CommercialUse,
         dalicc:royaltyFree ;
     skos:note "Added by the license library review of 2026-09-15, which recorded the clause as a vocabulary gap. Applied to 9 license records by the standard-license addition of 2026-09-15."@en .
+
+dalicc:ruleBasis a owl:DatatypeProperty ;
+    rdfs:label "Rule basis"@en ;
+    rdfs:comment """The legal source a default rule rests on, named in words: a statute and its
+article, a directive, or a general principle. It is a citation a reader can check, not a holding
+and not legal advice."""@en ;
+    rdfs:domain dalicc:DefaultRule ;
+    rdfs:isDefinedBy dalicc: ;
+    rdfs:range xsd:string ;
+    rdfs:seeAlso dct:date,
+        dalicc:DefaultRule .
 
 dalicc:sellCopy a skos:Concept,
         odrl:Action,
@@ -519,16 +641,15 @@ and on the strength of which finding or decision."""@en ;
         dalicc:reviewedOn ;
     skos:scopeNote "Carried by every record of the library, by the dependency graph and by this vocabulary. The object dereferences to the version list of that model."@en .
 
-dalicc:worldwide a skos:Concept,
-        dalicc:Jurisdiction ;
-    rdfs:label "Worldwide"@en ;
-    dct:source <https://dalicc.github.io/> ;
-    rdfs:comment "The license terms are valid throughout the world."@en ;
+dalicc:Adopted a skos:Concept,
+        dalicc:RuleStatus ;
+    rdfs:label "Adopted"@en ;
+    rdfs:comment """The rule takes part in reasoning under every graph that carries it. Only a rule
+the library has adopted is applied when a reader chooses nothing."""@en ;
     rdfs:isDefinedBy dalicc: ;
-    rdfs:seeAlso cc:jurisdiction ;
-    skos:definition "The license is valid in every jurisdiction. Used as the value of cc:jurisdiction where a license is not bound to specific countries."@en ;
-    skos:prefLabel "worldwide"@en ;
-    skos:scopeNote "The value of cc:jurisdiction on 57 licenses; the other 286 name one or more BPI country IRIs."@en .
+    rdfs:seeAlso dalicc:Proposed,
+        dalicc:ruleStatus ;
+    skos:prefLabel "adopted"@en .
 
 dalicc:Approved a skos:Concept,
         dalicc:ReviewStatus ;
@@ -569,6 +690,65 @@ audio, images, animations, video and interactive content."""@en ;
         dcmitype:Text ;
     skos:scopeNote "Used as a value of dct:type on the odrl:AssetCollection that an odrl:Set targets, alongside dcmitype:Dataset and dcmitype:Software."@en .
 
+dalicc:EU a skos:Concept,
+        dalicc:Jurisdiction ;
+    rdfs:label "European Union"@en ;
+    rdfs:comment """The member states of the European Union. A rule in this jurisdiction rests on
+a Union instrument, which reaches every member state once it is transposed; where a member state
+differs, a rule for that country says so."""@en ;
+    rdfs:isDefinedBy dalicc: ;
+    rdfs:seeAlso cc:jurisdiction,
+        dalicc:worldwide ;
+    skos:member bpicounty:Austria,
+        bpicounty:Belgium,
+        bpicounty:Bulgaria,
+        bpicounty:Croatia,
+        bpicounty:Cyprus,
+        bpicounty:Czechia,
+        bpicounty:Denmark,
+        bpicounty:Estonia,
+        bpicounty:Finland,
+        bpicounty:France,
+        bpicounty:Germany,
+        bpicounty:Greece,
+        bpicounty:Hungary,
+        bpicounty:Ireland,
+        bpicounty:Italy,
+        bpicounty:Latvia,
+        bpicounty:Lithuania,
+        bpicounty:Luxembourg,
+        bpicounty:Malta,
+        bpicounty:Netherlands,
+        bpicounty:Poland,
+        bpicounty:Portugal,
+        bpicounty:Romania,
+        bpicounty:Slovakia,
+        bpicounty:Slovenia,
+        bpicounty:Spain,
+        bpicounty:Sweden ;
+    skos:prefLabel "EU"@en ;
+    skos:scopeNote "27 member states. The United Kingdom left the Union in 2020 and is dalicc:GB, which keeps some of the same law and has diverged in others."@en .
+
+dalicc:FromDefaultRule a skos:Concept,
+        dalicc:StatementOrigin ;
+    rdfs:label "From a default rule"@en ;
+    rdfs:comment """The statement was derived, for an action the license is silent on, by a
+dalicc:DefaultRule of the dependency graph the check ran under. The rule that produced it is
+named beside it."""@en ;
+    rdfs:isDefinedBy dalicc: ;
+    rdfs:seeAlso dalicc:DefaultRule,
+        dalicc:FromText ;
+    skos:prefLabel "fromDefaultRule"@en .
+
+dalicc:FromText a skos:Concept,
+        dalicc:StatementOrigin ;
+    rdfs:label "From the text"@en ;
+    rdfs:comment "The statement is modelled from a sentence of the license text, which is what every curated record holds."@en ;
+    rdfs:isDefinedBy dalicc: ;
+    rdfs:seeAlso dalicc:FromDefaultRule,
+        dalicc:statementOrigin ;
+    skos:prefLabel "fromText"@en .
+
 dalicc:ModifiedWorks a skos:Concept,
         odrl:Action,
         dalicc:RuleAction ;
@@ -580,6 +760,28 @@ derivative work."""@en ;
     rdfs:seeAlso cc:DerivativeWorks,
         odrl:modify ;
     skos:scopeNote "Occurs in 320 of 343 licenses as an odrl:Permission."@en .
+
+dalicc:NotGrantedByDefault a skos:Concept,
+        dalicc:DefaultOutcome ;
+    rdfs:label "Not granted by default"@en ;
+    rdfs:comment """The action is not permitted unless the license permits it. A license that says
+nothing grants nothing, so a check under a graph that adopts the rule reads the silence as a
+prohibition and marks the finding as coming from the rule."""@en ;
+    rdfs:isDefinedBy dalicc: ;
+    rdfs:seeAlso dalicc:GrantedByDefault,
+        dalicc:defaultOutcome ;
+    skos:prefLabel "notGrantedByDefault"@en .
+
+dalicc:Proposed a skos:Concept,
+        dalicc:RuleStatus ;
+    rdfs:label "Proposed"@en ;
+    rdfs:comment """The rule is written down for review and is not part of any default check.
+Choosing the graph it lives in is the reader's request to see what it would do."""@en ;
+    rdfs:isDefinedBy dalicc: ;
+    rdfs:seeAlso dalicc:Adopted,
+        dalicc:ruleStatus ;
+    skos:note "A proposed rule is a question for the association's legal reviewer and not legal advice."@en ;
+    skos:prefLabel "proposed"@en .
 
 dalicc:Reviewed a skos:Concept,
         dalicc:ReviewStatus ;
@@ -745,18 +947,6 @@ against uses made under the license, so far as the applicable law allows."""@en 
     rdfs:seeAlso dalicc:moralRightsRestriction ;
     skos:note "Added by the license library review of 2026-09-15, which recorded the clause as a vocabulary gap. Applied to 4 license records by the standard-license addition of 2026-09-15."@en .
 
-dalicc:moralRightsRestriction a skos:Concept,
-        odrl:Action,
-        dalicc:RuleAction ;
-    rdfs:label "Moral rights restriction"@en ;
-    rdfs:comment """Treating the work in a way that touches the moral rights of the author,
-such as false attribution or a derogatory treatment. Where the license binds the licensee to
-respect those rights, this is the action it restricts."""@en ;
-    rdfs:isDefinedBy dalicc: ;
-    rdfs:seeAlso cc:Attribution,
-        dalicc:moralRightsNonAssertion ;
-    skos:note "Added by the license library review of 2026-09-15, which recorded the clause as a vocabulary gap. Applied to 6 license records by the standard-license addition of 2026-09-15."@en .
-
 dalicc:noWarrantyNotice a skos:Concept,
         odrl:Action,
         dalicc:DutyAction,
@@ -800,6 +990,20 @@ search results and counts."""@en ;
     rdfs:seeAlso dalicc:recordStatus ;
     skos:prefLabel "testFixture"@en .
 
+dalicc:textAndDataMining a skos:Concept,
+        odrl:Action,
+        dalicc:RuleAction ;
+    rdfs:label "Text and data mining"@en ;
+    rdfs:comment """Automated analysis of the work in digital form to generate information about
+patterns, trends and correlations in it, which is the act the European and British mining
+exceptions describe. It covers the copying a mining run makes, whether or not a model is trained
+from the result."""@en ;
+    rdfs:isDefinedBy dalicc: ;
+    rdfs:seeAlso odrl:extract,
+        odrl:reproduce,
+        dalicc:useForModelTraining ;
+    skos:note "Added with version 7 of the vocabulary so that the mining exceptions can be stated as default rules; not used by any license in the current library. dalicc:useForModelTraining stays the narrower act of training a system on the work."@en .
+
 dalicc:trademarkNotice a skos:Concept,
         odrl:Action,
         dalicc:DutyAction ;
@@ -814,17 +1018,16 @@ Work and reproducing the content of the notice file."""@en ;
         dalicc:promote ;
     skos:note "Defined in the 2022 documentation; used by 1 license record since 2026-09-15."@en .
 
-dalicc:useForModelTraining a skos:Concept,
-        odrl:Action,
-        dalicc:RuleAction ;
-    rdfs:label "Use for model training"@en ;
-    rdfs:comment """Using the licensed material to train, validate or tune an automated
-system that learns from data. Some licenses grant it, some prohibit it and most are silent,
-in which case no statement is made."""@en ;
+dalicc:worldwide a skos:Concept,
+        dalicc:Jurisdiction ;
+    rdfs:label "Worldwide"@en ;
+    dct:source <https://dalicc.github.io/> ;
+    rdfs:comment "The license terms are valid throughout the world."@en ;
     rdfs:isDefinedBy dalicc: ;
-    rdfs:seeAlso dcmitype:Dataset,
-        odrl:extract ;
-    skos:note "Added by the license library review of 2026-09-15, which recorded the clause as a vocabulary gap. Applied to 3 license records by the standard-license addition of 2026-09-15."@en .
+    rdfs:seeAlso cc:jurisdiction ;
+    skos:definition "The license is valid in every jurisdiction. Used as the value of cc:jurisdiction where a license is not bound to specific countries."@en ;
+    skos:prefLabel "worldwide"@en ;
+    skos:scopeNote "The value of cc:jurisdiction on 57 licenses; the other 286 name one or more BPI country IRIs."@en .
 
 dalicc:AssetType a owl:Class ;
     rdfs:label "Asset type"@en ;
@@ -836,11 +1039,27 @@ dcmitype:Dataset and the two asset types this vocabulary defines."""@en ;
         dcmitype:Software ;
     skos:scopeNote "Read by app/services/vocab.py, which builds the asset-type facet of the library and the target list of the composer from the instances of this class plus the two Dublin Core types."@en .
 
-dalicc:Jurisdiction a owl:Class ;
-    rdfs:label "Jurisdiction"@en ;
-    rdfs:comment "The legal territory in which a license is valid. Values are either a country IRI of the BPI country list or dalicc:worldwide."@en ;
+dalicc:GrantedByDefault a skos:Concept,
+        dalicc:DefaultOutcome ;
+    rdfs:label "Granted by default"@en ;
+    rdfs:comment """The action is permitted unless the license prohibits it, for example because a
+statutory exception allows it whatever the license says. A check under a graph that adopts the
+rule reads the silence as a permission and marks the finding as coming from the rule."""@en ;
     rdfs:isDefinedBy dalicc: ;
-    rdfs:seeAlso cc:jurisdiction .
+    rdfs:seeAlso dalicc:NotGrantedByDefault,
+        dalicc:NotWaivable ;
+    skos:prefLabel "grantedByDefault"@en .
+
+dalicc:NotWaivable a skos:Concept,
+        dalicc:DefaultOutcome ;
+    rdfs:label "Not waivable"@en ;
+    rdfs:comment """A statement of the license to the contrary has no effect in that jurisdiction.
+The reasoner reports it as a finding when the license prohibits the action; it never silently
+overrides what the license says, because what the license says is what the record models."""@en ;
+    rdfs:isDefinedBy dalicc: ;
+    rdfs:seeAlso dalicc:GrantedByDefault,
+        dalicc:moralRightsRestriction ;
+    skos:prefLabel "notWaivable"@en .
 
 dalicc:PromotionSpecification a owl:DatatypeProperty ;
     rdfs:label "Promotion specification"@en ;
@@ -893,6 +1112,28 @@ dalicc:compliantLicense a skos:Concept,
     rdfs:seeAlso cc:ShareAlike,
         dalicc:ChangeLicense .
 
+dalicc:defaultOutcome a owl:ObjectProperty ;
+    rdfs:label "Default outcome"@en ;
+    rdfs:comment """Relates a default rule to what it concludes about an action the license does
+not mention: dalicc:NotGrantedByDefault, dalicc:GrantedByDefault, dalicc:RequiredByDefault or
+dalicc:NotWaivable."""@en ;
+    rdfs:domain dalicc:DefaultRule ;
+    rdfs:isDefinedBy dalicc: ;
+    rdfs:range dalicc:DefaultOutcome ;
+    rdfs:seeAlso dalicc:DefaultOutcome .
+
+dalicc:moralRightsRestriction a skos:Concept,
+        odrl:Action,
+        dalicc:RuleAction ;
+    rdfs:label "Moral rights restriction"@en ;
+    rdfs:comment """Treating the work in a way that touches the moral rights of the author,
+such as false attribution or a derogatory treatment. Where the license binds the licensee to
+respect those rights, this is the action it restricts."""@en ;
+    rdfs:isDefinedBy dalicc: ;
+    rdfs:seeAlso cc:Attribution,
+        dalicc:moralRightsNonAssertion ;
+    skos:note "Added by the license library review of 2026-09-15, which recorded the clause as a vocabulary gap. Applied to 6 license records by the standard-license addition of 2026-09-15."@en .
+
 dalicc:networkUseTrigger a skos:Concept,
         odrl:Action,
         dalicc:RuleAction ;
@@ -938,6 +1179,16 @@ dalicc:recordStatus a owl:ObjectProperty ;
     rdfs:range dalicc:RecordStatus ;
     rdfs:seeAlso dalicc:testFixture ;
     skos:scopeNote "Carried by the two records that are test fixtures rather than published licenses."@en .
+
+dalicc:statementOrigin a owl:ObjectProperty ;
+    rdfs:label "Statement origin"@en ;
+    rdfs:comment """Relates a deontic statement in a result or a document to where it came from:
+dalicc:FromText or dalicc:FromDefaultRule. It is written by the reasoner and by the services that
+build a result, never by a curated record."""@en ;
+    rdfs:isDefinedBy dalicc: ;
+    rdfs:range dalicc:StatementOrigin ;
+    rdfs:seeAlso dalicc:DefaultRule,
+        dalicc:StatementOrigin .
 
 dalicc:suiGenerisDatabaseRights a skos:Concept,
         odrl:Action,
@@ -987,6 +1238,18 @@ the same language is not a translation."""@en ;
         dalicc:jurisdictionPortOf ;
     rdfs:subPropertyOf dct:isVersionOf ;
     skos:note "Added by the license library review of 2026-09-15, which recorded the clause as a vocabulary gap. Defined here so the gap is named; the review applied it to no license record."@en .
+
+dalicc:useForModelTraining a skos:Concept,
+        odrl:Action,
+        dalicc:RuleAction ;
+    rdfs:label "Use for model training"@en ;
+    rdfs:comment """Using the licensed material to train, validate or tune an automated
+system that learns from data. Some licenses grant it, some prohibit it and most are silent,
+in which case no statement is made."""@en ;
+    rdfs:isDefinedBy dalicc: ;
+    rdfs:seeAlso dcmitype:Dataset,
+        odrl:extract ;
+    skos:note "Added by the license library review of 2026-09-15, which recorded the clause as a vocabulary gap. Applied to 3 license records by the standard-license addition of 2026-09-15."@en .
 
 dalicc:variantKind a owl:DatatypeProperty ;
     rdfs:label "Variant kind"@en ;
@@ -1065,6 +1328,15 @@ IRI is kept so that data written against the published documentation still deref
 dalicc:royaltyFree in new data."""@en ;
     skos:prefLabel "royalityFree"@en .
 
+dalicc:ruleStatus a owl:ObjectProperty ;
+    rdfs:label "Rule status"@en ;
+    rdfs:comment """Relates a default rule to whether it takes part in reasoning by default
+(dalicc:Adopted) or is written down for review (dalicc:Proposed)."""@en ;
+    rdfs:domain dalicc:DefaultRule ;
+    rdfs:isDefinedBy dalicc: ;
+    rdfs:range dalicc:RuleStatus ;
+    rdfs:seeAlso dalicc:RuleStatus .
+
 dalicc:sublicense a skos:Concept,
         odrl:Action,
         dalicc:RuleAction ;
@@ -1077,12 +1349,14 @@ license originally granted by a licensor to the licensee."""@en ;
         dalicc:ChangeLicense ;
     skos:note "Defined in the 2022 documentation and first used by the data in the 2026-09-15 license review: every Creative Commons 2.0 and 3.0 port, the six 4.0 International licenses, the Open Database License and the Open Data Commons Attribution License prohibit it in as many words."@en .
 
-dalicc:DependencyRelation a owl:Class ;
-    rdfs:label "Dependency relation"@en ;
-    rdfs:comment """A relation between two actions that the DALICC compatibility checker reasons
-over. The DALICC dependency graph (named graph https://dalicc.net/dependencygraph/dg_default)
-consists exclusively of statements whose predicate is an instance of this class."""@en ;
-    rdfs:isDefinedBy dalicc: .
+dalicc:StatementOrigin a owl:Class ;
+    rdfs:label "Statement origin"@en ;
+    rdfs:comment """Where a deontic statement in a result or a document came from: the text of the
+license, or a default rule applied to an action the text is silent on."""@en ;
+    rdfs:isDefinedBy dalicc: ;
+    rdfs:seeAlso dalicc:DefaultRule,
+        dalicc:statementOrigin ;
+    skos:scopeNote "Used in compatibility and consistency results and in the documents built from them, never in a curated record: a record states what its text states."@en .
 
 dalicc:ValidityType a owl:Class ;
     rdfs:label "Validity type"@en ;
@@ -1132,6 +1406,14 @@ dalicc:ReviewStatus a owl:Class ;
     rdfs:isDefinedBy dalicc: ;
     rdfs:seeAlso dalicc:reviewStatus .
 
+dalicc:RuleStatus a owl:Class ;
+    rdfs:label "Rule status"@en ;
+    rdfs:comment """Whether a default rule takes part in reasoning by default (dalicc:Adopted) or
+is written down for review and applies only when its graph is chosen (dalicc:Proposed)."""@en ;
+    rdfs:isDefinedBy dalicc: ;
+    rdfs:seeAlso dalicc:DefaultRule,
+        dalicc:ruleStatus .
+
 dalicc:addLimitation a skos:Concept,
         odrl:Action,
         dalicc:RuleAction ;
@@ -1155,6 +1437,13 @@ drafted against, in the language of the legal text and in the clauses that quote
     rdfs:subPropertyOf dct:isVersionOf ;
     skos:scopeNote "Carried by 290 records. Where the library holds no record of the port's own version, the parent is the nearest version the library does hold, so the relation can carry a version difference as well as a jurisdiction difference; dalicc:licenseVersion names the version of the port itself."@en .
 
+dalicc:DependencyRelation a owl:Class ;
+    rdfs:label "Dependency relation"@en ;
+    rdfs:comment """A relation between two actions that the DALICC compatibility checker reasons
+over. The DALICC dependency graph (named graph https://dalicc.net/dependencygraph/dg_default)
+consists exclusively of statements whose predicate is an instance of this class."""@en ;
+    rdfs:isDefinedBy dalicc: .
+
 dalicc:additionalClauses a owl:DatatypeProperty ;
     rdfs:label "Additional clauses"@en ;
     rdfs:comment "The verbatim text of any license clause that the ODRL policy of the odrl:Set cannot express."@en ;
@@ -1174,6 +1463,35 @@ dalicc:reviewStatus a owl:ObjectProperty ;
         dalicc:Reviewed,
         dalicc:reviewedOn ;
     skos:scopeNote "Carried by every record of the library with the value dalicc:Reviewed after the review of 2026-09-15."@en .
+
+dalicc:DefaultOutcome a owl:Class ;
+    rdfs:label "Default outcome"@en ;
+    rdfs:comment """What a default rule concludes about an action the license does not mention:
+that it is not granted, that it is granted, that it is required, or that a statement of the
+license to the contrary has no effect."""@en ;
+    rdfs:isDefinedBy dalicc: ;
+    rdfs:seeAlso dalicc:DefaultRule,
+        dalicc:defaultOutcome .
+
+dalicc:Jurisdiction a owl:Class ;
+    rdfs:label "Jurisdiction"@en ;
+    rdfs:comment "The legal territory in which a license is valid. Values are either a country IRI of the BPI country list or dalicc:worldwide."@en ;
+    rdfs:isDefinedBy dalicc: ;
+    rdfs:seeAlso cc:jurisdiction .
+
+dalicc:DefaultRule a owl:Class ;
+    rdfs:label "Default rule"@en ;
+    rdfs:comment """A rule about an action a license is silent on: what applies when the license
+neither permits, prohibits nor requires that action. A rule names the action (dalicc:appliesTo),
+the outcome (dalicc:defaultOutcome), the territory it holds in (dalicc:inJurisdiction), the
+statute or principle it rests on (dalicc:ruleBasis) and whether it is adopted or only proposed
+(dalicc:ruleStatus)."""@en ;
+    rdfs:isDefinedBy dalicc: ;
+    rdfs:seeAlso dalicc:DefaultOutcome,
+        dalicc:DependencyRelation,
+        dalicc:RuleStatus ;
+    skos:note "Nothing a rule states is legal advice. An adopted rule is the library's reading of a legal default, a proposed one is a question for a legal reviewer, and what a license means is decided by its text."@en ;
+    skos:scopeNote "Instances live in the dependency graphs of licensedata/dependencygraph/, beside the axioms, because a graph is the layer of statements about actions and can be chosen per check."@en .
 
 dalicc:DutyAction a owl:Class ;
     rdfs:label "Duty action"@en ;
@@ -1201,7 +1519,7 @@ dalicc: a owl:Ontology ;
 extends ODRL 2.2 and the Creative Commons Rights Expression Language with the actions, duty
 actions, clause properties and controlled values that the DALICC licenses require and that
 neither vocabulary provides."""@en ;
-    dct:hasVersion "6" ;
+    dct:hasVersion "7" ;
     dct:license <http://creativecommons.org/licenses/by/4.0/> ;
     dct:modified "2026-09-23"^^xsd:date ;
     dct:publisher "DALICC" ;
@@ -1222,7 +1540,8 @@ in the production triple store; it denotes the same terms but must not be used i
         <https://dalicc.net/ns/versions/2>,
         <https://dalicc.net/ns/versions/3>,
         <https://dalicc.net/ns/versions/4>,
-        <https://dalicc.net/ns/versions/5> ;
-    owl:versionInfo "6.0" ;
+        <https://dalicc.net/ns/versions/5>,
+        <https://dalicc.net/ns/versions/6> ;
+    owl:versionInfo "7.0" ;
     dalicc:versionHistory <https://dalicc.net/ns/versions> .
 

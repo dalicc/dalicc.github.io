@@ -108,7 +108,7 @@
     ],
     "http://purl.org/dc/terms/hasVersion": [
       {
-        "@value": "6"
+        "@value": "7"
       }
     ],
     "http://purl.org/dc/terms/license": [
@@ -188,16 +188,57 @@
       },
       {
         "@id": "https://dalicc.net/ns/versions/5"
+      },
+      {
+        "@id": "https://dalicc.net/ns/versions/6"
       }
     ],
     "http://www.w3.org/2002/07/owl#versionInfo": [
       {
-        "@value": "6.0"
+        "@value": "7.0"
       }
     ],
     "https://dalicc.net/ns#versionHistory": [
       {
         "@id": "https://dalicc.net/ns/versions"
+      }
+    ]
+  },
+  {
+    "@id": "https://dalicc.net/ns#Adopted",
+    "@type": [
+      "http://www.w3.org/2004/02/skos/core#Concept",
+      "https://dalicc.net/ns#RuleStatus"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@language": "en",
+        "@value": "The rule takes part in reasoning under every graph that carries it. Only a rule\nthe library has adopted is applied when a reader chooses nothing."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+      {
+        "@id": "https://dalicc.net/ns#"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "Adopted"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#seeAlso": [
+      {
+        "@id": "https://dalicc.net/ns#Proposed"
+      },
+      {
+        "@id": "https://dalicc.net/ns#ruleStatus"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#prefLabel": [
+      {
+        "@language": "en",
+        "@value": "adopted"
       }
     ]
   },
@@ -305,6 +346,86 @@
       {
         "@language": "en",
         "@value": "Audited"
+      }
+    ]
+  },
+  {
+    "@id": "https://dalicc.net/ns#BR",
+    "@type": [
+      "http://www.w3.org/2004/02/skos/core#Concept",
+      "https://dalicc.net/ns#Jurisdiction"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@language": "en",
+        "@value": "The Federative Republic of Brazil."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+      {
+        "@id": "https://dalicc.net/ns#"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "Brazil"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#seeAlso": [
+      {
+        "@id": "http://creativecommons.org/ns#jurisdiction"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#member": [
+      {
+        "@id": "http://www.bpiresearch.com/BPMO/2004/03/03/cdl/Countries#Brazil"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#prefLabel": [
+      {
+        "@language": "en",
+        "@value": "BR"
+      }
+    ]
+  },
+  {
+    "@id": "https://dalicc.net/ns#CN",
+    "@type": [
+      "http://www.w3.org/2004/02/skos/core#Concept",
+      "https://dalicc.net/ns#Jurisdiction"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@language": "en",
+        "@value": "The People's Republic of China, excluding the special administrative regions, whose copyright law is separate."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+      {
+        "@id": "https://dalicc.net/ns#"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "China"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#seeAlso": [
+      {
+        "@id": "http://creativecommons.org/ns#jurisdiction"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#member": [
+      {
+        "@id": "http://www.bpiresearch.com/BPMO/2004/03/03/cdl/Countries#China"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#prefLabel": [
+      {
+        "@language": "en",
+        "@value": "CN"
       }
     ]
   },
@@ -435,6 +556,83 @@
     ]
   },
   {
+    "@id": "https://dalicc.net/ns#DefaultOutcome",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@language": "en",
+        "@value": "What a default rule concludes about an action the license does not mention:\nthat it is not granted, that it is granted, that it is required, or that a statement of the\nlicense to the contrary has no effect."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+      {
+        "@id": "https://dalicc.net/ns#"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "Default outcome"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#seeAlso": [
+      {
+        "@id": "https://dalicc.net/ns#DefaultRule"
+      },
+      {
+        "@id": "https://dalicc.net/ns#defaultOutcome"
+      }
+    ]
+  },
+  {
+    "@id": "https://dalicc.net/ns#DefaultRule",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@language": "en",
+        "@value": "A rule about an action a license is silent on: what applies when the license\nneither permits, prohibits nor requires that action. A rule names the action (dalicc:appliesTo),\nthe outcome (dalicc:defaultOutcome), the territory it holds in (dalicc:inJurisdiction), the\nstatute or principle it rests on (dalicc:ruleBasis) and whether it is adopted or only proposed\n(dalicc:ruleStatus)."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+      {
+        "@id": "https://dalicc.net/ns#"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "Default rule"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#seeAlso": [
+      {
+        "@id": "https://dalicc.net/ns#DefaultOutcome"
+      },
+      {
+        "@id": "https://dalicc.net/ns#DependencyRelation"
+      },
+      {
+        "@id": "https://dalicc.net/ns#RuleStatus"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#note": [
+      {
+        "@language": "en",
+        "@value": "Nothing a rule states is legal advice. An adopted rule is the library's reading of a legal default, a proposed one is a question for a legal reviewer, and what a license means is decided by its text."
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#scopeNote": [
+      {
+        "@language": "en",
+        "@value": "Instances live in the dependency graphs of licensedata/dependencygraph/, beside the axioms, because a graph is the layer of statements about actions and can be chosen per check."
+      }
+    ]
+  },
+  {
     "@id": "https://dalicc.net/ns#DependencyRelation",
     "@type": [
       "http://www.w3.org/2002/07/owl#Class"
@@ -500,6 +698,290 @@
     ]
   },
   {
+    "@id": "https://dalicc.net/ns#EU",
+    "@type": [
+      "http://www.w3.org/2004/02/skos/core#Concept",
+      "https://dalicc.net/ns#Jurisdiction"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@language": "en",
+        "@value": "The member states of the European Union. A rule in this jurisdiction rests on\na Union instrument, which reaches every member state once it is transposed; where a member state\ndiffers, a rule for that country says so."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+      {
+        "@id": "https://dalicc.net/ns#"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "European Union"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#seeAlso": [
+      {
+        "@id": "http://creativecommons.org/ns#jurisdiction"
+      },
+      {
+        "@id": "https://dalicc.net/ns#worldwide"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#member": [
+      {
+        "@id": "http://www.bpiresearch.com/BPMO/2004/03/03/cdl/Countries#Austria"
+      },
+      {
+        "@id": "http://www.bpiresearch.com/BPMO/2004/03/03/cdl/Countries#Belgium"
+      },
+      {
+        "@id": "http://www.bpiresearch.com/BPMO/2004/03/03/cdl/Countries#Bulgaria"
+      },
+      {
+        "@id": "http://www.bpiresearch.com/BPMO/2004/03/03/cdl/Countries#Croatia"
+      },
+      {
+        "@id": "http://www.bpiresearch.com/BPMO/2004/03/03/cdl/Countries#Cyprus"
+      },
+      {
+        "@id": "http://www.bpiresearch.com/BPMO/2004/03/03/cdl/Countries#Czechia"
+      },
+      {
+        "@id": "http://www.bpiresearch.com/BPMO/2004/03/03/cdl/Countries#Denmark"
+      },
+      {
+        "@id": "http://www.bpiresearch.com/BPMO/2004/03/03/cdl/Countries#Estonia"
+      },
+      {
+        "@id": "http://www.bpiresearch.com/BPMO/2004/03/03/cdl/Countries#Finland"
+      },
+      {
+        "@id": "http://www.bpiresearch.com/BPMO/2004/03/03/cdl/Countries#France"
+      },
+      {
+        "@id": "http://www.bpiresearch.com/BPMO/2004/03/03/cdl/Countries#Germany"
+      },
+      {
+        "@id": "http://www.bpiresearch.com/BPMO/2004/03/03/cdl/Countries#Greece"
+      },
+      {
+        "@id": "http://www.bpiresearch.com/BPMO/2004/03/03/cdl/Countries#Hungary"
+      },
+      {
+        "@id": "http://www.bpiresearch.com/BPMO/2004/03/03/cdl/Countries#Ireland"
+      },
+      {
+        "@id": "http://www.bpiresearch.com/BPMO/2004/03/03/cdl/Countries#Italy"
+      },
+      {
+        "@id": "http://www.bpiresearch.com/BPMO/2004/03/03/cdl/Countries#Latvia"
+      },
+      {
+        "@id": "http://www.bpiresearch.com/BPMO/2004/03/03/cdl/Countries#Lithuania"
+      },
+      {
+        "@id": "http://www.bpiresearch.com/BPMO/2004/03/03/cdl/Countries#Luxembourg"
+      },
+      {
+        "@id": "http://www.bpiresearch.com/BPMO/2004/03/03/cdl/Countries#Malta"
+      },
+      {
+        "@id": "http://www.bpiresearch.com/BPMO/2004/03/03/cdl/Countries#Netherlands"
+      },
+      {
+        "@id": "http://www.bpiresearch.com/BPMO/2004/03/03/cdl/Countries#Poland"
+      },
+      {
+        "@id": "http://www.bpiresearch.com/BPMO/2004/03/03/cdl/Countries#Portugal"
+      },
+      {
+        "@id": "http://www.bpiresearch.com/BPMO/2004/03/03/cdl/Countries#Romania"
+      },
+      {
+        "@id": "http://www.bpiresearch.com/BPMO/2004/03/03/cdl/Countries#Slovakia"
+      },
+      {
+        "@id": "http://www.bpiresearch.com/BPMO/2004/03/03/cdl/Countries#Slovenia"
+      },
+      {
+        "@id": "http://www.bpiresearch.com/BPMO/2004/03/03/cdl/Countries#Spain"
+      },
+      {
+        "@id": "http://www.bpiresearch.com/BPMO/2004/03/03/cdl/Countries#Sweden"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#prefLabel": [
+      {
+        "@language": "en",
+        "@value": "EU"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#scopeNote": [
+      {
+        "@language": "en",
+        "@value": "27 member states. The United Kingdom left the Union in 2020 and is dalicc:GB, which keeps some of the same law and has diverged in others."
+      }
+    ]
+  },
+  {
+    "@id": "https://dalicc.net/ns#FromDefaultRule",
+    "@type": [
+      "http://www.w3.org/2004/02/skos/core#Concept",
+      "https://dalicc.net/ns#StatementOrigin"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@language": "en",
+        "@value": "The statement was derived, for an action the license is silent on, by a\ndalicc:DefaultRule of the dependency graph the check ran under. The rule that produced it is\nnamed beside it."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+      {
+        "@id": "https://dalicc.net/ns#"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "From a default rule"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#seeAlso": [
+      {
+        "@id": "https://dalicc.net/ns#DefaultRule"
+      },
+      {
+        "@id": "https://dalicc.net/ns#FromText"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#prefLabel": [
+      {
+        "@language": "en",
+        "@value": "fromDefaultRule"
+      }
+    ]
+  },
+  {
+    "@id": "https://dalicc.net/ns#FromText",
+    "@type": [
+      "http://www.w3.org/2004/02/skos/core#Concept",
+      "https://dalicc.net/ns#StatementOrigin"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@language": "en",
+        "@value": "The statement is modelled from a sentence of the license text, which is what every curated record holds."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+      {
+        "@id": "https://dalicc.net/ns#"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "From the text"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#seeAlso": [
+      {
+        "@id": "https://dalicc.net/ns#FromDefaultRule"
+      },
+      {
+        "@id": "https://dalicc.net/ns#statementOrigin"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#prefLabel": [
+      {
+        "@language": "en",
+        "@value": "fromText"
+      }
+    ]
+  },
+  {
+    "@id": "https://dalicc.net/ns#GB",
+    "@type": [
+      "http://www.w3.org/2004/02/skos/core#Concept",
+      "https://dalicc.net/ns#Jurisdiction"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@language": "en",
+        "@value": "The United Kingdom of Great Britain and Northern Ireland, which kept the database right and the mining exception it had as a member state and has diverged since."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+      {
+        "@id": "https://dalicc.net/ns#"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "United Kingdom"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#seeAlso": [
+      {
+        "@id": "http://creativecommons.org/ns#jurisdiction"
+      },
+      {
+        "@id": "https://dalicc.net/ns#EU"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#member": [
+      {
+        "@id": "http://www.bpiresearch.com/BPMO/2004/03/03/cdl/Countries#UnitedKingdom"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#prefLabel": [
+      {
+        "@language": "en",
+        "@value": "GB"
+      }
+    ]
+  },
+  {
+    "@id": "https://dalicc.net/ns#GrantedByDefault",
+    "@type": [
+      "http://www.w3.org/2004/02/skos/core#Concept",
+      "https://dalicc.net/ns#DefaultOutcome"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@language": "en",
+        "@value": "The action is permitted unless the license prohibits it, for example because a\nstatutory exception allows it whatever the license says. A check under a graph that adopts the\nrule reads the silence as a permission and marks the finding as coming from the rule."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+      {
+        "@id": "https://dalicc.net/ns#"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "Granted by default"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#seeAlso": [
+      {
+        "@id": "https://dalicc.net/ns#NotGrantedByDefault"
+      },
+      {
+        "@id": "https://dalicc.net/ns#NotWaivable"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#prefLabel": [
+      {
+        "@language": "en",
+        "@value": "grantedByDefault"
+      }
+    ]
+  },
+  {
     "@id": "https://dalicc.net/ns#Hardware",
     "@type": [
       "http://www.w3.org/2002/07/owl#Class",
@@ -539,6 +1021,86 @@
       {
         "@language": "en",
         "@value": "Used as a value of dct:type on the odrl:AssetCollection that an odrl:Set targets, alongside dcmitype:Software, dcmitype:Dataset and dalicc:CreativeWork. Carried by the three CERN Open Hardware Licence records."
+      }
+    ]
+  },
+  {
+    "@id": "https://dalicc.net/ns#IN",
+    "@type": [
+      "http://www.w3.org/2004/02/skos/core#Concept",
+      "https://dalicc.net/ns#Jurisdiction"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@language": "en",
+        "@value": "The Republic of India."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+      {
+        "@id": "https://dalicc.net/ns#"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "India"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#seeAlso": [
+      {
+        "@id": "http://creativecommons.org/ns#jurisdiction"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#member": [
+      {
+        "@id": "http://www.bpiresearch.com/BPMO/2004/03/03/cdl/Countries#India"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#prefLabel": [
+      {
+        "@language": "en",
+        "@value": "IN"
+      }
+    ]
+  },
+  {
+    "@id": "https://dalicc.net/ns#JP",
+    "@type": [
+      "http://www.w3.org/2004/02/skos/core#Concept",
+      "https://dalicc.net/ns#Jurisdiction"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@language": "en",
+        "@value": "Japan."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+      {
+        "@id": "https://dalicc.net/ns#"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "Japan"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#seeAlso": [
+      {
+        "@id": "http://creativecommons.org/ns#jurisdiction"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#member": [
+      {
+        "@id": "http://www.bpiresearch.com/BPMO/2004/03/03/cdl/Countries#Japan"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#prefLabel": [
+      {
+        "@language": "en",
+        "@value": "JP"
       }
     ]
   },
@@ -649,6 +1211,82 @@
     ]
   },
   {
+    "@id": "https://dalicc.net/ns#NotGrantedByDefault",
+    "@type": [
+      "http://www.w3.org/2004/02/skos/core#Concept",
+      "https://dalicc.net/ns#DefaultOutcome"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@language": "en",
+        "@value": "The action is not permitted unless the license permits it. A license that says\nnothing grants nothing, so a check under a graph that adopts the rule reads the silence as a\nprohibition and marks the finding as coming from the rule."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+      {
+        "@id": "https://dalicc.net/ns#"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "Not granted by default"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#seeAlso": [
+      {
+        "@id": "https://dalicc.net/ns#GrantedByDefault"
+      },
+      {
+        "@id": "https://dalicc.net/ns#defaultOutcome"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#prefLabel": [
+      {
+        "@language": "en",
+        "@value": "notGrantedByDefault"
+      }
+    ]
+  },
+  {
+    "@id": "https://dalicc.net/ns#NotWaivable",
+    "@type": [
+      "http://www.w3.org/2004/02/skos/core#Concept",
+      "https://dalicc.net/ns#DefaultOutcome"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@language": "en",
+        "@value": "A statement of the license to the contrary has no effect in that jurisdiction.\nThe reasoner reports it as a finding when the license prohibits the action; it never silently\noverrides what the license says, because what the license says is what the record models."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+      {
+        "@id": "https://dalicc.net/ns#"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "Not waivable"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#seeAlso": [
+      {
+        "@id": "https://dalicc.net/ns#GrantedByDefault"
+      },
+      {
+        "@id": "https://dalicc.net/ns#moralRightsRestriction"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#prefLabel": [
+      {
+        "@language": "en",
+        "@value": "notWaivable"
+      }
+    ]
+  },
+  {
     "@id": "https://dalicc.net/ns#PromotionSpecification",
     "@type": [
       "http://www.w3.org/2002/07/owl#DatatypeProperty"
@@ -687,6 +1325,50 @@
     ]
   },
   {
+    "@id": "https://dalicc.net/ns#Proposed",
+    "@type": [
+      "http://www.w3.org/2004/02/skos/core#Concept",
+      "https://dalicc.net/ns#RuleStatus"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@language": "en",
+        "@value": "The rule is written down for review and is not part of any default check.\nChoosing the graph it lives in is the reader's request to see what it would do."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+      {
+        "@id": "https://dalicc.net/ns#"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "Proposed"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#seeAlso": [
+      {
+        "@id": "https://dalicc.net/ns#Adopted"
+      },
+      {
+        "@id": "https://dalicc.net/ns#ruleStatus"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#note": [
+      {
+        "@language": "en",
+        "@value": "A proposed rule is a question for the association's legal reviewer and not legal advice."
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#prefLabel": [
+      {
+        "@language": "en",
+        "@value": "proposed"
+      }
+    ]
+  },
+  {
     "@id": "https://dalicc.net/ns#RecordStatus",
     "@type": [
       "http://www.w3.org/2002/07/owl#Class"
@@ -711,6 +1393,44 @@
     "http://www.w3.org/2000/01/rdf-schema#seeAlso": [
       {
         "@id": "https://dalicc.net/ns#recordStatus"
+      }
+    ]
+  },
+  {
+    "@id": "https://dalicc.net/ns#RequiredByDefault",
+    "@type": [
+      "http://www.w3.org/2004/02/skos/core#Concept",
+      "https://dalicc.net/ns#DefaultOutcome"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@language": "en",
+        "@value": "A duty applies unless the license waives it. A check under a graph that adopts\nthe rule reads the silence as a license-wide duty and marks the finding as coming from the\nrule."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+      {
+        "@id": "https://dalicc.net/ns#"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "Required by default"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#seeAlso": [
+      {
+        "@id": "http://www.w3.org/ns/odrl/2/duty"
+      },
+      {
+        "@id": "https://dalicc.net/ns#NotWaivable"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#prefLabel": [
+      {
+        "@language": "en",
+        "@value": "requiredByDefault"
       }
     ]
   },
@@ -819,6 +1539,114 @@
       {
         "@language": "en",
         "@value": "Read by app/services/vocab.py, which offers only rule actions as permissions and prohibitions in the composer and in the search questionnaire."
+      }
+    ]
+  },
+  {
+    "@id": "https://dalicc.net/ns#RuleStatus",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@language": "en",
+        "@value": "Whether a default rule takes part in reasoning by default (dalicc:Adopted) or\nis written down for review and applies only when its graph is chosen (dalicc:Proposed)."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+      {
+        "@id": "https://dalicc.net/ns#"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "Rule status"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#seeAlso": [
+      {
+        "@id": "https://dalicc.net/ns#DefaultRule"
+      },
+      {
+        "@id": "https://dalicc.net/ns#ruleStatus"
+      }
+    ]
+  },
+  {
+    "@id": "https://dalicc.net/ns#StatementOrigin",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@language": "en",
+        "@value": "Where a deontic statement in a result or a document came from: the text of the\nlicense, or a default rule applied to an action the text is silent on."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+      {
+        "@id": "https://dalicc.net/ns#"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "Statement origin"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#seeAlso": [
+      {
+        "@id": "https://dalicc.net/ns#DefaultRule"
+      },
+      {
+        "@id": "https://dalicc.net/ns#statementOrigin"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#scopeNote": [
+      {
+        "@language": "en",
+        "@value": "Used in compatibility and consistency results and in the documents built from them, never in a curated record: a record states what its text states."
+      }
+    ]
+  },
+  {
+    "@id": "https://dalicc.net/ns#US",
+    "@type": [
+      "http://www.w3.org/2004/02/skos/core#Concept",
+      "https://dalicc.net/ns#Jurisdiction"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@language": "en",
+        "@value": "The United States of America, whose copyright law is federal."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+      {
+        "@id": "https://dalicc.net/ns#"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "United States"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#seeAlso": [
+      {
+        "@id": "http://creativecommons.org/ns#jurisdiction"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#member": [
+      {
+        "@id": "http://www.bpiresearch.com/BPMO/2004/03/03/cdl/Countries#UnitedStates"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#prefLabel": [
+      {
+        "@language": "en",
+        "@value": "US"
       }
     ]
   },
@@ -1117,6 +1945,47 @@
       {
         "@language": "en",
         "@value": "Added by the standard-license addition of 2026-09-15, which recorded the clause as a vocabulary gap. Applied to 3 license records by the standard-license addition of 2026-09-15."
+      }
+    ]
+  },
+  {
+    "@id": "https://dalicc.net/ns#appliesTo",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#ObjectProperty"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@language": "en",
+        "@value": "Relates a default rule to the action it is about."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#domain": [
+      {
+        "@id": "https://dalicc.net/ns#DefaultRule"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+      {
+        "@id": "https://dalicc.net/ns#"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "Applies to"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#range": [
+      {
+        "@id": "http://www.w3.org/ns/odrl/2/Action"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#seeAlso": [
+      {
+        "@id": "http://www.w3.org/ns/odrl/2/action"
+      },
+      {
+        "@id": "https://dalicc.net/ns#DefaultRule"
       }
     ]
   },
@@ -1830,6 +2699,44 @@
     ]
   },
   {
+    "@id": "https://dalicc.net/ns#defaultOutcome",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#ObjectProperty"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@language": "en",
+        "@value": "Relates a default rule to what it concludes about an action the license does\nnot mention: dalicc:NotGrantedByDefault, dalicc:GrantedByDefault, dalicc:RequiredByDefault or\ndalicc:NotWaivable."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#domain": [
+      {
+        "@id": "https://dalicc.net/ns#DefaultRule"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+      {
+        "@id": "https://dalicc.net/ns#"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "Default outcome"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#range": [
+      {
+        "@id": "https://dalicc.net/ns#DefaultOutcome"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#seeAlso": [
+      {
+        "@id": "https://dalicc.net/ns#DefaultOutcome"
+      }
+    ]
+  },
+  {
     "@id": "https://dalicc.net/ns#derivativeDatabaseAccess",
     "@type": [
       "http://www.w3.org/2004/02/skos/core#Concept",
@@ -2031,6 +2938,43 @@
     ]
   },
   {
+    "@id": "https://dalicc.net/ns#extendsGraph",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#ObjectProperty"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@language": "en",
+        "@value": "Relates a dependency graph to a graph whose statements it is read together\nwith. A jurisdiction graph carries its own default rules and extends the core graph, so a check\nunder it sees the core axioms, the adopted rules and the proposed rules of that jurisdiction,\nand the core graph stays the single place its axioms are written."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+      {
+        "@id": "https://dalicc.net/ns#"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "Extends graph"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#seeAlso": [
+      {
+        "@id": "https://dalicc.net/ns#DefaultRule"
+      },
+      {
+        "@id": "https://dalicc.net/ns#DependencyRelation"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#scopeNote": [
+      {
+        "@language": "en",
+        "@value": "Read by app/services/depgraph.py and by the reasoner's dependency-graph atom, which follow it one step; a graph that extends a graph that extends a third is not resolved further."
+      }
+    ]
+  },
+  {
     "@id": "https://dalicc.net/ns#fieldOfUseRestriction",
     "@type": [
       "http://www.w3.org/2002/07/owl#AnnotationProperty"
@@ -2153,6 +3097,47 @@
       {
         "@language": "en",
         "@value": "Added by the standard-license addition of 2026-09-15, which recorded the clause as a vocabulary gap. Applied to 1 license record by the standard-license addition of 2026-09-15."
+      }
+    ]
+  },
+  {
+    "@id": "https://dalicc.net/ns#inJurisdiction",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#ObjectProperty"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@language": "en",
+        "@value": "Relates a default rule to the territory it holds in: dalicc:worldwide, one of\nthe region concepts this vocabulary defines, or a BPI country IRI, which is the scheme\ncc:jurisdiction uses on the records."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#domain": [
+      {
+        "@id": "https://dalicc.net/ns#DefaultRule"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+      {
+        "@id": "https://dalicc.net/ns#"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "In jurisdiction"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#range": [
+      {
+        "@id": "https://dalicc.net/ns#Jurisdiction"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#seeAlso": [
+      {
+        "@id": "http://creativecommons.org/ns#jurisdiction"
+      },
+      {
+        "@id": "https://dalicc.net/ns#Jurisdiction"
       }
     ]
   },
@@ -3482,6 +4467,48 @@
     ]
   },
   {
+    "@id": "https://dalicc.net/ns#reverseEngineerForInteroperability",
+    "@type": [
+      "http://www.w3.org/2004/02/skos/core#Concept",
+      "http://www.w3.org/ns/odrl/2/Action",
+      "https://dalicc.net/ns#RuleAction"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@language": "en",
+        "@value": "Decompiling or otherwise analysing a program so far as is necessary to obtain\nthe information needed to make an independently created program work with it. It is narrower\nthan reverse engineering at large: the purpose is interoperability and nothing else."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+      {
+        "@id": "https://dalicc.net/ns#"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "Reverse engineer for interoperability"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#seeAlso": [
+      {
+        "@id": "http://creativecommons.org/ns#SourceCode"
+      },
+      {
+        "@id": "http://www.w3.org/ns/odrl/2/extract"
+      },
+      {
+        "@id": "https://dalicc.net/ns#textAndDataMining"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#note": [
+      {
+        "@language": "en",
+        "@value": "Added with version 7 of the vocabulary so that the European interoperability exception can be stated as a default rule; not used by any license in the current library."
+      }
+    ]
+  },
+  {
     "@id": "https://dalicc.net/ns#reviewStatus",
     "@type": [
       "http://www.w3.org/2002/07/owl#ObjectProperty"
@@ -3734,6 +4761,85 @@
       {
         "@language": "en",
         "@value": "royaltyFree"
+      }
+    ]
+  },
+  {
+    "@id": "https://dalicc.net/ns#ruleBasis",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#DatatypeProperty"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@language": "en",
+        "@value": "The legal source a default rule rests on, named in words: a statute and its\narticle, a directive, or a general principle. It is a citation a reader can check, not a holding\nand not legal advice."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#domain": [
+      {
+        "@id": "https://dalicc.net/ns#DefaultRule"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+      {
+        "@id": "https://dalicc.net/ns#"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "Rule basis"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#range": [
+      {
+        "@id": "http://www.w3.org/2001/XMLSchema#string"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#seeAlso": [
+      {
+        "@id": "http://purl.org/dc/terms/date"
+      },
+      {
+        "@id": "https://dalicc.net/ns#DefaultRule"
+      }
+    ]
+  },
+  {
+    "@id": "https://dalicc.net/ns#ruleStatus",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#ObjectProperty"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@language": "en",
+        "@value": "Relates a default rule to whether it takes part in reasoning by default\n(dalicc:Adopted) or is written down for review (dalicc:Proposed)."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#domain": [
+      {
+        "@id": "https://dalicc.net/ns#DefaultRule"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+      {
+        "@id": "https://dalicc.net/ns#"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "Rule status"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#range": [
+      {
+        "@id": "https://dalicc.net/ns#RuleStatus"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#seeAlso": [
+      {
+        "@id": "https://dalicc.net/ns#RuleStatus"
       }
     ]
   },
@@ -3992,6 +5098,42 @@
       {
         "@language": "en",
         "@value": "Carried by SISSL, whose reciprocity is triggered not by modification but by a modification that departs from the named Standard."
+      }
+    ]
+  },
+  {
+    "@id": "https://dalicc.net/ns#statementOrigin",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#ObjectProperty"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@language": "en",
+        "@value": "Relates a deontic statement in a result or a document to where it came from:\ndalicc:FromText or dalicc:FromDefaultRule. It is written by the reasoner and by the services that\nbuild a result, never by a curated record."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+      {
+        "@id": "https://dalicc.net/ns#"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "Statement origin"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#range": [
+      {
+        "@id": "https://dalicc.net/ns#StatementOrigin"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#seeAlso": [
+      {
+        "@id": "https://dalicc.net/ns#DefaultRule"
+      },
+      {
+        "@id": "https://dalicc.net/ns#StatementOrigin"
       }
     ]
   },
@@ -4256,6 +5398,48 @@
       {
         "@language": "en",
         "@value": "testFixture"
+      }
+    ]
+  },
+  {
+    "@id": "https://dalicc.net/ns#textAndDataMining",
+    "@type": [
+      "http://www.w3.org/2004/02/skos/core#Concept",
+      "http://www.w3.org/ns/odrl/2/Action",
+      "https://dalicc.net/ns#RuleAction"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@language": "en",
+        "@value": "Automated analysis of the work in digital form to generate information about\npatterns, trends and correlations in it, which is the act the European and British mining\nexceptions describe. It covers the copying a mining run makes, whether or not a model is trained\nfrom the result."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+      {
+        "@id": "https://dalicc.net/ns#"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "Text and data mining"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#seeAlso": [
+      {
+        "@id": "http://www.w3.org/ns/odrl/2/extract"
+      },
+      {
+        "@id": "http://www.w3.org/ns/odrl/2/reproduce"
+      },
+      {
+        "@id": "https://dalicc.net/ns#useForModelTraining"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#note": [
+      {
+        "@language": "en",
+        "@value": "Added with version 7 of the vocabulary so that the mining exceptions can be stated as default rules; not used by any license in the current library. dalicc:useForModelTraining stays the narrower act of training a system on the work."
       }
     ]
   },
