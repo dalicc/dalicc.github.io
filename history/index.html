@@ -1,0 +1,536 @@
+
+<!DOCTYPE html>
+<html lang="en"
+      data-palette="classic"
+      data-fonts="classic"
+      data-scale="large"
+      data-nav-caps="on">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>History of the vocabulary and the dependency graphs | DALICC</title>
+  <meta name="description" content="Every version of the DALICC vocabulary and of the dependency graphs, with its date, its content hash and what changed, and the release identifier of the data this mirror was generated from.">
+  <link rel="canonical" href="https://dalicc.net/ns/versions">
+  <meta property="og:site_name" content="DALICC">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="History of the vocabulary and the dependency graphs">
+  <meta property="og:description" content="Every version of the DALICC vocabulary and of the dependency graphs, with its date, its content hash and what changed, and the release identifier of the data this mirror was generated from.">
+  <meta property="og:url" content="https://dalicc.net/ns/versions">
+  <meta property="og:image" content="https://dalicc.net/static/DALICC_full_logo_RGB.svg?v=e3b77d30f4d3">
+  <link rel="icon" href="../assets/site/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="../assets/site/favicon.svg">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+        href="../assets/fonts/dalicc-font-webfont.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+        href="../assets/fonts/SourceSans3VF-Upright.ttf.woff2">
+  <link rel="stylesheet" href="../assets/site/fonts-classic.css">
+  <link rel="stylesheet" href="../assets/site/site.css">
+  <link rel="stylesheet" href="../assets/site/components.css">
+  <style>:root {
+  --color-brand: #505d66;
+  --color-brand-dark: #40565b;
+  --color-brand-darker: #2c4247;
+  --color-brand-mid: #5e7479;
+  --color-brand-soft: #c1d5dc;
+  --color-accent: #ea4a3c;
+  --color-accent-strong: #c73a2e;
+  --color-action: #009f7b;
+  --color-action-hover: #14b38f;
+  --color-action-active: #008b67;
+  --color-hero: #5accae;
+  --color-hero-text: #ffffff;
+  --color-hero-button: #40565b;
+  --color-hero-button-hover: #2c4247;
+  --color-band: #fff3ea;
+  --color-page: #ffffff;
+  --color-surface: #ffffff;
+  --color-surface-alt: #f6f9fa;
+  --color-text: #191919;
+  --color-text-soft: #4a4a4a;
+  --color-text-muted: #7c9297;
+  --color-on-brand: #ffffff;
+  --color-on-brand-soft: #dfe8eb;
+  --color-on-brand-faint: #c4d2d7;
+  --color-on-accent: #ffffff;
+  --color-on-action: #ffffff;
+  --color-border: #e6eef0;
+  --color-border-strong: #b3cacf;
+  --color-link: #ea4a3c;
+  --color-link-hover: #c73a2e;
+  --color-focus: #ea4a3c;
+  --color-logo-brand: #505d66;
+  --color-logo-accent: #ea4a3c;
+  --color-ok-surface: #eaf7f3;
+  --color-alert-surface: #fdeeec;
+  --color-warn: #d98c1f;
+  --color-warn-surface: #fdf4e6;
+  --color-graph-surface: #f7fafb;
+  --color-brand-rgb: 80, 93, 102;
+  --color-text-rgb: 25, 25, 25;
+  --color-action-rgb: 0, 159, 123;
+  --font-display: "Dalicc", "Oswald", "Arial Narrow", Arial, sans-serif;
+  --font-body: "Source Sans 3", "Source Sans Pro", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  --font-mono: ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas, monospace;
+  --weight-heading: normal;
+  --transform-heading: uppercase;
+  --tracking-heading: 0.01em;
+  --weight-ui: normal;
+  --tracking-caps: 0.06em;
+  --font-nav: var(--font-display);
+  --transform-nav: uppercase;
+  --tracking-nav: normal;
+  --size-hero: 44px;
+  --size-hero-narrow: 30px;
+  --size-h1: 44px;
+  --size-h1-narrow: 30px;
+  --size-h2: 30px;
+  --size-h2-narrow: 25px;
+  --size-h3: 24px;
+  --size-h3-narrow: 21px;
+  --size-h4: 20px;
+  --size-numeral: 54px;
+  --size-card-title-large: 26px;
+  --size-card-title: 22px;
+  --size-lede: 19px;
+  --size-body: 18px;
+  --size-body-small: 17px;
+  --size-caption: 15px;
+  --size-label: 14px;
+  --size-label-small: 13px;
+  --size-ui: 19px;
+  --size-ui-small: 16px;
+  --size-mono: 14px;
+  --size-code: 0.86em;
+  --leading-body: 1.5;
+  --leading-heading: 1.1;
+}
+</style>
+<link rel="stylesheet" href="../assets/site/vocabulary.css">
+<style>
+  /* The mirror's navigation is always open: it has no menu button to open it. */
+  .site-nav.mirror-nav { display: block; }
+  .mirror-social ul { display: flex; flex-wrap: wrap; gap: 4px 20px; }
+</style>
+</head>
+<body class=""
+      data-bookmarks-script="/static/site/dashboard.js?v=140b71793dd8">
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+
+  <header class="site-header">
+    <div class="site-header__inner">
+      <a class="site-logo" href="../index.html">
+        <svg id="Ebene_1" data-name="Ebene 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300.03 123.75"><title>DALICC, the Data Licenses Clearance Center</title><style>.wordmark__dali{fill:var(--color-logo-brand,#505d66)}.wordmark__cc{fill:var(--color-logo-accent,#ea4a3c)}</style><g id="Ebene_2" data-name="Ebene 2"><g id="Ebene_1-2" data-name="Ebene 1-2"><path d="M282.22,76.17a22.35,22.35,0,0,1-26.94-1.42,4.35,4.35,0,0,0-5.85,6.44l.25.21A31.1,31.1,0,0,0,288,82.74l3.82,4.32,6.32-18.91-19.54,4Z" class="wordmark__cc"/><path d="M269.71,35.21a22.33,22.33,0,0,1,12.52,3.85l-3.59,4,19.54,4L291.86,28.2,288,32.5a31,31,0,0,0-18.33-6,31.51,31.51,0,0,0-31.1,31.1A22.17,22.17,0,0,1,216.64,80h-.43a22.4,22.4,0,1,1,14.55-39.44,4.35,4.35,0,1,0,6.34-6,4,4,0,0,0-.7-.6,31.1,31.1,0,1,0-20.2,54.74A30.76,30.76,0,0,0,247.3,58.3q0-.33,0-.66A22.7,22.7,0,0,1,269.71,35.21Z" class="wordmark__cc"/><path d="M123.86,79.29a30.19,30.19,0,0,1-22.12,9.29,29.84,29.84,0,0,1-21.9-9.07,29.86,29.86,0,0,1-9.07-21.9,29.86,29.86,0,0,1,9.07-21.9,31,31,0,0,1,43.79,0,29.82,29.82,0,0,1,9.07,21.9V84.16a4.43,4.43,0,1,1-8.85,0ZM101.74,35.5A22.09,22.09,0,0,0,79.62,57.56v.06a22.1,22.1,0,0,0,22.06,22.12h.06a22.08,22.08,0,0,0,22.12-22.06v-.06A22.09,22.09,0,0,0,101.8,35.5Z" class="wordmark__dali"/><path d="M141.56,4.53a4.32,4.32,0,0,1,1.3-3.12,4.41,4.41,0,0,1,6.24,0h0a4.24,4.24,0,0,1,1.3,3.12v75.2h4.42a4.43,4.43,0,1,1,0,8.85H146a4.44,4.44,0,0,1-4.42-4.42Z" class="wordmark__dali"/><path d="M177.75,13.38a5.31,5.31,0,0,1-1.63,3.9,5.47,5.47,0,0,1-7.73.06l-.07-.06a5.48,5.48,0,0,1-.06-7.74l.06-.06a5.48,5.48,0,0,1,7.74-.06l.06.06A5.31,5.31,0,0,1,177.75,13.38Zm-10,17.69a4.43,4.43,0,1,1,8.85,0V84.16a4.43,4.43,0,1,1-8.85,0Z" class="wordmark__dali"/><path d="M60.63,1.3a4.4,4.4,0,0,0-6.23,0h0a4.32,4.32,0,0,0-1.3,3.12V35.94l-.22-.22A29.81,29.81,0,0,0,31,26.65,29.84,29.84,0,0,0,9.1,35.72,29.89,29.89,0,0,0,0,57.62a29.86,29.86,0,0,0,9.07,21.9A29.87,29.87,0,0,0,31,88.58a29.82,29.82,0,0,0,21.9-9.07l.22-.24v4.89a4.43,4.43,0,1,0,8.85,0V4.42A4.24,4.24,0,0,0,60.63,1.3Zm-14,72A21.3,21.3,0,0,1,31,79.74a21.34,21.34,0,0,1-15.65-6.47,21.37,21.37,0,0,1-6.5-15.65A21.37,21.37,0,0,1,15.32,42,21.34,21.34,0,0,1,31,35.5,21.28,21.28,0,0,1,46.61,42a21.28,21.28,0,0,1,6.47,15.65,21.29,21.29,0,0,1-6.47,15.62Z" class="wordmark__dali"/><path d="M3.34,123.53a1,1,0,0,1-1-1v-16a1,1,0,0,1,1-1H6.06c3.19,0,4.69,1.81,4.69,5.27v7.4c0,3.46-1.49,5.27-4.69,5.27ZM5,108.22v12.67H6c1.41,0,2-.85,2-2.63v-7.4c0-1.78-.59-2.64-2-2.64Z" class="wordmark__dali"/><path d="M19,118.63H16.26l-.93,4.15a1,1,0,0,1-.93.75h-.77a.92.92,0,0,1-1-.88.74.74,0,0,1,0-.26l1.3-5.65,2.42-10.4a1.06,1.06,0,0,1,.93-.75h.58a1,1,0,0,1,.93.75l3.67,16a.93.93,0,0,1-.68,1.14,1,1,0,0,1-.25,0h-.77a1.06,1.06,0,0,1-.93-.75ZM16.87,116h1.49c-.29-1.28-.24-2-.75-4.26Z" class="wordmark__dali"/><path d="M23,106.52a1,1,0,0,1,1-1h7a1,1,0,0,1,1,1v.75a1,1,0,0,1-1,1H28.72v14.32a1,1,0,0,1-1,1H27a1,1,0,0,1-1-1V108.22H23.93a1,1,0,0,1-1-1Z" class="wordmark__dali"/><path d="M38.66,118.63H36l-1,4.15a1,1,0,0,1-.93.75H33.3a.92.92,0,0,1-.95-.88.74.74,0,0,1,0-.26l1.28-5.64,2.42-10.4a1.06,1.06,0,0,1,.93-.75h.58a1,1,0,0,1,.93.75l3.67,16a.93.93,0,0,1-.68,1.14,1,1,0,0,1-.25,0H40.5a1.06,1.06,0,0,1-.93-.75ZM36.56,116h1.49c-.29-1.28-.24-2-.75-4.26Z" class="wordmark__dali"/><path d="M59.49,122.57a1,1,0,0,1-1,1H52.86a1,1,0,0,1-1-1v-16a1,1,0,0,1,1-1h.77a1,1,0,0,1,.93,1v14.35h4a1,1,0,0,1,1,1Z" class="wordmark__dali"/><path d="M64,122.57a1,1,0,0,1-1,1h-.75a1,1,0,0,1-1-1v-16a1,1,0,0,1,1-1H63a1,1,0,0,1,1,1Z" class="wordmark__dali"/><path d="M66,110.78a5.47,5.47,0,0,1,1.44-4.15,4.69,4.69,0,0,1,5.88,0,5.42,5.42,0,0,1,1.41,4.15v.37a1,1,0,0,1-.93,1H73a1,1,0,0,1-1-1v-.37c0-1.78-.58-2.56-1.68-2.56s-1.7.77-1.7,2.56v7.53c0,1.78.56,2.58,1.7,2.58a1.67,1.67,0,0,0,1.22-.48,3.58,3.58,0,0,0,.45-2.1v-.37a1,1,0,0,1,1-1h.77a1,1,0,0,1,.93,1v.37a5.45,5.45,0,0,1-1.39,4.15,4.67,4.67,0,0,1-5.94,0A5.49,5.49,0,0,1,66,118.31Z" class="wordmark__dali"/><path d="M83.4,105.59a1,1,0,0,1,1,1v.72a1,1,0,0,1-1,1H79.32v5h3.35a1,1,0,0,1,1,1V115a1,1,0,0,1-1,1H79.32v5H83.4a1,1,0,0,1,1,1v.72a1,1,0,0,1-1,1H77.65a1,1,0,0,1-1-1v-16a1,1,0,0,1,1-1Z" class="wordmark__dali"/><path d="M93.58,123.53a1.12,1.12,0,0,1-.88-.59L89,113.79v8.78a1,1,0,0,1-1,1h-.77a1,1,0,0,1-1-1v-16a1,1,0,0,1,1-1h.64a1,1,0,0,1,.88.58l3.7,9.16v-8.78a1,1,0,0,1,1-1h.74a1,1,0,0,1,1,1v16a1,1,0,0,1-1,1Z" class="wordmark__dali"/><path d="M97.31,118a1,1,0,0,1,1-1H99a1,1,0,0,1,1,1v.35c0,1.28.24,1.89.61,2.21a1.58,1.58,0,0,0,1.12.35c1.12,0,1.73-.48,1.73-1.89,0-1.25-1.23-2.24-2.53-3.25h0c-1.76-1.38-3.59-2.82-3.59-5.46,0-3,1.57-4.74,4.39-4.74s4.39,1.84,4.39,5.22v.37a1,1,0,0,1-1,1h-.75a1,1,0,0,1-1-1v-.37c0-1.76-.56-2.56-1.73-2.56s-1.73.61-1.73,2,1.31,2.39,2.61,3.41h0c1.76,1.36,3.54,2.72,3.54,5.3,0,3-1.57,4.58-4.39,4.58s-4.39-1.7-4.39-5.19Z" class="wordmark__dali"/><path d="M114.79,105.59a1,1,0,0,1,1,1v.72a1,1,0,0,1-1,1h-4.07v5h3.35a1,1,0,0,1,1,1V115a1,1,0,0,1-1,1h-3.35v5h4.07a1,1,0,0,1,1,1v.72a1,1,0,0,1-1,1H109a1,1,0,0,1-1-1v-16a1,1,0,0,1,1-1Z" class="wordmark__dali"/><path d="M117.51,118a1,1,0,0,1,1-1h.75a1,1,0,0,1,1,1v.35c0,1.28.24,1.89.61,2.21a1.58,1.58,0,0,0,1.12.35c1.12,0,1.73-.48,1.73-1.89,0-1.25-1.23-2.24-2.53-3.25h0c-1.76-1.38-3.59-2.82-3.59-5.46,0-3,1.57-4.74,4.39-4.74s4.39,1.84,4.39,5.22v.37a1,1,0,0,1-1,1h-.75a1,1,0,0,1-1-1v-.37c0-1.76-.56-2.56-1.73-2.56s-1.73.61-1.73,2,1.31,2.39,2.61,3.41h0c1.76,1.36,3.54,2.72,3.54,5.3,0,3-1.57,4.58-4.39,4.58s-4.39-1.7-4.39-5.19Z" class="wordmark__dali"/><path d="M136.05,110.78a5.47,5.47,0,0,1,1.44-4.15,4.69,4.69,0,0,1,5.88,0,5.46,5.46,0,0,1,1.41,4.15v.37a1,1,0,0,1-.93,1h-.77a1,1,0,0,1-1-1v-.37c0-1.78-.59-2.56-1.68-2.56s-1.7.77-1.7,2.56v7.53c0,1.78.56,2.58,1.7,2.58a1.67,1.67,0,0,0,1.22-.48,3.58,3.58,0,0,0,.45-2.1v-.37a1,1,0,0,1,1-1h.77a1,1,0,0,1,.93,1v.37a5.45,5.45,0,0,1-1.38,4.15,4.67,4.67,0,0,1-5.94,0,5.5,5.5,0,0,1-1.41-4.15Z" class="wordmark__dali"/><path d="M154.29,122.57a1,1,0,0,1-1,1h-5.67a1,1,0,0,1-1-1v-16a1,1,0,0,1,1-1h.77a1,1,0,0,1,.93,1v14.35h4a1,1,0,0,1,1,1Z" class="wordmark__dali"/><path d="M162.83,105.59a1,1,0,0,1,1,1v.72a1,1,0,0,1-1,1h-4.07v5h3.35a1,1,0,0,1,1,1V115a1,1,0,0,1-1,1h-3.35v5h4.07a1,1,0,0,1,1,1v.72a1,1,0,0,1-1,1h-5.75a1,1,0,0,1-1-1v-16a1,1,0,0,1,1-1Z" class="wordmark__dali"/><path d="M172.09,118.63h-2.71l-.93,4.15a1,1,0,0,1-.93.75h-.77a.92.92,0,0,1-.95-.88.74.74,0,0,1,0-.26l1.28-5.64,2.42-10.4a1.06,1.06,0,0,1,.93-.75H171a1,1,0,0,1,.93.75l3.67,16a.93.93,0,0,1-.68,1.14,1,1,0,0,1-.25,0h-.77a1.06,1.06,0,0,1-.93-.75ZM170,116h1.49c-.29-1.28-.24-2-.75-4.26Z" class="wordmark__dali"/><path d="M186.25,122.54a1,1,0,0,1-1,1h-.75a1,1,0,0,1-1-1V118.1a1.86,1.86,0,0,0-1.64-2.07,1.45,1.45,0,0,0-.36,0h-1.2v6.52a1,1,0,0,1-.93,1h-.75a1,1,0,0,1-1-1v-16a1,1,0,0,1,1-1H182c3.27,0,4.42,1.65,4.42,5.22a5.23,5.23,0,0,1-1.12,3.81l-.21.21a4.59,4.59,0,0,1,1.14,3.3Zm-5.91-9.21h1.2c1.49,0,2.26-.74,2.26-2.55s-.4-2.56-1.78-2.56h-1.68Z" class="wordmark__dali"/><path d="M194.68,118.63H192l-.93,4.15a1,1,0,0,1-.93.75h-.77a.92.92,0,0,1-1-.88.74.74,0,0,1,0-.26l1.28-5.64,2.42-10.4a1.06,1.06,0,0,1,.93-.75h.58a1,1,0,0,1,.93.75l3.67,16a.93.93,0,0,1-.68,1.14,1,1,0,0,1-.25,0h-.77a1.06,1.06,0,0,1-.93-.75Zm-2.1-2.63h1.49c-.29-1.28-.24-2-.75-4.26Z" class="wordmark__dali"/><path d="M207.54,123.53a1.1,1.1,0,0,1-.88-.59l-3.7-9.16v8.78a1,1,0,0,1-1,1h-.77a1,1,0,0,1-1-1v-16a1,1,0,0,1,1-1h.64a1,1,0,0,1,.88.58l3.7,9.16v-8.78a1,1,0,0,1,1-1h.75a1,1,0,0,1,1,1v16a1,1,0,0,1-1,1Z" class="wordmark__dali"/><path d="M211.3,110.78a5.47,5.47,0,0,1,1.44-4.15,4.69,4.69,0,0,1,5.88,0,5.42,5.42,0,0,1,1.41,4.15v.37a1,1,0,0,1-.93,1h-.77a1,1,0,0,1-1-1v-.37c0-1.78-.58-2.56-1.68-2.56s-1.7.77-1.7,2.56v7.53c0,1.78.56,2.58,1.7,2.58a1.67,1.67,0,0,0,1.22-.48,3.58,3.58,0,0,0,.45-2.1v-.37a1,1,0,0,1,1-1h.77a1,1,0,0,1,.93,1v.37a5.45,5.45,0,0,1-1.39,4.15,4.67,4.67,0,0,1-5.94,0,5.54,5.54,0,0,1-1.41-4.15Z" class="wordmark__dali"/><path d="M228.73,105.59a1,1,0,0,1,1,1v.72a1,1,0,0,1-1,1h-4.07v5H228a1,1,0,0,1,1,1V115a1,1,0,0,1-1,1h-3.35v5h4.07a1,1,0,0,1,1,1v.72a1,1,0,0,1-1,1H223a1,1,0,0,1-1-1v-16a1,1,0,0,1,1-1Z" class="wordmark__dali"/><path d="M239.38,110.78a5.47,5.47,0,0,1,1.44-4.15,4.69,4.69,0,0,1,5.88,0,5.42,5.42,0,0,1,1.41,4.15v.37a1,1,0,0,1-.93,1h-.77a1,1,0,0,1-1-1v-.37c0-1.78-.58-2.56-1.68-2.56s-1.7.77-1.7,2.56v7.53c0,1.78.56,2.58,1.7,2.58a1.67,1.67,0,0,0,1.22-.48,3.58,3.58,0,0,0,.45-2.1v-.37a1,1,0,0,1,1-1h.77a1,1,0,0,1,.93,1v.37a5.45,5.45,0,0,1-1.39,4.15,4.67,4.67,0,0,1-5.94,0,5.54,5.54,0,0,1-1.41-4.15Z" class="wordmark__dali"/><path d="M256.81,105.59a1,1,0,0,1,1,1v.72a1,1,0,0,1-1,1h-4.07v5h3.35a1,1,0,0,1,1,1V115a1,1,0,0,1-1,1h-3.35v5h4.07a1,1,0,0,1,1,1v.72a1,1,0,0,1-1,1h-5.75a1,1,0,0,1-1-1v-16a1,1,0,0,1,1-1Z" class="wordmark__dali"/><path d="M267,123.53a1.12,1.12,0,0,1-.88-.59l-3.7-9.16v8.78a1,1,0,0,1-1,1h-.77a1,1,0,0,1-1-1v-16a1,1,0,0,1,1-1h.64a1,1,0,0,1,.88.58l3.7,9.16v-8.78a1,1,0,0,1,1-1h.74a1,1,0,0,1,1,1v16a1,1,0,0,1-1,1Z" class="wordmark__dali"/><path d="M270.69,106.52a1,1,0,0,1,1-1h7a1,1,0,0,1,1,1v.75a1,1,0,0,1-1,1h-2.18v14.32a1,1,0,0,1-1,1h-.72a1,1,0,0,1-1-1V108.22h-2.16a1,1,0,0,1-1-1Z" class="wordmark__dali"/><path d="M288.32,105.59a1,1,0,0,1,1,1v.72a1,1,0,0,1-1,1h-4.07v5h3.35a1,1,0,0,1,1,1V115a1,1,0,0,1-1,1h-3.35v5h4.07a1,1,0,0,1,1,1v.72a1,1,0,0,1-1,1h-5.75a1,1,0,0,1-1-1v-16a1,1,0,0,1,1-1Z" class="wordmark__dali"/><path d="M299.81,122.54a1,1,0,0,1-1,1h-.75a1,1,0,0,1-1-1V118.1a1.87,1.87,0,0,0-1.62-2.09,1.9,1.9,0,0,0-.34,0h-1.2v6.52a1,1,0,0,1-.93,1h-.75a1,1,0,0,1-1-1v-16a1,1,0,0,1,1-1h3.35c3.27,0,4.42,1.65,4.42,5.22a5.23,5.23,0,0,1-1.12,3.81l-.21.21a4.59,4.59,0,0,1,1.14,3.3Zm-5.91-9.21h1.2c1.49,0,2.26-.74,2.26-2.55s-.4-2.56-1.78-2.56H293.9Z" class="wordmark__dali"/></g></g></svg>
+      </a>
+      
+
+      
+
+      <nav class="site-nav mirror-nav" aria-label="This mirror">
+        <ul class="site-nav__list">
+        <li class="site-nav__item"><a class="site-nav__link" href="../index.html">Vocabulary</a></li>
+        <li class="site-nav__item"><a class="site-nav__link" href="../dependency-graph/">Dependency graph</a></li>
+        <li class="site-nav__item"><a class="site-nav__link" href="../reasoning/">Reasoning</a></li>
+        <li class="site-nav__item site-nav__item--active"><a class="site-nav__link" href="./" aria-current="page">History</a></li>
+        <li class="site-nav__item"><a class="site-nav__link" href="../dalicc-ns.ttl">Turtle</a></li>
+        <li class="site-nav__item"><a class="site-nav__link" href="../dalicc-ns.jsonld">JSON-LD</a></li>
+        <li class="site-nav__item"><a class="site-nav__link" href="../dalicc-ns.rdf">RDF/XML</a></li>
+        </ul>
+      </nav>
+
+      <div class="site-header__aside">
+        <a class="social-link" href="https://www.linkedin.com/groups/13523102" target="_blank" rel="noopener noreferrer"
+           title="DALICC on LinkedIn">          <svg class="social-link__mark" viewBox="0 0 24 24" fill="currentColor"
+               aria-hidden="true" focusable="false">
+            <path d="M4.98 3.5a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5zM3 9.25h4v11.25H3V9.25zm6.5 0h3.83v1.54h.05c.53-.95 1.84-1.95 3.79-1.95 4.05 0 4.8 2.53 4.8 5.82v5.84h-4v-5.18c0-1.24-.02-2.83-1.78-2.83-1.78 0-2.05 1.35-2.05 2.74v5.27h-4V9.25z"/>
+          </svg>          <span class="visually-hidden">LinkedIn</span>
+        </a>
+        <a class="social-link" href="https://github.com/dalicc/" target="_blank" rel="noopener noreferrer"
+           title="DALICC on GitHub">          <svg class="social-link__mark" viewBox="0 0 24 24" fill="currentColor"
+               aria-hidden="true" focusable="false">
+            <path d="M12 1.75a10.25 10.25 0 0 0-3.24 19.98c.51.1.7-.22.7-.49v-1.9c-2.85.62-3.45-1.2-3.45-1.2-.47-1.18-1.14-1.5-1.14-1.5-.93-.63.07-.62.07-.62 1.03.07 1.57 1.05 1.57 1.05.92 1.57 2.41 1.12 3 .86.09-.67.36-1.12.65-1.38-2.28-.26-4.67-1.14-4.67-5.06 0-1.12.4-2.03 1.05-2.75-.11-.26-.46-1.3.1-2.72 0 0 .86-.27 2.82 1.05a9.8 9.8 0 0 1 5.14 0c1.96-1.32 2.82-1.05 2.82-1.05.56 1.42.21 2.46.1 2.72.66.72 1.05 1.63 1.05 2.75 0 3.93-2.39 4.79-4.67 5.05.37.32.7.94.7 1.9v2.81c0 .27.18.59.7.49A10.25 10.25 0 0 0 12 1.75z"/>
+          </svg>          <span class="visually-hidden">GitHub</span>
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <div class="l-shell">
+    <main id="main-content" tabindex="-1" class="">
+<div class="l-main">
+  <div class="flash flash--info" role="status">
+    <span class="flash__icon" aria-hidden="true">&#8505;</span>
+    <div class="flash__body">
+      <p style="margin:0">Static mirror of https://dalicc.net/ns, vocabulary version 2, generated on 2026-09-24; the live pages may be newer.</p>
+    </div>
+  </div>
+</div>
+
+<div class="l-main">
+  <nav class="breadcrumb" aria-label="Breadcrumb">
+  <ol>
+    <li><a href="../index.html">Home</a></li>
+    <li>
+<a href="../index.html">Vocabulary</a>
+    </li>
+    <li>
+<span aria-current="page">History</span>    </li>
+  </ol>
+</nav>
+
+<h1>History</h1>
+<hr class="rule-dotted">
+
+
+  <div class="prose prose--measure">
+    <p class="page-lede">
+      Every version of the DALICC vocabulary and of the 8 dependency
+      graphs, with the date it was published, its content hash and what changed. A
+      content hash is computed from the canonical form <code>dalicc-c14n-1</code>, so
+      two files with the same hash say the same thing, whatever the order of their
+      statements. The hashes are the ones <code>https://api.dalicc.net</code> answers
+      for the same versions.
+    </p>
+  </div>
+
+  <h2 id="release">The data this mirror was generated from</h2>
+  <hr class="rule-dotted">
+  <dl class="term-card__meta">
+    <dt>Release</dt><dd><code>data-cc2fd2f7f4a6f172</code></dd>
+    <dt>Library</dt><dd><code>lib-c7dcd85c3a70cd9b</code>, 581 records</dd>
+    <dt>Graphs</dt><dd><code>dg-e0475ee1e1683745</code></dd>
+    <dt>Vocabulary</dt><dd><code>ns-b5e891e76aaa1249</code></dd>
+    <dt>Manifest</dt>
+    <dd><a href="releases/data-cc2fd2f7f4a6f172.json">data-cc2fd2f7f4a6f172.json</a>, every record, graph and
+      vocabulary with its version and its content hash</dd>
+    <dt>Every hash</dt>
+    <dd><a href="content-hashes.txt">content-hashes.txt</a>, one line per version below</dd>
+  </dl>
+
+  <h2 id="dalicc-ns">DALICC vocabulary</h2>
+  <hr class="rule-dotted">
+  <p>
+    <code>dalicc-ns</code>, version 2.
+    <a href="vocabulary/versions.json">Version list</a> (JSON),
+    <a href="vocabulary/changelog.json">change log</a> (JSON).
+  </p>
+  <div class="table-scroll">
+    <table class="vocab-table">
+      <caption class="visually-hidden">Versions of DALICC vocabulary</caption>
+      <thead>
+        <tr><th scope="col">Version</th><th scope="col">Date</th>
+            <th scope="col">Content hash</th><th scope="col">What changed</th></tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><a href="vocabulary/v2.ttl">2</a> (current)</td>
+          <td>2026-09-24</td>
+          <td><code>sha256:5a538e4afdc69631ef416b2fce5988133399e1b65e257c2e242322a03d4ef7e3</code></td>
+          <td>The content review of 2026-09-15 defined the terms the license texts need and the review itself writes, and the model history added the terms a versioned model needs. The later changes defined the terms of the standard licenses, a composed license&#39;s own text, variants and SPDX exceptions, default rules for what a license does not say, complete dependency graphs built from a difference file and where a statement of a record comes from, made every action definition describe its act, deprecated seven duplicates and spell license the way the site does.</td>
+        </tr>
+        <tr>
+          <td><a href="vocabulary/v1.ttl">1</a></td>
+          <td>not recorded</td>
+          <td><code>sha256:f781c32371c19d794600984a60f2dcf94f974eedf379e80c757b13f52555003a</code></td>
+          <td>The first version.</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <h2 id="dg_default">DALICC deontic dependency graph</h2>
+  <hr class="rule-dotted">
+  <p>
+    <code>dg_default</code>, version 2.
+    <a href="dependency-graphs/dg_default/versions.json">Version list</a> (JSON),
+    <a href="dependency-graphs/dg_default/changelog.json">change log</a> (JSON).
+  </p>
+  <div class="table-scroll">
+    <table class="vocab-table">
+      <caption class="visually-hidden">Versions of DALICC deontic dependency graph</caption>
+      <thead>
+        <tr><th scope="col">Version</th><th scope="col">Date</th>
+            <th scope="col">Content hash</th><th scope="col">What changed</th></tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><a href="dependency-graphs/dg_default/v2.ttl">2</a> (current)</td>
+          <td>2026-09-24</td>
+          <td><code>sha256:26ca6cd83a3ba32d2c227beb8366ae8d8dc915ded060d08912e9430d8ed35fa3</code></td>
+          <td>The content review of 2026-09-15 removed the pair of axioms that made a reciprocal license which also grants sublicensing contradict itself, and the reviews that followed related the two names of sublicensing and the commercial-use terms, so the graph holds 46 axioms. The graph also gained its first default rule, which Giray Havur adopted on 2026-09-23: a copyright license that is silent grants no right to endorsement, which refuses only a use that suggests endorsement and cites article 9 of the EU Trade Mark Regulation and section 2(b)(2) of Creative Commons 4.0.</td>
+        </tr>
+        <tr>
+          <td><a href="dependency-graphs/dg_default/v1.ttl">1</a></td>
+          <td>not recorded</td>
+          <td><code>sha256:ea2d9f7a2fecaba9bf93e5dc682d418e7785b77f2f0f7a941e52f97912b8d899</code></td>
+          <td>The first version.</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <h2 id="dg_br">Brazil default rules</h2>
+  <hr class="rule-dotted">
+  <p>
+    <code>dg_br</code>, version 2.
+    <a href="dependency-graphs/dg_br/versions.json">Version list</a> (JSON),
+    <a href="dependency-graphs/dg_br/changelog.json">change log</a> (JSON),
+    <a href="dependency-graphs/dg_br/difference.ttl">difference file</a> (Turtle, what this graph
+    changes in the core graph).
+  </p>
+  <div class="table-scroll">
+    <table class="vocab-table">
+      <caption class="visually-hidden">Versions of Brazil default rules</caption>
+      <thead>
+        <tr><th scope="col">Version</th><th scope="col">Date</th>
+            <th scope="col">Content hash</th><th scope="col">What changed</th></tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><a href="dependency-graphs/dg_br/v2.ttl">2</a> (current)</td>
+          <td>2026-09-24</td>
+          <td><code>sha256:50857c2ac933ba123dd21c211cea064472be99c77dfacdb094210f242476ea2b</code></td>
+          <td>The title no longer says proposal, and the graph is complete: it holds the 46 axioms and the adopted endorsement rule of the core graph beside its own rules, is generated from the core graph and its difference file, and every rule explains itself in plain words, checked against the statute it cites. Follows core graph version 2.</td>
+        </tr>
+        <tr>
+          <td><a href="dependency-graphs/dg_br/v1.ttl">1</a></td>
+          <td>not recorded</td>
+          <td><code>sha256:d3b90fff9a873f18ce2524d75966e885037e4815d3e4b8c4299115295cb485f3</code></td>
+          <td>The first version.</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <h2 id="dg_cn">China default rules</h2>
+  <hr class="rule-dotted">
+  <p>
+    <code>dg_cn</code>, version 2.
+    <a href="dependency-graphs/dg_cn/versions.json">Version list</a> (JSON),
+    <a href="dependency-graphs/dg_cn/changelog.json">change log</a> (JSON),
+    <a href="dependency-graphs/dg_cn/difference.ttl">difference file</a> (Turtle, what this graph
+    changes in the core graph).
+  </p>
+  <div class="table-scroll">
+    <table class="vocab-table">
+      <caption class="visually-hidden">Versions of China default rules</caption>
+      <thead>
+        <tr><th scope="col">Version</th><th scope="col">Date</th>
+            <th scope="col">Content hash</th><th scope="col">What changed</th></tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><a href="dependency-graphs/dg_cn/v2.ttl">2</a> (current)</td>
+          <td>2026-09-24</td>
+          <td><code>sha256:27a15eb52b0582cf8411e936dbf6c1ad9b2e54666c945dbb79548ae2b3ee4465</code></td>
+          <td>The title no longer says proposal, and the graph is complete: it holds the 46 axioms and the adopted endorsement rule of the core graph beside its own rules, is generated from the core graph and its difference file, and every rule explains itself in plain words, checked against the statute it cites. Follows core graph version 2.</td>
+        </tr>
+        <tr>
+          <td><a href="dependency-graphs/dg_cn/v1.ttl">1</a></td>
+          <td>not recorded</td>
+          <td><code>sha256:ea234dfc3a42fa535eb98ec1108c8b75766b30fae7950696296be4255f29c7cb</code></td>
+          <td>The first version.</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <h2 id="dg_eu">European Union default rules</h2>
+  <hr class="rule-dotted">
+  <p>
+    <code>dg_eu</code>, version 2.
+    <a href="dependency-graphs/dg_eu/versions.json">Version list</a> (JSON),
+    <a href="dependency-graphs/dg_eu/changelog.json">change log</a> (JSON),
+    <a href="dependency-graphs/dg_eu/difference.ttl">difference file</a> (Turtle, what this graph
+    changes in the core graph).
+  </p>
+  <div class="table-scroll">
+    <table class="vocab-table">
+      <caption class="visually-hidden">Versions of European Union default rules</caption>
+      <thead>
+        <tr><th scope="col">Version</th><th scope="col">Date</th>
+            <th scope="col">Content hash</th><th scope="col">What changed</th></tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><a href="dependency-graphs/dg_eu/v2.ttl">2</a> (current)</td>
+          <td>2026-09-24</td>
+          <td><code>sha256:d03bca8b1914f768353c3bb948f709bc98e8a3873ad87bc36a2de50740324ddd</code></td>
+          <td>The title no longer says proposal, and the graph is complete: it holds the 46 axioms and the adopted endorsement rule of the core graph beside its own rules, is generated from the core graph and its difference file, and every rule explains itself in plain words, checked against the statute it cites. Follows core graph version 2.</td>
+        </tr>
+        <tr>
+          <td><a href="dependency-graphs/dg_eu/v1.ttl">1</a></td>
+          <td>not recorded</td>
+          <td><code>sha256:e733b4abfd47bec4d082bb32295d61ee2984bc21660e30d8fc7f4bb6882a722d</code></td>
+          <td>The first version.</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <h2 id="dg_gb">United Kingdom default rules</h2>
+  <hr class="rule-dotted">
+  <p>
+    <code>dg_gb</code>, version 2.
+    <a href="dependency-graphs/dg_gb/versions.json">Version list</a> (JSON),
+    <a href="dependency-graphs/dg_gb/changelog.json">change log</a> (JSON),
+    <a href="dependency-graphs/dg_gb/difference.ttl">difference file</a> (Turtle, what this graph
+    changes in the core graph).
+  </p>
+  <div class="table-scroll">
+    <table class="vocab-table">
+      <caption class="visually-hidden">Versions of United Kingdom default rules</caption>
+      <thead>
+        <tr><th scope="col">Version</th><th scope="col">Date</th>
+            <th scope="col">Content hash</th><th scope="col">What changed</th></tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><a href="dependency-graphs/dg_gb/v2.ttl">2</a> (current)</td>
+          <td>2026-09-24</td>
+          <td><code>sha256:ddd9d18286184dd91da8e3f96e1f845d3d27a60b34ab5fbf4262a72c872130e4</code></td>
+          <td>The title no longer says proposal, and the graph is complete: it holds the 46 axioms and the adopted endorsement rule of the core graph beside its own rules, is generated from the core graph and its difference file, and every rule explains itself in plain words, checked against the statute it cites. Follows core graph version 2.</td>
+        </tr>
+        <tr>
+          <td><a href="dependency-graphs/dg_gb/v1.ttl">1</a></td>
+          <td>not recorded</td>
+          <td><code>sha256:77e9a1184521eaabb5f261476df17f9330efa40dc75cba13b47994cc657046be</code></td>
+          <td>The first version.</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <h2 id="dg_in">India default rules</h2>
+  <hr class="rule-dotted">
+  <p>
+    <code>dg_in</code>, version 2.
+    <a href="dependency-graphs/dg_in/versions.json">Version list</a> (JSON),
+    <a href="dependency-graphs/dg_in/changelog.json">change log</a> (JSON),
+    <a href="dependency-graphs/dg_in/difference.ttl">difference file</a> (Turtle, what this graph
+    changes in the core graph).
+  </p>
+  <div class="table-scroll">
+    <table class="vocab-table">
+      <caption class="visually-hidden">Versions of India default rules</caption>
+      <thead>
+        <tr><th scope="col">Version</th><th scope="col">Date</th>
+            <th scope="col">Content hash</th><th scope="col">What changed</th></tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><a href="dependency-graphs/dg_in/v2.ttl">2</a> (current)</td>
+          <td>2026-09-24</td>
+          <td><code>sha256:12cba960584f9563ea8db4283b9e6961f8e099f51ef2153e6a60872566b1adc9</code></td>
+          <td>The title no longer says proposal, and the graph is complete: it holds the 46 axioms and the adopted endorsement rule of the core graph beside its own rules, is generated from the core graph and its difference file, and every rule explains itself in plain words, checked against the statute it cites. Follows core graph version 2.</td>
+        </tr>
+        <tr>
+          <td><a href="dependency-graphs/dg_in/v1.ttl">1</a></td>
+          <td>not recorded</td>
+          <td><code>sha256:3e964dadee013092d03680a7d9ead7fe7fa503c282f7869699b698afaf41b686</code></td>
+          <td>The first version.</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <h2 id="dg_jp">Japan default rules</h2>
+  <hr class="rule-dotted">
+  <p>
+    <code>dg_jp</code>, version 2.
+    <a href="dependency-graphs/dg_jp/versions.json">Version list</a> (JSON),
+    <a href="dependency-graphs/dg_jp/changelog.json">change log</a> (JSON),
+    <a href="dependency-graphs/dg_jp/difference.ttl">difference file</a> (Turtle, what this graph
+    changes in the core graph).
+  </p>
+  <div class="table-scroll">
+    <table class="vocab-table">
+      <caption class="visually-hidden">Versions of Japan default rules</caption>
+      <thead>
+        <tr><th scope="col">Version</th><th scope="col">Date</th>
+            <th scope="col">Content hash</th><th scope="col">What changed</th></tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><a href="dependency-graphs/dg_jp/v2.ttl">2</a> (current)</td>
+          <td>2026-09-24</td>
+          <td><code>sha256:452dda1d33d24fd3fd701c0a05fe3c6929e40d16d6d0add210c87269b24a5368</code></td>
+          <td>The title no longer says proposal, and the graph is complete: it holds the 46 axioms and the adopted endorsement rule of the core graph beside its own rules, is generated from the core graph and its difference file, and every rule explains itself in plain words, checked against the statute it cites. Follows core graph version 2.</td>
+        </tr>
+        <tr>
+          <td><a href="dependency-graphs/dg_jp/v1.ttl">1</a></td>
+          <td>not recorded</td>
+          <td><code>sha256:4f726b92773be7120f3fdc03bbd4bf20eb464b1cad0f71e83128ac7138ffa8b8</code></td>
+          <td>The first version.</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <h2 id="dg_us">United States default rules</h2>
+  <hr class="rule-dotted">
+  <p>
+    <code>dg_us</code>, version 2.
+    <a href="dependency-graphs/dg_us/versions.json">Version list</a> (JSON),
+    <a href="dependency-graphs/dg_us/changelog.json">change log</a> (JSON),
+    <a href="dependency-graphs/dg_us/difference.ttl">difference file</a> (Turtle, what this graph
+    changes in the core graph).
+  </p>
+  <div class="table-scroll">
+    <table class="vocab-table">
+      <caption class="visually-hidden">Versions of United States default rules</caption>
+      <thead>
+        <tr><th scope="col">Version</th><th scope="col">Date</th>
+            <th scope="col">Content hash</th><th scope="col">What changed</th></tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><a href="dependency-graphs/dg_us/v2.ttl">2</a> (current)</td>
+          <td>2026-09-24</td>
+          <td><code>sha256:b6e060b754b7f72005c14e812b159908cf3e4f913f3597cff488e85b1e124701</code></td>
+          <td>The title no longer says proposal, and the graph is complete: it holds the 46 axioms and the adopted endorsement rule of the core graph beside its own rules, is generated from the core graph and its difference file, and every rule explains itself in plain words, checked against the statute it cites. Follows core graph version 2.</td>
+        </tr>
+        <tr>
+          <td><a href="dependency-graphs/dg_us/v1.ttl">1</a></td>
+          <td>not recorded</td>
+          <td><code>sha256:88f016980380902363d237dae382968a76bca702d5690c9790a7aae0cb0cec10</code></td>
+          <td>The first version.</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <hr class="rule-dotted rule-dotted--footer">
+</div>
+    </main>
+  </div>
+
+  <footer class="site-footer">
+    <div class="site-footer__inner">
+      <nav class="site-footer__nav mirror-social" aria-label="DALICC elsewhere">
+        <ul>
+          <li><a href="https://www.linkedin.com/groups/13523102" target="_blank" rel="noopener noreferrer">DALICC on LinkedIn</a></li>
+          <li><a href="https://github.com/dalicc/" target="_blank" rel="noopener noreferrer">DALICC on GitHub</a></li>
+        </ul>
+      </nav>
+      <p class="site-footer__funding">
+        DALICC does not replace legal advice.
+      </p>
+      <p class="site-footer__funding">
+        © 2021-2026 DALICC - Verein zur Förderung der Rechtssicherheit in der
+        Datenbewirtschaftung. All rights reserved.
+      </p>
+      <p class="site-footer__partners">
+        DALICC originated in a research project led by USTP (Hochschule für Angewandte
+        Wissenschaften St. Pölten GmbH), with the Vienna University of Economics and
+        Business, the University of Innsbruck / STI International, Höhne, In der Maur
+        &amp; Partner Rechtsanwälte OG and the Semantic Web Company, funded by the
+        <a href="https://www.ffg.at/" target="_blank" rel="noopener noreferrer">Austrian Research
+        Promotion Agency (FFG)</a> and
+        <a href="https://www.netidee.at/" target="_blank" rel="noopener noreferrer">netidee</a>.
+      </p>
+    </div>
+  </footer>
+
+  <button type="button" class="back-to-top" data-visible="false" aria-label="Back to top">
+    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" aria-hidden="true" focusable="false">
+      <path d="M12 19V6m-6 6 6-6 6 6" stroke="currentColor" stroke-width="2"
+            stroke-linecap="round" stroke-linejoin="round"/>
+    </svg>
+  </button>
+
+  <script src="../assets/site/site.js" defer></script>
+  <script src="../assets/site/components.js" defer></script>
+</body>
+</html>

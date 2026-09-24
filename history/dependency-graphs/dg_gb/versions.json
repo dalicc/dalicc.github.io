@@ -1,0 +1,88 @@
+{
+  "items": [
+    {
+      "axioms": 46,
+      "content_hash": "sha256:ddd9d18286184dd91da8e3f96e1f845d3d27a60b34ab5fbf4262a72c872130e4",
+      "date": "2026-09-24",
+      "default": false,
+      "default_rules": 6,
+      "formats": {
+        "jsonld": "/v2/dependency-graphs/dg_gb/versions/2?format=jsonld",
+        "nt": "/v2/dependency-graphs/dg_gb/versions/2?format=nt",
+        "rdfxml": "/v2/dependency-graphs/dg_gb/versions/2?format=rdfxml",
+        "ttl": "/v2/dependency-graphs/dg_gb/versions/2?format=ttl"
+      },
+      "hash_algorithm": "dalicc-c14n-1",
+      "id": "dg_gb",
+      "iri": "https://dalicc.net/dependencygraph/dg_gb",
+      "kind": "dependency-graph",
+      "latest_version": 2,
+      "links": {
+        "canonical": "/v2/dependency-graphs/dg_gb/versions/2",
+        "changelog": "/dependencygraph/dg_gb/changelog",
+        "html": "https://dalicc.net/dependency-graph/dg_gb",
+        "latest": "/v2/dependency-graphs/dg_gb/versions/2",
+        "predecessor": "/v2/dependency-graphs/dg_gb/versions/1",
+        "self": "/v2/dependency-graphs/dg_gb/versions/2",
+        "successor": null,
+        "v1": "/dependency-graph/dg_gb/download",
+        "version_history": "/v2/dependency-graphs/dg_gb/versions"
+      },
+      "port_of": "dg_default",
+      "published_on": "2026-09-24",
+      "record_status": "published",
+      "replaced_by": null,
+      "replaces": null,
+      "status": "current",
+      "summary": "The title no longer says proposal, and the graph is complete: it holds the 46 axioms and the adopted endorsement rule of the core graph beside its own rules, is generated from the core graph and its difference file, and every rule explains itself in plain words, checked against the statute it cites. Follows core graph version 2.",
+      "title": "United Kingdom default rules",
+      "version": 2,
+      "withdrawn_on": null
+    },
+    {
+      "axioms": 0,
+      "content_hash": "sha256:77e9a1184521eaabb5f261476df17f9330efa40dc75cba13b47994cc657046be",
+      "date": "",
+      "default": false,
+      "default_rules": 5,
+      "formats": {
+        "jsonld": "/v2/dependency-graphs/dg_gb/versions/1?format=jsonld",
+        "nt": "/v2/dependency-graphs/dg_gb/versions/1?format=nt",
+        "rdfxml": "/v2/dependency-graphs/dg_gb/versions/1?format=rdfxml",
+        "ttl": "/v2/dependency-graphs/dg_gb/versions/1?format=ttl"
+      },
+      "hash_algorithm": "dalicc-c14n-1",
+      "id": "dg_gb",
+      "iri": "https://dalicc.net/dependencygraph/dg_gb",
+      "kind": "dependency-graph",
+      "latest_version": 2,
+      "links": {
+        "canonical": "/v2/dependency-graphs/dg_gb/versions/1",
+        "changelog": "/dependencygraph/dg_gb/changelog",
+        "html": null,
+        "latest": "/v2/dependency-graphs/dg_gb/versions/2",
+        "predecessor": null,
+        "self": "/v2/dependency-graphs/dg_gb/versions/1",
+        "successor": "/v2/dependency-graphs/dg_gb/versions/2",
+        "v1": "/dependencygraph/dg_gb/versions/1",
+        "version_history": "/v2/dependency-graphs/dg_gb/versions"
+      },
+      "port_of": "dg_default",
+      "published_on": "",
+      "record_status": "published",
+      "replaced_by": null,
+      "replaces": null,
+      "status": "superseded",
+      "summary": "",
+      "title": "United Kingdom default rules",
+      "version": 1,
+      "withdrawn_on": null
+    }
+  ],
+  "links": {
+    "next": null,
+    "self": "/v2/dependency-graphs/dg_gb/versions"
+  },
+  "next_cursor": null,
+  "total": 2
+}

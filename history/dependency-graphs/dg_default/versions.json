@@ -1,0 +1,88 @@
+{
+  "items": [
+    {
+      "axioms": 46,
+      "content_hash": "sha256:26ca6cd83a3ba32d2c227beb8366ae8d8dc915ded060d08912e9430d8ed35fa3",
+      "date": "2026-09-24",
+      "default": true,
+      "default_rules": 1,
+      "formats": {
+        "jsonld": "/v2/dependency-graphs/dg_default/versions/2?format=jsonld",
+        "nt": "/v2/dependency-graphs/dg_default/versions/2?format=nt",
+        "rdfxml": "/v2/dependency-graphs/dg_default/versions/2?format=rdfxml",
+        "ttl": "/v2/dependency-graphs/dg_default/versions/2?format=ttl"
+      },
+      "hash_algorithm": "dalicc-c14n-1",
+      "id": "dg_default",
+      "iri": "https://dalicc.net/dependencygraph/dg_default",
+      "kind": "dependency-graph",
+      "latest_version": 2,
+      "links": {
+        "canonical": "/v2/dependency-graphs/dg_default/versions/2",
+        "changelog": "/dependencygraph/changelog",
+        "html": "https://dalicc.net/dependency-graph",
+        "latest": "/v2/dependency-graphs/dg_default/versions/2",
+        "predecessor": "/v2/dependency-graphs/dg_default/versions/1",
+        "self": "/v2/dependency-graphs/dg_default/versions/2",
+        "successor": null,
+        "v1": "/dependency-graph.ttl",
+        "version_history": "/v2/dependency-graphs/dg_default/versions"
+      },
+      "port_of": null,
+      "published_on": "2026-09-24",
+      "record_status": "published",
+      "replaced_by": null,
+      "replaces": null,
+      "status": "current",
+      "summary": "The content review of 2026-09-15 removed the pair of axioms that made a reciprocal license which also grants sublicensing contradict itself, and the reviews that followed related the two names of sublicensing and the commercial-use terms, so the graph holds 46 axioms. The graph also gained its first default rule, which Giray Havur adopted on 2026-09-23: a copyright license that is silent grants no right to endorsement, which refuses only a use that suggests endorsement and cites article 9 of the EU Trade Mark Regulation and section 2(b)(2) of Creative Commons 4.0.",
+      "title": "DALICC deontic dependency graph",
+      "version": 2,
+      "withdrawn_on": null
+    },
+    {
+      "axioms": 41,
+      "content_hash": "sha256:ea2d9f7a2fecaba9bf93e5dc682d418e7785b77f2f0f7a941e52f97912b8d899",
+      "date": "",
+      "default": true,
+      "default_rules": 0,
+      "formats": {
+        "jsonld": "/v2/dependency-graphs/dg_default/versions/1?format=jsonld",
+        "nt": "/v2/dependency-graphs/dg_default/versions/1?format=nt",
+        "rdfxml": "/v2/dependency-graphs/dg_default/versions/1?format=rdfxml",
+        "ttl": "/v2/dependency-graphs/dg_default/versions/1?format=ttl"
+      },
+      "hash_algorithm": "dalicc-c14n-1",
+      "id": "dg_default",
+      "iri": "https://dalicc.net/dependencygraph/dg_default",
+      "kind": "dependency-graph",
+      "latest_version": 2,
+      "links": {
+        "canonical": "/v2/dependency-graphs/dg_default/versions/1",
+        "changelog": "/dependencygraph/changelog",
+        "html": null,
+        "latest": "/v2/dependency-graphs/dg_default/versions/2",
+        "predecessor": null,
+        "self": "/v2/dependency-graphs/dg_default/versions/1",
+        "successor": "/v2/dependency-graphs/dg_default/versions/2",
+        "v1": "/dependencygraph/versions/1",
+        "version_history": "/v2/dependency-graphs/dg_default/versions"
+      },
+      "port_of": null,
+      "published_on": "",
+      "record_status": "published",
+      "replaced_by": null,
+      "replaces": null,
+      "status": "superseded",
+      "summary": "",
+      "title": "DALICC deontic dependency graph",
+      "version": 1,
+      "withdrawn_on": null
+    }
+  ],
+  "links": {
+    "next": null,
+    "self": "/v2/dependency-graphs/dg_default/versions"
+  },
+  "next_cursor": null,
+  "total": 2
+}

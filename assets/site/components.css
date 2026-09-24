@@ -27,7 +27,7 @@
   border: 1px solid var(--c-rule-strong);
   background: var(--c-peach);
   color: var(--c-ink);
-  font-size: 17px;
+  font-size: var(--size-body-small);
 }
 
 .flash a {
@@ -42,6 +42,29 @@
 
 .flash__body {
   min-width: 0;
+  /* A file path or an address in a message is one long word; at 390 px the path of
+     the shipped dependency graph pushed the viewer 4 px wider than the screen. */
+  overflow-wrap: anywhere;
+}
+
+/* The drawn mark of flash_mark(): sits on the first line of the message. */
+.flash__mark {
+  display: block;
+  margin-top: 3px;
+}
+
+/* The privacy-notice banner of base.html: the list of changes folds away. */
+.notice-banner__changes {
+  margin: 6px 0 10px;
+}
+
+.notice-banner__changes > summary {
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+.notice-banner__changes[open] > summary {
+  margin-bottom: 6px;
 }
 
 .flash__body > :last-child {
@@ -85,7 +108,7 @@
   background: var(--c-surface-alt);
   color: var(--c-slate-muted);
   font-family: var(--font-body);
-  font-size: 14px;
+  font-size: var(--size-label);
   font-weight: 700;
   line-height: 1;
   cursor: help;
@@ -112,7 +135,7 @@
   max-width: min(340px, 70vw);
   background: var(--c-slate-dark);
   color: var(--c-white);
-  font-size: 15px;
+  font-size: var(--size-caption);
   line-height: 1.45;
   padding: 10px 13px;
   border-radius: var(--radius);
@@ -147,22 +170,28 @@
   box-shadow: none;
 }
 
+/* On a phone a bubble anchored to its button ran off the left edge whenever the "?"
+   sat near it (measured at -232px on the composer). There it is a sheet at the foot
+   of the screen, the full width less the gutter, and the button is a 24px target. */
 @media (max-width: 604px) {
+  .info__btn {
+    width: 24px;
+    height: 24px;
+  }
+
   .info__bubble {
-    left: auto;
-    right: 0;
-    top: calc(100% + 8px);
+    position: fixed;
+    left: 16px;
+    right: 16px;
+    top: auto;
+    bottom: 16px;
     transform: none;
-    max-width: min(300px, 88vw);
+    width: auto;
+    max-width: none;
   }
 
   .info__bubble::before {
-    right: 8px;
-    top: auto;
-    bottom: 100%;
-    transform: none;
-    border-right-color: transparent;
-    border-bottom-color: var(--c-slate-dark);
+    display: none;
   }
 }
 
@@ -184,7 +213,7 @@
   background: var(--c-slate-muted);
   color: var(--c-white);
   font-family: var(--font-body);
-  font-size: 18px;
+  font-size: var(--size-body);
   font-weight: 600;
   padding: 12px 18px;
   margin: 0 -1px;
@@ -266,7 +295,7 @@
   font-weight: 600;
   padding: 8px 16px;
   margin: 18px 0 0;
-  font-size: 17px;
+  font-size: var(--size-body-small);
 }
 
 .subhead-bar + .subhead-body {
@@ -303,7 +332,7 @@
   justify-content: center;
   height: 26px;
   border-radius: 50%;
-  font-size: 13px;
+  font-size: var(--size-label-small);
   line-height: 1;
   color: var(--c-slate-muted);
   cursor: pointer;
@@ -371,7 +400,7 @@
   justify-content: center;
   height: 26px;
   border-radius: 50%;
-  font-size: 13px;
+  font-size: var(--size-label-small);
   font-weight: 700;
   line-height: 1;
   cursor: pointer;
@@ -416,7 +445,7 @@
      the original questionnaire had it. */
   flex: 0 1 auto;
   min-width: 0;
-  font-size: 17px;
+  font-size: var(--size-body-small);
 }
 
 .switch-row__label b,
@@ -456,7 +485,7 @@
 
 .license-card__title {
   font-family: var(--font-display);
-  font-size: 22px;
+  font-size: var(--size-card-title);
   text-transform: uppercase;
   color: var(--c-slate);
   margin: 0;
@@ -472,14 +501,14 @@
 
 .license-card__id {
   font-family: var(--font-mono);
-  font-size: 13px;
+  font-size: var(--size-label-small);
   color: var(--c-slate-muted);
   word-break: break-all;
 }
 
 .license-card__meta {
   margin: 8px 0 0;
-  font-size: 16px;
+  font-size: var(--size-ui-small);
   color: var(--c-ink-soft);
 }
 
@@ -494,7 +523,7 @@
   display: inline-block;
   padding: 2px 9px;
   border-radius: 999px;
-  font-size: 13px;
+  font-size: var(--size-label-small);
   letter-spacing: 0.03em;
   text-transform: uppercase;
   background: var(--c-surface-alt);
@@ -544,7 +573,7 @@
   display: block;
   padding: 7px 13px;
   font-family: var(--font-display);
-  font-size: 17px;
+  font-size: var(--size-body-small);
   text-transform: uppercase;
   color: var(--c-green);
   background: var(--c-white);
@@ -571,6 +600,13 @@
   padding: 7px 10px;
   color: var(--c-slate-muted);
   border-right: 1px solid var(--c-green);
+}
+
+/* ============================================================ legal note */
+
+/* ui.legal_note(): the info flash under the lede of a tool page. */
+.legal-note p {
+  margin: 0;
 }
 
 /* ======================================================= disclaimer modal */
@@ -601,12 +637,12 @@
 }
 
 .disclaimer__title {
-  font-size: 24px;
+  font-size: var(--size-h3);
   margin: 0 0 12px;
 }
 
 .disclaimer__panel p {
-  font-size: 18px;
+  font-size: var(--size-body);
   color: var(--c-ink);
 }
 
@@ -653,7 +689,7 @@
   background: none;
   padding: 9px 14px;
   font: inherit;
-  font-size: 16px;
+  font-size: var(--size-ui-small);
   color: var(--c-slate);
   cursor: pointer;
 }
@@ -666,7 +702,7 @@
 
 .autocomplete__empty {
   padding: 9px 14px;
-  font-size: 16px;
+  font-size: var(--size-ui-small);
   color: var(--c-slate-muted);
 }
 
@@ -682,7 +718,7 @@
 
 .empty-state h2 {
   margin-top: 0;
-  font-size: 22px;
+  font-size: var(--size-card-title);
 }
 
 .empty-state > :last-child {
@@ -708,7 +744,7 @@
   background: var(--c-peach);
   padding: 12px 16px;
   margin: 16px 0 0;
-  font-size: 16px;
+  font-size: var(--size-ui-small);
 }
 
 .history-box__lede {
@@ -717,7 +753,7 @@
 
 .history-box__foot {
   margin: 18px 0 0;
-  font-size: 15px;
+  font-size: var(--size-caption);
 }
 
 .version-list {
@@ -753,7 +789,7 @@
 .version__date,
 .version__reviewer {
   color: var(--c-slate-mid);
-  font-size: 15px;
+  font-size: var(--size-caption);
 }
 
 .version__summary {
@@ -796,13 +832,13 @@
   gap: 10px;
   flex-wrap: wrap;
   margin: 0 0 4px;
-  font-size: 15px;
+  font-size: var(--size-caption);
 }
 
 .change__action {
   text-transform: uppercase;
   letter-spacing: 0.04em;
-  font-size: 13px;
+  font-size: var(--size-label-small);
   font-weight: 700;
   color: var(--c-slate-mid);
 }
@@ -812,19 +848,19 @@
 
 .change__statement,
 .change__previous code {
-  font-size: 14px;
+  font-size: var(--size-mono);
   overflow-wrap: anywhere;
 }
 
 .change__previous {
   margin: 0 0 4px;
-  font-size: 14px;
+  font-size: var(--size-label);
   color: var(--c-slate-mid);
 }
 
 .change__reason {
   margin: 0;
-  font-size: 15px;
+  font-size: var(--size-caption);
 }
 
 .change__license {
@@ -834,7 +870,7 @@
 .change__version,
 .change__date {
   color: var(--c-slate-mid);
-  font-size: 14px;
+  font-size: var(--size-label);
 }
 
 .change-list--index {
@@ -877,7 +913,7 @@
   background: var(--c-surface);
   color: var(--c-slate-dark);
   text-decoration: none;
-  font-size: 15px;
+  font-size: var(--size-caption);
 }
 
 .filter-chip:hover,
@@ -897,17 +933,17 @@
   }
 
   .change__statement {
-    font-size: 13px;
+    font-size: var(--size-label-small);
   }
 }
 
 .library-header-links {
   margin: 0 0 20px;
-  font-size: 16px;
+  font-size: var(--size-ui-small);
 }
 
 .library-header-links .text-muted {
   display: block;
-  font-size: 15px;
+  font-size: var(--size-caption);
   margin-top: 2px;
 }

@@ -1,0 +1,88 @@
+{
+  "items": [
+    {
+      "axioms": 46,
+      "content_hash": "sha256:50857c2ac933ba123dd21c211cea064472be99c77dfacdb094210f242476ea2b",
+      "date": "2026-09-24",
+      "default": false,
+      "default_rules": 4,
+      "formats": {
+        "jsonld": "/v2/dependency-graphs/dg_br/versions/2?format=jsonld",
+        "nt": "/v2/dependency-graphs/dg_br/versions/2?format=nt",
+        "rdfxml": "/v2/dependency-graphs/dg_br/versions/2?format=rdfxml",
+        "ttl": "/v2/dependency-graphs/dg_br/versions/2?format=ttl"
+      },
+      "hash_algorithm": "dalicc-c14n-1",
+      "id": "dg_br",
+      "iri": "https://dalicc.net/dependencygraph/dg_br",
+      "kind": "dependency-graph",
+      "latest_version": 2,
+      "links": {
+        "canonical": "/v2/dependency-graphs/dg_br/versions/2",
+        "changelog": "/dependencygraph/dg_br/changelog",
+        "html": "https://dalicc.net/dependency-graph/dg_br",
+        "latest": "/v2/dependency-graphs/dg_br/versions/2",
+        "predecessor": "/v2/dependency-graphs/dg_br/versions/1",
+        "self": "/v2/dependency-graphs/dg_br/versions/2",
+        "successor": null,
+        "v1": "/dependency-graph/dg_br/download",
+        "version_history": "/v2/dependency-graphs/dg_br/versions"
+      },
+      "port_of": "dg_default",
+      "published_on": "2026-09-24",
+      "record_status": "published",
+      "replaced_by": null,
+      "replaces": null,
+      "status": "current",
+      "summary": "The title no longer says proposal, and the graph is complete: it holds the 46 axioms and the adopted endorsement rule of the core graph beside its own rules, is generated from the core graph and its difference file, and every rule explains itself in plain words, checked against the statute it cites. Follows core graph version 2.",
+      "title": "Brazil default rules",
+      "version": 2,
+      "withdrawn_on": null
+    },
+    {
+      "axioms": 0,
+      "content_hash": "sha256:d3b90fff9a873f18ce2524d75966e885037e4815d3e4b8c4299115295cb485f3",
+      "date": "",
+      "default": false,
+      "default_rules": 3,
+      "formats": {
+        "jsonld": "/v2/dependency-graphs/dg_br/versions/1?format=jsonld",
+        "nt": "/v2/dependency-graphs/dg_br/versions/1?format=nt",
+        "rdfxml": "/v2/dependency-graphs/dg_br/versions/1?format=rdfxml",
+        "ttl": "/v2/dependency-graphs/dg_br/versions/1?format=ttl"
+      },
+      "hash_algorithm": "dalicc-c14n-1",
+      "id": "dg_br",
+      "iri": "https://dalicc.net/dependencygraph/dg_br",
+      "kind": "dependency-graph",
+      "latest_version": 2,
+      "links": {
+        "canonical": "/v2/dependency-graphs/dg_br/versions/1",
+        "changelog": "/dependencygraph/dg_br/changelog",
+        "html": null,
+        "latest": "/v2/dependency-graphs/dg_br/versions/2",
+        "predecessor": null,
+        "self": "/v2/dependency-graphs/dg_br/versions/1",
+        "successor": "/v2/dependency-graphs/dg_br/versions/2",
+        "v1": "/dependencygraph/dg_br/versions/1",
+        "version_history": "/v2/dependency-graphs/dg_br/versions"
+      },
+      "port_of": "dg_default",
+      "published_on": "",
+      "record_status": "published",
+      "replaced_by": null,
+      "replaces": null,
+      "status": "superseded",
+      "summary": "",
+      "title": "Brazil default rules",
+      "version": 1,
+      "withdrawn_on": null
+    }
+  ],
+  "links": {
+    "next": null,
+    "self": "/v2/dependency-graphs/dg_br/versions"
+  },
+  "next_cursor": null,
+  "total": 2
+}

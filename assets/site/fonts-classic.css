@@ -8,7 +8,7 @@
  * own monospace for identifiers. This is the site as it stands.
  *
  * Every file is served from /static/fonts by this site, so opening a page
- * asks no other host for anything.  The licence of each family sits beside
+ * asks no other host for anything.  The license of each family sits beside
  * the file and the version and the checksum are recorded in THIRD_PARTY.md.
  *
  * Written by app.services.appearance.face_stylesheet; edit the font set
@@ -37,5 +37,16 @@
   src: url("../fonts/SourceSans3VF-Italic.ttf.woff2") format("woff2");
   font-weight: 200 900;
   font-style: italic;
+  font-display: swap;
+}
+
+/* The 2017 infographic sets its small captions in "Source Sans Pro", a name
+   no face of this set carries; without this the browser drew them in its
+   serif default.  The same file as the reading face, so nothing more loads. */
+@font-face {
+  font-family: "Source Sans Pro";
+  src: url("../fonts/SourceSans3VF-Upright.ttf.woff2") format("woff2");
+  font-weight: 200 900;
+  font-style: normal;
   font-display: swap;
 }

@@ -88,8 +88,15 @@
   --size-h3: 24px;
   --size-h3-narrow: 21px;
   --size-h4: 20px;
+  --size-numeral: 54px;
+  --size-card-title-large: 26px;
+  --size-card-title: 22px;
   --size-lede: 19px;
   --size-body: 18px;
+  --size-body-small: 17px;
+  --size-caption: 15px;
+  --size-label: 14px;
+  --size-label-small: 13px;
   --size-ui: 19px;
   --size-ui-small: 16px;
   --size-mono: 14px;
@@ -102,9 +109,11 @@
 <style>
   /* The mirror's navigation is always open: it has no menu button to open it. */
   .site-nav.mirror-nav { display: block; }
+  .mirror-social ul { display: flex; flex-wrap: wrap; gap: 4px 20px; }
 </style>
 </head>
-<body class="">
+<body class=""
+      data-bookmarks-script="/static/site/dashboard.js?v=140b71793dd8">
   <a class="skip-link" href="#main-content">Skip to main content</a>
 
   <header class="site-header">
@@ -121,6 +130,7 @@
         <li class="site-nav__item"><a class="site-nav__link" href="../../index.html">Vocabulary</a></li>
         <li class="site-nav__item"><a class="site-nav__link" href="../../dependency-graph/">Dependency graph</a></li>
         <li class="site-nav__item"><a class="site-nav__link" href="../../reasoning/">Reasoning</a></li>
+        <li class="site-nav__item"><a class="site-nav__link" href="../../history/">History</a></li>
         <li class="site-nav__item"><a class="site-nav__link" href="../../dalicc-ns.ttl">Turtle</a></li>
         <li class="site-nav__item"><a class="site-nav__link" href="../../dalicc-ns.jsonld">JSON-LD</a></li>
         <li class="site-nav__item"><a class="site-nav__link" href="../../dalicc-ns.rdf">RDF/XML</a></li>
@@ -150,7 +160,7 @@
   <div class="flash flash--info" role="status">
     <span class="flash__icon" aria-hidden="true">&#8505;</span>
     <div class="flash__body">
-      <p style="margin:0">Static mirror of https://dalicc.net/ns, vocabulary version 7, generated on 2026-09-23; the live pages may be newer.</p>
+      <p style="margin:0">Static mirror of https://dalicc.net/ns, vocabulary version 2, generated on 2026-09-24; the live pages may be newer.</p>
     </div>
   </div>
 </div>
@@ -184,7 +194,7 @@
            id="recipientAssent">
     <h2>
       Recipient assent
-<span class="term-card__kind">dalicc:DutyAction</span><span class="term-card__kind">odrl:Action</span><span class="term-card__kind">skos:Concept</span>    </h2>
+<span class="term-card__kind">dalicc:DutyAction</span><span class="term-card__kind">odrl:Action</span><span class="term-card__kind">owl:NamedIndividual</span><span class="term-card__kind">skos:Concept</span>    </h2>
 
     <p class="term-card__iri"><code>https://dalicc.net/ns#recipientAssent</code></p>
 
@@ -193,7 +203,7 @@ terms of the license before the work reaches them, rather than relying on the no
     <dl class="term-card__meta">
       <dt>Kind</dt>
       <dd class="term-card__links">
-<code>dalicc:DutyAction</code><code>odrl:Action</code><code>skos:Concept</code>      </dd>
+<code>dalicc:DutyAction</code><code>odrl:Action</code><code>owl:NamedIndividual</code><code>skos:Concept</code>      </dd>
       <dt>Used</dt>
       <dd>
         In 6 of the 581 license records
@@ -217,7 +227,12 @@ terms of the license before the work reaches them, rather than relying on the no
 
   <footer class="site-footer">
     <div class="site-footer__inner">
-      
+      <nav class="site-footer__nav mirror-social" aria-label="DALICC elsewhere">
+        <ul>
+          <li><a href="https://www.linkedin.com/groups/13523102" target="_blank" rel="noopener noreferrer">DALICC on LinkedIn</a></li>
+          <li><a href="https://github.com/dalicc/" target="_blank" rel="noopener noreferrer">DALICC on GitHub</a></li>
+        </ul>
+      </nav>
       <p class="site-footer__funding">
         DALICC does not replace legal advice.
       </p>
@@ -246,6 +261,5 @@ terms of the license before the work reaches them, rather than relying on the no
 
   <script src="../../assets/site/site.js" defer></script>
   <script src="../../assets/site/components.js" defer></script>
-  <script src="../../assets/site/dashboard.js" defer></script>
 </body>
 </html>

@@ -53,6 +53,12 @@
   font-size: 0.95em;
 }
 
+/* A term that is a link is a 24px target: 18px of text and 3px above and below. */
+a.dg-term {
+  display: inline-block;
+  padding-block: 3px;
+}
+
 .dg-term__label {
   display: block;
   color: var(--c-slate-muted);

@@ -1,0 +1,169 @@
+{
+  "current_version": 2,
+  "entries": [
+    {
+      "changes": [
+        {
+          "action": "removed",
+          "previous": "",
+          "reason": "Review decision 5: passing the same terms on is the normal way to satisfy a share-alike condition, not a contradiction of it.",
+          "source": "consolidation-decision 5",
+          "statement": "cc:ShareAlike dalicc:contradicts odrl:grantUse"
+        },
+        {
+          "action": "removed",
+          "previous": "",
+          "reason": "Review decision 5: passing the same terms on is the normal way to satisfy a share-alike condition, not a contradiction of it.",
+          "source": "consolidation-decision 5",
+          "statement": "odrl:grantUse dalicc:contradicts cc:ShareAlike"
+        },
+        {
+          "action": "added",
+          "previous": "",
+          "reason": "Open issue 9 of the content review is decided: the two terms denote the same act, so a bundle of a license that forbids sublicensing with one that permits it must report a conflict instead of no conflict.",
+          "source": "consolidation-decision 5",
+          "statement": "dalicc:sublicense owl:sameAs odrl:grantUse"
+        },
+        {
+          "action": "added",
+          "previous": "",
+          "reason": "The inverse spelling, written explicitly because the graph states every owl:sameAs pair in both directions.",
+          "source": "consolidation-decision 5",
+          "statement": "odrl:grantUse owl:sameAs dalicc:sublicense"
+        },
+        {
+          "action": "added",
+          "previous": "",
+          "reason": "cc:CommercialUse is 'income-generating use of any kind, whether direct or indirect' and odrl:commercialize is 'use the asset in a business environment', the reasoning counterpart of commercial use. 579 statements of the library name the first and none names the second, so the three axioms written about odrl:commercialize reached nothing. A license that permits charging a license fee now meets one that prohibits commercial use.",
+          "source": "dependency-graph-review 2026-09-23",
+          "statement": "cc:CommercialUse owl:sameAs odrl:commercialize"
+        },
+        {
+          "action": "added",
+          "previous": "",
+          "reason": "The inverse spelling, written explicitly because the graph states every owl:sameAs pair in both directions.",
+          "source": "dependency-graph-review 2026-09-23",
+          "statement": "odrl:commercialize owl:sameAs cc:CommercialUse"
+        },
+        {
+          "action": "added",
+          "previous": "",
+          "reason": "dalicc:sellCopy is 'the Assignee may sell the copies of the License Material' and odrl:sell is 'trade the asset for consideration', so selling copies is one way of selling. Through odrl:sell odrl:includedIn odrl:commercialize a prohibition of commercial use now reaches it.",
+          "source": "dependency-graph-review 2026-09-23",
+          "statement": "dalicc:sellCopy odrl:includedIn odrl:sell"
+        },
+        {
+          "action": "added",
+          "previous": "",
+          "reason": "cc:DerivativeWorks is 'to distribute the derivative and making it available to the public', which is one kind of odrl:distribute, 'providing the work to the public or making it accessible to anyone else'. A license that forbids distribution now meets one that permits publishing a derivative.",
+          "source": "dependency-graph-review 2026-09-23",
+          "statement": "cc:DerivativeWorks odrl:includedIn odrl:distribute"
+        },
+        {
+          "action": "added",
+          "previous": "",
+          "reason": "dalicc:ModifiedWorks is 'distributing a modified version of the work and making it available to the public', the counterpart of cc:DerivativeWorks for alterations that do not amount to a new work, and it is distribution for the same reason.",
+          "source": "dependency-graph-review 2026-09-23",
+          "statement": "dalicc:ModifiedWorks odrl:includedIn odrl:distribute"
+        },
+        {
+          "action": "added",
+          "previous": "",
+          "reason": "The inverse of cc:Notice owl:sameAs odrl:AttachPolicy. The graph states every owl:sameAs pair in both directions; three pairs did not, and now every one of them does.",
+          "source": "dependency-graph-review 2026-09-23",
+          "statement": "odrl:AttachPolicy owl:sameAs cc:Notice"
+        },
+        {
+          "action": "added",
+          "previous": "",
+          "reason": "The inverse of cc:SourceCode owl:sameAs odrl:attachSource, for the same reason.",
+          "source": "dependency-graph-review 2026-09-23",
+          "statement": "odrl:attachSource owl:sameAs cc:SourceCode"
+        },
+        {
+          "action": "added",
+          "previous": "",
+          "reason": "The inverse of cc:ShareAlike owl:sameAs odrl:shareAlike, for the same reason.",
+          "source": "dependency-graph-review 2026-09-23",
+          "statement": "odrl:shareAlike owl:sameAs cc:ShareAlike"
+        },
+        {
+          "action": "removed",
+          "previous": "",
+          "reason": "odrl:extract is 'extract part of the asset', which the term's own definition places inside odrl:reproduce rather than beside it. Calling it the same act as odrl:copy put extract, copy and reproduce in one equivalence class, so permitting the extraction of a part permitted copying the whole. odrl:extract odrl:includedIn odrl:reproduce carries the conclusions that do hold.",
+          "source": "dependency-graph-review 2026-09-23",
+          "statement": "odrl:extract owl:sameAs odrl:copy"
+        },
+        {
+          "action": "removed",
+          "previous": "",
+          "reason": "odrl:copy owl:sameAs odrl:reproduce already says the two names denote one act, so a subsumption between them states nothing and shows the pair twice with two different readings.",
+          "source": "dependency-graph-review 2026-09-23",
+          "statement": "odrl:reproduce odrl:includedIn odrl:copy"
+        },
+        {
+          "action": "removed",
+          "previous": "",
+          "reason": "odrl:display is 'create a static and transient rendition of the work' and odrl:play is 'render the asset in an audio or video form'. A static rendition is not an audio or video one, so displaying is not a kind of playing. Both remain kinds of odrl:present.",
+          "source": "dependency-graph-review 2026-09-23",
+          "statement": "odrl:display odrl:includedIn odrl:play"
+        },
+        {
+          "action": "added",
+          "previous": "",
+          "reason": "Open proposal 1 of the licence review: dalicc:promote was prohibited on 519 of 581 records although the GNU texts and the older Creative Commons texts say nothing about endorsement. The prohibition was a house convention resting on a legal default, so it belongs in the rule layer and not in the records. Basis: trademark law and the protection of names, under which a copyright licence that is silent grants no right to endorsement. Status: adopted, so a check that chooses nothing reads a silent licence exactly as it read a record that carried the prohibition.",
+          "source": "dependency-graph-review 2026-09-23",
+          "statement": "rule dalicc:promote dalicc:NotGrantedByDefault in dalicc:worldwide"
+        },
+        {
+          "action": "added",
+          "previous": "",
+          "reason": "The review considered the seven largest markets and proposed default rules for each. Each graph holds the default rules proposed for one of them, names this graph with dalicc:extendsGraph so the axioms stay written once, and carries only proposals, so nothing in it reaches a reader who chooses nothing. Every rule names the statute or the principle it rests on, and nothing in any of them is legal advice.",
+          "source": "dependency-graph-review 2026-09-23",
+          "statement": "the graphs dg_eu, dg_us, dg_cn, dg_gb, dg_jp, dg_in and dg_br"
+        },
+        {
+          "action": "changed",
+          "previous": "rule dalicc:promote dalicc:NotGrantedByDefault in dalicc:worldwide, with no dalicc:ruleExplanation",
+          "reason": "A citation alone does not say what a rule does. dalicc:ruleExplanation, a term the vocabulary gained for it, now says what the rule does to a silent licence, why trademark law and the protection of names lead there, and what a person combining licences will notice.",
+          "source": "dependency-graph-review 2026-09-24",
+          "statement": "rule dalicc:promote dalicc:NotGrantedByDefault in dalicc:worldwide"
+        },
+        {
+          "action": "changed",
+          "previous": "the graphs dg_eu, dg_us, dg_cn, dg_gb, dg_jp, dg_in and dg_br name this graph with dalicc:extendsGraph",
+          "reason": "Every graph under Graphs you can reason with reads like a complete graph, and a jurisdiction whose law does not agree with the core graph had no way to say so. Each jurisdiction graph now holds the 46 axioms and this rule itself, is built by scripts/build_dependency_graphs.py from this file and its difference file, and can remove an axiom or replace a rule with a legal reason. The reasoner reads one graph and follows no link.",
+          "source": "dependency-graph-review 2026-09-24",
+          "statement": "the graphs dg_eu, dg_us, dg_cn, dg_gb, dg_jp, dg_in and dg_br are generated from this graph"
+        },
+        {
+          "action": "changed",
+          "previous": "rule dalicc:promote dalicc:NotGrantedByDefault in dalicc:worldwide, with dalicc:ruleBasis: trademark law and the protection of names: a copyright licence that is silent grants no right to endorsement",
+          "reason": "The rule was the only adopted one and cited no source a lawyer could check. Trademark and endorsement rights are separate from copyright: the EU Trade Mark Regulation gives the proprietor the right to prevent use of the sign without consent, and the Creative Commons 4.0 licences, which the library models, say in section 2(b)(2) that patent and trademark rights are not licensed under them.",
+          "source": "dependency-graph-review 2026-09-24",
+          "statement": "rule dalicc:promote dalicc:NotGrantedByDefault in dalicc:worldwide, with dalicc:ruleBasis citing Regulation (EU) 2017/1001 article 9 and Creative Commons 4.0 section 2(b)(2)"
+        },
+        {
+          "action": "changed",
+          "previous": "rule dalicc:promote dalicc:NotGrantedByDefault in dalicc:worldwide, with a dalicc:ruleExplanation that said the licensee may not use the name or the marks of the licensor to promote a product",
+          "reason": "Descriptive or referential use of a name, such as saying truthfully that a product is based on or compatible with the licensed work, is generally lawful; the legal limit is a use that states or implies endorsement or origin.",
+          "source": "dependency-graph-review 2026-09-24",
+          "statement": "rule dalicc:promote dalicc:NotGrantedByDefault in dalicc:worldwide, with a dalicc:ruleExplanation that refuses only a use suggesting endorsement"
+        },
+        {
+          "action": "added",
+          "previous": "",
+          "reason": "A lawyer reading the graph could not tell who adopted the rule. The vocabulary has no reviewer property for rules, so the rule names its reviewer with dct:contributor and the date of adoption, which the version 2 entry of this log records, with dct:dateAccepted.",
+          "source": "dependency-graph-review 2026-09-24",
+          "statement": "rule dalicc:promote dalicc:NotGrantedByDefault in dalicc:worldwide: dct:contributor \"Giray Havur, for the association's review, adopted this rule on 2026-09-23\"; dct:dateAccepted 2026-09-23"
+        }
+      ],
+      "date": "2026-09-24",
+      "reviewer": "Giray Havur",
+      "summary": "The content review of 2026-09-15 removed the pair of axioms that made a reciprocal license which also grants sublicensing contradict itself, and the reviews that followed related the two names of sublicensing and the commercial-use terms, so the graph holds 46 axioms. The graph also gained its first default rule, which Giray Havur adopted on 2026-09-23: a copyright license that is silent grants no right to endorsement, which refuses only a use that suggests endorsement and cites article 9 of the EU Trade Mark Regulation and section 2(b)(2) of Creative Commons 4.0.",
+      "version": 2
+    }
+  ],
+  "id": "dg_default",
+  "title": "DALICC deontic dependency graph"
+}

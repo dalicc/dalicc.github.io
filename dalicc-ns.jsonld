@@ -4,6 +4,12 @@
     "@type": [
       "https://dalicc.net/ns#DependencyRelation"
     ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@language": "en",
+        "@value": "The two actions denote the same act in different vocabularies."
+      }
+    ],
     "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
       {
         "@id": "http://www.w3.org/2002/07/owl#"
@@ -35,7 +41,7 @@
     "http://www.w3.org/2000/01/rdf-schema#comment": [
       {
         "@language": "en",
-        "@value": "An Action asserts that another Action is not prohibited to enable its operational semantics."
+        "@value": "Exercising the subject action requires that the object action is not prohibited."
       }
     ],
     "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
@@ -47,6 +53,12 @@
       {
         "@language": "en",
         "@value": "Implies"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#historyNote": [
+      {
+        "@language": "en",
+        "@value": "An Action asserts that another Action is not prohibited to enable its operational semantics."
       }
     ],
     "http://www.w3.org/2004/02/skos/core#scopeNote": [
@@ -69,7 +81,7 @@
     "http://www.w3.org/2000/01/rdf-schema#comment": [
       {
         "@language": "en",
-        "@value": "An Action transitively asserts that another Action that encompasses its operational semantics."
+        "@value": "Exercising the subject action is a way of exercising the object action."
       }
     ],
     "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
@@ -81,6 +93,12 @@
       {
         "@language": "en",
         "@value": "Included in"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#historyNote": [
+      {
+        "@language": "en",
+        "@value": "An Action transitively asserts that another Action that encompasses its operational semantics."
       }
     ],
     "http://www.w3.org/2004/02/skos/core#scopeNote": [
@@ -108,7 +126,7 @@
     ],
     "http://purl.org/dc/terms/hasVersion": [
       {
-        "@value": "7"
+        "@value": "2"
       }
     ],
     "http://purl.org/dc/terms/license": [
@@ -119,7 +137,7 @@
     "http://purl.org/dc/terms/modified": [
       {
         "@type": "http://www.w3.org/2001/XMLSchema#date",
-        "@value": "2026-09-23"
+        "@value": "2026-09-24"
       }
     ],
     "http://purl.org/dc/terms/publisher": [
@@ -176,26 +194,11 @@
       },
       {
         "@id": "https://dalicc.net/ns/versions/1"
-      },
-      {
-        "@id": "https://dalicc.net/ns/versions/2"
-      },
-      {
-        "@id": "https://dalicc.net/ns/versions/3"
-      },
-      {
-        "@id": "https://dalicc.net/ns/versions/4"
-      },
-      {
-        "@id": "https://dalicc.net/ns/versions/5"
-      },
-      {
-        "@id": "https://dalicc.net/ns/versions/6"
       }
     ],
     "http://www.w3.org/2002/07/owl#versionInfo": [
       {
-        "@value": "7.0"
+        "@value": "2.0"
       }
     ],
     "https://dalicc.net/ns#versionHistory": [
@@ -207,6 +210,7 @@
   {
     "@id": "https://dalicc.net/ns#Adopted",
     "@type": [
+      "http://www.w3.org/2002/07/owl#NamedIndividual",
       "http://www.w3.org/2004/02/skos/core#Concept",
       "https://dalicc.net/ns#RuleStatus"
     ],
@@ -245,6 +249,7 @@
   {
     "@id": "https://dalicc.net/ns#Approved",
     "@type": [
+      "http://www.w3.org/2002/07/owl#NamedIndividual",
       "http://www.w3.org/2004/02/skos/core#Concept",
       "https://dalicc.net/ns#ReviewStatus"
     ],
@@ -317,6 +322,7 @@
   {
     "@id": "https://dalicc.net/ns#Audited",
     "@type": [
+      "http://www.w3.org/2002/07/owl#NamedIndividual",
       "http://www.w3.org/2004/02/skos/core#Concept",
       "https://dalicc.net/ns#ReviewStatus"
     ],
@@ -350,8 +356,55 @@
     ]
   },
   {
+    "@id": "https://dalicc.net/ns#AxiomRemoval",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@language": "en",
+        "@value": "A statement that a dependency graph built from another one leaves out one axiom\nof that graph, because the law of its jurisdiction does not support it. The axiom is named in\nthe reified form, with rdf:subject, rdf:predicate and rdf:object, and the removal carries the\nlegal reason (dalicc:ruleBasis), a plain explanation (dalicc:ruleExplanation) and a status\n(dalicc:ruleStatus), like a default rule."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+      {
+        "@id": "https://dalicc.net/ns#"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "Axiom removal"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#seeAlso": [
+      {
+        "@id": "http://www.w3.org/1999/02/22-rdf-syntax-ns#Statement"
+      },
+      {
+        "@id": "https://dalicc.net/ns#DefaultRule"
+      },
+      {
+        "@id": "https://dalicc.net/ns#basedOnGraph"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#note": [
+      {
+        "@language": "en",
+        "@value": "Added with version 2 of the vocabulary. No shipped graph removes an axiom of the core graph; the difference-file README shows the syntax."
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#scopeNote": [
+      {
+        "@language": "en",
+        "@value": "Written in the difference files of licensedata/dependencygraph/differences/ and copied into the complete graph scripts/build_dependency_graphs.py generates from them. The generated graph never holds the axiom a removal names."
+      }
+    ]
+  },
+  {
     "@id": "https://dalicc.net/ns#BR",
     "@type": [
+      "http://www.w3.org/2002/07/owl#NamedIndividual",
       "http://www.w3.org/2004/02/skos/core#Concept",
       "https://dalicc.net/ns#Jurisdiction"
     ],
@@ -392,6 +445,7 @@
   {
     "@id": "https://dalicc.net/ns#CN",
     "@type": [
+      "http://www.w3.org/2002/07/owl#NamedIndividual",
       "http://www.w3.org/2004/02/skos/core#Concept",
       "https://dalicc.net/ns#Jurisdiction"
     ],
@@ -432,6 +486,7 @@
   {
     "@id": "https://dalicc.net/ns#ChangeLicense",
     "@type": [
+      "http://www.w3.org/2002/07/owl#NamedIndividual",
       "http://www.w3.org/2004/02/skos/core#Concept",
       "http://www.w3.org/ns/odrl/2/Action",
       "https://dalicc.net/ns#RuleAction"
@@ -439,7 +494,7 @@
     "http://www.w3.org/2000/01/rdf-schema#comment": [
       {
         "@language": "en",
-        "@value": "The licensee may change, extend or modify the license terms and replace the\noriginal license with a new one. Where the license carries a share-alike duty for the whole\nwork, this permission must carry the dalicc:compliantLicense duty."
+        "@value": "Replacing the license of the work, or of an adaptation, with another license, or changing its terms."
       }
     ],
     "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
@@ -471,6 +526,7 @@
   {
     "@id": "https://dalicc.net/ns#Created",
     "@type": [
+      "http://www.w3.org/2002/07/owl#NamedIndividual",
       "http://www.w3.org/2004/02/skos/core#Concept",
       "https://dalicc.net/ns#ReviewStatus"
     ],
@@ -548,6 +604,11 @@
         "@id": "http://purl.org/dc/dcmitype/Text"
       }
     ],
+    "http://www.w3.org/2004/02/skos/core#closeMatch": [
+      {
+        "@id": "http://schema.org/CreativeWork"
+      }
+    ],
     "http://www.w3.org/2004/02/skos/core#scopeNote": [
       {
         "@language": "en",
@@ -574,7 +635,7 @@
     "http://www.w3.org/2000/01/rdf-schema#label": [
       {
         "@language": "en",
-        "@value": "Default outcome"
+        "@value": "Default outcome value"
       }
     ],
     "http://www.w3.org/2000/01/rdf-schema#seeAlso": [
@@ -700,6 +761,7 @@
   {
     "@id": "https://dalicc.net/ns#EU",
     "@type": [
+      "http://www.w3.org/2002/07/owl#NamedIndividual",
       "http://www.w3.org/2004/02/skos/core#Concept",
       "https://dalicc.net/ns#Jurisdiction"
     ],
@@ -825,8 +887,57 @@
     ]
   },
   {
+    "@id": "https://dalicc.net/ns#FromConvention",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#NamedIndividual",
+      "http://www.w3.org/2004/02/skos/core#Concept",
+      "https://dalicc.net/ns#StatementOrigin"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@language": "en",
+        "@value": "The statement is a library convention applied to every record of its kind, not a sentence of the license text."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+      {
+        "@id": "https://dalicc.net/ns#"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "From a library convention"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#seeAlso": [
+      {
+        "@id": "https://dalicc.net/ns#FromText"
+      },
+      {
+        "@id": "https://dalicc.net/ns#convention"
+      },
+      {
+        "@id": "https://dalicc.net/ns#statementOrigin"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#note": [
+      {
+        "@language": "en",
+        "@value": "Added with version 2 of the vocabulary, so that a record can say which of its statements the text makes and which the library adds by convention."
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#prefLabel": [
+      {
+        "@language": "en",
+        "@value": "fromConvention"
+      }
+    ]
+  },
+  {
     "@id": "https://dalicc.net/ns#FromDefaultRule",
     "@type": [
+      "http://www.w3.org/2002/07/owl#NamedIndividual",
       "http://www.w3.org/2004/02/skos/core#Concept",
       "https://dalicc.net/ns#StatementOrigin"
     ],
@@ -865,13 +976,14 @@
   {
     "@id": "https://dalicc.net/ns#FromText",
     "@type": [
+      "http://www.w3.org/2002/07/owl#NamedIndividual",
       "http://www.w3.org/2004/02/skos/core#Concept",
       "https://dalicc.net/ns#StatementOrigin"
     ],
     "http://www.w3.org/2000/01/rdf-schema#comment": [
       {
         "@language": "en",
-        "@value": "The statement is modelled from a sentence of the license text, which is what every curated record holds."
+        "@value": "The statement is modelled from a sentence of the license text. A statement node of a curated record that names no origin is read as this one."
       }
     ],
     "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
@@ -903,6 +1015,7 @@
   {
     "@id": "https://dalicc.net/ns#GB",
     "@type": [
+      "http://www.w3.org/2002/07/owl#NamedIndividual",
       "http://www.w3.org/2004/02/skos/core#Concept",
       "https://dalicc.net/ns#Jurisdiction"
     ],
@@ -946,6 +1059,7 @@
   {
     "@id": "https://dalicc.net/ns#GrantedByDefault",
     "@type": [
+      "http://www.w3.org/2002/07/owl#NamedIndividual",
       "http://www.w3.org/2004/02/skos/core#Concept",
       "https://dalicc.net/ns#DefaultOutcome"
     ],
@@ -1027,6 +1141,7 @@
   {
     "@id": "https://dalicc.net/ns#IN",
     "@type": [
+      "http://www.w3.org/2002/07/owl#NamedIndividual",
       "http://www.w3.org/2004/02/skos/core#Concept",
       "https://dalicc.net/ns#Jurisdiction"
     ],
@@ -1067,13 +1182,14 @@
   {
     "@id": "https://dalicc.net/ns#JP",
     "@type": [
+      "http://www.w3.org/2002/07/owl#NamedIndividual",
       "http://www.w3.org/2004/02/skos/core#Concept",
       "https://dalicc.net/ns#Jurisdiction"
     ],
     "http://www.w3.org/2000/01/rdf-schema#comment": [
       {
         "@language": "en",
-        "@value": "Japan."
+        "@value": "Japan, whose copyright law is national and applies throughout the country."
       }
     ],
     "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
@@ -1140,7 +1256,7 @@
     "http://www.w3.org/2000/01/rdf-schema#comment": [
       {
         "@language": "en",
-        "@value": "The verbatim text of the limitation-of-liability clause of the license. The work comes with a limitation of liability."
+        "@value": "The verbatim text of the limitation-of-liability clause of the license."
       }
     ],
     "http://www.w3.org/2000/01/rdf-schema#domain": [
@@ -1174,6 +1290,7 @@
   {
     "@id": "https://dalicc.net/ns#ModifiedWorks",
     "@type": [
+      "http://www.w3.org/2002/07/owl#NamedIndividual",
       "http://www.w3.org/2004/02/skos/core#Concept",
       "http://www.w3.org/ns/odrl/2/Action",
       "https://dalicc.net/ns#RuleAction"
@@ -1181,7 +1298,7 @@
     "http://www.w3.org/2000/01/rdf-schema#comment": [
       {
         "@language": "en",
-        "@value": "Distributing a modified version of the work and making it available to the\npublic. The counterpart of cc:DerivativeWorks for alterations that do not amount to a new,\nderivative work."
+        "@value": "Distributing a modified version of the work that does not amount to a new, derivative work."
       }
     ],
     "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
@@ -1213,6 +1330,7 @@
   {
     "@id": "https://dalicc.net/ns#NotGrantedByDefault",
     "@type": [
+      "http://www.w3.org/2002/07/owl#NamedIndividual",
       "http://www.w3.org/2004/02/skos/core#Concept",
       "https://dalicc.net/ns#DefaultOutcome"
     ],
@@ -1251,6 +1369,7 @@
   {
     "@id": "https://dalicc.net/ns#NotWaivable",
     "@type": [
+      "http://www.w3.org/2002/07/owl#NamedIndividual",
       "http://www.w3.org/2004/02/skos/core#Concept",
       "https://dalicc.net/ns#DefaultOutcome"
     ],
@@ -1327,6 +1446,7 @@
   {
     "@id": "https://dalicc.net/ns#Proposed",
     "@type": [
+      "http://www.w3.org/2002/07/owl#NamedIndividual",
       "http://www.w3.org/2004/02/skos/core#Concept",
       "https://dalicc.net/ns#RuleStatus"
     ],
@@ -1387,7 +1507,7 @@
     "http://www.w3.org/2000/01/rdf-schema#label": [
       {
         "@language": "en",
-        "@value": "Record status"
+        "@value": "Record status value"
       }
     ],
     "http://www.w3.org/2000/01/rdf-schema#seeAlso": [
@@ -1399,6 +1519,7 @@
   {
     "@id": "https://dalicc.net/ns#RequiredByDefault",
     "@type": [
+      "http://www.w3.org/2002/07/owl#NamedIndividual",
       "http://www.w3.org/2004/02/skos/core#Concept",
       "https://dalicc.net/ns#DefaultOutcome"
     ],
@@ -1453,7 +1574,7 @@
     "http://www.w3.org/2000/01/rdf-schema#label": [
       {
         "@language": "en",
-        "@value": "Review status"
+        "@value": "Review status value"
       }
     ],
     "http://www.w3.org/2000/01/rdf-schema#seeAlso": [
@@ -1465,6 +1586,7 @@
   {
     "@id": "https://dalicc.net/ns#Reviewed",
     "@type": [
+      "http://www.w3.org/2002/07/owl#NamedIndividual",
       "http://www.w3.org/2004/02/skos/core#Concept",
       "https://dalicc.net/ns#ReviewStatus"
     ],
@@ -1561,7 +1683,7 @@
     "http://www.w3.org/2000/01/rdf-schema#label": [
       {
         "@language": "en",
-        "@value": "Rule status"
+        "@value": "Rule status value"
       }
     ],
     "http://www.w3.org/2000/01/rdf-schema#seeAlso": [
@@ -1581,7 +1703,7 @@
     "http://www.w3.org/2000/01/rdf-schema#comment": [
       {
         "@language": "en",
-        "@value": "Where a deontic statement in a result or a document came from: the text of the\nlicense, or a default rule applied to an action the text is silent on."
+        "@value": "Where a deontic statement came from: a sentence of the license text, a\nconvention the library applies to every record of its kind, or a default rule applied to an\naction the text is silent on."
       }
     ],
     "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
@@ -1592,7 +1714,7 @@
     "http://www.w3.org/2000/01/rdf-schema#label": [
       {
         "@language": "en",
-        "@value": "Statement origin"
+        "@value": "Statement origin value"
       }
     ],
     "http://www.w3.org/2000/01/rdf-schema#seeAlso": [
@@ -1606,13 +1728,14 @@
     "http://www.w3.org/2004/02/skos/core#scopeNote": [
       {
         "@language": "en",
-        "@value": "Used in compatibility and consistency results and in the documents built from them, never in a curated record: a record states what its text states."
+        "@value": "dalicc:FromConvention is written on the statement nodes of curated records; dalicc:FromDefaultRule only in compatibility and consistency results and the documents built from them. A statement node without an origin is read as dalicc:FromText."
       }
     ]
   },
   {
     "@id": "https://dalicc.net/ns#US",
     "@type": [
+      "http://www.w3.org/2002/07/owl#NamedIndividual",
       "http://www.w3.org/2004/02/skos/core#Concept",
       "https://dalicc.net/ns#Jurisdiction"
     ],
@@ -1669,7 +1792,7 @@
     "http://www.w3.org/2000/01/rdf-schema#label": [
       {
         "@language": "en",
-        "@value": "Validity type"
+        "@value": "Validity type value"
       }
     ]
   },
@@ -1681,7 +1804,7 @@
     "http://www.w3.org/2000/01/rdf-schema#comment": [
       {
         "@language": "en",
-        "@value": "The verbatim text of the warranty disclaimer of the license. The licensee must accept a disclaimer attached to this work."
+        "@value": "The verbatim text of the warranty disclaimer of the license."
       }
     ],
     "http://www.w3.org/2000/01/rdf-schema#domain": [
@@ -1725,7 +1848,7 @@
     "http://www.w3.org/2000/01/rdf-schema#comment": [
       {
         "@language": "en",
-        "@value": "The verbatim text of a clause under which the licensee may accept a warranty or additional liability. The work comes with a warranty or additional liability."
+        "@value": "The verbatim text of a clause under which the licensee may offer a warranty or accept additional liability."
       }
     ],
     "http://www.w3.org/2000/01/rdf-schema#domain": [
@@ -1753,6 +1876,7 @@
   {
     "@id": "https://dalicc.net/ns#addLimitation",
     "@type": [
+      "http://www.w3.org/2002/07/owl#NamedIndividual",
       "http://www.w3.org/2004/02/skos/core#Concept",
       "http://www.w3.org/ns/odrl/2/Action",
       "https://dalicc.net/ns#RuleAction"
@@ -1760,7 +1884,7 @@
     "http://www.w3.org/2000/01/rdf-schema#comment": [
       {
         "@language": "en",
-        "@value": "Adding further limitations or restrictions to the license terms when redistributing the work. Where this action is prohibited the license may not be made more restrictive downstream."
+        "@value": "Adding further limitations or restrictions to the license terms when passing the work on."
       }
     ],
     "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
@@ -1786,6 +1910,7 @@
   {
     "@id": "https://dalicc.net/ns#addStatement",
     "@type": [
+      "http://www.w3.org/2002/07/owl#NamedIndividual",
       "http://www.w3.org/2004/02/skos/core#Concept",
       "http://www.w3.org/ns/odrl/2/Action",
       "https://dalicc.net/ns#DutyAction",
@@ -1799,7 +1924,7 @@
     "http://www.w3.org/2000/01/rdf-schema#comment": [
       {
         "@language": "en",
-        "@value": "The Assignee may add his own copyright statement, notices to his modifications\nand may provide additional or different license terms and conditions for use, reproduction, or\ndistribution of his modifications, or for any such Derivative Works as a whole, provided use,\nreproduction, and distribution of the Work otherwise complies with the conditions stated in this\nLicense."
+        "@value": "Attaching terms, notices or statements of one's own to the work or to one's modifications when passing it on."
       }
     ],
     "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
@@ -1818,10 +1943,10 @@
         "@id": "https://dalicc.net/ns#addLimitation"
       }
     ],
-    "http://www.w3.org/2004/02/skos/core#definition": [
+    "http://www.w3.org/2004/02/skos/core#historyNote": [
       {
         "@language": "en",
-        "@value": "Attaching additional terms, notices or statements to the work when redistributing it. Where this action is prohibited the licensee must pass the license on unchanged."
+        "@value": "The Assignee may add his own copyright statement, notices to his modifications\nand may provide additional or different license terms and conditions for use, reproduction, or\ndistribution of his modifications, or for any such Derivative Works as a whole, provided use,\nreproduction, and distribution of the Work otherwise complies with the conditions stated in this\nLicense."
       }
     ]
   },
@@ -1861,6 +1986,7 @@
   {
     "@id": "https://dalicc.net/ns#advertisingAcknowledgement",
     "@type": [
+      "http://www.w3.org/2002/07/owl#NamedIndividual",
       "http://www.w3.org/2004/02/skos/core#Concept",
       "http://www.w3.org/ns/odrl/2/Action",
       "https://dalicc.net/ns#DutyAction"
@@ -1868,7 +1994,7 @@
     "http://www.w3.org/2000/01/rdf-schema#comment": [
       {
         "@language": "en",
-        "@value": "Displaying a prescribed acknowledgement in every advertisement that mentions\nfeatures of the work or its use. The wording itself is carried by\ndalicc:PromotionSpecification."
+        "@value": "Displaying a prescribed acknowledgement, whose wording dalicc:PromotionSpecification carries, in every advertisement that mentions the work or its use."
       }
     ],
     "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
@@ -1909,12 +2035,17 @@
   {
     "@id": "https://dalicc.net/ns#alternativeConditionSet",
     "@type": [
-      "http://www.w3.org/2002/07/owl#AnnotationProperty"
+      "http://www.w3.org/2002/07/owl#DatatypeProperty"
     ],
     "http://www.w3.org/2000/01/rdf-schema#comment": [
       {
         "@language": "en",
         "@value": "A statement that the license lets the licensee satisfy any one of several\nlisted conditions rather than all of them. The deontic model has no way to say \"one of these\", so\nthe alternatives are quoted and this property records that they are alternatives."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#domain": [
+      {
+        "@id": "http://www.w3.org/ns/odrl/2/Set"
       }
     ],
     "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
@@ -1992,6 +2123,7 @@
   {
     "@id": "https://dalicc.net/ns#applyTechnicalProtectionMeasures",
     "@type": [
+      "http://www.w3.org/2002/07/owl#NamedIndividual",
       "http://www.w3.org/2004/02/skos/core#Concept",
       "http://www.w3.org/ns/odrl/2/Action",
       "https://dalicc.net/ns#RuleAction"
@@ -1999,7 +2131,7 @@
     "http://www.w3.org/2000/01/rdf-schema#comment": [
       {
         "@language": "en",
-        "@value": "Applying technological measures that control access to the work or its\nuse. Where this action is prohibited the licensee may not pass the work on behind a measure\nthat keeps a recipient from exercising the rights the license grants."
+        "@value": "Applying technological measures that control access to the work or its use."
       }
     ],
     "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
@@ -2031,6 +2163,7 @@
   {
     "@id": "https://dalicc.net/ns#attachoffer",
     "@type": [
+      "http://www.w3.org/2002/07/owl#NamedIndividual",
       "http://www.w3.org/2004/02/skos/core#Concept",
       "http://www.w3.org/ns/odrl/2/Action",
       "https://dalicc.net/ns#RuleAction"
@@ -2043,7 +2176,7 @@
     "http://www.w3.org/2000/01/rdf-schema#comment": [
       {
         "@language": "en",
-        "@value": "The Assignee may add a written offer for permissions according to the license."
+        "@value": "Attaching to the work a written offer of further permissions."
       }
     ],
     "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
@@ -2065,6 +2198,12 @@
         "@id": "https://dalicc.net/ns#chargeOffer"
       }
     ],
+    "http://www.w3.org/2004/02/skos/core#historyNote": [
+      {
+        "@language": "en",
+        "@value": "The Assignee may add a written offer for permissions according to the license."
+      }
+    ],
     "http://www.w3.org/2004/02/skos/core#note": [
       {
         "@language": "en",
@@ -2075,9 +2214,15 @@
   {
     "@id": "https://dalicc.net/ns#attributionNotice",
     "@type": [
+      "http://www.w3.org/2002/07/owl#NamedIndividual",
       "http://www.w3.org/2004/02/skos/core#Concept",
       "http://www.w3.org/ns/odrl/2/Action",
       "https://dalicc.net/ns#DutyAction"
+    ],
+    "http://purl.org/dc/terms/isReplacedBy": [
+      {
+        "@id": "http://creativecommons.org/ns#Attribution"
+      }
     ],
     "http://purl.org/dc/terms/source": [
       {
@@ -2087,7 +2232,7 @@
     "http://www.w3.org/2000/01/rdf-schema#comment": [
       {
         "@language": "en",
-        "@value": "Notify the attributes of License Material."
+        "@value": "Deprecated; replaced by cc:Attribution, because the library states attribution duties with it. Giving notice of the attributions that the licensed material carries."
       }
     ],
     "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
@@ -2098,7 +2243,7 @@
     "http://www.w3.org/2000/01/rdf-schema#label": [
       {
         "@language": "en",
-        "@value": "Attribution notice"
+        "@value": "Attribution notice (deprecated)"
       }
     ],
     "http://www.w3.org/2000/01/rdf-schema#seeAlso": [
@@ -2112,6 +2257,23 @@
         "@id": "http://www.w3.org/ns/odrl/2/attribute"
       }
     ],
+    "http://www.w3.org/2002/07/owl#deprecated": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#boolean",
+        "@value": true
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#closeMatch": [
+      {
+        "@id": "http://creativecommons.org/ns#Attribution"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#historyNote": [
+      {
+        "@language": "en",
+        "@value": "Notify the attributes of License Material."
+      }
+    ],
     "http://www.w3.org/2004/02/skos/core#note": [
       {
         "@language": "en",
@@ -2120,8 +2282,103 @@
     ]
   },
   {
+    "@id": "https://dalicc.net/ns#basedOnGraph",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#ObjectProperty"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@language": "en",
+        "@value": "Relates a complete dependency graph to the graph it was built from, together\nwith a difference: the default rules it adds, the axioms it removes (dalicc:AxiomRemoval) and the\ndefault rules it replaces (dalicc:replacesRule). It records provenance only. The graph that\ncarries it holds every statement a check reads, and nothing follows the link."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+      {
+        "@id": "https://dalicc.net/ns#"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "Based on graph"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#seeAlso": [
+      {
+        "@id": "https://dalicc.net/ns#AxiomRemoval"
+      },
+      {
+        "@id": "https://dalicc.net/ns#basedOnVersion"
+      },
+      {
+        "@id": "https://dalicc.net/ns#replacesRule"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#note": [
+      {
+        "@language": "en",
+        "@value": "Added with version 2 of the vocabulary, when the jurisdiction graphs became complete graphs and dalicc:extendsGraph was deprecated."
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#scopeNote": [
+      {
+        "@language": "en",
+        "@value": "Carried by the difference files of licensedata/dependencygraph/differences/ and by the seven jurisdiction graphs scripts/build_dependency_graphs.py generates from them; each names the core graph dg_default."
+      }
+    ]
+  },
+  {
+    "@id": "https://dalicc.net/ns#basedOnVersion",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#DatatypeProperty"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@language": "en",
+        "@value": "The version of the graph named with dalicc:basedOnGraph that a complete\ndependency graph was built from, as the number the model history of that graph gives it."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+      {
+        "@id": "https://dalicc.net/ns#"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "Based on version"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#range": [
+      {
+        "@id": "http://www.w3.org/2001/XMLSchema#string"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#seeAlso": [
+      {
+        "@id": "http://purl.org/dc/terms/hasVersion"
+      },
+      {
+        "@id": "https://dalicc.net/ns#basedOnGraph"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#note": [
+      {
+        "@language": "en",
+        "@value": "Added with version 2 of the vocabulary."
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#scopeNote": [
+      {
+        "@language": "en",
+        "@value": "Written by scripts/build_dependency_graphs.py and never by hand. When the core graph gets a new version, the build gives every graph based on it a new version of its own whose change log names the core version it follows."
+      }
+    ]
+  },
+  {
     "@id": "https://dalicc.net/ns#chargeDistributionFee",
     "@type": [
+      "http://www.w3.org/2002/07/owl#NamedIndividual",
       "http://www.w3.org/2004/02/skos/core#Concept",
       "http://www.w3.org/ns/odrl/2/Action",
       "https://dalicc.net/ns#RuleAction"
@@ -2134,7 +2391,7 @@
     "http://www.w3.org/2000/01/rdf-schema#comment": [
       {
         "@language": "en",
-        "@value": "The distribution of the Licensed Material is provided on a costly basis."
+        "@value": "Charging a fee for the act of providing a copy of the work to someone else."
       }
     ],
     "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
@@ -2156,16 +2413,17 @@
         "@id": "https://dalicc.net/ns#chargeLicenseFee"
       }
     ],
-    "http://www.w3.org/2004/02/skos/core#definition": [
+    "http://www.w3.org/2004/02/skos/core#historyNote": [
       {
         "@language": "en",
-        "@value": "The licensee is allowed to charge a distribution fee, that is, a fee covering the act of providing the work to a third party."
+        "@value": "The distribution of the Licensed Material is provided on a costly basis."
       }
     ]
   },
   {
     "@id": "https://dalicc.net/ns#chargeLicenseFee",
     "@type": [
+      "http://www.w3.org/2002/07/owl#NamedIndividual",
       "http://www.w3.org/2004/02/skos/core#Concept",
       "http://www.w3.org/ns/odrl/2/Action",
       "https://dalicc.net/ns#RuleAction"
@@ -2178,7 +2436,7 @@
     "http://www.w3.org/2000/01/rdf-schema#comment": [
       {
         "@language": "en",
-        "@value": "The Licensed Material is available for use at monetary cost."
+        "@value": "Charging a fee for granting someone a license to the work."
       }
     ],
     "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
@@ -2203,10 +2461,10 @@
         "@id": "http://www.w3.org/ns/odrl/2/sell"
       }
     ],
-    "http://www.w3.org/2004/02/skos/core#definition": [
+    "http://www.w3.org/2004/02/skos/core#historyNote": [
       {
         "@language": "en",
-        "@value": "The licensee is allowed to charge a fee for granting a license to the work, that is, to generate revenue from sub-licensing rather than from distribution alone."
+        "@value": "The Licensed Material is available for use at monetary cost."
       }
     ],
     "http://www.w3.org/2004/02/skos/core#scopeNote": [
@@ -2219,9 +2477,15 @@
   {
     "@id": "https://dalicc.net/ns#chargeOffer",
     "@type": [
+      "http://www.w3.org/2002/07/owl#NamedIndividual",
       "http://www.w3.org/2004/02/skos/core#Concept",
       "http://www.w3.org/ns/odrl/2/Action",
       "https://dalicc.net/ns#RuleAction"
+    ],
+    "http://purl.org/dc/terms/isReplacedBy": [
+      {
+        "@id": "https://dalicc.net/ns#chargeDistributionFee"
+      }
     ],
     "http://purl.org/dc/terms/source": [
       {
@@ -2231,7 +2495,7 @@
     "http://www.w3.org/2000/01/rdf-schema#comment": [
       {
         "@language": "en",
-        "@value": "The Assignee may charge a fee for the physical act of transferring a copy, and\nyou may at your option offer warranty protection in exchange for a fee."
+        "@value": "Deprecated; replaced by dalicc:chargeDistributionFee, because a fee for the physical act of transferring a copy is a distribution fee. Charging a fee for transferring a copy of the work, or for a warranty offered with it."
       }
     ],
     "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
@@ -2242,7 +2506,7 @@
     "http://www.w3.org/2000/01/rdf-schema#label": [
       {
         "@language": "en",
-        "@value": "Charge offer"
+        "@value": "Charge offer (deprecated)"
       }
     ],
     "http://www.w3.org/2000/01/rdf-schema#seeAlso": [
@@ -2251,6 +2515,18 @@
       },
       {
         "@id": "https://dalicc.net/ns#chargeDistributionFee"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#deprecated": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#boolean",
+        "@value": true
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#historyNote": [
+      {
+        "@language": "en",
+        "@value": "The Assignee may charge a fee for the physical act of transferring a copy, and\nyou may at your option offer warranty protection in exchange for a fee."
       }
     ],
     "http://www.w3.org/2004/02/skos/core#note": [
@@ -2263,12 +2539,17 @@
   {
     "@id": "https://dalicc.net/ns#compatibleLicenseTest",
     "@type": [
-      "http://www.w3.org/2002/07/owl#AnnotationProperty"
+      "http://www.w3.org/2002/07/owl#DatatypeProperty"
     ],
     "http://www.w3.org/2000/01/rdf-schema#comment": [
       {
         "@language": "en",
         "@value": "The test a license states for deciding whether another license is compatible\nwith it, as a short literal: a named list, an approval by a body, or a comparison of the level of\nreciprocity. The list itself is quoted in dalicc:additionalClauses."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#domain": [
+      {
+        "@id": "http://www.w3.org/ns/odrl/2/Set"
       }
     ],
     "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
@@ -2306,8 +2587,65 @@
     ]
   },
   {
+    "@id": "https://dalicc.net/ns#compatibleWith",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#ObjectProperty"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@language": "en",
+        "@value": "The license lets a work under it be released, alone or combined with other\nmaterial, under the other license, as its own text or its licensor's published compatibility list\nstates; the relation is directed, not symmetric, so it says nothing about the opposite way."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#domain": [
+      {
+        "@id": "http://www.w3.org/ns/odrl/2/Set"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+      {
+        "@id": "https://dalicc.net/ns#"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "Compatible with"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#range": [
+      {
+        "@id": "http://www.w3.org/ns/odrl/2/Set"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#seeAlso": [
+      {
+        "@id": "http://creativecommons.org/ns#ShareAlike"
+      },
+      {
+        "@id": "https://dalicc.net/ns#compatibleLicenseTest"
+      },
+      {
+        "@id": "https://dalicc.net/ns#compliantLicense"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#note": [
+      {
+        "@language": "en",
+        "@value": "Added with version 2 of the vocabulary."
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#scopeNote": [
+      {
+        "@language": "en",
+        "@value": "Examples: LGPL-3.0 is compatible with GPL-3.0 by its section 2, AGPL-3.0 with GPL-3.0 by section 13 of GPL-3.0, and CC BY-SA 4.0 with GPL-3.0 by the Creative Commons list of compatible licenses. Read by the reasoner as a one-way permission to relicense."
+      }
+    ]
+  },
+  {
     "@id": "https://dalicc.net/ns#compliantLicense",
     "@type": [
+      "http://www.w3.org/2002/07/owl#NamedIndividual",
       "http://www.w3.org/2004/02/skos/core#Concept",
       "http://www.w3.org/ns/odrl/2/Action",
       "https://dalicc.net/ns#DutyAction"
@@ -2315,7 +2653,7 @@
     "http://www.w3.org/2000/01/rdf-schema#comment": [
       {
         "@language": "en",
-        "@value": "The replacement license chosen by the licensee must remain compliant with the terms of the original license. Attached as an odrl:Duty to a dalicc:ChangeLicense permission."
+        "@value": "Choosing a replacement license that stays compliant with the terms of the original license."
       }
     ],
     "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
@@ -2394,6 +2732,7 @@
   {
     "@id": "https://dalicc.net/ns#computationalUseOnly",
     "@type": [
+      "http://www.w3.org/2002/07/owl#NamedIndividual",
       "http://www.w3.org/2004/02/skos/core#Concept",
       "http://www.w3.org/ns/odrl/2/Action",
       "https://dalicc.net/ns#DutyAction"
@@ -2401,7 +2740,7 @@
     "http://www.w3.org/2000/01/rdf-schema#comment": [
       {
         "@language": "en",
-        "@value": "Using the work only as the input of a computation: analysis, training,\ntesting or the production of a result, as against publishing or performing the work itself.\nWhere a license carries this term as a duty the licensee may make no other use."
+        "@value": "Using the work only as the input of a computation, such as analysis, training or testing, and not publishing or performing the work itself."
       }
     ],
     "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
@@ -2439,6 +2778,7 @@
   {
     "@id": "https://dalicc.net/ns#conditionalAddLimitation",
     "@type": [
+      "http://www.w3.org/2002/07/owl#NamedIndividual",
       "http://www.w3.org/2004/02/skos/core#Concept",
       "http://www.w3.org/ns/odrl/2/Action",
       "https://dalicc.net/ns#RuleAction"
@@ -2446,7 +2786,7 @@
     "http://www.w3.org/2000/01/rdf-schema#comment": [
       {
         "@language": "en",
-        "@value": "Adding a further condition to the license terms, but only in the narrow\ncircumstances the license names, such as a statute, a judicial order, a regulation or a matter of\nnational security. It is the qualified form of dalicc:addLimitation, which a license either\nallows outright or forbids outright."
+        "@value": "Adding a further condition to the license terms only in the narrow circumstances the license names, such as a statute, a court order or national security."
       }
     ],
     "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
@@ -2496,7 +2836,7 @@
     "http://www.w3.org/2000/01/rdf-schema#comment": [
       {
         "@language": "en",
-        "@value": "An Action contradicts with another Action."
+        "@value": "Two actions that cannot both be exercised under one policy."
       }
     ],
     "http://www.w3.org/2000/01/rdf-schema#domain": [
@@ -2520,22 +2860,23 @@
         "@id": "http://www.w3.org/ns/odrl/2/Action"
       }
     ],
-    "http://www.w3.org/2004/02/skos/core#definition": [
+    "http://www.w3.org/2004/02/skos/core#historyNote": [
       {
         "@language": "en",
-        "@value": "States that two actions cannot both be exercised under one policy: if one\nlicense permits the subject action while another requires or permits the object action, the two\nlicenses are incompatible. This is the relation the DALICC compatibility checker reports as a\nconflicting statement."
+        "@value": "An Action contradicts with another Action."
       }
     ],
     "http://www.w3.org/2004/02/skos/core#scopeNote": [
       {
         "@language": "en",
-        "@value": "Asserted once in the default dependency graph: odrl:ensureExclusivity contradicts odrl:commercialize. The pair cc:ShareAlike contradicts odrl:grantUse was removed on 2026-09-15: passing the same terms on is the normal way to satisfy a share-alike condition, not a contradiction of it."
+        "@value": "If one license permits the subject action while another requires or permits the object action, the two are incompatible; the compatibility checker reports this as a conflicting statement. Asserted once in the default dependency graph: odrl:ensureExclusivity contradicts odrl:commercialize. The pair cc:ShareAlike contradicts odrl:grantUse was removed on 2026-09-15: passing the same terms on is the normal way to satisfy a share-alike condition, not a contradiction of it."
       }
     ]
   },
   {
     "@id": "https://dalicc.net/ns#contributionGrantBack",
     "@type": [
+      "http://www.w3.org/2002/07/owl#NamedIndividual",
       "http://www.w3.org/2004/02/skos/core#Concept",
       "http://www.w3.org/ns/odrl/2/Action",
       "https://dalicc.net/ns#DutyAction"
@@ -2543,7 +2884,7 @@
     "http://www.w3.org/2000/01/rdf-schema#comment": [
       {
         "@language": "en",
-        "@value": "Granting the licensor, or every other licensee, a license over the changes\nthe licensee makes, so that the modification can travel back into the original work."
+        "@value": "Granting the licensor, or every other licensee, a license over one's own changes to the work, so that they can travel back into the original."
       }
     ],
     "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
@@ -2579,8 +2920,62 @@
     ]
   },
   {
+    "@id": "https://dalicc.net/ns#convention",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#DatatypeProperty"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@language": "en",
+        "@value": "The name of the library convention that put the statement there, for example a family rule."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#domain": [
+      {
+        "@id": "http://www.w3.org/ns/odrl/2/Rule"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+      {
+        "@id": "https://dalicc.net/ns#"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "Convention"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#range": [
+      {
+        "@id": "http://www.w3.org/2001/XMLSchema#string"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#seeAlso": [
+      {
+        "@id": "https://dalicc.net/ns#FromConvention"
+      },
+      {
+        "@id": "https://dalicc.net/ns#statementOrigin"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#note": [
+      {
+        "@language": "en",
+        "@value": "Added with version 2 of the vocabulary."
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#scopeNote": [
+      {
+        "@language": "en",
+        "@value": "Carried by a permission, prohibition or duty node of a record together with dalicc:statementOrigin dalicc:FromConvention. The record page names it beside the statement."
+      }
+    ]
+  },
+  {
     "@id": "https://dalicc.net/ns#covenantNotToSue",
     "@type": [
+      "http://www.w3.org/2002/07/owl#NamedIndividual",
       "http://www.w3.org/2004/02/skos/core#Concept",
       "http://www.w3.org/ns/odrl/2/Action",
       "https://dalicc.net/ns#RuleAction"
@@ -2588,7 +2983,7 @@
     "http://www.w3.org/2000/01/rdf-schema#comment": [
       {
         "@language": "en",
-        "@value": "An undertaking by the licensor not to bring a claim over uses made under the\nlicense. It is wider than a patent grant, because it reaches every cause of action the licensor\nmight have, and narrower, because it grants nothing: it only promises not to enforce."
+        "@value": "Undertaking not to bring a claim against the licensee or later recipients over uses made under the license."
       }
     ],
     "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
@@ -2619,19 +3014,24 @@
     "http://www.w3.org/2004/02/skos/core#scopeNote": [
       {
         "@language": "en",
-        "@value": "Carried by the two Microsoft use of data agreements, whose section 2 says the data provider will not sue the licensee or any downstream recipient over the use, modification or distribution of the data."
+        "@value": "Wider than a patent grant, because it reaches every cause of action the licensor might have, and narrower, because it grants nothing and only promises not to enforce. Carried by the two Microsoft use of data agreements, whose section 2 says the data provider will not sue the licensee or any downstream recipient over the use, modification or distribution of the data."
       }
     ]
   },
   {
     "@id": "https://dalicc.net/ns#curePeriod",
     "@type": [
-      "http://www.w3.org/2002/07/owl#AnnotationProperty"
+      "http://www.w3.org/2002/07/owl#DatatypeProperty"
     ],
     "http://www.w3.org/2000/01/rdf-schema#comment": [
       {
         "@language": "en",
-        "@value": "The time a licensee in breach is given to put the breach right before the\nlicense ends, as a short literal such as \"30 days\". The absence of the property beside\ndalicc:terminatesOnBreach says the termination is immediate."
+        "@value": "The time a licensee in breach is given to put the breach right before the license ends, as a short literal such as \"30 days\"."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#domain": [
+      {
+        "@id": "http://www.w3.org/ns/odrl/2/Set"
       }
     ],
     "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
@@ -2660,11 +3060,18 @@
         "@language": "en",
         "@value": "Added by the standard-license addition of 2026-09-15, which recorded the clause as a vocabulary gap. Applied to 19 license records by the standard-license addition of 2026-09-15."
       }
+    ],
+    "http://www.w3.org/2004/02/skos/core#scopeNote": [
+      {
+        "@language": "en",
+        "@value": "Without it, beside dalicc:terminatesOnBreach, the termination is immediate."
+      }
     ]
   },
   {
     "@id": "https://dalicc.net/ns#databaseRightWaiver",
     "@type": [
+      "http://www.w3.org/2002/07/owl#NamedIndividual",
       "http://www.w3.org/2004/02/skos/core#Concept",
       "http://www.w3.org/ns/odrl/2/Action",
       "https://dalicc.net/ns#RuleAction"
@@ -2672,7 +3079,7 @@
     "http://www.w3.org/2000/01/rdf-schema#comment": [
       {
         "@language": "en",
-        "@value": "The licensor giving up the sui generis database right it holds in the\nlicensed material, so that the conditions of the license do not reach the parts of the work\nprotected by that right alone."
+        "@value": "Waiving the sui generis database right the licensor holds in the licensed material, so that the license conditions do not reach the parts protected by that right alone."
       }
     ],
     "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
@@ -2737,8 +3144,62 @@
     ]
   },
   {
+    "@id": "https://dalicc.net/ns#deprecatedOn",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#DatatypeProperty"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@language": "en",
+        "@value": "The date from which a composed license is no longer current, because its publisher withdrew it or a newer version replaced it."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#domain": [
+      {
+        "@id": "http://www.w3.org/ns/odrl/2/Set"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+      {
+        "@id": "https://dalicc.net/ns#"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "Deprecated on"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#range": [
+      {
+        "@id": "http://www.w3.org/2001/XMLSchema#date"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#seeAlso": [
+      {
+        "@id": "http://purl.org/dc/terms/isReplacedBy"
+      },
+      {
+        "@id": "http://www.w3.org/2002/07/owl#deprecated"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#note": [
+      {
+        "@language": "en",
+        "@value": "Added with version 2 of the vocabulary. The composer wrote it before the vocabulary defined it."
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#scopeNote": [
+      {
+        "@language": "en",
+        "@value": "Written by the License Composer beside owl:deprecated true; with dct:isReplacedBy the license is superseded, without it withdrawn. No curated record carries it."
+      }
+    ]
+  },
+  {
     "@id": "https://dalicc.net/ns#derivativeDatabaseAccess",
     "@type": [
+      "http://www.w3.org/2002/07/owl#NamedIndividual",
       "http://www.w3.org/2004/02/skos/core#Concept",
       "http://www.w3.org/ns/odrl/2/Action",
       "https://dalicc.net/ns#DutyAction"
@@ -2778,6 +3239,7 @@
   {
     "@id": "https://dalicc.net/ns#downstreamOffer",
     "@type": [
+      "http://www.w3.org/2002/07/owl#NamedIndividual",
       "http://www.w3.org/2004/02/skos/core#Concept",
       "http://www.w3.org/ns/odrl/2/Action",
       "https://dalicc.net/ns#DutyAction"
@@ -2785,7 +3247,7 @@
     "http://www.w3.org/2000/01/rdf-schema#comment": [
       {
         "@language": "en",
-        "@value": "Offering every recipient of the work a license on the same terms, directly\nfrom the licensor rather than through the distributing licensee."
+        "@value": "Offering every recipient of the work a license on the same terms directly from the licensor, rather than through the distributing licensee."
       }
     ],
     "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
@@ -2815,8 +3277,62 @@
     ]
   },
   {
+    "@id": "https://dalicc.net/ns#evidence",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#DatatypeProperty"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@language": "en",
+        "@value": "The sentence of the legal text the statement rests on, quoted verbatim."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#domain": [
+      {
+        "@id": "http://www.w3.org/ns/odrl/2/Rule"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+      {
+        "@id": "https://dalicc.net/ns#"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "Evidence"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#range": [
+      {
+        "@id": "http://www.w3.org/2001/XMLSchema#string"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#seeAlso": [
+      {
+        "@id": "https://dalicc.net/ns#additionalClauses"
+      },
+      {
+        "@id": "https://dalicc.net/ns#statementOrigin"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#note": [
+      {
+        "@language": "en",
+        "@value": "Added with version 2 of the vocabulary."
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#scopeNote": [
+      {
+        "@language": "en",
+        "@value": "Carried by a permission, prohibition or duty node of a record. The record page quotes it beside the statement."
+      }
+    ]
+  },
+  {
     "@id": "https://dalicc.net/ns#exceptedCombination",
     "@type": [
+      "http://www.w3.org/2002/07/owl#NamedIndividual",
       "http://www.w3.org/2004/02/skos/core#Concept",
       "http://www.w3.org/ns/odrl/2/Action",
       "https://dalicc.net/ns#RuleAction"
@@ -2824,7 +3340,7 @@
     "http://www.w3.org/2000/01/rdf-schema#comment": [
       {
         "@language": "en",
-        "@value": "Combining or linking the covered work with the material the exception names\nand conveying the result without the condition the exception lifts. Where this action is\npermitted the exception applies, and dalicc:reciprocityScope says what the condition still\ncovers."
+        "@value": "Combining or linking the covered work with the material an exception names and conveying the result without the condition the exception lifts."
       }
     ],
     "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
@@ -2854,11 +3370,18 @@
         "@language": "en",
         "@value": "Added on 2026-09-23 for the records that model a license with an SPDX exception. dalicc:exemptedMaterial keeps its one meaning, material the grant does not reach at all."
       }
+    ],
+    "http://www.w3.org/2004/02/skos/core#scopeNote": [
+      {
+        "@language": "en",
+        "@value": "Where this action is permitted the exception applies, and dalicc:reciprocityScope says what the condition still covers."
+      }
     ]
   },
   {
     "@id": "https://dalicc.net/ns#exemptedMaterial",
     "@type": [
+      "http://www.w3.org/2002/07/owl#NamedIndividual",
       "http://www.w3.org/2004/02/skos/core#Concept",
       "http://www.w3.org/ns/odrl/2/Action",
       "https://dalicc.net/ns#RuleAction"
@@ -2866,7 +3389,7 @@
     "http://www.w3.org/2000/01/rdf-schema#comment": [
       {
         "@language": "en",
-        "@value": "Using material that the license expressly carves out of its grant, such as\npersonal data, official insignia, third-party rights or material under a separate license.\nWhere this action is prohibited the grant does not reach that material at all."
+        "@value": "Using material that the license carves out of its grant, such as personal data, official insignia, third-party rights or material under a separate license."
       }
     ],
     "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
@@ -2895,6 +3418,7 @@
   {
     "@id": "https://dalicc.net/ns#exportControlNotice",
     "@type": [
+      "http://www.w3.org/2002/07/owl#NamedIndividual",
       "http://www.w3.org/2004/02/skos/core#Concept",
       "http://www.w3.org/ns/odrl/2/Action",
       "https://dalicc.net/ns#DutyAction"
@@ -2942,10 +3466,15 @@
     "@type": [
       "http://www.w3.org/2002/07/owl#ObjectProperty"
     ],
+    "http://purl.org/dc/terms/isReplacedBy": [
+      {
+        "@id": "https://dalicc.net/ns#basedOnGraph"
+      }
+    ],
     "http://www.w3.org/2000/01/rdf-schema#comment": [
       {
         "@language": "en",
-        "@value": "Relates a dependency graph to a graph whose statements it is read together\nwith. A jurisdiction graph carries its own default rules and extends the core graph, so a check\nunder it sees the core axioms, the adopted rules and the proposed rules of that jurisdiction,\nand the core graph stays the single place its axioms are written."
+        "@value": "Deprecated; replaced by dalicc:basedOnGraph. Related a dependency graph to a graph whose statements it was read together with."
       }
     ],
     "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
@@ -2956,7 +3485,7 @@
     "http://www.w3.org/2000/01/rdf-schema#label": [
       {
         "@language": "en",
-        "@value": "Extends graph"
+        "@value": "Extends graph (deprecated)"
       }
     ],
     "http://www.w3.org/2000/01/rdf-schema#seeAlso": [
@@ -2965,24 +3494,44 @@
       },
       {
         "@id": "https://dalicc.net/ns#DependencyRelation"
+      },
+      {
+        "@id": "https://dalicc.net/ns#basedOnGraph"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#deprecated": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#boolean",
+        "@value": true
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#note": [
+      {
+        "@language": "en",
+        "@value": "Deprecated when the jurisdiction graphs became complete graphs. dalicc:basedOnGraph is not a drop-in replacement: it records where a complete graph was built from and is never followed by the reasoner."
       }
     ],
     "http://www.w3.org/2004/02/skos/core#scopeNote": [
       {
         "@language": "en",
-        "@value": "Read by app/services/depgraph.py and by the reasoner's dependency-graph atom, which follow it one step; a graph that extends a graph that extends a third is not resolved further."
+        "@value": "No longer resolved. Every published dependency graph is complete: it holds every axiom and every rule a check under it reads, and neither app/services/depgraph.py nor the reasoner follows a link to another graph. A graph that still carries this property is read as complete, and the link is ignored with a warning in the log."
       }
     ]
   },
   {
     "@id": "https://dalicc.net/ns#fieldOfUseRestriction",
     "@type": [
-      "http://www.w3.org/2002/07/owl#AnnotationProperty"
+      "http://www.w3.org/2002/07/owl#DatatypeProperty"
     ],
     "http://www.w3.org/2000/01/rdf-schema#comment": [
       {
         "@language": "en",
         "@value": "The field of activity a license confines the licensee to, as a short literal.\nWhere the field is computational use the action dalicc:computationalUseOnly carries the duty and\nthis property names the field."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#domain": [
+      {
+        "@id": "http://www.w3.org/ns/odrl/2/Set"
       }
     ],
     "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
@@ -3019,12 +3568,17 @@
   {
     "@id": "https://dalicc.net/ns#governingLaw",
     "@type": [
-      "http://www.w3.org/2002/07/owl#AnnotationProperty"
+      "http://www.w3.org/2002/07/owl#DatatypeProperty"
     ],
     "http://www.w3.org/2000/01/rdf-schema#comment": [
       {
         "@language": "en",
         "@value": "The law that governs the license agreement, as a short literal. It is not the\nterritory in which the grant is valid: a license whose grant is worldwide can still be governed by\nthe law of one state, and cc:jurisdiction carries the territory."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#domain": [
+      {
+        "@id": "http://www.w3.org/ns/odrl/2/Set"
       }
     ],
     "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
@@ -3061,12 +3615,17 @@
   {
     "@id": "https://dalicc.net/ns#governmentRightsLimitation",
     "@type": [
-      "http://www.w3.org/2002/07/owl#AnnotationProperty"
+      "http://www.w3.org/2002/07/owl#DatatypeProperty"
     ],
     "http://www.w3.org/2000/01/rdf-schema#comment": [
       {
         "@language": "en",
         "@value": "A clause limiting the rights a government end user acquires in the work, or\nmaking the governing law depend on which government the licensee is."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#domain": [
+      {
+        "@id": "http://www.w3.org/ns/odrl/2/Set"
       }
     ],
     "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
@@ -3144,6 +3703,7 @@
   {
     "@id": "https://dalicc.net/ns#includeNoticeFile",
     "@type": [
+      "http://www.w3.org/2002/07/owl#NamedIndividual",
       "http://www.w3.org/2004/02/skos/core#Concept",
       "http://www.w3.org/ns/odrl/2/Action",
       "https://dalicc.net/ns#DutyAction"
@@ -3151,7 +3711,7 @@
     "http://www.w3.org/2000/01/rdf-schema#comment": [
       {
         "@language": "en",
-        "@value": "Carrying a named notice file of the original work forward into every\nredistributed copy and into derivative works, in one of the places the license lists."
+        "@value": "Carrying a named notice file of the original work into every redistributed copy and every derivative work."
       }
     ],
     "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
@@ -3183,6 +3743,7 @@
   {
     "@id": "https://dalicc.net/ns#irrevocable",
     "@type": [
+      "http://www.w3.org/2002/07/owl#NamedIndividual",
       "http://www.w3.org/2004/02/skos/core#Concept"
     ],
     "http://purl.org/dc/terms/source": [
@@ -3330,7 +3891,7 @@
     "http://www.w3.org/2000/01/rdf-schema#comment": [
       {
         "@language": "en",
-        "@value": "The full text of a licence as its licensor publishes it, carried by the\nrecord itself. Curated records point at the authoritative text with cc:legalcode and quote\nsingle clauses in dalicc:WarrantyDisclaimer, dalicc:LiabilityLimitation and\ndalicc:additionalClauses; a composed licence may carry the text written for it, for example\nby License-to-Text after the licensor has checked it."
+        "@value": "The full text of a license as its licensor publishes it, carried by the\nrecord itself. Curated records point at the authoritative text with cc:legalcode and quote\nsingle clauses in dalicc:WarrantyDisclaimer, dalicc:LiabilityLimitation and\ndalicc:additionalClauses; a composed license may carry the text written for it, for example\nby License-to-Text after the licensor has checked it."
       }
     ],
     "http://www.w3.org/2000/01/rdf-schema#domain": [
@@ -3346,7 +3907,7 @@
     "http://www.w3.org/2000/01/rdf-schema#label": [
       {
         "@language": "en",
-        "@value": "license text"
+        "@value": "License text"
       }
     ],
     "http://www.w3.org/2000/01/rdf-schema#range": [
@@ -3419,6 +3980,7 @@
   {
     "@id": "https://dalicc.net/ns#modificationNotice",
     "@type": [
+      "http://www.w3.org/2002/07/owl#NamedIndividual",
       "http://www.w3.org/2004/02/skos/core#Concept",
       "http://www.w3.org/ns/odrl/2/Action",
       "https://dalicc.net/ns#DutyAction"
@@ -3431,7 +3993,7 @@
     "http://www.w3.org/2000/01/rdf-schema#comment": [
       {
         "@language": "en",
-        "@value": "A notice that indicates if the Assignee modified the Licensed Material and\nretains an indication of any previous modifications."
+        "@value": "Marking a changed work as changed, saying how it differs from the original and keeping earlier notices of change."
       }
     ],
     "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
@@ -3453,10 +4015,10 @@
         "@id": "http://www.w3.org/ns/odrl/2/modify"
       }
     ],
-    "http://www.w3.org/2004/02/skos/core#definition": [
+    "http://www.w3.org/2004/02/skos/core#historyNote": [
       {
         "@language": "en",
-        "@value": "Providing a modification note means to document any changes done to the work and clearly document how it differs from the original work."
+        "@value": "A notice that indicates if the Assignee modified the Licensed Material and\nretains an indication of any previous modifications."
       }
     ],
     "http://www.w3.org/2004/02/skos/core#scopeNote": [
@@ -3469,6 +4031,7 @@
   {
     "@id": "https://dalicc.net/ns#moralRightsNonAssertion",
     "@type": [
+      "http://www.w3.org/2002/07/owl#NamedIndividual",
       "http://www.w3.org/2004/02/skos/core#Concept",
       "http://www.w3.org/ns/odrl/2/Action",
       "https://dalicc.net/ns#RuleAction"
@@ -3476,7 +4039,7 @@
     "http://www.w3.org/2000/01/rdf-schema#comment": [
       {
         "@language": "en",
-        "@value": "The licensor undertaking not to assert the moral rights of the author\nagainst uses made under the license, so far as the applicable law allows."
+        "@value": "Waiving, or undertaking not to assert, the moral rights of the author against uses made under the license, so far as the law allows."
       }
     ],
     "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
@@ -3505,6 +4068,7 @@
   {
     "@id": "https://dalicc.net/ns#moralRightsRestriction",
     "@type": [
+      "http://www.w3.org/2002/07/owl#NamedIndividual",
       "http://www.w3.org/2004/02/skos/core#Concept",
       "http://www.w3.org/ns/odrl/2/Action",
       "https://dalicc.net/ns#RuleAction"
@@ -3512,7 +4076,7 @@
     "http://www.w3.org/2000/01/rdf-schema#comment": [
       {
         "@language": "en",
-        "@value": "Treating the work in a way that touches the moral rights of the author,\nsuch as false attribution or a derogatory treatment. Where the license binds the licensee to\nrespect those rights, this is the action it restricts."
+        "@value": "Treating the work in a way that touches the moral rights of the author, such as false attribution or a derogatory treatment."
       }
     ],
     "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
@@ -3544,6 +4108,7 @@
   {
     "@id": "https://dalicc.net/ns#networkUseTrigger",
     "@type": [
+      "http://www.w3.org/2002/07/owl#NamedIndividual",
       "http://www.w3.org/2004/02/skos/core#Concept",
       "http://www.w3.org/ns/odrl/2/Action",
       "https://dalicc.net/ns#RuleAction"
@@ -3551,7 +4116,7 @@
     "http://www.w3.org/2000/01/rdf-schema#comment": [
       {
         "@language": "en",
-        "@value": "Making the work available over a network, deploying it or providing a service\nwith it. Where a license carries this term, that act triggers the duties the license would\notherwise attach to distribution, so the duties hang off this action rather than off\nodrl:distribute."
+        "@value": "Making the work available over a network, deploying it or providing a service with it."
       }
     ],
     "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
@@ -3579,19 +4144,20 @@
     "http://www.w3.org/2004/02/skos/core#note": [
       {
         "@language": "en",
-        "@value": "Added by the standard-license addition of 2026-09-15, which recorded the clause as a vocabulary gap in the review records named in its scope note."
+        "@value": "Added by the standard-license addition of 2026-09-15, which recorded the clause as a vocabulary gap. Applied to 30 license records by the standard-license addition of 2026-09-15."
       }
     ],
     "http://www.w3.org/2004/02/skos/core#scopeNote": [
       {
         "@language": "en",
-        "@value": "Carried by 16 records whose texts make deployment or communication to the public a trigger: the Apple, Open Software, Reciprocal Public and Cryptographic Autonomy families and the two European Union Public Licence records."
+        "@value": "Where a license carries this term, the act triggers the duties the license would otherwise attach to distribution, so the duties hang off this action rather than off odrl:distribute. Carried by the records whose texts make deployment or communication to the public a trigger: the Apple, Open Software, Reciprocal Public and Cryptographic Autonomy families and the two European Union Public Licence records."
       }
     ]
   },
   {
     "@id": "https://dalicc.net/ns#noWarrantyNotice",
     "@type": [
+      "http://www.w3.org/2002/07/owl#NamedIndividual",
       "http://www.w3.org/2004/02/skos/core#Concept",
       "http://www.w3.org/ns/odrl/2/Action",
       "https://dalicc.net/ns#DutyAction",
@@ -3605,7 +4171,7 @@
     "http://www.w3.org/2000/01/rdf-schema#comment": [
       {
         "@language": "en",
-        "@value": "Informs that Licensed Material does not provide any warranties."
+        "@value": "Attaching a notice that the work is provided without any warranty."
       }
     ],
     "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
@@ -3624,10 +4190,10 @@
         "@id": "https://dalicc.net/ns#WarrantyDisclaimer"
       }
     ],
-    "http://www.w3.org/2004/02/skos/core#definition": [
+    "http://www.w3.org/2004/02/skos/core#historyNote": [
       {
         "@language": "en",
-        "@value": "The licensee may attach a notice stating that the work is provided without warranty of any kind."
+        "@value": "Informs that Licensed Material does not provide any warranties."
       }
     ]
   },
@@ -3639,7 +4205,7 @@
     "http://www.w3.org/2000/01/rdf-schema#comment": [
       {
         "@language": "en",
-        "@value": "Whether the record models a license text that lets the licensee choose a\nlater version of the same license. False says the record models the named version only."
+        "@value": "Whether the license text lets the licensee choose a later version of the same license instead of the one named."
       }
     ],
     "http://www.w3.org/2000/01/rdf-schema#domain": [
@@ -3674,13 +4240,14 @@
     "http://www.w3.org/2004/02/skos/core#scopeNote": [
       {
         "@language": "en",
-        "@value": "Carried by the four GNU records, each with the value false: none of them models an or-later text."
+        "@value": "False says the record models the named version only. Carried by the four GNU records, each with the value false: none of them models an or-later text."
       }
     ]
   },
   {
     "@id": "https://dalicc.net/ns#originalVersionOffer",
     "@type": [
+      "http://www.w3.org/2002/07/owl#NamedIndividual",
       "http://www.w3.org/2004/02/skos/core#Concept",
       "http://www.w3.org/ns/odrl/2/Action",
       "https://dalicc.net/ns#DutyAction"
@@ -3726,7 +4293,13 @@
   {
     "@id": "https://dalicc.net/ns#patentFree",
     "@type": [
+      "http://www.w3.org/2002/07/owl#NamedIndividual",
       "http://www.w3.org/2004/02/skos/core#Concept"
+    ],
+    "http://purl.org/dc/terms/isReplacedBy": [
+      {
+        "@id": "https://dalicc.net/ns#patentGrant"
+      }
     ],
     "http://purl.org/dc/terms/source": [
       {
@@ -3736,7 +4309,7 @@
     "http://www.w3.org/2000/01/rdf-schema#comment": [
       {
         "@language": "en",
-        "@value": "The license applies only to those patent claims licensable by such Contributor\nthat are necessarily infringed by their Contribution(s) alone or by combination of their\nContribution(s) with the Licensed Material to which such Contribution(s) was submitted."
+        "@value": "Deprecated; replaced by dalicc:patentGrant, because its 2022 definition is the scope of a contributor's patent license. The license applies only to those patent claims licensable by such Contributor that are necessarily infringed by their Contribution(s) alone or by combination of their Contribution(s) with the Licensed Material to which such Contribution(s) was submitted."
       }
     ],
     "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
@@ -3747,12 +4320,18 @@
     "http://www.w3.org/2000/01/rdf-schema#label": [
       {
         "@language": "en",
-        "@value": "Patent free"
+        "@value": "Patent free (deprecated)"
       }
     ],
     "http://www.w3.org/2000/01/rdf-schema#seeAlso": [
       {
         "@id": "https://dalicc.net/ns#patentNotice"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#deprecated": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#boolean",
+        "@value": true
       }
     ],
     "http://www.w3.org/2004/02/skos/core#note": [
@@ -3771,6 +4350,7 @@
   {
     "@id": "https://dalicc.net/ns#patentFreedomCondition",
     "@type": [
+      "http://www.w3.org/2002/07/owl#NamedIndividual",
       "http://www.w3.org/2004/02/skos/core#Concept",
       "http://www.w3.org/ns/odrl/2/Action",
       "https://dalicc.net/ns#DutyAction"
@@ -3778,7 +4358,7 @@
     "http://www.w3.org/2000/01/rdf-schema#comment": [
       {
         "@language": "en",
-        "@value": "The condition that a patent reading on the work must be licensed for free and\nunrestricted use by everyone, or else the work may not be distributed at all. It is the clause\nthat forbids a licensee to accept a patent license narrower than the license itself."
+        "@value": "Distributing the work only where every patent that reads on it is licensed for free and unrestricted use by everyone."
       }
     ],
     "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
@@ -3819,6 +4399,7 @@
   {
     "@id": "https://dalicc.net/ns#patentGrant",
     "@type": [
+      "http://www.w3.org/2002/07/owl#NamedIndividual",
       "http://www.w3.org/2004/02/skos/core#Concept",
       "http://www.w3.org/ns/odrl/2/Action",
       "https://dalicc.net/ns#RuleAction"
@@ -3826,7 +4407,7 @@
     "http://www.w3.org/2000/01/rdf-schema#comment": [
       {
         "@language": "en",
-        "@value": "An express license to the patent claims a contributor holds that the\ncontribution necessarily infringes. Modelled as a permission where the license text grants\nit; its absence means the license is silent about patents, not that patents are withheld."
+        "@value": "Granting a license under the patent claims that a contributor holds and that the contribution necessarily infringes."
       }
     ],
     "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
@@ -3856,11 +4437,18 @@
         "@language": "en",
         "@value": "Added by the license library review of 2026-09-15, which recorded the clause as a vocabulary gap. Applied to 54 license records by the standard-license addition of 2026-09-15."
       }
+    ],
+    "http://www.w3.org/2004/02/skos/core#scopeNote": [
+      {
+        "@language": "en",
+        "@value": "Modelled as a permission where the license text grants it; its absence means the license is silent about patents, not that patents are withheld."
+      }
     ]
   },
   {
     "@id": "https://dalicc.net/ns#patentNotice",
     "@type": [
+      "http://www.w3.org/2002/07/owl#NamedIndividual",
       "http://www.w3.org/2004/02/skos/core#Concept",
       "http://www.w3.org/ns/odrl/2/Action",
       "https://dalicc.net/ns#DutyAction"
@@ -3873,7 +4461,7 @@
     "http://www.w3.org/2000/01/rdf-schema#comment": [
       {
         "@language": "en",
-        "@value": "Notifies that Licensed Material is patented or includes patented parts."
+        "@value": "Stating that the work is patented or contains patented parts."
       }
     ],
     "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
@@ -3895,6 +4483,12 @@
         "@id": "https://dalicc.net/ns#patentFree"
       }
     ],
+    "http://www.w3.org/2004/02/skos/core#historyNote": [
+      {
+        "@language": "en",
+        "@value": "Notifies that Licensed Material is patented or includes patented parts."
+      }
+    ],
     "http://www.w3.org/2004/02/skos/core#note": [
       {
         "@language": "en",
@@ -3905,6 +4499,7 @@
   {
     "@id": "https://dalicc.net/ns#patentRetaliationTermination",
     "@type": [
+      "http://www.w3.org/2002/07/owl#NamedIndividual",
       "http://www.w3.org/2004/02/skos/core#Concept",
       "http://www.w3.org/ns/odrl/2/Action",
       "https://dalicc.net/ns#RuleAction"
@@ -3912,7 +4507,7 @@
     "http://www.w3.org/2000/01/rdf-schema#comment": [
       {
         "@language": "en",
-        "@value": "Bringing a patent claim over the licensed work. Where a license carries\nthis term, such a claim ends the patent license, or the whole license, as the text provides."
+        "@value": "Not a ban on suing: a patent claim ends the patent license, or the whole license, as the text provides."
       }
     ],
     "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
@@ -3923,7 +4518,7 @@
     "http://www.w3.org/2000/01/rdf-schema#label": [
       {
         "@language": "en",
-        "@value": "Patent retaliation termination"
+        "@value": "Patent license ends on a patent claim"
       }
     ],
     "http://www.w3.org/2000/01/rdf-schema#seeAlso": [
@@ -3944,9 +4539,15 @@
   {
     "@id": "https://dalicc.net/ns#permissionNotice",
     "@type": [
+      "http://www.w3.org/2002/07/owl#NamedIndividual",
       "http://www.w3.org/2004/02/skos/core#Concept",
       "http://www.w3.org/ns/odrl/2/Action",
       "https://dalicc.net/ns#DutyAction"
+    ],
+    "http://purl.org/dc/terms/isReplacedBy": [
+      {
+        "@id": "http://creativecommons.org/ns#Notice"
+      }
     ],
     "http://purl.org/dc/terms/source": [
       {
@@ -3956,7 +4557,7 @@
     "http://www.w3.org/2000/01/rdf-schema#comment": [
       {
         "@language": "en",
-        "@value": "The permission notices which are in the License shall be included."
+        "@value": "Deprecated; replaced by cc:Notice, because the library states notice duties with it. Including the permission notice of the license with the work."
       }
     ],
     "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
@@ -3967,7 +4568,7 @@
     "http://www.w3.org/2000/01/rdf-schema#label": [
       {
         "@language": "en",
-        "@value": "Permission notice"
+        "@value": "Permission notice (deprecated)"
       }
     ],
     "http://www.w3.org/2000/01/rdf-schema#seeAlso": [
@@ -3976,6 +4577,23 @@
       },
       {
         "@id": "http://www.w3.org/ns/odrl/2/AttachPolicy"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#deprecated": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#boolean",
+        "@value": true
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#closeMatch": [
+      {
+        "@id": "http://creativecommons.org/ns#Notice"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#historyNote": [
+      {
+        "@language": "en",
+        "@value": "The permission notices which are in the License shall be included."
       }
     ],
     "http://www.w3.org/2004/02/skos/core#note": [
@@ -3988,6 +4606,7 @@
   {
     "@id": "https://dalicc.net/ns#perpetual",
     "@type": [
+      "http://www.w3.org/2002/07/owl#NamedIndividual",
       "http://www.w3.org/2004/02/skos/core#Concept",
       "https://dalicc.net/ns#ValidityType"
     ],
@@ -3999,7 +4618,7 @@
     "http://www.w3.org/2000/01/rdf-schema#comment": [
       {
         "@language": "en",
-        "@value": "A perpetual license allows to use the licensed work indefinitely."
+        "@value": "The license has no time limit."
       }
     ],
     "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
@@ -4013,10 +4632,10 @@
         "@value": "Perpetual"
       }
     ],
-    "http://www.w3.org/2004/02/skos/core#definition": [
+    "http://www.w3.org/2004/02/skos/core#historyNote": [
       {
         "@language": "en",
-        "@value": "The license has no limit of time. Where this does not apply, a start date and an end date are given instead."
+        "@value": "A perpetual license allows to use the licensed work indefinitely."
       }
     ],
     "http://www.w3.org/2004/02/skos/core#prefLabel": [
@@ -4028,13 +4647,14 @@
     "http://www.w3.org/2004/02/skos/core#scopeNote": [
       {
         "@language": "en",
-        "@value": "The value of dalicc:validityType on 342 of 343 licenses."
+        "@value": "Where it does not apply, a start and an end date or a period are given instead. The value of dalicc:validityType on 342 of 343 licenses."
       }
     ]
   },
   {
     "@id": "https://dalicc.net/ns#promote",
     "@type": [
+      "http://www.w3.org/2002/07/owl#NamedIndividual",
       "http://www.w3.org/2004/02/skos/core#Concept",
       "http://www.w3.org/ns/odrl/2/Action",
       "https://dalicc.net/ns#RuleAction"
@@ -4047,7 +4667,7 @@
     "http://www.w3.org/2000/01/rdf-schema#comment": [
       {
         "@language": "en",
-        "@value": "The Assigner permits the Assignee to use the licensed work for promotional purposes.."
+        "@value": "Using the name or trademarks of the licensor or of contributors to endorse or promote a product."
       }
     ],
     "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
@@ -4069,10 +4689,10 @@
         "@id": "https://dalicc.net/ns#trademarkNotice"
       }
     ],
-    "http://www.w3.org/2004/02/skos/core#definition": [
+    "http://www.w3.org/2004/02/skos/core#historyNote": [
       {
         "@language": "en",
-        "@value": "Promote means that the licensee can use the licensor's trademark for advertising and promotion purposes."
+        "@value": "The Assigner permits the Assignee to use the licensed work for promotional purposes.."
       }
     ],
     "http://www.w3.org/2004/02/skos/core#scopeNote": [
@@ -4085,6 +4705,7 @@
   {
     "@id": "https://dalicc.net/ns#provideUserData",
     "@type": [
+      "http://www.w3.org/2002/07/owl#NamedIndividual",
       "http://www.w3.org/2004/02/skos/core#Concept",
       "http://www.w3.org/ns/odrl/2/Action",
       "https://dalicc.net/ns#DutyAction"
@@ -4130,6 +4751,7 @@
   {
     "@id": "https://dalicc.net/ns#publicationNonObstruction",
     "@type": [
+      "http://www.w3.org/2002/07/owl#NamedIndividual",
       "http://www.w3.org/2004/02/skos/core#Concept",
       "http://www.w3.org/ns/odrl/2/Action",
       "https://dalicc.net/ns#RuleAction"
@@ -4137,7 +4759,7 @@
     "http://www.w3.org/2000/01/rdf-schema#comment": [
       {
         "@language": "en",
-        "@value": "Restricting or deterring the ability of anyone who receives the work to\npublish it, or to record it and the grants of rights in it. Where this action is prohibited the\nlicensee may not stand between a recipient and publication."
+        "@value": "Restricting or deterring a recipient of the work from publishing it, or from recording it and the grants of rights in it."
       }
     ],
     "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
@@ -4175,9 +4797,15 @@
   {
     "@id": "https://dalicc.net/ns#publish",
     "@type": [
+      "http://www.w3.org/2002/07/owl#NamedIndividual",
       "http://www.w3.org/2004/02/skos/core#Concept",
       "http://www.w3.org/ns/odrl/2/Action",
       "https://dalicc.net/ns#RuleAction"
+    ],
+    "http://purl.org/dc/terms/isReplacedBy": [
+      {
+        "@id": "http://www.w3.org/ns/odrl/2/distribute"
+      }
     ],
     "http://purl.org/dc/terms/source": [
       {
@@ -4187,7 +4815,7 @@
     "http://www.w3.org/2000/01/rdf-schema#comment": [
       {
         "@language": "en",
-        "@value": "The Assigner permits the Assignee to prepare and issue (a book, journal) for\npublic sale to make it generally known, to make available online."
+        "@value": "Deprecated; replaced by odrl:distribute, because issuing the work to the public is distributing it. Preparing and issuing the work for the public, in print or online."
       }
     ],
     "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
@@ -4198,7 +4826,7 @@
     "http://www.w3.org/2000/01/rdf-schema#label": [
       {
         "@language": "en",
-        "@value": "Publish"
+        "@value": "Publish (deprecated)"
       }
     ],
     "http://www.w3.org/2000/01/rdf-schema#seeAlso": [
@@ -4207,6 +4835,18 @@
       },
       {
         "@id": "http://www.w3.org/ns/odrl/2/present"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#deprecated": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#boolean",
+        "@value": true
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#historyNote": [
+      {
+        "@language": "en",
+        "@value": "The Assigner permits the Assignee to prepare and issue (a book, journal) for\npublic sale to make it generally known, to make available online."
       }
     ],
     "http://www.w3.org/2004/02/skos/core#note": [
@@ -4219,6 +4859,7 @@
   {
     "@id": "https://dalicc.net/ns#recipientAssent",
     "@type": [
+      "http://www.w3.org/2002/07/owl#NamedIndividual",
       "http://www.w3.org/2004/02/skos/core#Concept",
       "http://www.w3.org/ns/odrl/2/Action",
       "https://dalicc.net/ns#DutyAction"
@@ -4264,6 +4905,7 @@
   {
     "@id": "https://dalicc.net/ns#recipientRegistrationRequest",
     "@type": [
+      "http://www.w3.org/2002/07/owl#NamedIndividual",
       "http://www.w3.org/2004/02/skos/core#Concept",
       "http://www.w3.org/ns/odrl/2/Action",
       "https://dalicc.net/ns#DutyAction"
@@ -4309,12 +4951,17 @@
   {
     "@id": "https://dalicc.net/ns#reciprocityScope",
     "@type": [
-      "http://www.w3.org/2002/07/owl#AnnotationProperty"
+      "http://www.w3.org/2002/07/owl#DatatypeProperty"
     ],
     "http://www.w3.org/2000/01/rdf-schema#comment": [
       {
         "@language": "en",
         "@value": "How far a share-alike condition reaches, as a short literal: the changed file,\nthe source form, the whole work, or the product the work is built into. It says in words what the\nattachment level of the cc:ShareAlike duty says in structure."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#domain": [
+      {
+        "@id": "http://www.w3.org/ns/odrl/2/Set"
       }
     ],
     "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
@@ -4395,9 +5042,15 @@
   {
     "@id": "https://dalicc.net/ns#redistribute",
     "@type": [
+      "http://www.w3.org/2002/07/owl#NamedIndividual",
       "http://www.w3.org/2004/02/skos/core#Concept",
       "http://www.w3.org/ns/odrl/2/Action",
       "https://dalicc.net/ns#RuleAction"
+    ],
+    "http://purl.org/dc/terms/isReplacedBy": [
+      {
+        "@id": "http://www.w3.org/ns/odrl/2/distribute"
+      }
     ],
     "http://purl.org/dc/terms/source": [
       {
@@ -4407,7 +5060,7 @@
     "http://www.w3.org/2000/01/rdf-schema#comment": [
       {
         "@language": "en",
-        "@value": "The Assigner permits/prohibits the Assignees to redistribute the Asset."
+        "@value": "Deprecated; replaced by odrl:distribute, because it names the same act. Passing copies of the work on to others."
       }
     ],
     "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
@@ -4418,12 +5071,29 @@
     "http://www.w3.org/2000/01/rdf-schema#label": [
       {
         "@language": "en",
-        "@value": "Redistribute"
+        "@value": "Redistribute (deprecated)"
       }
     ],
     "http://www.w3.org/2000/01/rdf-schema#seeAlso": [
       {
         "@id": "http://www.w3.org/ns/odrl/2/distribute"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#deprecated": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#boolean",
+        "@value": true
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#closeMatch": [
+      {
+        "@id": "http://www.w3.org/ns/odrl/2/distribute"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#historyNote": [
+      {
+        "@language": "en",
+        "@value": "The Assigner permits/prohibits the Assignees to redistribute the Asset."
       }
     ],
     "http://www.w3.org/2004/02/skos/core#note": [
@@ -4436,6 +5106,7 @@
   {
     "@id": "https://dalicc.net/ns#rename",
     "@type": [
+      "http://www.w3.org/2002/07/owl#NamedIndividual",
       "http://www.w3.org/2004/02/skos/core#Concept",
       "http://www.w3.org/ns/odrl/2/Action",
       "https://dalicc.net/ns#DutyAction"
@@ -4443,7 +5114,7 @@
     "http://www.w3.org/2000/01/rdf-schema#comment": [
       {
         "@language": "en",
-        "@value": "Rename means to change the title of the modified or derived work so that it can\nbe clearly distinguished from the original work."
+        "@value": "Giving a modified or derived work a name that tells it apart from the original."
       }
     ],
     "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
@@ -4467,8 +5138,62 @@
     ]
   },
   {
+    "@id": "https://dalicc.net/ns#replacesRule",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#ObjectProperty"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@language": "en",
+        "@value": "Relates a default rule of a graph built from another one to the rule of that other graph it takes the place of. The generated graph holds the replacing rule and not the replaced one, so no graph holds two default rules for one action and one territory."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#domain": [
+      {
+        "@id": "https://dalicc.net/ns#DefaultRule"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+      {
+        "@id": "https://dalicc.net/ns#"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "Replaces rule"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#range": [
+      {
+        "@id": "https://dalicc.net/ns#DefaultRule"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#seeAlso": [
+      {
+        "@id": "https://dalicc.net/ns#AxiomRemoval"
+      },
+      {
+        "@id": "https://dalicc.net/ns#basedOnGraph"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#note": [
+      {
+        "@language": "en",
+        "@value": "Added with version 2 of the vocabulary. No shipped graph replaces a rule of the core graph; the difference-file README shows the syntax."
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#scopeNote": [
+      {
+        "@language": "en",
+        "@value": "Read by scripts/build_dependency_graphs.py and shown on the page of a graph under What it replaces."
+      }
+    ]
+  },
+  {
     "@id": "https://dalicc.net/ns#reverseEngineerForInteroperability",
     "@type": [
+      "http://www.w3.org/2002/07/owl#NamedIndividual",
       "http://www.w3.org/2004/02/skos/core#Concept",
       "http://www.w3.org/ns/odrl/2/Action",
       "https://dalicc.net/ns#RuleAction"
@@ -4476,7 +5201,7 @@
     "http://www.w3.org/2000/01/rdf-schema#comment": [
       {
         "@language": "en",
-        "@value": "Decompiling or otherwise analysing a program so far as is necessary to obtain\nthe information needed to make an independently created program work with it. It is narrower\nthan reverse engineering at large: the purpose is interoperability and nothing else."
+        "@value": "Decompiling or otherwise analysing a program only so far as is needed to make an independently created program work with it."
       }
     ],
     "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
@@ -4504,7 +5229,13 @@
     "http://www.w3.org/2004/02/skos/core#note": [
       {
         "@language": "en",
-        "@value": "Added with version 7 of the vocabulary so that the European interoperability exception can be stated as a default rule; not used by any license in the current library."
+        "@value": "Added with version 2 of the vocabulary so that the European interoperability exception can be stated as a default rule; not used by any license in the current library."
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#scopeNote": [
+      {
+        "@language": "en",
+        "@value": "Narrower than reverse engineering at large: the purpose is interoperability and nothing else."
       }
     ]
   },
@@ -4608,6 +5339,7 @@
   {
     "@id": "https://dalicc.net/ns#royalityFree",
     "@type": [
+      "http://www.w3.org/2002/07/owl#NamedIndividual",
       "http://www.w3.org/2004/02/skos/core#Concept"
     ],
     "http://purl.org/dc/terms/isReplacedBy": [
@@ -4623,7 +5355,7 @@
     "http://www.w3.org/2000/01/rdf-schema#comment": [
       {
         "@language": "en",
-        "@value": "Refers to the right to use copyright material or intellectual property without\nthe need to pay royalties or license fees for each use, per each copy or volume sold or some time\nperiod of use or sales."
+        "@value": "Deprecated misspelling of dalicc:royaltyFree, which replaces it: the right to use the work without paying royalties or license fees."
       }
     ],
     "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
@@ -4653,6 +5385,12 @@
         "@id": "https://dalicc.net/ns#royaltyFree"
       }
     ],
+    "http://www.w3.org/2004/02/skos/core#historyNote": [
+      {
+        "@language": "en",
+        "@value": "Refers to the right to use copyright material or intellectual property without\nthe need to pay royalties or license fees for each use, per each copy or volume sold or some time\nperiod of use or sales."
+      }
+    ],
     "http://www.w3.org/2004/02/skos/core#note": [
       {
         "@language": "en",
@@ -4669,6 +5407,7 @@
   {
     "@id": "https://dalicc.net/ns#royaltyCollectionReserved",
     "@type": [
+      "http://www.w3.org/2002/07/owl#NamedIndividual",
       "http://www.w3.org/2004/02/skos/core#Concept",
       "http://www.w3.org/ns/odrl/2/Action",
       "https://dalicc.net/ns#DutyAction",
@@ -4677,7 +5416,7 @@
     "http://www.w3.org/2000/01/rdf-schema#comment": [
       {
         "@language": "en",
-        "@value": "The licensor keeping the right to collect a royalty for uses of the work,\nwhether individually or through a collecting society. Where the license waives that right\ninstead, the statement is absent."
+        "@value": "Collecting royalties for uses of the work, individually or through a collecting society, under a right the licensor keeps."
       }
     ],
     "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
@@ -4709,6 +5448,7 @@
   {
     "@id": "https://dalicc.net/ns#royaltyFree",
     "@type": [
+      "http://www.w3.org/2002/07/owl#NamedIndividual",
       "http://www.w3.org/2004/02/skos/core#Concept"
     ],
     "http://purl.org/dc/terms/replaces": [
@@ -4772,12 +5512,7 @@
     "http://www.w3.org/2000/01/rdf-schema#comment": [
       {
         "@language": "en",
-        "@value": "The legal source a default rule rests on, named in words: a statute and its\narticle, a directive, or a general principle. It is a citation a reader can check, not a holding\nand not legal advice."
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#domain": [
-      {
-        "@id": "https://dalicc.net/ns#DefaultRule"
+        "@value": "The legal source a default rule or an axiom removal rests on, named in words: a\nstatute and its article, a directive, or a general principle. It is a citation a reader can\ncheck, not a holding and not legal advice."
       }
     ],
     "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
@@ -4806,6 +5541,57 @@
     ]
   },
   {
+    "@id": "https://dalicc.net/ns#ruleExplanation",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#DatatypeProperty"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@language": "en",
+        "@value": "Two or three plain sentences that say what a default rule, an axiom removal or a replacement does and why the law it rests on leads there. dalicc:ruleBasis is the citation, this is the reading of it."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+      {
+        "@id": "https://dalicc.net/ns#"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "Rule explanation"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#range": [
+      {
+        "@id": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#seeAlso": [
+      {
+        "@id": "https://dalicc.net/ns#AxiomRemoval"
+      },
+      {
+        "@id": "https://dalicc.net/ns#DefaultRule"
+      },
+      {
+        "@id": "https://dalicc.net/ns#ruleBasis"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#note": [
+      {
+        "@language": "en",
+        "@value": "Added with version 2 of the vocabulary."
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#scopeNote": [
+      {
+        "@language": "en",
+        "@value": "Carried by every default rule and every axiom removal of the shipped dependency graphs, and shown next to the rule on the graph pages, in the comparator and in every check result where the rule fired. It is not legal advice."
+      }
+    ]
+  },
+  {
     "@id": "https://dalicc.net/ns#ruleStatus",
     "@type": [
       "http://www.w3.org/2002/07/owl#ObjectProperty"
@@ -4813,12 +5599,7 @@
     "http://www.w3.org/2000/01/rdf-schema#comment": [
       {
         "@language": "en",
-        "@value": "Relates a default rule to whether it takes part in reasoning by default\n(dalicc:Adopted) or is written down for review (dalicc:Proposed)."
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#domain": [
-      {
-        "@id": "https://dalicc.net/ns#DefaultRule"
+        "@value": "Relates a default rule or an axiom removal to whether it takes part in reasoning\nby default (dalicc:Adopted) or is written down for review (dalicc:Proposed)."
       }
     ],
     "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
@@ -4846,6 +5627,7 @@
   {
     "@id": "https://dalicc.net/ns#sellCopy",
     "@type": [
+      "http://www.w3.org/2002/07/owl#NamedIndividual",
       "http://www.w3.org/2004/02/skos/core#Concept",
       "http://www.w3.org/ns/odrl/2/Action",
       "https://dalicc.net/ns#RuleAction"
@@ -4858,7 +5640,7 @@
     "http://www.w3.org/2000/01/rdf-schema#comment": [
       {
         "@language": "en",
-        "@value": "The Assignee may sell the copies of the License Material."
+        "@value": "Selling copies of the work."
       }
     ],
     "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
@@ -4880,6 +5662,17 @@
         "@id": "http://www.w3.org/ns/odrl/2/sell"
       }
     ],
+    "http://www.w3.org/2004/02/skos/core#closeMatch": [
+      {
+        "@id": "http://www.w3.org/ns/odrl/2/sell"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#historyNote": [
+      {
+        "@language": "en",
+        "@value": "The Assignee may sell the copies of the License Material."
+      }
+    ],
     "http://www.w3.org/2004/02/skos/core#note": [
       {
         "@language": "en",
@@ -4890,12 +5683,17 @@
   {
     "@id": "https://dalicc.net/ns#shareAlikeVersionQualifier",
     "@type": [
-      "http://www.w3.org/2002/07/owl#AnnotationProperty"
+      "http://www.w3.org/2002/07/owl#DatatypeProperty"
     ],
     "http://www.w3.org/2000/01/rdf-schema#comment": [
       {
         "@language": "en",
         "@value": "Which outgoing licenses a share-alike condition accepts, as a short literal,\nfor example the same license, a later version of it, another jurisdiction port with the same\nlicense elements, or a license declared compatible."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#domain": [
+      {
+        "@id": "http://www.w3.org/ns/odrl/2/Set"
       }
     ],
     "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
@@ -4932,12 +5730,17 @@
   {
     "@id": "https://dalicc.net/ns#sourcePublicationPeriod",
     "@type": [
-      "http://www.w3.org/2002/07/owl#AnnotationProperty"
+      "http://www.w3.org/2002/07/owl#DatatypeProperty"
     ],
     "http://www.w3.org/2000/01/rdf-schema#comment": [
       {
         "@language": "en",
         "@value": "How long the source code a license requires to be published must stay\navailable, and from when, as a short literal such as \"12 months from first deployment\"."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#domain": [
+      {
+        "@id": "http://www.w3.org/ns/odrl/2/Set"
       }
     ],
     "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
@@ -4974,6 +5777,7 @@
   {
     "@id": "https://dalicc.net/ns#specifyDate",
     "@type": [
+      "http://www.w3.org/2002/07/owl#NamedIndividual",
       "http://www.w3.org/2004/02/skos/core#Concept",
       "https://dalicc.net/ns#ValidityType"
     ],
@@ -5018,6 +5822,7 @@
   {
     "@id": "https://dalicc.net/ns#specifyPeriod",
     "@type": [
+      "http://www.w3.org/2002/07/owl#NamedIndividual",
       "http://www.w3.org/2004/02/skos/core#Concept",
       "https://dalicc.net/ns#ValidityType"
     ],
@@ -5059,6 +5864,7 @@
   {
     "@id": "https://dalicc.net/ns#standardsConformance",
     "@type": [
+      "http://www.w3.org/2002/07/owl#NamedIndividual",
       "http://www.w3.org/2004/02/skos/core#Concept",
       "http://www.w3.org/ns/odrl/2/Action",
       "https://dalicc.net/ns#DutyAction"
@@ -5066,7 +5872,7 @@
     "http://www.w3.org/2000/01/rdf-schema#comment": [
       {
         "@language": "en",
-        "@value": "Keeping a modified version in conformity with an external technical standard\nthe license names. Where the modification departs from that standard, the license attaches duties\nthat a conforming modification does not carry."
+        "@value": "Keeping a modified version in conformity with an external technical standard the license names."
       }
     ],
     "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
@@ -5097,7 +5903,7 @@
     "http://www.w3.org/2004/02/skos/core#scopeNote": [
       {
         "@language": "en",
-        "@value": "Carried by SISSL, whose reciprocity is triggered not by modification but by a modification that departs from the named Standard."
+        "@value": "Where the modification departs from the named standard, the license attaches duties that a conforming modification does not carry. Carried by SISSL, whose reciprocity is triggered not by modification but by a modification that departs from the named Standard."
       }
     ]
   },
@@ -5109,7 +5915,7 @@
     "http://www.w3.org/2000/01/rdf-schema#comment": [
       {
         "@language": "en",
-        "@value": "Relates a deontic statement in a result or a document to where it came from:\ndalicc:FromText or dalicc:FromDefaultRule. It is written by the reasoner and by the services that\nbuild a result, never by a curated record."
+        "@value": "Relates a deontic statement to where it came from: dalicc:FromText,\ndalicc:FromConvention or dalicc:FromDefaultRule. A curated record writes it only to mark a\nstatement as a library convention; the reasoner and the services that build a result write the\nother two."
       }
     ],
     "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
@@ -5134,12 +5940,19 @@
       },
       {
         "@id": "https://dalicc.net/ns#StatementOrigin"
+      },
+      {
+        "@id": "https://dalicc.net/ns#convention"
+      },
+      {
+        "@id": "https://dalicc.net/ns#evidence"
       }
     ]
   },
   {
     "@id": "https://dalicc.net/ns#sublicense",
     "@type": [
+      "http://www.w3.org/2002/07/owl#NamedIndividual",
       "http://www.w3.org/2004/02/skos/core#Concept",
       "http://www.w3.org/ns/odrl/2/Action",
       "https://dalicc.net/ns#RuleAction"
@@ -5152,7 +5965,7 @@
     "http://www.w3.org/2000/01/rdf-schema#comment": [
       {
         "@language": "en",
-        "@value": "The license granted by a licensee to a third party, under the authority of the\nlicense originally granted by a licensor to the licensee."
+        "@value": "Granting a third party rights in the work under a license of the licensee's own, rather than passing on the original license."
       }
     ],
     "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
@@ -5174,6 +5987,17 @@
         "@id": "https://dalicc.net/ns#ChangeLicense"
       }
     ],
+    "http://www.w3.org/2004/02/skos/core#closeMatch": [
+      {
+        "@id": "http://www.w3.org/ns/odrl/2/grantUse"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#historyNote": [
+      {
+        "@language": "en",
+        "@value": "The license granted by a licensee to a third party, under the authority of the\nlicense originally granted by a licensor to the licensee."
+      }
+    ],
     "http://www.w3.org/2004/02/skos/core#note": [
       {
         "@language": "en",
@@ -5189,7 +6013,7 @@
     "http://www.w3.org/2000/01/rdf-schema#comment": [
       {
         "@language": "en",
-        "@value": "Whether the licenses a licensee has validly granted to third parties survive\nthe termination of the licensee's own license."
+        "@value": "Whether the licenses a licensee has validly granted to third parties survive the end of the licensee's own license."
       }
     ],
     "http://www.w3.org/2000/01/rdf-schema#domain": [
@@ -5231,6 +6055,7 @@
   {
     "@id": "https://dalicc.net/ns#suiGenerisDatabaseRights",
     "@type": [
+      "http://www.w3.org/2002/07/owl#NamedIndividual",
       "http://www.w3.org/2004/02/skos/core#Concept",
       "http://www.w3.org/ns/odrl/2/Action",
       "https://dalicc.net/ns#RuleAction"
@@ -5238,7 +6063,7 @@
     "http://www.w3.org/2000/01/rdf-schema#comment": [
       {
         "@language": "en",
-        "@value": "Exercising the database right that protects a substantial investment in\nobtaining, verifying or presenting the contents of a database, separately from any copyright\nin the database or in its contents."
+        "@value": "Extracting or reusing all or a substantial part of the contents of a database that the sui generis database right protects."
       }
     ],
     "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
@@ -5249,7 +6074,7 @@
     "http://www.w3.org/2000/01/rdf-schema#label": [
       {
         "@language": "en",
-        "@value": "Sui generis database rights"
+        "@value": "Extract or reuse a substantial part of a database"
       }
     ],
     "http://www.w3.org/2000/01/rdf-schema#seeAlso": [
@@ -5278,7 +6103,7 @@
     "http://www.w3.org/2000/01/rdf-schema#comment": [
       {
         "@language": "en",
-        "@value": "Whether the license ends automatically when the licensee fails to comply with\nit. True says the text carries such a clause; the absence of the property says the text is silent,\nnot that the license survives a breach."
+        "@value": "Whether the license ends automatically when the licensee fails to comply with it."
       }
     ],
     "http://www.w3.org/2000/01/rdf-schema#domain": [
@@ -5319,19 +6144,25 @@
     "http://www.w3.org/2004/02/skos/core#scopeNote": [
       {
         "@language": "en",
-        "@value": "The policy quality dalicc:terminationOnBreach names the concept; this property is how a record carries it."
+        "@value": "True says the text carries such a clause; the absence of the property says the text is silent, not that the license survives a breach. The policy quality dalicc:terminationOnBreach names the concept; this property is how a record carries it."
       }
     ]
   },
   {
     "@id": "https://dalicc.net/ns#terminationOnBreach",
     "@type": [
+      "http://www.w3.org/2002/07/owl#NamedIndividual",
       "http://www.w3.org/2004/02/skos/core#Concept"
+    ],
+    "http://purl.org/dc/terms/isReplacedBy": [
+      {
+        "@id": "https://dalicc.net/ns#terminatesOnBreach"
+      }
     ],
     "http://www.w3.org/2000/01/rdf-schema#comment": [
       {
         "@language": "en",
-        "@value": "The license ends automatically when the licensee breaches it. Licenses\ndiffer in what survives the end and in whether compliance reinstates the grant."
+        "@value": "Deprecated; replaced by dalicc:terminatesOnBreach, because the property a record carries says the same thing. The license ends automatically when the licensee breaches it. Licenses differ in what survives the end and in whether compliance reinstates the grant."
       }
     ],
     "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
@@ -5342,7 +6173,7 @@
     "http://www.w3.org/2000/01/rdf-schema#label": [
       {
         "@language": "en",
-        "@value": "Termination on breach"
+        "@value": "Termination on breach (deprecated)"
       }
     ],
     "http://www.w3.org/2000/01/rdf-schema#seeAlso": [
@@ -5351,6 +6182,12 @@
       },
       {
         "@id": "https://dalicc.net/ns#patentRetaliationTermination"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#deprecated": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#boolean",
+        "@value": true
       }
     ],
     "http://www.w3.org/2004/02/skos/core#note": [
@@ -5369,6 +6206,7 @@
   {
     "@id": "https://dalicc.net/ns#testFixture",
     "@type": [
+      "http://www.w3.org/2002/07/owl#NamedIndividual",
       "http://www.w3.org/2004/02/skos/core#Concept",
       "https://dalicc.net/ns#RecordStatus"
     ],
@@ -5404,6 +6242,7 @@
   {
     "@id": "https://dalicc.net/ns#textAndDataMining",
     "@type": [
+      "http://www.w3.org/2002/07/owl#NamedIndividual",
       "http://www.w3.org/2004/02/skos/core#Concept",
       "http://www.w3.org/ns/odrl/2/Action",
       "https://dalicc.net/ns#RuleAction"
@@ -5411,7 +6250,7 @@
     "http://www.w3.org/2000/01/rdf-schema#comment": [
       {
         "@language": "en",
-        "@value": "Automated analysis of the work in digital form to generate information about\npatterns, trends and correlations in it, which is the act the European and British mining\nexceptions describe. It covers the copying a mining run makes, whether or not a model is trained\nfrom the result."
+        "@value": "Analysing the work automatically in digital form to find patterns, trends and correlations in it, including the copies such an analysis makes."
       }
     ],
     "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
@@ -5439,13 +6278,14 @@
     "http://www.w3.org/2004/02/skos/core#note": [
       {
         "@language": "en",
-        "@value": "Added with version 7 of the vocabulary so that the mining exceptions can be stated as default rules; not used by any license in the current library. dalicc:useForModelTraining stays the narrower act of training a system on the work."
+        "@value": "Added with version 2 of the vocabulary so that the mining exceptions can be stated as default rules; not used by any license in the current library. dalicc:useForModelTraining stays the narrower act of training a system on the work."
       }
     ]
   },
   {
     "@id": "https://dalicc.net/ns#trademarkNotice",
     "@type": [
+      "http://www.w3.org/2002/07/owl#NamedIndividual",
       "http://www.w3.org/2004/02/skos/core#Concept",
       "http://www.w3.org/ns/odrl/2/Action",
       "https://dalicc.net/ns#DutyAction"
@@ -5458,7 +6298,7 @@
     "http://www.w3.org/2000/01/rdf-schema#comment": [
       {
         "@language": "en",
-        "@value": "Informs that Licensed Material is a trademark or includes trademark. The license\ndoes not grant permission to use the trade names, trademarks, service marks, or product names of\nthe Licensor, except as required for reasonable and customary use in describing the origin of the\nWork and reproducing the content of the notice file."
+        "@value": "Stating that the work is, or contains, a trademark."
       }
     ],
     "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
@@ -5478,6 +6318,12 @@
       },
       {
         "@id": "https://dalicc.net/ns#promote"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#historyNote": [
+      {
+        "@language": "en",
+        "@value": "Informs that Licensed Material is a trademark or includes trademark. The license\ndoes not grant permission to use the trade names, trademarks, service marks, or product names of\nthe Licensor, except as required for reasonable and customary use in describing the origin of the\nWork and reproducing the content of the notice file."
       }
     ],
     "http://www.w3.org/2004/02/skos/core#note": [
@@ -5542,6 +6388,7 @@
   {
     "@id": "https://dalicc.net/ns#useForModelTraining",
     "@type": [
+      "http://www.w3.org/2002/07/owl#NamedIndividual",
       "http://www.w3.org/2004/02/skos/core#Concept",
       "http://www.w3.org/ns/odrl/2/Action",
       "https://dalicc.net/ns#RuleAction"
@@ -5549,7 +6396,7 @@
     "http://www.w3.org/2000/01/rdf-schema#comment": [
       {
         "@language": "en",
-        "@value": "Using the licensed material to train, validate or tune an automated\nsystem that learns from data. Some licenses grant it, some prohibit it and most are silent,\nin which case no statement is made."
+        "@value": "Using the licensed material to train, validate or tune an automated system that learns from data."
       }
     ],
     "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
@@ -5576,6 +6423,12 @@
         "@language": "en",
         "@value": "Added by the license library review of 2026-09-15, which recorded the clause as a vocabulary gap. Applied to 3 license records by the standard-license addition of 2026-09-15."
       }
+    ],
+    "http://www.w3.org/2004/02/skos/core#scopeNote": [
+      {
+        "@language": "en",
+        "@value": "Some licenses grant it, some prohibit it and most are silent, in which case no statement is made."
+      }
     ]
   },
   {
@@ -5586,7 +6439,7 @@
     "http://www.w3.org/2000/01/rdf-schema#comment": [
       {
         "@language": "en",
-        "@value": "Relates a license to the kind of validity period it has. Specify your license period by either giving a start date and an end date or by defining a validity period; where this does not apply, choose dalicc:perpetual for an indefinite period."
+        "@value": "Relates a license to the kind of validity period it has: dalicc:perpetual, dalicc:specifyDate or dalicc:specifyPeriod."
       }
     ],
     "http://www.w3.org/2000/01/rdf-schema#domain": [
@@ -5625,7 +6478,7 @@
     "http://www.w3.org/2000/01/rdf-schema#comment": [
       {
         "@language": "en",
-        "@value": "How a record relates to the record it descends from: jurisdiction-port,\ntranslation, version, edition, version-option, exception or rider. The first four name a text\nof the same licence adapted, translated or reissued; version-option, exception and rider name\na variant that keeps the base text and changes what it grants or requires, and each of those\nthree carries dalicc:variantOf."
+        "@value": "How a record relates to the record it descends from: jurisdiction-port,\ntranslation, version, edition, version-option, exception or rider. The first four name a text\nof the same license adapted, translated or reissued; version-option, exception and rider name\na variant that keeps the base text and changes what it grants or requires, and each of those\nthree carries dalicc:variantOf."
       }
     ],
     "http://www.w3.org/2000/01/rdf-schema#domain": [
@@ -5672,7 +6525,7 @@
     "http://www.w3.org/2000/01/rdf-schema#comment": [
       {
         "@language": "en",
-        "@value": "The record this record is a version-option, exception or rider variant of.\nThe variant keeps the base text and changes what the base grants or requires: an or-later\nidentifier adds the option of a later version of the same licence, an exception lifts one\ncondition for named material, and a rider adds a condition of its own."
+        "@value": "The record this record is a version-option, exception or rider variant of.\nThe variant keeps the base text and changes what the base grants or requires: an or-later\nidentifier adds the option of a later version of the same license, an exception lifts one\ncondition for named material, and a rider adds a condition of its own."
       }
     ],
     "http://www.w3.org/2000/01/rdf-schema#domain": [
@@ -5762,6 +6615,7 @@
   {
     "@id": "https://dalicc.net/ns#worldwide",
     "@type": [
+      "http://www.w3.org/2002/07/owl#NamedIndividual",
       "http://www.w3.org/2004/02/skos/core#Concept",
       "https://dalicc.net/ns#Jurisdiction"
     ],

@@ -14,37 +14,59 @@
 
   /* ---------------------------------------------------------- navigation */
 
+  /**
+   * The Menu button of the drawer (1024px and below).
+   *
+   * Without JavaScript the drawer is a checkbox and its label: it opens, but a screen
+   * reader announces a checkbox and Enter does nothing. With JavaScript the label is
+   * replaced by a real button that says whether the drawer is open (aria-expanded)
+   * and which element it opens (aria-controls); the checkbox stays as the state the
+   * CSS reads, out of the tab order and out of the accessibility tree. Above 1024px
+   * the CSS hides both, so neither is a tab stop there.
+   */
   function initNav() {
     var toggle = document.getElementById("nav-toggle");
     var label = document.querySelector(".nav-toggle__label");
-    if (!toggle || !label) return;
+    var nav = document.querySelector(".site-nav");
+    if (!toggle || !label || !nav) return;
+
+    var button = document.createElement("button");
+    button.type = "button";
+    button.className = "nav-toggle__label nav-toggle__button";
+    button.setAttribute("aria-controls", nav.id || "site-nav");
+    while (label.firstChild) button.appendChild(label.firstChild);
+    label.parentNode.replaceChild(button, label);
+    toggle.setAttribute("tabindex", "-1");
+    toggle.setAttribute("aria-hidden", "true");
 
     function sync() {
-      label.setAttribute("aria-expanded", toggle.checked ? "true" : "false");
+      button.setAttribute("aria-expanded", toggle.checked ? "true" : "false");
     }
+
+    function set(open) {
+      toggle.checked = open;
+      sync();
+    }
+
+    button.addEventListener("click", function () {
+      set(!toggle.checked);
+    });
     toggle.addEventListener("change", sync);
     sync();
 
     // Escape closes the drawer and returns focus to the button.
     document.addEventListener("keydown", function (event) {
       if (event.key === "Escape" && toggle.checked) {
-        toggle.checked = false;
-        sync();
-        label.focus();
+        set(false);
+        button.focus();
       }
     });
 
     // Close the drawer when a link inside it is followed.  The caret buttons are not
     // links and are hidden in the drawer, so they never close it.
-    var nav = document.querySelector(".site-nav");
-    if (nav) {
-      nav.addEventListener("click", function (event) {
-        if (closestElement(event.target, "a") && toggle.checked) {
-          toggle.checked = false;
-          sync();
-        }
-      });
-    }
+    nav.addEventListener("click", function (event) {
+      if (closestElement(event.target, "a") && toggle.checked) set(false);
+    });
   }
 
   /* ------------------------------------------------- menu drop-downs (wide) */
@@ -291,6 +313,73 @@
     });
   }
 
+  /* ----------------------------------------------------- the bookmark store */
+
+  /**
+   * dashboard.js (the bookmarks kept in this browser) on the pages that use it.
+   *
+   * It used to load on every page. It is needed where a page carries one of its
+   * controls: an "Add bookmark" button, the list and the buttons of /bookmarks, or the
+   * results region of the License Search, whose cards arrive later and are bound by
+   * search.js through DALICC.dashboard. The file runs its own set-up whenever it
+   * arrives, so loading it after the page is ready is enough.
+   */
+  var BOOKMARK_HOOKS = [
+    "[data-dashboard-toggle]",
+    "[data-dashboard-list]",
+    "[data-dashboard-count]",
+    "[data-dashboard-export]",
+    "[data-dashboard-import]",
+    "[data-dashboard-clear]",
+    "#search-results"
+  ].join(",");
+
+  function initBookmarks() {
+    var address = document.body && document.body.getAttribute("data-bookmarks-script");
+    if (!address || root.dashboard || !document.querySelector(BOOKMARK_HOOKS)) return;
+    var script = document.createElement("script");
+    script.src = address;
+    document.body.appendChild(script);
+  }
+
+  /* ------------------------------------------------------ the home scene */
+
+  /**
+   * The 2017 infographic of the home page, loaded only where it is shown.
+   *
+   * The template renders the scene's container empty, with the address of the
+   * generated script in data-scene-script. The script, the runtime it loads and the
+   * icons come to about 200 KB, so they are asked for only when the window is wider
+   * than 768px and the reader has not asked for reduced motion: the CSS shows the
+   * still everywhere else, and a phone or a reader who wants a quiet page loads none
+   * of it. If the query starts to match later (a window made wider), the scene loads
+   * then, once.
+   */
+  function initHeroScene() {
+    var container = document.querySelector("[data-scene-script]");
+    if (!container) return;
+    var wanted = window.matchMedia(
+      "(min-width: 769px) and (prefers-reduced-motion: no-preference)"
+    );
+    var loaded = false;
+
+    function load() {
+      if (loaded || !wanted.matches) return;
+      loaded = true;
+      var script = document.createElement("script");
+      script.src = container.getAttribute("data-scene-script");
+      script.charset = "utf-8";
+      container.appendChild(script);
+    }
+
+    if (wanted.addEventListener) {
+      wanted.addEventListener("change", load);
+    } else if (wanted.addListener) {
+      wanted.addListener(load);
+    }
+    load();
+  }
+
   /* ------------------------------------------------------------ helpers */
 
   /** Escape a string for safe insertion as element text. */
@@ -324,5 +413,7 @@
     initNavDropdowns();
     initBackToTop();
     initSecretCopy();
+    initHeroScene();
+    initBookmarks();
   });
 })();

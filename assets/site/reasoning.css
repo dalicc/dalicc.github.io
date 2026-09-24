@@ -111,28 +111,39 @@
 .rsn__dots {
   display: flex;
   align-items: center;
-  gap: 10px;
+  gap: 2px;
   list-style: none;
   margin: 0 4px;
   padding: 0;
 }
 
+/* A 24px target (WCAG 2.5.8) around the 16px ring the reader sees; the ring is
+   drawn by ::before, so the dots look and sit as they did. */
 .rsn__dot {
+  position: relative;
   display: block;
-  width: 16px;
-  height: 16px;
+  width: 24px;
+  height: 24px;
   padding: 0;
-  border: 2px solid var(--c-slate-muted);
+  border: 0;
   border-radius: 50%;
   background: transparent;
   cursor: pointer;
 }
 
-.rsn__dot:hover {
+.rsn__dot::before {
+  content: "";
+  position: absolute;
+  inset: 4px;
+  border: 2px solid var(--c-slate-muted);
+  border-radius: 50%;
+}
+
+.rsn__dot:hover::before {
   border-color: var(--c-red);
 }
 
-.rsn__dot[aria-current="true"] {
+.rsn__dot[aria-current="true"]::before {
   background: var(--c-red);
   border-color: var(--c-red);
 }
@@ -443,6 +454,47 @@
 
   .rsn-badge__text {
     font-size: 22px;
+  }
+}
+
+/* On a phone the three columns of the vocabulary table broke one word per line and
+   clipped the third. There each row is a small block: the relation as its first line,
+   what it reads as and the example under it. */
+@media (max-width: 604px) {
+  .rsn-table thead {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    clip: rect(0 0 0 0);
+    clip-path: inset(50%);
+  }
+
+  .rsn-table,
+  .rsn-table tbody,
+  .rsn-table tr,
+  .rsn-table td {
+    display: block;
+    width: 100%;
+  }
+
+  .rsn-table tr {
+    padding: 10px 14px;
+    border-bottom: 1px solid var(--color-border);
+  }
+
+  .rsn-table td {
+    padding: 2px 0;
+    border: 0;
+  }
+
+  .rsn-table td:first-child {
+    font-weight: 600;
+  }
+
+  .rsn-table td code {
+    white-space: normal;
+    overflow-wrap: anywhere;
   }
 }
 

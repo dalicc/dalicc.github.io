@@ -1,0 +1,869 @@
+{
+  "current_version": 2,
+  "entries": [
+    {
+      "changes": [
+        {
+          "action": "changed",
+          "previous": "owl:versionInfo \"1.2.0\"",
+          "reason": "The vocabulary is versioned like every other curated model: version 1 is archived next to this change log and owl:priorVersion names it.",
+          "source": "model-history",
+          "statement": "owl:versionInfo \"2.0\""
+        },
+        {
+          "action": "added",
+          "previous": "",
+          "reason": "Defined by the 2026-09-15 content review, which recorded the clause the license texts state and the model could not express.",
+          "source": "consolidation-decision 8",
+          "statement": "term dalicc:Approved"
+        },
+        {
+          "action": "added",
+          "previous": "",
+          "reason": "Defined by the 2026-09-15 content review, which recorded the clause the license texts state and the model could not express.",
+          "source": "consolidation-decision 8",
+          "statement": "term dalicc:Audited"
+        },
+        {
+          "action": "added",
+          "previous": "",
+          "reason": "Defined by the 2026-09-15 content review, which recorded the clause the license texts state and the model could not express.",
+          "source": "consolidation-decision 8",
+          "statement": "term dalicc:Created"
+        },
+        {
+          "action": "added",
+          "previous": "",
+          "reason": "Defined by the 2026-09-15 content review, which recorded the clause the license texts state and the model could not express.",
+          "source": "consolidation-decision 8",
+          "statement": "term dalicc:RecordStatus"
+        },
+        {
+          "action": "added",
+          "previous": "",
+          "reason": "Defined by the 2026-09-15 content review, which recorded the clause the license texts state and the model could not express.",
+          "source": "consolidation-decision 8",
+          "statement": "term dalicc:ReviewStatus"
+        },
+        {
+          "action": "added",
+          "previous": "",
+          "reason": "Defined by the 2026-09-15 content review, which recorded the clause the license texts state and the model could not express.",
+          "source": "consolidation-decision 8",
+          "statement": "term dalicc:Reviewed"
+        },
+        {
+          "action": "added",
+          "previous": "",
+          "reason": "Defined by the 2026-09-15 content review, which recorded the clause the license texts state and the model could not express.",
+          "source": "consolidation-decision 8",
+          "statement": "term dalicc:applyTechnicalProtectionMeasures"
+        },
+        {
+          "action": "added",
+          "previous": "",
+          "reason": "Defined by the 2026-09-15 content review, which recorded the clause the license texts state and the model could not express.",
+          "source": "consolidation-decision 8",
+          "statement": "term dalicc:databaseRightWaiver"
+        },
+        {
+          "action": "added",
+          "previous": "",
+          "reason": "Defined by the 2026-09-15 content review, which recorded the clause the license texts state and the model could not express.",
+          "source": "consolidation-decision 8",
+          "statement": "term dalicc:derivativeDatabaseAccess"
+        },
+        {
+          "action": "added",
+          "previous": "",
+          "reason": "Defined by the 2026-09-15 content review, which recorded the clause the license texts state and the model could not express.",
+          "source": "consolidation-decision 8",
+          "statement": "term dalicc:downstreamOffer"
+        },
+        {
+          "action": "added",
+          "previous": "",
+          "reason": "Defined by the 2026-09-15 content review, which recorded the clause the license texts state and the model could not express.",
+          "source": "consolidation-decision 8",
+          "statement": "term dalicc:exemptedMaterial"
+        },
+        {
+          "action": "added",
+          "previous": "",
+          "reason": "Defined by the 2026-09-15 content review, which recorded the clause the license texts state and the model could not express.",
+          "source": "consolidation-decision 8",
+          "statement": "term dalicc:includeNoticeFile"
+        },
+        {
+          "action": "added",
+          "previous": "",
+          "reason": "Defined by the 2026-09-15 content review, which recorded the clause the license texts state and the model could not express.",
+          "source": "consolidation-decision 8",
+          "statement": "term dalicc:jurisdictionPortOf"
+        },
+        {
+          "action": "added",
+          "previous": "",
+          "reason": "Defined so that a curated model can name the list of its versions and so that the version of a license text stays readable next to the version of the model of that text.",
+          "source": "model-history",
+          "statement": "term dalicc:licenseVersion"
+        },
+        {
+          "action": "added",
+          "previous": "",
+          "reason": "Defined by the 2026-09-15 content review, which recorded the clause the license texts state and the model could not express.",
+          "source": "consolidation-decision 8",
+          "statement": "term dalicc:moralRightsNonAssertion"
+        },
+        {
+          "action": "added",
+          "previous": "",
+          "reason": "Defined by the 2026-09-15 content review, which recorded the clause the license texts state and the model could not express.",
+          "source": "consolidation-decision 8",
+          "statement": "term dalicc:moralRightsRestriction"
+        },
+        {
+          "action": "added",
+          "previous": "",
+          "reason": "Defined by the 2026-09-15 content review, which recorded the clause the license texts state and the model could not express.",
+          "source": "consolidation-decision 8",
+          "statement": "term dalicc:orLaterVersionOption"
+        },
+        {
+          "action": "added",
+          "previous": "",
+          "reason": "Defined by the 2026-09-15 content review, which recorded the clause the license texts state and the model could not express.",
+          "source": "consolidation-decision 8",
+          "statement": "term dalicc:patentGrant"
+        },
+        {
+          "action": "added",
+          "previous": "",
+          "reason": "Defined by the 2026-09-15 content review, which recorded the clause the license texts state and the model could not express.",
+          "source": "consolidation-decision 8",
+          "statement": "term dalicc:patentRetaliationTermination"
+        },
+        {
+          "action": "added",
+          "previous": "",
+          "reason": "Defined by the 2026-09-15 content review, which recorded the clause the license texts state and the model could not express.",
+          "source": "consolidation-decision 8",
+          "statement": "term dalicc:recordStatus"
+        },
+        {
+          "action": "added",
+          "previous": "",
+          "reason": "Defined by the 2026-09-15 content review, which recorded the clause the license texts state and the model could not express.",
+          "source": "consolidation-decision 8",
+          "statement": "term dalicc:reviewStatus"
+        },
+        {
+          "action": "added",
+          "previous": "",
+          "reason": "Defined by the 2026-09-15 content review, which recorded the clause the license texts state and the model could not express.",
+          "source": "consolidation-decision 8",
+          "statement": "term dalicc:reviewedOn"
+        },
+        {
+          "action": "added",
+          "previous": "",
+          "reason": "Defined by the 2026-09-15 content review, which recorded the clause the license texts state and the model could not express.",
+          "source": "consolidation-decision 8",
+          "statement": "term dalicc:royaltyCollectionReserved"
+        },
+        {
+          "action": "added",
+          "previous": "",
+          "reason": "Defined by the 2026-09-15 content review, which recorded the clause the license texts state and the model could not express.",
+          "source": "consolidation-decision 8",
+          "statement": "term dalicc:shareAlikeVersionQualifier"
+        },
+        {
+          "action": "added",
+          "previous": "",
+          "reason": "Defined by the 2026-09-15 content review, which recorded the clause the license texts state and the model could not express.",
+          "source": "consolidation-decision 8",
+          "statement": "term dalicc:suiGenerisDatabaseRights"
+        },
+        {
+          "action": "added",
+          "previous": "",
+          "reason": "Defined by the 2026-09-15 content review, which recorded the clause the license texts state and the model could not express.",
+          "source": "consolidation-decision 8",
+          "statement": "term dalicc:terminationOnBreach"
+        },
+        {
+          "action": "added",
+          "previous": "",
+          "reason": "Defined by the 2026-09-15 content review, which recorded the clause the license texts state and the model could not express.",
+          "source": "consolidation-decision 8",
+          "statement": "term dalicc:testFixture"
+        },
+        {
+          "action": "added",
+          "previous": "",
+          "reason": "Defined by the 2026-09-15 content review, which recorded the clause the license texts state and the model could not express.",
+          "source": "consolidation-decision 8",
+          "statement": "term dalicc:translationOf"
+        },
+        {
+          "action": "added",
+          "previous": "",
+          "reason": "Defined by the 2026-09-15 content review, which recorded the clause the license texts state and the model could not express.",
+          "source": "consolidation-decision 8",
+          "statement": "term dalicc:useForModelTraining"
+        },
+        {
+          "action": "added",
+          "previous": "",
+          "reason": "Defined by the 2026-09-15 content review, which recorded the clause the license texts state and the model could not express.",
+          "source": "consolidation-decision 8",
+          "statement": "term dalicc:variantKind"
+        },
+        {
+          "action": "added",
+          "previous": "",
+          "reason": "Defined so that a curated model can name the list of its versions and so that the version of a license text stays readable next to the version of the model of that text.",
+          "source": "model-history",
+          "statement": "term dalicc:versionHistory"
+        },
+        {
+          "action": "added",
+          "previous": "",
+          "reason": "The class the asset types of the library belong to, so that app/services/vocab.py can read them from the file instead of holding a second copy of the list.",
+          "source": "consolidation-decision 8",
+          "statement": "term dalicc:AssetType"
+        },
+        {
+          "action": "added",
+          "previous": "",
+          "reason": "The class of actions that may be the odrl:action of an odrl:Duty. The vocabulary file is now the source of truth for the classification, which app/services/vocab.py reads at import.",
+          "source": "consolidation-decision 8",
+          "statement": "term dalicc:DutyAction"
+        },
+        {
+          "action": "added",
+          "previous": "",
+          "reason": "The class of actions that may be the odrl:action of an odrl:Permission or an odrl:Prohibition, read the same way.",
+          "source": "consolidation-decision 8",
+          "statement": "term dalicc:RuleAction"
+        },
+        {
+          "action": "added",
+          "previous": "",
+          "reason": "The three CERN Open Hardware Licence records govern design material and the physical product made from it, and no asset type said so.",
+          "source": "consolidation-decision 8",
+          "statement": "term dalicc:Hardware"
+        },
+        {
+          "action": "added",
+          "previous": "",
+          "reason": "The BSD advertising clause of RSCPL and BSD-4-Clause had no duty.",
+          "source": "consolidation-decision 8",
+          "statement": "term dalicc:advertisingAcknowledgement"
+        },
+        {
+          "action": "added",
+          "previous": "",
+          "reason": "Clauses 3 and 4 of the Artistic License 1.0 each let the licensee satisfy any one of four alternatives, which the deontic model cannot say.",
+          "source": "consolidation-decision 8",
+          "statement": "term dalicc:alternativeConditionSet"
+        },
+        {
+          "action": "added",
+          "previous": "",
+          "reason": "Ten records name a list of compatible licences or a test for one, and neither could be recorded.",
+          "source": "consolidation-decision 8",
+          "statement": "term dalicc:compatibleLicenseTest"
+        },
+        {
+          "action": "added",
+          "previous": "",
+          "reason": "Python-2.0.1 is a stack of four agreements published as one licence.",
+          "source": "consolidation-decision 8",
+          "statement": "term dalicc:composedOf"
+        },
+        {
+          "action": "added",
+          "previous": "",
+          "reason": "C-UDA-1.0 binds the licensee to use the data solely for Computational Use.",
+          "source": "consolidation-decision 8",
+          "statement": "term dalicc:computationalUseOnly"
+        },
+        {
+          "action": "added",
+          "previous": "",
+          "reason": "OSET-PL-2.1 allows a further condition only where statute, judicial order, regulation, national security or the public interest requires it.",
+          "source": "consolidation-decision 8",
+          "statement": "term dalicc:conditionalAddLimitation"
+        },
+        {
+          "action": "added",
+          "previous": "",
+          "reason": "EUDatagrid, OCLC-2.0 and Vim ask for the licensee's changes back.",
+          "source": "consolidation-decision 8",
+          "statement": "term dalicc:contributionGrantBack"
+        },
+        {
+          "action": "added",
+          "previous": "",
+          "reason": "The two use of data agreements promise not to sue rather than grant a patent licence.",
+          "source": "consolidation-decision 8",
+          "statement": "term dalicc:covenantNotToSue"
+        },
+        {
+          "action": "added",
+          "previous": "",
+          "reason": "Nineteen records give the licensee a stated number of days to put a breach right.",
+          "source": "consolidation-decision 8",
+          "statement": "term dalicc:curePeriod"
+        },
+        {
+          "action": "added",
+          "previous": "",
+          "reason": "NASA-1.3, RPL-1.1 and RPL-1.5 carry an export control notice.",
+          "source": "consolidation-decision 8",
+          "statement": "term dalicc:exportControlNotice"
+        },
+        {
+          "action": "added",
+          "previous": "",
+          "reason": "C-UDA-1.0 confines the licensee to one field of activity.",
+          "source": "consolidation-decision 8",
+          "statement": "term dalicc:fieldOfUseRestriction"
+        },
+        {
+          "action": "added",
+          "previous": "",
+          "reason": "Six records choose a national or state law while their grant stays worldwide, which cc:jurisdiction cannot say.",
+          "source": "consolidation-decision 8",
+          "statement": "term dalicc:governingLaw"
+        },
+        {
+          "action": "added",
+          "previous": "",
+          "reason": "Watcom-1.0 limits what a United States government end user acquires.",
+          "source": "consolidation-decision 8",
+          "statement": "term dalicc:governmentRightsLimitation"
+        },
+        {
+          "action": "added",
+          "previous": "",
+          "reason": "Sixteen records make deployment or communication to the public, and not distribution, the trigger of the source duty.",
+          "source": "consolidation-decision 8",
+          "statement": "term dalicc:networkUseTrigger"
+        },
+        {
+          "action": "added",
+          "previous": "",
+          "reason": "IPA requires a way back to the original font to travel with a derived one.",
+          "source": "consolidation-decision 8",
+          "statement": "term dalicc:originalVersionOffer"
+        },
+        {
+          "action": "added",
+          "previous": "",
+          "reason": "The liberty-or-death clause of the two LGPL 2.x texts and of OCLC-2.0 had no term.",
+          "source": "consolidation-decision 8",
+          "statement": "term dalicc:patentFreedomCondition"
+        },
+        {
+          "action": "added",
+          "previous": "",
+          "reason": "The Cryptographic Autonomy License requires a recipient's own data to be handed back.",
+          "source": "consolidation-decision 8",
+          "statement": "term dalicc:provideUserData"
+        },
+        {
+          "action": "added",
+          "previous": "",
+          "reason": "CDLA-Sharing-1.0 forbids restricting or deterring publication by a recipient.",
+          "source": "consolidation-decision 8",
+          "statement": "term dalicc:publicationNonObstruction"
+        },
+        {
+          "action": "added",
+          "previous": "",
+          "reason": "The Academic Free and Open Software licences from version 2.0 on ask for the express assent of recipients.",
+          "source": "consolidation-decision 8",
+          "statement": "term dalicc:recipientAssent"
+        },
+        {
+          "action": "added",
+          "previous": "",
+          "reason": "NASA-1.3 asks recipients to register and to report modifications.",
+          "source": "consolidation-decision 8",
+          "statement": "term dalicc:recipientRegistrationRequest"
+        },
+        {
+          "action": "added",
+          "previous": "",
+          "reason": "CERN-OHL-W-2.0 scopes its reciprocity to the Covered Source and exempts the Product.",
+          "source": "consolidation-decision 8",
+          "statement": "term dalicc:reciprocityScope"
+        },
+        {
+          "action": "added",
+          "previous": "",
+          "reason": "Seven records set a deadline for publishing source and a minimum period it must stay up.",
+          "source": "consolidation-decision 8",
+          "statement": "term dalicc:sourcePublicationPeriod"
+        },
+        {
+          "action": "added",
+          "previous": "",
+          "reason": "SISSL triggers its reciprocity on a departure from a named external standard.",
+          "source": "consolidation-decision 8",
+          "statement": "term dalicc:standardsConformance"
+        },
+        {
+          "action": "added",
+          "previous": "",
+          "reason": "Eleven records say that sublicences validly granted survive termination.",
+          "source": "consolidation-decision 8",
+          "statement": "term dalicc:sublicenseSurvival"
+        },
+        {
+          "action": "added",
+          "previous": "",
+          "reason": "Sixty records end automatically on a breach and the vocabulary had only the concept dalicc:terminationOnBreach, with no predicate a record could carry.",
+          "source": "consolidation-decision 8",
+          "statement": "term dalicc:terminatesOnBreach"
+        },
+        {
+          "action": "changed",
+          "previous": "",
+          "reason": "Decision 2 made the vocabulary file the single source of truth for the term table app/services/vocab.py serves, which needs the classification to be in the file rather than in the code.",
+          "source": "consolidation-decision 2",
+          "statement": "rdf:type dalicc:RuleAction, dalicc:DutyAction on 48 actions"
+        },
+        {
+          "action": "changed",
+          "previous": "",
+          "reason": "The notes were refreshed from the real usage counts: nine terms the content review had defined and applied nowhere are now in use, and the notes of the terms that are still unused say so.",
+          "source": "consolidation-decision 2",
+          "statement": "skos:note \"... not used by any license in the current library\""
+        },
+        {
+          "action": "changed",
+          "previous": "dct:modified \"2026-09-15\"",
+          "reason": "The day this version was written.",
+          "source": "model-history",
+          "statement": "dct:modified \"2026-09-22\""
+        },
+        {
+          "action": "changed",
+          "previous": "dalicc:ChangeLicense rdfs:comment \"The licensee may change, extend or modify the license terms and replace the original license with a new one. The grant-use clause contradicts the share-alike clause.\"",
+          "reason": "The closing sentence stated cc:ShareAlike dalicc:contradicts odrl:grantUse, which version 2 of the dependency graph removed. What holds today is family rule 13: a license-wide share-alike duty beside a permitted dalicc:ChangeLicense that carries no dalicc:compliantLicense duty is inconsistent.",
+          "source": "consolidation-decision 5",
+          "statement": "dalicc:ChangeLicense rdfs:comment \"The licensee may change, extend or modify the license terms and replace the original license with a new one. Where the license carries a share-alike duty for the whole work, this permission must carry the dalicc:compliantLicense duty.\""
+        },
+        {
+          "action": "added",
+          "previous": "",
+          "reason": "The License Composer writes the licence text into the form and keeps it with the licence, and that text needed a property of its own: cc:legalcode is an address rather than a text, and the three clause properties quote single clauses rather than the whole licence.",
+          "source": "manual",
+          "statement": "term dalicc:licenseText"
+        },
+        {
+          "action": "added",
+          "previous": "",
+          "reason": "An or-later identifier, a licence with an SPDX exception and a licence with a rider are variants of a record the library already holds, and dalicc:jurisdictionPortOf is for jurisdiction ports only. The new property names the base record, so the licence page can list the variants of a licence next to its ports.",
+          "source": "manual",
+          "statement": "term dalicc:variantOf"
+        },
+        {
+          "action": "added",
+          "previous": "",
+          "reason": "A linking or classpath exception carves material out of the condition of the licence, not out of its grant. dalicc:exemptedMaterial says the opposite, that the grant does not reach the material at all, and it is prohibited on the records that use it. The new action is permitted on the 18 records that model a licence with an SPDX exception.",
+          "source": "manual",
+          "statement": "term dalicc:exceptedCombination"
+        },
+        {
+          "action": "changed",
+          "previous": "How a record relates to the record it descends from: jurisdiction-port, translation, version or edition.",
+          "reason": "The comment lists the values the property takes, and the addition brought three more, version-option, exception and rider, each of which carries dalicc:variantOf.",
+          "source": "manual",
+          "statement": "dalicc:variantKind rdfs:comment"
+        },
+        {
+          "action": "added",
+          "previous": "",
+          "reason": "The world of unspoken actions needed a mechanism to close it, one that can vary by jurisdiction (open proposal 1 of the licence review). A rule is that mechanism: it names one action, one outcome, one territory, the legal source it rests on and whether the library has adopted it.",
+          "source": "manual",
+          "statement": "term dalicc:DefaultRule"
+        },
+        {
+          "action": "added",
+          "previous": "",
+          "reason": "The class of the four values a rule concludes with, so the outcome is a controlled value rather than a free string.",
+          "source": "manual",
+          "statement": "term dalicc:DefaultOutcome"
+        },
+        {
+          "action": "added",
+          "previous": "",
+          "reason": "The action is not permitted unless the licence permits it. This is the outcome the endorsement rule uses: a copyright licence that is silent grants no right to use the licensor's name.",
+          "source": "manual",
+          "statement": "term dalicc:NotGrantedByDefault"
+        },
+        {
+          "action": "added",
+          "previous": "",
+          "reason": "The action is permitted unless the licence prohibits it, which is what a statutory exception does. The European mining exceptions and the interoperability exception are written with it.",
+          "source": "manual",
+          "statement": "term dalicc:GrantedByDefault"
+        },
+        {
+          "action": "added",
+          "previous": "",
+          "reason": "A duty applies unless the licence waives it, so that a jurisdiction whose law imposes a duty on every licensee can be stated.",
+          "source": "manual",
+          "statement": "term dalicc:RequiredByDefault"
+        },
+        {
+          "action": "added",
+          "previous": "",
+          "reason": "A statement of the licence to the contrary has no effect in that jurisdiction. The reasoner reports it as a finding and never overrides the record, because the record models the text.",
+          "source": "manual",
+          "statement": "term dalicc:NotWaivable"
+        },
+        {
+          "action": "added",
+          "previous": "",
+          "reason": "Only an adopted rule takes part in a check a reader did not ask for. Every jurisdiction rule of this version is proposed, so nothing changes for a reader who chooses nothing.",
+          "source": "manual",
+          "statement": "term dalicc:RuleStatus, with dalicc:Adopted and dalicc:Proposed"
+        },
+        {
+          "action": "added",
+          "previous": "",
+          "reason": "A result that mixes what the text says with what a rule supplies has to say which is which, on every finding.",
+          "source": "manual",
+          "statement": "term dalicc:StatementOrigin, with dalicc:FromText and dalicc:FromDefaultRule"
+        },
+        {
+          "action": "added",
+          "previous": "",
+          "reason": "The action a rule is about.",
+          "source": "manual",
+          "statement": "term dalicc:appliesTo"
+        },
+        {
+          "action": "added",
+          "previous": "",
+          "reason": "The outcome a rule concludes with.",
+          "source": "manual",
+          "statement": "term dalicc:defaultOutcome"
+        },
+        {
+          "action": "added",
+          "previous": "",
+          "reason": "The territory a rule holds in: dalicc:worldwide, a region, or a BPI country IRI, which is the scheme cc:jurisdiction already uses on the records.",
+          "source": "manual",
+          "statement": "term dalicc:inJurisdiction"
+        },
+        {
+          "action": "added",
+          "previous": "",
+          "reason": "The statute, directive or principle a rule rests on, named in words so a reader can check it. It is a citation, not a holding.",
+          "source": "manual",
+          "statement": "term dalicc:ruleBasis"
+        },
+        {
+          "action": "added",
+          "previous": "",
+          "reason": "Whether a rule is adopted or proposed.",
+          "source": "manual",
+          "statement": "term dalicc:ruleStatus"
+        },
+        {
+          "action": "added",
+          "previous": "",
+          "reason": "Written into results and documents, never into a curated record.",
+          "source": "manual",
+          "statement": "term dalicc:statementOrigin"
+        },
+        {
+          "action": "added",
+          "previous": "",
+          "reason": "A jurisdiction graph holds its own rules and is read together with the core graph. Without this property the core axioms would have to be copied into seven files, and the next graph review would have to edit eight.",
+          "source": "manual",
+          "statement": "term dalicc:extendsGraph"
+        },
+        {
+          "action": "added",
+          "previous": "",
+          "reason": "cc:jurisdiction names a BPI country or dalicc:worldwide, and the law a default rule rests on is usually written for a region. Each region is a dalicc:Jurisdiction whose members are named with the BPI country IRIs the records use.",
+          "source": "manual",
+          "statement": "terms dalicc:EU, dalicc:US, dalicc:CN, dalicc:GB, dalicc:JP, dalicc:IN and dalicc:BR"
+        },
+        {
+          "action": "added",
+          "previous": "",
+          "reason": "The European and British mining exceptions describe the automated analysis of a work, which is wider than training a model on it. dalicc:useForModelTraining keeps its narrower meaning and no record uses the new term.",
+          "source": "manual",
+          "statement": "term dalicc:textAndDataMining"
+        },
+        {
+          "action": "added",
+          "previous": "",
+          "reason": "Article 6 of the European Software Directive allows decompilation for interoperability and forbids a contract from taking it away, which needs an action of its own; reverse engineering at large is a different act.",
+          "source": "manual",
+          "statement": "term dalicc:reverseEngineerForInteroperability"
+        },
+        {
+          "action": "added",
+          "previous": "",
+          "reason": "A complete jurisdiction graph records the graph it was built from. It is provenance and nothing follows it, unlike dalicc:extendsGraph, which the reasoner followed one step.",
+          "source": "manual",
+          "statement": "term dalicc:basedOnGraph"
+        },
+        {
+          "action": "added",
+          "previous": "",
+          "reason": "The version of the core graph a generated graph was built from, so that a core change shows as a new version of every graph built from it, with a change-log entry that names the core version it follows.",
+          "source": "manual",
+          "statement": "term dalicc:basedOnVersion"
+        },
+        {
+          "action": "added",
+          "previous": "",
+          "reason": "A jurisdiction whose law does not agree with the core graph needs a way to say so. A difference file names a core axiom its jurisdiction does not support in the reified form (rdf:subject, rdf:predicate, rdf:object) with its legal reason, and the generated graph leaves that axiom out.",
+          "source": "manual",
+          "statement": "term dalicc:AxiomRemoval"
+        },
+        {
+          "action": "added",
+          "previous": "",
+          "reason": "A jurisdiction whose law reaches another outcome for an action the core graph has a default rule for replaces that rule rather than adding a second one, so no graph holds two default rules for one action and one territory.",
+          "source": "manual",
+          "statement": "term dalicc:replacesRule"
+        },
+        {
+          "action": "added",
+          "previous": "",
+          "reason": "Every added, removed and replaced rule needs a plain explanation beside its citation. dalicc:ruleBasis is the citation; the explanation says in two or three plain sentences what the rule does to a silent licence, why the law leads there and what a person combining licences will notice.",
+          "source": "manual",
+          "statement": "term dalicc:ruleExplanation"
+        },
+        {
+          "action": "changed",
+          "previous": "term dalicc:extendsGraph, followed one step by the service and the reasoner",
+          "reason": "Deprecated with owl:deprecated true and dct:isReplacedBy dalicc:basedOnGraph. The term keeps dereferencing because external data may use it, and a graph that still carries it is read as complete, with the link ignored and a warning in the log.",
+          "source": "manual",
+          "statement": "term dalicc:extendsGraph"
+        },
+        {
+          "action": "changed",
+          "previous": "rdfs:domain dalicc:DefaultRule",
+          "reason": "An axiom removal carries a basis and a status as well as a default rule does, so the two properties no longer name a domain.",
+          "source": "manual",
+          "statement": "terms dalicc:ruleBasis and dalicc:ruleStatus"
+        },
+        {
+          "action": "added",
+          "previous": "",
+          "reason": "Some statements of a record are not in the licence text but follow a convention the library applies to every record of its kind, such as a family rule. The record page marks them \"by library convention\" instead of presenting them as the licence's own words.",
+          "source": "manual",
+          "statement": "term dalicc:FromConvention"
+        },
+        {
+          "action": "added",
+          "previous": "",
+          "reason": "A statement node can quote the sentence of the licence text it rests on, so a reader can check the reading against the text without leaving the page.",
+          "source": "manual",
+          "statement": "term dalicc:evidence"
+        },
+        {
+          "action": "added",
+          "previous": "",
+          "reason": "A statement marked dalicc:FromConvention names the convention that put it there.",
+          "source": "manual",
+          "statement": "term dalicc:convention"
+        },
+        {
+          "action": "added",
+          "previous": "",
+          "reason": "A licence's own text, or its licensor's published list, can let a work under it be released under another licence (LGPL-3.0 into GPL-3.0, CC BY-SA 4.0 into GPL-3.0). The reasoner needs that one-way relation between two records as data.",
+          "source": "manual",
+          "statement": "term dalicc:compatibleWith"
+        },
+        {
+          "action": "changed",
+          "previous": "a statement origin written only in results, never in a curated record",
+          "reason": "A curated record now marks its convention statements with dalicc:statementOrigin, and a statement node that names no origin is read as dalicc:FromText.",
+          "source": "manual",
+          "statement": "terms dalicc:StatementOrigin, dalicc:statementOrigin and dalicc:FromText"
+        },
+        {
+          "action": "changed",
+          "previous": "comments phrased as a permission (\"The licensee may change ...\", \"Promote means that the licensee can use ...\", \"The Assigner permits the Assignee to ...\") or as a noun (sublicense)",
+          "reason": "A definition describes the act in one sentence and neither grants nor forbids it, because the record page prints it under Permissions and under Prohibitions alike. The 2022 wording of the documented terms is kept verbatim as skos:historyNote with its dct:source, the skos:definition glosses are folded into the comment, and sentences about modelling moved to skos:scopeNote.",
+          "source": "manual",
+          "statement": "rdfs:comment of every dalicc action"
+        },
+        {
+          "action": "changed",
+          "previous": "rdfs:label \"Patent retaliation termination\"",
+          "reason": "Labelled \"Patent licence ends on a patent claim\" with the comment \"Not a ban on suing: a patent claim ends the patent licence, or the whole licence, as the text provides.\" The old label read as a ban on suing where Apache-2.0 section 3 only ends the patent licence.",
+          "source": "manual",
+          "statement": "term dalicc:patentRetaliationTermination"
+        },
+        {
+          "action": "changed",
+          "previous": "rdfs:label \"Sui generis database rights\"",
+          "reason": "The label names the act the right controls, \"Extract or reuse a substantial part of a database\", so a sentence built from it says something a lawyer can check. The IRI stays.",
+          "source": "manual",
+          "statement": "term dalicc:suiGenerisDatabaseRights"
+        },
+        {
+          "action": "changed",
+          "previous": "owl:AnnotationProperty without a domain",
+          "reason": "Each carries a plain literal on an odrl:Set, like the datatype properties beside it, so each is an owl:DatatypeProperty with rdfs:domain odrl:Set.",
+          "source": "manual",
+          "statement": "terms dalicc:curePeriod, dalicc:governingLaw, dalicc:compatibleLicenseTest, dalicc:reciprocityScope, dalicc:alternativeConditionSet, dalicc:governmentRightsLimitation, dalicc:fieldOfUseRestriction, dalicc:shareAlikeVersionQualifier, dalicc:sourcePublicationPeriod"
+        },
+        {
+          "action": "changed",
+          "previous": "rdfs:range xsd:string",
+          "reason": "Every explanation in the shipped graphs is an English literal with a language tag, so the range is rdf:langString.",
+          "source": "manual",
+          "statement": "term dalicc:ruleExplanation"
+        },
+        {
+          "action": "changed",
+          "previous": "the same label as the property that takes them as values",
+          "reason": "Each class is labelled as the set of values (\"Review status value\"), so no two terms share a label; the property keeps the label the record pages print.",
+          "source": "manual",
+          "statement": "terms dalicc:DefaultOutcome, dalicc:RecordStatus, dalicc:ReviewStatus, dalicc:RuleStatus, dalicc:StatementOrigin, dalicc:ValidityType"
+        },
+        {
+          "action": "changed",
+          "previous": "two sentences each; the comparator glossary gave all further terms one shared sentence",
+          "reason": "One sentence each, which the comparator glossary now shows beside its row.",
+          "source": "manual",
+          "statement": "rdfs:comment of dalicc:curePeriod, dalicc:orLaterVersionOption, dalicc:terminatesOnBreach and dalicc:sublicenseSurvival"
+        },
+        {
+          "action": "changed",
+          "previous": "a lower-case label, composer help text in a definition, a comment that repeated its label, ungrammatical 2022 wording, over-long comments and deprecated terms whose comment did not name the replacement",
+          "reason": "The label is in sentence case, each comment says what the term means in one or two plain sentences, the 2022 wording is kept as skos:historyNote and a deprecated term names its replacement in its comment.",
+          "source": "manual",
+          "statement": "comments of dalicc:licenseText, dalicc:WarrantyDisclaimer, dalicc:LiabilityLimitation, dalicc:WarrantyOrLiabilityAcceptance, dalicc:validityType, dalicc:JP, dalicc:perpetual, dalicc:contradicts, odrl:includedIn, odrl:implies, owl:sameAs, dalicc:replacesRule, dalicc:ruleExplanation, dalicc:royalityFree and dalicc:extendsGraph"
+        },
+        {
+          "action": "added",
+          "previous": "",
+          "reason": "Individuals are typed as such, so a structural OWL check tells them from classes.",
+          "source": "manual",
+          "statement": "owl:NamedIndividual on every action and controlled value"
+        },
+        {
+          "action": "added",
+          "previous": "",
+          "reason": "Each has a close counterpart in ODRL 2.2, the CC Rights Expression Language or schema.org that rdfs:seeAlso alone did not state; none is exact, so none is an equivalence.",
+          "source": "manual",
+          "statement": "skos:closeMatch from dalicc:sublicense to odrl:grantUse, dalicc:redistribute to odrl:distribute, dalicc:attributionNotice to cc:Attribution, dalicc:permissionNotice to cc:Notice, dalicc:sellCopy to odrl:sell and dalicc:CreativeWork to schema:CreativeWork"
+        },
+        {
+          "action": "added",
+          "previous": "",
+          "reason": "The License Composer writes the date on which a composed license was withdrawn or superseded, and the record page and the API read it, but the vocabulary did not define it. It is the one term the application used that the vocabulary lacked.",
+          "source": "manual",
+          "statement": "term dalicc:deprecatedOn"
+        },
+        {
+          "action": "changed",
+          "previous": "a current term",
+          "reason": "Deprecated with owl:deprecated true and dct:isReplacedBy dalicc:terminatesOnBreach, because the property a record carries says the same thing. No record uses it; it keeps dereferencing because it was published.",
+          "source": "manual",
+          "statement": "term dalicc:terminationOnBreach"
+        },
+        {
+          "action": "changed",
+          "previous": "a current term",
+          "reason": "Deprecated with owl:deprecated true and dct:isReplacedBy dalicc:patentGrant, because its 2022 definition is the scope of a contributor's patent license. No record uses it; it keeps dereferencing because it was published.",
+          "source": "manual",
+          "statement": "term dalicc:patentFree"
+        },
+        {
+          "action": "changed",
+          "previous": "a current term",
+          "reason": "Deprecated with owl:deprecated true and dct:isReplacedBy dalicc:chargeDistributionFee, because a fee for the physical act of transferring a copy is a distribution fee. No record uses it; it keeps dereferencing because it was published.",
+          "source": "manual",
+          "statement": "term dalicc:chargeOffer"
+        },
+        {
+          "action": "changed",
+          "previous": "a current term",
+          "reason": "Deprecated with owl:deprecated true and dct:isReplacedBy odrl:distribute, because it names the same act. No record uses it; it keeps dereferencing because it was published.",
+          "source": "manual",
+          "statement": "term dalicc:redistribute"
+        },
+        {
+          "action": "changed",
+          "previous": "a current term",
+          "reason": "Deprecated with owl:deprecated true and dct:isReplacedBy odrl:distribute, because issuing the work to the public is distributing it. No record uses it; it keeps dereferencing because it was published.",
+          "source": "manual",
+          "statement": "term dalicc:publish"
+        },
+        {
+          "action": "changed",
+          "previous": "a current term",
+          "reason": "Deprecated with owl:deprecated true and dct:isReplacedBy cc:Attribution, because the library states attribution duties with it. No record uses it; it keeps dereferencing because it was published.",
+          "source": "manual",
+          "statement": "term dalicc:attributionNotice"
+        },
+        {
+          "action": "changed",
+          "previous": "a current term",
+          "reason": "Deprecated with owl:deprecated true and dct:isReplacedBy cc:Notice, because the library states notice duties with it. No record uses it; it keeps dereferencing because it was published.",
+          "source": "manual",
+          "statement": "term dalicc:permissionNotice"
+        },
+        {
+          "action": "changed",
+          "previous": "the same comment spelled licence",
+          "reason": "The site's English spells license with an s (License Library, License Composer); the vocabulary's own words now do as well. License titles that spell it with a c keep it.",
+          "source": "manual",
+          "statement": "term dalicc:FromConvention"
+        },
+        {
+          "action": "changed",
+          "previous": "the same comment spelled licence",
+          "reason": "The site's English spells license with an s (License Library, License Composer); the vocabulary's own words now do as well. License titles that spell it with a c keep it.",
+          "source": "manual",
+          "statement": "term dalicc:licenseText"
+        },
+        {
+          "action": "changed",
+          "previous": "the same comment and label spelled licence",
+          "reason": "The site's English spells license with an s (License Library, License Composer); the vocabulary's own words now do as well. License titles that spell it with a c keep it.",
+          "source": "manual",
+          "statement": "term dalicc:patentRetaliationTermination"
+        },
+        {
+          "action": "changed",
+          "previous": "the same comment spelled licence",
+          "reason": "The site's English spells license with an s (License Library, License Composer); the vocabulary's own words now do as well. License titles that spell it with a c keep it.",
+          "source": "manual",
+          "statement": "term dalicc:variantKind"
+        },
+        {
+          "action": "changed",
+          "previous": "the same comment spelled licence",
+          "reason": "The site's English spells license with an s (License Library, License Composer); the vocabulary's own words now do as well. License titles that spell it with a c keep it.",
+          "source": "manual",
+          "statement": "term dalicc:variantOf"
+        }
+      ],
+      "date": "2026-09-24",
+      "reviewer": "Giray Havur",
+      "summary": "The content review of 2026-09-15 defined the terms the license texts need and the review itself writes, and the model history added the terms a versioned model needs. The later changes defined the terms of the standard licenses, a composed license's own text, variants and SPDX exceptions, default rules for what a license does not say, complete dependency graphs built from a difference file and where a statement of a record comes from, made every action definition describe its act, deprecated seven duplicates and spell license the way the site does.",
+      "version": 2
+    }
+  ],
+  "id": "dalicc-ns",
+  "title": "DALICC vocabulary"
+}

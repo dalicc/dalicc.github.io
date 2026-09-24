@@ -1,0 +1,3556 @@
+{
+  "algorithm": "dalicc-c14n-1",
+  "application_version": "2.0.0.dev0",
+  "date": "2026-09-24",
+  "graphs": {
+    "graphs": {
+      "dg_br": {
+        "date": "2026-09-24",
+        "hash": "sha256:50857c2ac933ba123dd21c211cea064472be99c77dfacdb094210f242476ea2b",
+        "status": "current",
+        "version": 2
+      },
+      "dg_cn": {
+        "date": "2026-09-24",
+        "hash": "sha256:27a15eb52b0582cf8411e936dbf6c1ad9b2e54666c945dbb79548ae2b3ee4465",
+        "status": "current",
+        "version": 2
+      },
+      "dg_default": {
+        "date": "2026-09-24",
+        "hash": "sha256:26ca6cd83a3ba32d2c227beb8366ae8d8dc915ded060d08912e9430d8ed35fa3",
+        "status": "current",
+        "version": 2
+      },
+      "dg_eu": {
+        "date": "2026-09-24",
+        "hash": "sha256:d03bca8b1914f768353c3bb948f709bc98e8a3873ad87bc36a2de50740324ddd",
+        "status": "current",
+        "version": 2
+      },
+      "dg_gb": {
+        "date": "2026-09-24",
+        "hash": "sha256:ddd9d18286184dd91da8e3f96e1f845d3d27a60b34ab5fbf4262a72c872130e4",
+        "status": "current",
+        "version": 2
+      },
+      "dg_in": {
+        "date": "2026-09-24",
+        "hash": "sha256:12cba960584f9563ea8db4283b9e6961f8e099f51ef2153e6a60872566b1adc9",
+        "status": "current",
+        "version": 2
+      },
+      "dg_jp": {
+        "date": "2026-09-24",
+        "hash": "sha256:452dda1d33d24fd3fd701c0a05fe3c6929e40d16d6d0add210c87269b24a5368",
+        "status": "current",
+        "version": 2
+      },
+      "dg_us": {
+        "date": "2026-09-24",
+        "hash": "sha256:b6e060b754b7f72005c14e812b159908cf3e4f913f3597cff488e85b1e124701",
+        "status": "current",
+        "version": 2
+      }
+    },
+    "id": "dg-e0475ee1e1683745"
+  },
+  "library": {
+    "id": "lib-c7dcd85c3a70cd9b",
+    "records": {
+      "0BSD": {
+        "date": "2026-09-24",
+        "hash": "sha256:132d55331ac84b428b2c1828d275227151dba963565845f5d02ae0d8babf9104",
+        "status": "current",
+        "version": 2
+      },
+      "AAL": {
+        "date": "2026-09-24",
+        "hash": "sha256:194885185874a6c0d5cf31c104748d7616323171cfb81ad8447944e490d5e40d",
+        "status": "current",
+        "version": 2
+      },
+      "AFL-1.1": {
+        "date": "2026-09-24",
+        "hash": "sha256:a73e460c2f20b0e49b2d17701d674be2b4f6970ed0109f6eab9cb3ae8bb83839",
+        "status": "current",
+        "version": 2
+      },
+      "AFL-1.2": {
+        "date": "2026-09-24",
+        "hash": "sha256:f1971f8fd1787812698f16a7baf636f1b246db613471a9692bb079483dde6b95",
+        "status": "current",
+        "version": 2
+      },
+      "AFL-2.0": {
+        "date": "2026-09-24",
+        "hash": "sha256:0fffebdd28f925c229467fded6fcda53c60ddfb972af4719897f2cfd4727916c",
+        "status": "current",
+        "version": 2
+      },
+      "AFL-2.1": {
+        "date": "2026-09-24",
+        "hash": "sha256:560de21cff09a64b75f75e6a8a2da6d7881d5a290682668d6d742e3482e7d19c",
+        "status": "current",
+        "version": 2
+      },
+      "AFL-3.0": {
+        "date": "2026-09-24",
+        "hash": "sha256:2a774aac205621fd9e978d35acf602bc90fc7e7694691a31a64daf1af186ae11",
+        "status": "current",
+        "version": 2
+      },
+      "AGPL-3.0": {
+        "date": "2026-09-24",
+        "hash": "sha256:a1ff9059d8a210eef90e67d9eb24b89dc88ee9a501767f7cae86b0983d944dae",
+        "status": "current",
+        "version": 2
+      },
+      "AGPL-3.0-or-later": {
+        "date": "2026-09-24",
+        "hash": "sha256:89c3fa70021da1efcaf83ef7524f635692239a7edfdb700d969592eedf3b2e8c",
+        "status": "current",
+        "version": 2
+      },
+      "ALGLIB-Documentation": {
+        "date": "2026-09-24",
+        "hash": "sha256:7e5ef997e02d30ec8fb756bc457138a715631ed51f736448cddef1e4c373203d",
+        "status": "current",
+        "version": 2
+      },
+      "APL-1.0": {
+        "date": "2026-09-24",
+        "hash": "sha256:6cc70ad617369d4adebae44fa3eeac5dd3ae4f672b0cb41aff4d3c825ffff928",
+        "status": "current",
+        "version": 2
+      },
+      "APSL-1.0": {
+        "date": "2026-09-24",
+        "hash": "sha256:8f5015e0277bbc6b93b2dcee0cbf8c799df80958298b075e49fe163b46409082",
+        "status": "current",
+        "version": 2
+      },
+      "APSL-1.1": {
+        "date": "2026-09-24",
+        "hash": "sha256:02a9bb8973757013d56c6d073d08bc355331f4bb541b237214cf52ab2c0e784c",
+        "status": "current",
+        "version": 2
+      },
+      "APSL-1.2": {
+        "date": "2026-09-24",
+        "hash": "sha256:9cddf70280db52dd31b3f66dc3f90560d7f49dc3e0cae5027c30b0b1f0683fc3",
+        "status": "current",
+        "version": 2
+      },
+      "APSL-2.0": {
+        "date": "2026-09-24",
+        "hash": "sha256:dd9b5029c4c9439ac0f0c3dd9984b6bc1c922ce50ad49975466814976fdc02d5",
+        "status": "current",
+        "version": 2
+      },
+      "Apache-1.0": {
+        "date": "2026-09-24",
+        "hash": "sha256:9dbf274f44d41d1f7a9a39a2c0d2101c0285bcbed573a3e29e692ddbf1409336",
+        "status": "current",
+        "version": 2
+      },
+      "Apache-1.1": {
+        "date": "2026-09-24",
+        "hash": "sha256:5267eb1ea9eef1530252d05be09e57b6ae72cd7181153eed490c7b40f90852ac",
+        "status": "current",
+        "version": 2
+      },
+      "Apache-2.0": {
+        "date": "2026-09-24",
+        "hash": "sha256:06b7ddf2f2d5960efd3456b4d612668cbf8583cb6cb2dbbb8bfd66de00dca486",
+        "status": "current",
+        "version": 2
+      },
+      "Apache-2.0-with-Commons-Clause": {
+        "date": "2026-09-24",
+        "hash": "sha256:45f69e29a5c94a31afc51854e6178c91e798bdacb8ae697f7eec650466154c6f",
+        "status": "current",
+        "version": 2
+      },
+      "Apache-2.0-with-LLVM-exception": {
+        "date": "2026-09-24",
+        "hash": "sha256:4d089bd4a3df5f6e505234fa249279edd7af15f79b4a16edd877e8e589bb6c88",
+        "status": "current",
+        "version": 2
+      },
+      "Apple-ML-Research-Model-License": {
+        "date": "2026-09-24",
+        "hash": "sha256:cd820cab8431750d8ea40c79ef7e70adfa503e8e0c18d446104107ef2b49b439",
+        "status": "current",
+        "version": 2
+      },
+      "Apple-Sample-Code-License": {
+        "date": "2026-09-24",
+        "hash": "sha256:26b17abf3a33faf116fa341de1baa075101d8c86bdf78dfa74c3c48fa445e735",
+        "status": "current",
+        "version": 2
+      },
+      "Artistic-1.0": {
+        "date": "2026-09-24",
+        "hash": "sha256:5045a7b7773c1b6fe70b22573ec09202efea8dd869676f684b777795347681ff",
+        "status": "current",
+        "version": 2
+      },
+      "Artistic-1.0-Perl": {
+        "date": "2026-09-24",
+        "hash": "sha256:b5660a9ec58af8858276bcc8f75678e039155adcd0c47dd64f388808ee908640",
+        "status": "current",
+        "version": 2
+      },
+      "Artistic-1.0-cl8": {
+        "date": "2026-09-24",
+        "hash": "sha256:d58620150af7b558b4f271c68708b573d3e0c332c8fa0437290ed3c15c2e41e8",
+        "status": "current",
+        "version": 2
+      },
+      "Artistic-2.0": {
+        "date": "2026-09-24",
+        "hash": "sha256:aeee89151571356542ab64884eda9959b089060ceefbb49ac0e8bd13d1617169",
+        "status": "current",
+        "version": 2
+      },
+      "AttributionNoncommercial20Australia": {
+        "date": "2026-09-24",
+        "hash": "sha256:78623106dccc2b2d14d8cb70f51092c9927131e94539ab47754d25e6978efc7d",
+        "status": "current",
+        "version": 2
+      },
+      "AttributionNoncommercial20Austria": {
+        "date": "2026-09-24",
+        "hash": "sha256:f885c47c7b4cd0d6cca8460f404a78eb72fc0c99e73e30ef04e0cd38b8c1b67a",
+        "status": "current",
+        "version": 2
+      },
+      "AttributionNoncommercial20Brazil": {
+        "date": "2026-09-24",
+        "hash": "sha256:a471ad3a5e5c99335e749ff0fa3fbe29bf1eacb799168f9f94054b30a74d65b3",
+        "status": "current",
+        "version": 2
+      },
+      "AttributionNoncommercial20Chile": {
+        "date": "2026-09-24",
+        "hash": "sha256:9738be3e1ca390ea616f18e7b4036609bef5523801f552c01bbbbb02f3035963",
+        "status": "current",
+        "version": 2
+      },
+      "AttributionNoncommercial20Croatia": {
+        "date": "2026-09-24",
+        "hash": "sha256:e1a85d153fe1e362159e0942f317ace2034cbd45f1876243ee792fd266d09675",
+        "status": "current",
+        "version": 2
+      },
+      "AttributionNoncommercial20France": {
+        "date": "2026-09-24",
+        "hash": "sha256:cf1d7f2c616dba68ed26ee2cc98b6c70637dadbb2455bbd4448735e0329eae16",
+        "status": "current",
+        "version": 2
+      },
+      "AttributionNoncommercial20Germany": {
+        "date": "2026-09-24",
+        "hash": "sha256:b8b05cb59b6b4efac3d5638561e949ec0fc322c361d3a72a5be0a7e22552ae58",
+        "status": "current",
+        "version": 2
+      },
+      "AttributionNoncommercial20Italy": {
+        "date": "2026-09-24",
+        "hash": "sha256:440f62bf3e7694d404642b37ae4ac5a42a1527b7c829397a71aac7519a936b13",
+        "status": "current",
+        "version": 2
+      },
+      "AttributionNoncommercial20Japan": {
+        "date": "2026-09-24",
+        "hash": "sha256:6cefda30b215946680fafc1f5dd11cb5969c18a8d895809d5f26aef3c8dc6f04",
+        "status": "current",
+        "version": 2
+      },
+      "AttributionNoncommercial20KoreaSouth": {
+        "date": "2026-09-24",
+        "hash": "sha256:d678ffe97a3a4ef497dae71e99147d5036d311a231797a810ad26d953f7178a2",
+        "status": "current",
+        "version": 2
+      },
+      "AttributionNoncommercial20Netherlands": {
+        "date": "2026-09-24",
+        "hash": "sha256:184f79cf6f91daad286a076b07047f847f4f69e3f7ff686fa94ffe5c8ad7a5d0",
+        "status": "current",
+        "version": 2
+      },
+      "AttributionNoncommercial20Poland": {
+        "date": "2026-09-24",
+        "hash": "sha256:8a62e265d479ccfa5c93b0b35ddaf48d9a013fd3048fc26e552eaaabc8324118",
+        "status": "current",
+        "version": 2
+      },
+      "AttributionNoncommercial20SouthAfrica": {
+        "date": "2026-09-24",
+        "hash": "sha256:2198bf56709a66322f7703973e90416f389a7d515e411c225fec7644219e43d7",
+        "status": "current",
+        "version": 2
+      },
+      "AttributionNoncommercial30Armenia": {
+        "date": "2026-09-24",
+        "hash": "sha256:c2b8d49f8d4cd1255174f9154dee3ea43cab3fb97451cb12b28f71b587e90290",
+        "status": "current",
+        "version": 2
+      },
+      "AttributionNoncommercial30Australia": {
+        "date": "2026-09-24",
+        "hash": "sha256:e09de1c768c6bd3e3c0a2c55a0fe916816cffc541ecb0ad73dda09b543c334ea",
+        "status": "current",
+        "version": 2
+      },
+      "AttributionNoncommercial30Austria": {
+        "date": "2026-09-24",
+        "hash": "sha256:1949d6175aba3fcae2d9787b160f967b9f436e7967ee4bb2d86d34bb3187df9e",
+        "status": "current",
+        "version": 2
+      },
+      "AttributionNoncommercial30Azerbaijan": {
+        "date": "2026-09-24",
+        "hash": "sha256:a024c30a39b8c60f35db87fc7fa436ff2c4e01f68bca90d00ec61f38fd323760",
+        "status": "current",
+        "version": 2
+      },
+      "AttributionNoncommercial30Brazil": {
+        "date": "2026-09-24",
+        "hash": "sha256:1fd9cf13d1d8b022b9e238878990835440c2d081e5e282681e2533236378f53f",
+        "status": "current",
+        "version": 2
+      },
+      "AttributionNoncommercial30Chile": {
+        "date": "2026-09-24",
+        "hash": "sha256:947d126161e1413d98a2002772429243eb0cad9e8754fb75f7166e5fbbb4b56f",
+        "status": "current",
+        "version": 2
+      },
+      "AttributionNoncommercial30China": {
+        "date": "2026-09-24",
+        "hash": "sha256:d17617c552581b59a15ad6c5a569e4bc1d5a1d16e805a7922d296ef0c072c1d0",
+        "status": "current",
+        "version": 2
+      },
+      "AttributionNoncommercial30CostaRica": {
+        "date": "2026-09-24",
+        "hash": "sha256:a7f834d4573f9dc5af7ab98f336cb1d9026a858cac11274750107f896d28e855",
+        "status": "current",
+        "version": 2
+      },
+      "AttributionNoncommercial30Croatia": {
+        "date": "2026-09-24",
+        "hash": "sha256:a7d9da784f1a336f1d505471905e12718cd4f32c3706997e94c1c4aa8381647b",
+        "status": "current",
+        "version": 2
+      },
+      "AttributionNoncommercial30Czechia": {
+        "date": "2026-09-24",
+        "hash": "sha256:1256824778fcb51988de0f539d92cf3751e847eb3cda466d2080e2fec107831a",
+        "status": "current",
+        "version": 2
+      },
+      "AttributionNoncommercial30Ecuador": {
+        "date": "2026-09-24",
+        "hash": "sha256:9b7c6c19c8801170c521897791bf47d040b238e2518376075fe7ab62a9668e6b",
+        "status": "current",
+        "version": 2
+      },
+      "AttributionNoncommercial30Egypt": {
+        "date": "2026-09-24",
+        "hash": "sha256:b25d0499feae06e02649cd072147537cd5094da16d7dc67e85f7f55cc54a54c1",
+        "status": "current",
+        "version": 2
+      },
+      "AttributionNoncommercial30Estonia": {
+        "date": "2026-09-24",
+        "hash": "sha256:6b73cd0f2b02c0ec93692607469b85a7f8f21777de67605c5b6b7a94fd8fde2f",
+        "status": "current",
+        "version": 2
+      },
+      "AttributionNoncommercial30France": {
+        "date": "2026-09-24",
+        "hash": "sha256:a97ab19bec38a8024334d6cd132ae2456ae41944a624bdbb74e121ad6c596037",
+        "status": "current",
+        "version": 2
+      },
+      "AttributionNoncommercial30Georgia": {
+        "date": "2026-09-24",
+        "hash": "sha256:06daa98b98369fc352e911d00af02def95a9584239685583025ac08865a803e1",
+        "status": "current",
+        "version": 2
+      },
+      "AttributionNoncommercial30Germany": {
+        "date": "2026-09-24",
+        "hash": "sha256:85169ad2d8f8249d07b332df891a2692c65e6bb055074f5ee37d9c9157d3b99c",
+        "status": "current",
+        "version": 2
+      },
+      "AttributionNoncommercial30Greece": {
+        "date": "2026-09-24",
+        "hash": "sha256:2fa740efc0f63fbc8784823589fa2653875082c56133674b344ee47b257e6739",
+        "status": "current",
+        "version": 2
+      },
+      "AttributionNoncommercial30Guatemala": {
+        "date": "2026-09-24",
+        "hash": "sha256:0801812535a81af8f81525331eeb942dc9c39d579d8ceed6e2b43d20bfd88b45",
+        "status": "current",
+        "version": 2
+      },
+      "AttributionNoncommercial30Ireland": {
+        "date": "2026-09-24",
+        "hash": "sha256:619b9fef71883accbdeeee869b9fb49f341ef3f5ad9128b7617318de02dd7ffd",
+        "status": "current",
+        "version": 2
+      },
+      "AttributionNoncommercial30Italy": {
+        "date": "2026-09-24",
+        "hash": "sha256:0f8b2f75628f9346976422462bd9cd1a0faf5b8d8db4d39f8091a6fa93a51ab1",
+        "status": "current",
+        "version": 2
+      },
+      "AttributionNoncommercial30Luxembourg": {
+        "date": "2026-09-24",
+        "hash": "sha256:2ce6629132fcbcce2296d64462d9cf86ef0f57e5a53e3f29df22554c82aa5d60",
+        "status": "current",
+        "version": 2
+      },
+      "AttributionNoncommercial30Netherlands": {
+        "date": "2026-09-24",
+        "hash": "sha256:472b9f8404d5b0bba8b0b5d134cb0081eb6a890a8b9505121289a5068a4d9e7b",
+        "status": "current",
+        "version": 2
+      },
+      "AttributionNoncommercial30NewZealand": {
+        "date": "2026-09-24",
+        "hash": "sha256:fc321d43b70a32bf21d8b004ea11767be577cd6074b25a8bc83804b11e1385b8",
+        "status": "current",
+        "version": 2
+      },
+      "AttributionNoncommercial30Norway": {
+        "date": "2026-09-24",
+        "hash": "sha256:fd0399af1307a17f7c2e0133bb117e30d223631726c2e29a0a424a803a921b98",
+        "status": "current",
+        "version": 2
+      },
+      "AttributionNoncommercial30Philippines": {
+        "date": "2026-09-24",
+        "hash": "sha256:05afd5db9d4b1355db5e83650f3a2a2b5d81e5b09c6fdc6de06cedcea4095780",
+        "status": "current",
+        "version": 2
+      },
+      "AttributionNoncommercial30Poland": {
+        "date": "2026-09-24",
+        "hash": "sha256:2a40c2d90e1eaa99bd6b91e35652677ba4b2565d9d0f8911bccc36eeae994bbd",
+        "status": "current",
+        "version": 2
+      },
+      "AttributionNoncommercial30Portugal": {
+        "date": "2026-09-24",
+        "hash": "sha256:204e9cd29c975a5920169b7282edeb201945cc595594cbbcaae4b76a00ff8478",
+        "status": "current",
+        "version": 2
+      },
+      "AttributionNoncommercial30Romania": {
+        "date": "2026-09-24",
+        "hash": "sha256:7475928481d02a17f0d91f3c573f2abb4a79dca60f4b067bf8587bd8a9f86b24",
+        "status": "current",
+        "version": 2
+      },
+      "AttributionNoncommercial30Singapore": {
+        "date": "2026-09-24",
+        "hash": "sha256:e14a60e8e289b56b3aee4d7cc05370ffebc1cafcc8116affc8d30247e41feba1",
+        "status": "current",
+        "version": 2
+      },
+      "AttributionNoncommercial30SouthAfrica": {
+        "date": "2026-09-24",
+        "hash": "sha256:98cdf2270227d094c92b923fcfeace7ddb59fad2b2a96ab606207e5f99ac4641",
+        "status": "current",
+        "version": 2
+      },
+      "AttributionNoncommercial30Thailand": {
+        "date": "2026-09-24",
+        "hash": "sha256:64851a95d2be6b50a4e1104b3975098e714a8ba856d2c1e657858bc2ca2bb234",
+        "status": "current",
+        "version": 2
+      },
+      "AttributionNoncommercial30Uganda": {
+        "date": "2026-09-24",
+        "hash": "sha256:20eb01772ca0ab50fa831ece43a34f7de3243e1ae8126d24ecb5773d641cac5e",
+        "status": "current",
+        "version": 2
+      },
+      "AttributionNoncommercial30UnitedStatesofAmerica": {
+        "date": "2026-09-24",
+        "hash": "sha256:65b2ad21cd3166c382fb3cb92c80be3645a5b97d22375b32ecbda2015d51ce85",
+        "status": "current",
+        "version": 2
+      },
+      "AttributionNoncommercial30Venezuela": {
+        "date": "2026-09-24",
+        "hash": "sha256:9ae293564211a7165d77b97fedf03c4c6b7aefd329943e75a94e7b70513c0fad",
+        "status": "current",
+        "version": 2
+      },
+      "AttributionNoncommercial30Vietnam": {
+        "date": "2026-09-24",
+        "hash": "sha256:4abebb2d937c532e32fb5693d63d1e6d8e0a8ef9aa7ab637d0758045c53667ce",
+        "status": "current",
+        "version": 2
+      },
+      "BSD-1-Clause": {
+        "date": "2026-09-24",
+        "hash": "sha256:1cd0adbdb8c6cd0e4cfae01a1f2f84ac0e946a635cb7da86f057a4398c664fe5",
+        "status": "current",
+        "version": 2
+      },
+      "BSD-2-Clause": {
+        "date": "2026-09-24",
+        "hash": "sha256:6f3060a266162658d28674a439bad25a84ebe8547e4f92bfd8d95f7ecf8f94e5",
+        "status": "current",
+        "version": 2
+      },
+      "BSD-2-Clause-Patent": {
+        "date": "2026-09-24",
+        "hash": "sha256:ed8aefbb3f1aea67d6e0cf56405a805713b8237b422384c26120513cae5ab9c8",
+        "status": "current",
+        "version": 2
+      },
+      "BSD-2-Clause-Views": {
+        "date": "2026-09-24",
+        "hash": "sha256:c52d9fb9596373a0eda05ffda9debc58cd29f0f25d4a7f2f33b2cca7a604143a",
+        "status": "current",
+        "version": 2
+      },
+      "BSD-3-Clause": {
+        "date": "2026-09-24",
+        "hash": "sha256:d792dfa57f37452b75558b5b378b17a8dcc7f8354a91e3d3e97d0945e266ad4d",
+        "status": "current",
+        "version": 2
+      },
+      "BSD-3-Clause-Attribution": {
+        "date": "2026-09-24",
+        "hash": "sha256:51c889afe4fd518d3288c87ffae3296a20701c906c35e7557fb8c00b75d7d232",
+        "status": "current",
+        "version": 2
+      },
+      "BSD-3-Clause-Clear": {
+        "date": "2026-09-24",
+        "hash": "sha256:2d3ffb8a10ef75d43a9056ca14057ad11da461a5e070cdd9337ddd872c4c16cd",
+        "status": "current",
+        "version": 2
+      },
+      "BSD-3-Clause-LBNL": {
+        "date": "2026-09-24",
+        "hash": "sha256:5f870277b07aa40a22415080bfcb03f88092090a474c606729718f36d9938ffe",
+        "status": "current",
+        "version": 2
+      },
+      "BSD-3-Clause-Open-MPI": {
+        "date": "2026-09-24",
+        "hash": "sha256:3d2b20f4238d0e3b8956a0ade8eb3357fdbfdd0ff9fdbbb499ae6de8b5b493d1",
+        "status": "current",
+        "version": 2
+      },
+      "BSD-4-Clause": {
+        "date": "2026-09-24",
+        "hash": "sha256:cd0e11fd36f492e7c5087cc71b80216f47d66f5fd6f067debf219035f73628ba",
+        "status": "current",
+        "version": 2
+      },
+      "BSD-ask-to-endorse": {
+        "date": "2026-09-24",
+        "hash": "sha256:030090084ebd7a9dc447d5ae70a475713062a04c2ae3d885d4825bab9afecfc2",
+        "status": "current",
+        "version": 2
+      },
+      "BSL-1.0": {
+        "date": "2026-09-24",
+        "hash": "sha256:29b62d0af0b504782aac789b3d6c7c665df6fd485e2fafca63e07fb198b810ee",
+        "status": "current",
+        "version": 2
+      },
+      "BUSL-1.1": {
+        "date": "2026-09-24",
+        "hash": "sha256:dd9fda47ef2a65ee1e07028df1c4b5184eae092626628bfa1344ccbca54f3a13",
+        "status": "current",
+        "version": 2
+      },
+      "Beerware": {
+        "date": "2026-09-24",
+        "hash": "sha256:7481f6ffa59197654866335cd6488435226476bfe0625d2dda0cf02cf32b81a4",
+        "status": "current",
+        "version": 2
+      },
+      "BigCode-OpenRAIL-M": {
+        "date": "2026-09-24",
+        "hash": "sha256:dd6e6208ee785a97d7bb8c726a730a576433a7af0d8567bcf2c84738a5af8e9d",
+        "status": "current",
+        "version": 2
+      },
+      "BigScience-BLOOM-RAIL-1.0": {
+        "date": "2026-09-24",
+        "hash": "sha256:b9479449c462b4a989afef08792af1c80c0c17afc68211f2521e27552f3e0173",
+        "status": "current",
+        "version": 2
+      },
+      "BigScience-OpenRAIL-M": {
+        "date": "2026-09-24",
+        "hash": "sha256:3e1ddd2eedd730c7871b7ee8f777cb4ad76b98e5e595bf01b1bf947db8376773",
+        "status": "current",
+        "version": 2
+      },
+      "Bitstream-Vera": {
+        "date": "2026-09-24",
+        "hash": "sha256:b8517927aac8eab54a865a064d68bfef290d8076774fee24f2b31ed892684b99",
+        "status": "current",
+        "version": 2
+      },
+      "BlueOak-1.0.0": {
+        "date": "2026-09-24",
+        "hash": "sha256:a403f17afad63084e70535f566ce6c48b708df8bd12985c1148248da5b675910",
+        "status": "current",
+        "version": 2
+      },
+      "C-UDA-1.0": {
+        "date": "2026-09-24",
+        "hash": "sha256:c1b0b47078ded7ede4d725f4a96a11f784de4a4c9ee1e948885d8f0ade9a0bb0",
+        "status": "current",
+        "version": 2
+      },
+      "CAL-1.0": {
+        "date": "2026-09-24",
+        "hash": "sha256:ae1368969255bee9a2b9659e3ac05257277364d1646497d799ae257afb4a4475",
+        "status": "current",
+        "version": 2
+      },
+      "CAL-1.0-Combined-Work-Exception": {
+        "date": "2026-09-24",
+        "hash": "sha256:369b1eb08bdae80de0291ce6ef61e9456fdbd8f7b1357a54dd17fd93e3b2f66f",
+        "status": "current",
+        "version": 2
+      },
+      "CATOSL-1.1": {
+        "date": "2026-09-24",
+        "hash": "sha256:2b13a721375157603d8d04e05ec0b6c5e842bb9c969fc6d3e3473b80951922d9",
+        "status": "current",
+        "version": 2
+      },
+      "CC-BY-1.0": {
+        "date": "2026-09-24",
+        "hash": "sha256:d13674e537278348d14e45fb271fe07522641a9435cfceab0f2330717355aaec",
+        "status": "current",
+        "version": 2
+      },
+      "CC-BY-2.0": {
+        "date": "2026-09-24",
+        "hash": "sha256:b8719cf49a608eff69105c1921d67d0f90cec9c3a557406dc7163147fd4a4297",
+        "status": "current",
+        "version": 2
+      },
+      "CC-BY-2.5": {
+        "date": "2026-09-24",
+        "hash": "sha256:70fa93b37507b074cdbfe411cd7cb190abf9a64d7e4e13738c3dcfcfcafbeab5",
+        "status": "current",
+        "version": 2
+      },
+      "CC-BY-3.0": {
+        "date": "2026-09-24",
+        "hash": "sha256:27be3d5c128194040deb767839597947b31b01313a31d22412cf55d188bc8f88",
+        "status": "current",
+        "version": 2
+      },
+      "CC-BY-4.0": {
+        "date": "2026-09-24",
+        "hash": "sha256:fb7002f069994cba88196058ab28f1b6fa9878d8755b6ac05eea7c451a6e7065",
+        "status": "current",
+        "version": 2
+      },
+      "CC-BY-NC-1.0": {
+        "date": "2026-09-24",
+        "hash": "sha256:f854ef119f94eecc9ae85a3682d33f66e7809694357d2fdbc1d498086e4b90e1",
+        "status": "current",
+        "version": 2
+      },
+      "CC-BY-NC-2.0": {
+        "date": "2026-09-24",
+        "hash": "sha256:fd933f41167f30cc7b2fcbc94d9f01c6fcb0563483ada5e79da23e7b523a9433",
+        "status": "current",
+        "version": 2
+      },
+      "CC-BY-NC-2.5": {
+        "date": "2026-09-24",
+        "hash": "sha256:9cf14f7a2e86cadb54c4540fc29b374a0890ebfb930cd964d080ddd32e9c5070",
+        "status": "current",
+        "version": 2
+      },
+      "CC-BY-NC-3.0": {
+        "date": "2026-09-24",
+        "hash": "sha256:fd65eb5791d9ccab83d169868470d759508e991126e1549d88738cfd3883af21",
+        "status": "current",
+        "version": 2
+      },
+      "CC-BY-NC-4.0": {
+        "date": "2026-09-24",
+        "hash": "sha256:60c1adc64ea66abfbc55d511154bd8bbae16ad2126e2d4ae81a96f343078b212",
+        "status": "current",
+        "version": 2
+      },
+      "CC-BY-NC-ND-1.0": {
+        "date": "2026-09-24",
+        "hash": "sha256:d5bcc88a46218e59aa07bdc30527ce57cbb922567ebc877cec1554d54907fd91",
+        "status": "current",
+        "version": 2
+      },
+      "CC-BY-NC-ND-2.0": {
+        "date": "2026-09-24",
+        "hash": "sha256:6887076bef176a4e78e124cbb71db2ed84e5fd5d8f41ff4069d04c5b4c689a6d",
+        "status": "current",
+        "version": 2
+      },
+      "CC-BY-NC-ND-2.5": {
+        "date": "2026-09-24",
+        "hash": "sha256:58e98f00f71ab1d0ae8d505e726dbc1753db893d52bb714224025668f83fa5a4",
+        "status": "current",
+        "version": 2
+      },
+      "CC-BY-NC-ND-3.0": {
+        "date": "2026-09-24",
+        "hash": "sha256:be87c3f663d2728e0188cf82faf07aaa1fe8e14f67491f28bd863c87a7a94424",
+        "status": "current",
+        "version": 2
+      },
+      "CC-BY-NC-ND-4.0": {
+        "date": "2026-09-24",
+        "hash": "sha256:a410e2f729326ff4c1d1af446c99300aeaa6f4c31106f084231e5dde2f946dcc",
+        "status": "current",
+        "version": 2
+      },
+      "CC-BY-NC-SA-1.0": {
+        "date": "2026-09-24",
+        "hash": "sha256:27cf11a8112f41d84e25bc20321288173640952506d84309341b74be804158ec",
+        "status": "current",
+        "version": 2
+      },
+      "CC-BY-NC-SA-2.0": {
+        "date": "2026-09-24",
+        "hash": "sha256:149b66424e7034ebfcf431558be7b4a08c22d2abf9888f32643d57998c0cce0e",
+        "status": "current",
+        "version": 2
+      },
+      "CC-BY-NC-SA-2.5": {
+        "date": "2026-09-24",
+        "hash": "sha256:9f5abd9c7dafcd1069b9faa250e7b6db6598ce3d64d9e22e80ad56199b22e555",
+        "status": "current",
+        "version": 2
+      },
+      "CC-BY-NC-SA-3.0": {
+        "date": "2026-09-24",
+        "hash": "sha256:41bc3d1c2d527df552957301c07fbcd8cf5f3b7f8f3a7dd83ff2087880e67acc",
+        "status": "current",
+        "version": 2
+      },
+      "CC-BY-NC-SA-4.0": {
+        "date": "2026-09-24",
+        "hash": "sha256:104f12d0603dcfd4601ecbfe66f44c1f093db41703cde5a88037169191fc41ed",
+        "status": "current",
+        "version": 2
+      },
+      "CC-BY-ND-1.0": {
+        "date": "2026-09-24",
+        "hash": "sha256:313580269bc933aee51443464218588bdd8e8d6c42db9982e8cd006b37ef795c",
+        "status": "current",
+        "version": 2
+      },
+      "CC-BY-ND-2.0": {
+        "date": "2026-09-24",
+        "hash": "sha256:9828b0687de9fdf818d9b954e2259f29e24cc59532b29368fb744a7f833ebb92",
+        "status": "current",
+        "version": 2
+      },
+      "CC-BY-ND-2.5": {
+        "date": "2026-09-24",
+        "hash": "sha256:b17f0da96b5a83d05660e371fd082e28c7d43328913c65b87b526d9bcc76e89a",
+        "status": "current",
+        "version": 2
+      },
+      "CC-BY-ND-3.0": {
+        "date": "2026-09-24",
+        "hash": "sha256:ce68410b32a633bc861bd3b96b4a8faf8891b0be0007e67e246a92778138f7a2",
+        "status": "current",
+        "version": 2
+      },
+      "CC-BY-ND-4.0": {
+        "date": "2026-09-24",
+        "hash": "sha256:b4830eca9ef39e4c72b75c44c49eb04b47518e0e44b0bfc439f0061119f91dad",
+        "status": "current",
+        "version": 2
+      },
+      "CC-BY-SA-1.0": {
+        "date": "2026-09-24",
+        "hash": "sha256:1d343b5a93110e10103f13cd1bd97220d176db5ee5a8a074be42ffc3b0b71945",
+        "status": "current",
+        "version": 2
+      },
+      "CC-BY-SA-2.0": {
+        "date": "2026-09-24",
+        "hash": "sha256:e241eefec4d283dea2718861621fb1ea48153f5f9632502404445763a24bdc7b",
+        "status": "current",
+        "version": 2
+      },
+      "CC-BY-SA-2.5": {
+        "date": "2026-09-24",
+        "hash": "sha256:4f68f8851c28e93c1b290ee8e8f812aba66581f0c587d19892362797867b8143",
+        "status": "current",
+        "version": 2
+      },
+      "CC-BY-SA-3.0": {
+        "date": "2026-09-24",
+        "hash": "sha256:0a23d0ec1176a21398fa7dba361ade7e6b28ddc5a6f9e7a86755a7eba6ffdf5a",
+        "status": "current",
+        "version": 2
+      },
+      "CC-BY-SA-4.0": {
+        "date": "2026-09-24",
+        "hash": "sha256:7ee6876e61ca84dd3dad196f6f1dcd5a88c463f21d0abf0ac43e8c8bba289a2c",
+        "status": "current",
+        "version": 2
+      },
+      "CC-PDDC": {
+        "date": "2026-09-24",
+        "hash": "sha256:54d4eacbe072da7ba1dd296b4e37936f28eaae65f4a51d0c84a461167fa00bd7",
+        "status": "current",
+        "version": 2
+      },
+      "CDDL-1.1": {
+        "date": "2026-09-24",
+        "hash": "sha256:d6e48c30ec81f4eea9d2806bebbe83a98c58c8613b6841856497fcd14f184da4",
+        "status": "current",
+        "version": 2
+      },
+      "CDLA-Permissive-1.0": {
+        "date": "2026-09-24",
+        "hash": "sha256:605c09d407e8009bbea6d1930c6637e56501c48482c68fe7af626a0e0345d96f",
+        "status": "current",
+        "version": 2
+      },
+      "CDLA-Permissive-2.0": {
+        "date": "2026-09-24",
+        "hash": "sha256:6e2dc6e12d4bca317e0f813c673d3a6aff0b9febde18ec45912e067a62431487",
+        "status": "current",
+        "version": 2
+      },
+      "CDLA-Sharing-1.0": {
+        "date": "2026-09-24",
+        "hash": "sha256:99a24726a49af719766af5ae68f9bc13f5ac1d5ec945f9b2c374720b914a704a",
+        "status": "current",
+        "version": 2
+      },
+      "CECILL-B": {
+        "date": "2026-09-24",
+        "hash": "sha256:456ab6a183afb8f0470552b4e4c53e9557c52c73aa849d6f16297cc13be46fb1",
+        "status": "current",
+        "version": 2
+      },
+      "CECILL-C": {
+        "date": "2026-09-24",
+        "hash": "sha256:6e30b139be06a050a1d682db5e3851cfc2143ee967b72d200226579be45a564f",
+        "status": "current",
+        "version": 2
+      },
+      "CERN-OHL-P-2.0": {
+        "date": "2026-09-24",
+        "hash": "sha256:35bc1d5db2d4364ae942d614f31b5f67388f9d67e93794d3f40e1da327a91776",
+        "status": "current",
+        "version": 2
+      },
+      "CERN-OHL-S-2.0": {
+        "date": "2026-09-24",
+        "hash": "sha256:c5a3560ce310df9ea03844c563b70309270c4b74b62852a2c6aaf27f47dcde1e",
+        "status": "current",
+        "version": 2
+      },
+      "CERN-OHL-W-2.0": {
+        "date": "2026-09-24",
+        "hash": "sha256:28005283177100e81d5c021bee1c9cf88cd1f2a0bc2a6e14efebe60d41d138bb",
+        "status": "current",
+        "version": 2
+      },
+      "CNRI-Python": {
+        "date": "2026-09-24",
+        "hash": "sha256:e3973dc8c775783ca5e8ab68b2735e188c6c973dab4bd7dbc0aa9f74fb0a19ac",
+        "status": "current",
+        "version": 2
+      },
+      "CNRI-Python-GPL-Compatible": {
+        "date": "2026-09-24",
+        "hash": "sha256:92f7608c3ad62e4753064d71497f2edc8863be2417aa7a79d91c18bfa8bae39c",
+        "status": "current",
+        "version": 2
+      },
+      "CPL-1.0": {
+        "date": "2026-09-24",
+        "hash": "sha256:827d809d260cb4e51ef9197105b5efe9da7fb45531edd18a5b3fd64ff2068ba9",
+        "status": "current",
+        "version": 2
+      },
+      "CUA-OPL-1.0": {
+        "date": "2026-09-24",
+        "hash": "sha256:d9dc8d14d39af33f8086f0f9f833feb38651a5ef5669df5f3cfdc5733dee3285",
+        "status": "current",
+        "version": 2
+      },
+      "Cc010Universal": {
+        "date": "2026-09-24",
+        "hash": "sha256:6f37bdccaf7a8f2d19db90615b184ba61ab8c061a039a05512b10a081f78329a",
+        "status": "current",
+        "version": 2
+      },
+      "CeaCnrsInriaLogicielLibreLicenseVersion21": {
+        "date": "2026-09-24",
+        "hash": "sha256:1918da66bdfe4d1a40ec56df66ade973aa18444cf3689fb77fb2d857eabd7379",
+        "status": "current",
+        "version": 2
+      },
+      "CommonDevelopmentAndDistributionLicense10": {
+        "date": "2026-09-24",
+        "hash": "sha256:cc478e96a81c02f7f188d40b673576133d3bffd8938d25b6415c2bf8170d9961",
+        "status": "current",
+        "version": 2
+      },
+      "CommonPublicAttributionLicenseVersion10": {
+        "date": "2026-09-24",
+        "hash": "sha256:59439264ed6c2114141e0c05f292e507566a65560389e49c3c64f074c265b590",
+        "status": "current",
+        "version": 2
+      },
+      "Confluent-Community-1.0": {
+        "date": "2026-09-24",
+        "hash": "sha256:930ac127570b37ecf2ef0f63173cf703868522b2dc6ac1a2e762bc613c3681d3",
+        "status": "current",
+        "version": 2
+      },
+      "CreativeCommonsAttribution20Australia": {
+        "date": "2026-09-24",
+        "hash": "sha256:f7975268bb6df810c3245d16b28553db4e97e32225765b4a966109e169a905c3",
+        "status": "current",
+        "version": 2
+      },
+      "CreativeCommonsAttribution20Austria": {
+        "date": "2026-09-24",
+        "hash": "sha256:b3744e49aa759d176d9a48b3488fc82f412b18209a894300a5e395194b64418b",
+        "status": "current",
+        "version": 2
+      },
+      "CreativeCommonsAttribution20Brazil": {
+        "date": "2026-09-24",
+        "hash": "sha256:e22e7c0713f8d99ac8781d937d9ab18d31b564e938e1a0f955a396badc6932ca",
+        "status": "current",
+        "version": 2
+      },
+      "CreativeCommonsAttribution20Chile": {
+        "date": "2026-09-24",
+        "hash": "sha256:a0e0f6cb0b51fd6ab129dbcaf25a43813e847dc6ed2a5a03230fd2e3c183e093",
+        "status": "current",
+        "version": 2
+      },
+      "CreativeCommonsAttribution20Croatia": {
+        "date": "2026-09-24",
+        "hash": "sha256:3b778ed69142c892ae3531bf73d0360f570a5692098e38636f4a4f0c7791f5c4",
+        "status": "current",
+        "version": 2
+      },
+      "CreativeCommonsAttribution20France": {
+        "date": "2026-09-24",
+        "hash": "sha256:35e4a378310c60c2f836507be6ce1534b0fbd99bcff3c16f0920e824b129a76f",
+        "status": "current",
+        "version": 2
+      },
+      "CreativeCommonsAttribution20Germany": {
+        "date": "2026-09-24",
+        "hash": "sha256:bfc628de001186365103fca666408833bbbae9099845c33bbbda58af72552037",
+        "status": "current",
+        "version": 2
+      },
+      "CreativeCommonsAttribution20Italy": {
+        "date": "2026-09-24",
+        "hash": "sha256:cb6cc4edcdf1146a21d0d0f9b90c754d6c04fc2339f069fa1616f52a70633240",
+        "status": "current",
+        "version": 2
+      },
+      "CreativeCommonsAttribution20Japan": {
+        "date": "2026-09-24",
+        "hash": "sha256:f664f6c39291aee5225e4ccbe466fa0330ac773a87bd0b72174f0e223342b32b",
+        "status": "current",
+        "version": 2
+      },
+      "CreativeCommonsAttribution20KoreaSouth": {
+        "date": "2026-09-24",
+        "hash": "sha256:e5843f12e127a759607b7a01cbe8d5a4fe167b611d692e8e3f5c576a8e233b34",
+        "status": "current",
+        "version": 2
+      },
+      "CreativeCommonsAttribution20Netherlands": {
+        "date": "2026-09-24",
+        "hash": "sha256:544bf008e94d833bdf65dd812c7b9101e922b03ce076ddbcce890dcae61fa631",
+        "status": "current",
+        "version": 2
+      },
+      "CreativeCommonsAttribution20Poland": {
+        "date": "2026-09-24",
+        "hash": "sha256:dbcc365df060c0d39c7ba712ba2dbc48dc67288c24ed007f423605f86ddb54fa",
+        "status": "current",
+        "version": 2
+      },
+      "CreativeCommonsAttribution20SouthAfrica": {
+        "date": "2026-09-24",
+        "hash": "sha256:8e4531ff2c3ad3c66f2663104f4ae347ee3b0632f5df04d91ce05367c6533e0d",
+        "status": "current",
+        "version": 2
+      },
+      "CreativeCommonsAttribution30Armenia": {
+        "date": "2026-09-24",
+        "hash": "sha256:50da2ac8ecee6bfd2f200cdc57597e2f8f40369565d958bff494072b02f51958",
+        "status": "current",
+        "version": 2
+      },
+      "CreativeCommonsAttribution30Australia": {
+        "date": "2026-09-24",
+        "hash": "sha256:76632378584f46d2d3bf5587c04768d434ddd4c513888518f45802cf0754fb48",
+        "status": "current",
+        "version": 2
+      },
+      "CreativeCommonsAttribution30Austria": {
+        "date": "2026-09-24",
+        "hash": "sha256:8474109223d35948b78782c7044e9659cf217e8a888077c31f865f4d43775501",
+        "status": "current",
+        "version": 2
+      },
+      "CreativeCommonsAttribution30Azerbaijan": {
+        "date": "2026-09-24",
+        "hash": "sha256:253cbb71e823e89e3487c488a4b24f8997d44ccb140790f7b01ad7f45746ff1a",
+        "status": "current",
+        "version": 2
+      },
+      "CreativeCommonsAttribution30Brazil": {
+        "date": "2026-09-24",
+        "hash": "sha256:4d367694da27cd635c55ea3b4a358a354f3b78f15baa878755d328f3281acaf9",
+        "status": "current",
+        "version": 2
+      },
+      "CreativeCommonsAttribution30Chile": {
+        "date": "2026-09-24",
+        "hash": "sha256:8b06abbc5bc408098d13990531f2499d2fbd05c76acea81408b7fb3e4d768e48",
+        "status": "current",
+        "version": 2
+      },
+      "CreativeCommonsAttribution30China": {
+        "date": "2026-09-24",
+        "hash": "sha256:ccb602f4988864b945b50b4ad1fa30c34c34504eb568838e1a802831b8cdc219",
+        "status": "current",
+        "version": 2
+      },
+      "CreativeCommonsAttribution30CostaRica": {
+        "date": "2026-09-24",
+        "hash": "sha256:4b41f33c907e17a41e819ce6a22206dcae30296b25efd3fa1d7063412eb920b2",
+        "status": "current",
+        "version": 2
+      },
+      "CreativeCommonsAttribution30Croatia": {
+        "date": "2026-09-24",
+        "hash": "sha256:eee13126911cc0dd601426ab6b2aee439eca6c785dc60fa31cd7694963b177c6",
+        "status": "current",
+        "version": 2
+      },
+      "CreativeCommonsAttribution30Czechia": {
+        "date": "2026-09-24",
+        "hash": "sha256:87383564f2f0e18f3e66cb984385b70490360543c6fe01faa9d091641896f7e5",
+        "status": "current",
+        "version": 2
+      },
+      "CreativeCommonsAttribution30Ecuador": {
+        "date": "2026-09-24",
+        "hash": "sha256:073ce20b017b699a1aa02e59404711715cc33ad3675dca90b7f3d148ebca45ee",
+        "status": "current",
+        "version": 2
+      },
+      "CreativeCommonsAttribution30Egypt": {
+        "date": "2026-09-24",
+        "hash": "sha256:2f2754d1e7fdc74af2c2a3157ffd6e977cb40b980cd8cbd106d9ad7ed6b60963",
+        "status": "current",
+        "version": 2
+      },
+      "CreativeCommonsAttribution30Estonia": {
+        "date": "2026-09-24",
+        "hash": "sha256:4978b6ca58e55ad521a2c8dfc0f40b3eca8d54b947607ec53ef81d9591fdb3fe",
+        "status": "current",
+        "version": 2
+      },
+      "CreativeCommonsAttribution30France": {
+        "date": "2026-09-24",
+        "hash": "sha256:d3528724237a3b4dd27f553f5b495b17dfcde7139f1dac2120a3f030be09ec06",
+        "status": "current",
+        "version": 2
+      },
+      "CreativeCommonsAttribution30Georgia": {
+        "date": "2026-09-24",
+        "hash": "sha256:24a30ecbd3b3710bb1924b5aefa423b12568ea761cb28cb76d853ae2fa844af6",
+        "status": "current",
+        "version": 2
+      },
+      "CreativeCommonsAttribution30Germany": {
+        "date": "2026-09-24",
+        "hash": "sha256:df55db640783067626b0d739fc8e8addb25cd1dec1992677b3662fced0bef7a9",
+        "status": "current",
+        "version": 2
+      },
+      "CreativeCommonsAttribution30Greece": {
+        "date": "2026-09-24",
+        "hash": "sha256:1f11d6cdb5b5f603f16d6d04eb58d44a0c9e07bf47577877107473e70904b780",
+        "status": "current",
+        "version": 2
+      },
+      "CreativeCommonsAttribution30Guatemala": {
+        "date": "2026-09-24",
+        "hash": "sha256:e5349d61d9cb8b7e72134a14090d0a3af4d87e1bc2dfd59f93db6d0dbb50208a",
+        "status": "current",
+        "version": 2
+      },
+      "CreativeCommonsAttribution30Ireland": {
+        "date": "2026-09-24",
+        "hash": "sha256:622c9555a99234adb188e29ed71124e66162a0d25ec9596896efdb812d6d36f4",
+        "status": "current",
+        "version": 2
+      },
+      "CreativeCommonsAttribution30Italy": {
+        "date": "2026-09-24",
+        "hash": "sha256:0da664b8c6c20933b38103a6f5e1d84d6faf53943c29373720f95f4ab7521171",
+        "status": "current",
+        "version": 2
+      },
+      "CreativeCommonsAttribution30Luxembourg": {
+        "date": "2026-09-24",
+        "hash": "sha256:ee5db66ee0f3fdbb99542855e762a9c4d61e11a96fbe55ba63e8f9de4c19a3d9",
+        "status": "current",
+        "version": 2
+      },
+      "CreativeCommonsAttribution30Netherlands": {
+        "date": "2026-09-24",
+        "hash": "sha256:26ce64df42612b78537be12bacbac48078c3194af4eedf63d6fac09d5957ee98",
+        "status": "current",
+        "version": 2
+      },
+      "CreativeCommonsAttribution30NewZealand": {
+        "date": "2026-09-24",
+        "hash": "sha256:e227fb5141e050c4b772b6eaf63234d14d4495ba6f963aad96e3b8cae121523d",
+        "status": "current",
+        "version": 2
+      },
+      "CreativeCommonsAttribution30Norway": {
+        "date": "2026-09-24",
+        "hash": "sha256:99a19b8fa56a5dd1e7b078f5b84fe0f3528917dea078965c86e0d6e306bd5562",
+        "status": "current",
+        "version": 2
+      },
+      "CreativeCommonsAttribution30Philippines": {
+        "date": "2026-09-24",
+        "hash": "sha256:f0864a3531bf18517c2f5a72175da73d45538b26fd18d8729545a03716fbe96f",
+        "status": "current",
+        "version": 2
+      },
+      "CreativeCommonsAttribution30Poland": {
+        "date": "2026-09-24",
+        "hash": "sha256:20a4822175515fb7d66562958f65131c40eac02e528e1f6efec1fbbd53adef43",
+        "status": "current",
+        "version": 2
+      },
+      "CreativeCommonsAttribution30Portugal": {
+        "date": "2026-09-24",
+        "hash": "sha256:994460da4e28c9e5f5fd3182c39240cb7f7db5f7cdc2c68a0df2276d43b93419",
+        "status": "current",
+        "version": 2
+      },
+      "CreativeCommonsAttribution30Romania": {
+        "date": "2026-09-24",
+        "hash": "sha256:5b0ea6865779a10fa10f10e46288339701313a24ede21e4e1264b37468ae7956",
+        "status": "current",
+        "version": 2
+      },
+      "CreativeCommonsAttribution30Singapore": {
+        "date": "2026-09-24",
+        "hash": "sha256:ac672bb83bb26211454ad6662bcea2cd0805b3ab6c69b6bdbc165b5456b84d25",
+        "status": "current",
+        "version": 2
+      },
+      "CreativeCommonsAttribution30SouthAfrica": {
+        "date": "2026-09-24",
+        "hash": "sha256:c23ea76ee6eec62392c82c62f283538aec877e6dc063bb5ac6e2079fa8bdd964",
+        "status": "current",
+        "version": 2
+      },
+      "CreativeCommonsAttribution30Thailand": {
+        "date": "2026-09-24",
+        "hash": "sha256:a8ed08d5ae816474af6323d32c90adee8f5e784ea715f06a0078242494bbd3ea",
+        "status": "current",
+        "version": 2
+      },
+      "CreativeCommonsAttribution30Uganda": {
+        "date": "2026-09-24",
+        "hash": "sha256:cd86a6f8aaa9564d283af58d071c956c3c40ea1dd4bcb4d3d5596b3731bda4cd",
+        "status": "current",
+        "version": 2
+      },
+      "CreativeCommonsAttribution30UnitedStatesofAmerica": {
+        "date": "2026-09-24",
+        "hash": "sha256:96f8f93263156d5013b4ec9616b0f6b003f78790074cabeb059e802b7cd108ee",
+        "status": "current",
+        "version": 2
+      },
+      "CreativeCommonsAttribution30Venezuela": {
+        "date": "2026-09-24",
+        "hash": "sha256:77c7b9a4e8287d0dc5868ef0d450e1ba08b1aa7916e7f4b505fcbffaba6daba7",
+        "status": "current",
+        "version": 2
+      },
+      "CreativeCommonsAttribution30Vietnam": {
+        "date": "2026-09-24",
+        "hash": "sha256:b7c31b81fc19368048360eee02411c270f25d7267e6d6c306b3b025d5c9614b7",
+        "status": "current",
+        "version": 2
+      },
+      "CreativeCommonsAttributionNoderivs20Australia": {
+        "date": "2026-09-24",
+        "hash": "sha256:4a7442ee25ecdd4e4a48b2dc9519a2c1e41c8d184086b32b7202d4f5ca3f0e76",
+        "status": "current",
+        "version": 2
+      },
+      "CreativeCommonsAttributionNoderivs20Austria": {
+        "date": "2026-09-24",
+        "hash": "sha256:d9a35bf1065c4b74793360a91ee7c358c681853b82bfb209dd57cf6e6418d1ff",
+        "status": "current",
+        "version": 2
+      },
+      "CreativeCommonsAttributionNoderivs20Brazil": {
+        "date": "2026-09-24",
+        "hash": "sha256:e1c3a5efe085b31e3e27b43c5292ec425cae20860b4b5ea0a8bc1f794af4a719",
+        "status": "current",
+        "version": 2
+      },
+      "CreativeCommonsAttributionNoderivs20Chile": {
+        "date": "2026-09-24",
+        "hash": "sha256:d913156c3fd4820597ce32cc65ac939a4d41075d0085c06c2e5726e673523118",
+        "status": "current",
+        "version": 2
+      },
+      "CreativeCommonsAttributionNoderivs20Croatia": {
+        "date": "2026-09-24",
+        "hash": "sha256:f470db4d4c231144fb753bb3f6551d1dc0380abc0d2ec03bccd3d5d9feec23ff",
+        "status": "current",
+        "version": 2
+      },
+      "CreativeCommonsAttributionNoderivs20France": {
+        "date": "2026-09-24",
+        "hash": "sha256:886d2a0cbe2d36c9b0860b1e8c82e37740e27eb907f547c3bb862f47e03dbb31",
+        "status": "current",
+        "version": 2
+      },
+      "CreativeCommonsAttributionNoderivs20Germany": {
+        "date": "2026-09-24",
+        "hash": "sha256:3cb8ee21eeca0f3ec1b93d6cbfdc5064a9a18979e8917dfa266e82bb0583565d",
+        "status": "current",
+        "version": 2
+      },
+      "CreativeCommonsAttributionNoderivs20Italy": {
+        "date": "2026-09-24",
+        "hash": "sha256:0cdbf2c753fc8b2a36b655c067e49a9c8c385b68d462abadf8914b78ce8f4e88",
+        "status": "current",
+        "version": 2
+      },
+      "CreativeCommonsAttributionNoderivs20Japan": {
+        "date": "2026-09-24",
+        "hash": "sha256:34138fea9f8b6a1ea8db1413a55dca6bdc8cfef24eda085f28d2863e2702540e",
+        "status": "current",
+        "version": 2
+      },
+      "CreativeCommonsAttributionNoderivs20KoreaSouth": {
+        "date": "2026-09-24",
+        "hash": "sha256:48b9ab87204186799c8f24584263e0a83d228f7d24553b67a0d3f0a070e2c213",
+        "status": "current",
+        "version": 2
+      },
+      "CreativeCommonsAttributionNoderivs20Netherlands": {
+        "date": "2026-09-24",
+        "hash": "sha256:f1ef10acac6cb1daf6ce0bd05e2e55b45ec4c477d57ad58d0a4416c08d83b230",
+        "status": "current",
+        "version": 2
+      },
+      "CreativeCommonsAttributionNoderivs20Poland": {
+        "date": "2026-09-24",
+        "hash": "sha256:4133a0ac69e39e6248f6118b19deb892122b43e58e96603a98e1ebe1b26c68a7",
+        "status": "current",
+        "version": 2
+      },
+      "CreativeCommonsAttributionNoderivs20SouthAfrica": {
+        "date": "2026-09-24",
+        "hash": "sha256:832ae4275910aad4c06292ffb72858f3b0ae8d039763abf579dbfa8348b061d1",
+        "status": "current",
+        "version": 2
+      },
+      "CreativeCommonsAttributionNoderivs30Armenia": {
+        "date": "2026-09-24",
+        "hash": "sha256:483eb5d6a52a253b102c83e3785626f06f9af4ace32cb17fffd0d088b4895f76",
+        "status": "current",
+        "version": 2
+      },
+      "CreativeCommonsAttributionNoderivs30Australia": {
+        "date": "2026-09-24",
+        "hash": "sha256:ddb447afc52dd1cceddc6180f941b4476cb4450fcc19732650c0d4621a34cf40",
+        "status": "current",
+        "version": 2
+      },
+      "CreativeCommonsAttributionNoderivs30Austria": {
+        "date": "2026-09-24",
+        "hash": "sha256:1578a10dda9406bcf2ad6fb31d46cd60caf0837098f4a6b90c9843d76875ace3",
+        "status": "current",
+        "version": 2
+      },
+      "CreativeCommonsAttributionNoderivs30Azerbaijan": {
+        "date": "2026-09-24",
+        "hash": "sha256:09a129ecdd3f02951fc059322bc74f4a4a56472481d1059ede84567aa5332814",
+        "status": "current",
+        "version": 2
+      },
+      "CreativeCommonsAttributionNoderivs30Brazil": {
+        "date": "2026-09-24",
+        "hash": "sha256:373da4ffe23d4b9fd7598ebb76289e37b33b97c2a9559c2a25c42788c5d2a8b5",
+        "status": "current",
+        "version": 2
+      },
+      "CreativeCommonsAttributionNoderivs30Chile": {
+        "date": "2026-09-24",
+        "hash": "sha256:dfccf5e3ea9fc6253c4ac48f187660e6f41dce712a455a54122ea6954be9d50f",
+        "status": "current",
+        "version": 2
+      },
+      "CreativeCommonsAttributionNoderivs30China": {
+        "date": "2026-09-24",
+        "hash": "sha256:0ca8ca96e294d59cdd9cf31af6ded091e4e27a882d4bdfcb1381251c332e0460",
+        "status": "current",
+        "version": 2
+      },
+      "CreativeCommonsAttributionNoderivs30CostaRica": {
+        "date": "2026-09-24",
+        "hash": "sha256:ef64efd04ab74800a42bdee6f7394f135181faa7ed717d610ae42a64d75e1cdb",
+        "status": "current",
+        "version": 2
+      },
+      "CreativeCommonsAttributionNoderivs30Croatia": {
+        "date": "2026-09-24",
+        "hash": "sha256:8069b4e5a6d7cb0684056f737bc17877f6ddb7ac92aa8e55d85ad27670699710",
+        "status": "current",
+        "version": 2
+      },
+      "CreativeCommonsAttributionNoderivs30Czechia": {
+        "date": "2026-09-24",
+        "hash": "sha256:065def250fa46c6bd4b3c287b6cd147aa409aa1035e3ba3c1e1f4f66fb638828",
+        "status": "current",
+        "version": 2
+      },
+      "CreativeCommonsAttributionNoderivs30Ecuador": {
+        "date": "2026-09-24",
+        "hash": "sha256:2c0614f4ea0895567cb248ea9404d15eaa4460bbbe1c66f1e455b8c30d18b0bc",
+        "status": "current",
+        "version": 2
+      },
+      "CreativeCommonsAttributionNoderivs30Egypt": {
+        "date": "2026-09-24",
+        "hash": "sha256:7f2ac87d191c5e5538d53df5d939ab51f6bc5d8702894734020099f15a0440d4",
+        "status": "current",
+        "version": 2
+      },
+      "CreativeCommonsAttributionNoderivs30Estonia": {
+        "date": "2026-09-24",
+        "hash": "sha256:795f25ed9c06443c83aa6aace0ae6b0d85e87fd1d616d7bbb658f321a7a1cfdd",
+        "status": "current",
+        "version": 2
+      },
+      "CreativeCommonsAttributionNoderivs30France": {
+        "date": "2026-09-24",
+        "hash": "sha256:fa8484ff4d56bae1b0545d0717099005a0002f134cb5f2f32c6dc4c6016c9421",
+        "status": "current",
+        "version": 2
+      },
+      "CreativeCommonsAttributionNoderivs30Georgia": {
+        "date": "2026-09-24",
+        "hash": "sha256:f04b6d97880ac88a472967eb0cee26879df9f1718e616ee751997bee0144e448",
+        "status": "current",
+        "version": 2
+      },
+      "CreativeCommonsAttributionNoderivs30Germany": {
+        "date": "2026-09-24",
+        "hash": "sha256:329e829dc70069eb79c71858bfa3706c149ed361856424b39a7b238a8a43a8b7",
+        "status": "current",
+        "version": 2
+      },
+      "CreativeCommonsAttributionNoderivs30Greece": {
+        "date": "2026-09-24",
+        "hash": "sha256:2229a9e69ad25e81528c57d9a31378d52224c31e9eb8c5b9b3a1f1f8dcb93f14",
+        "status": "current",
+        "version": 2
+      },
+      "CreativeCommonsAttributionNoderivs30Guatemala": {
+        "date": "2026-09-24",
+        "hash": "sha256:536953df6d175c57d6c6d326c5c2a350563097696ab2612ca0a9e59445415044",
+        "status": "current",
+        "version": 2
+      },
+      "CreativeCommonsAttributionNoderivs30Ireland": {
+        "date": "2026-09-24",
+        "hash": "sha256:1cb759d562c26a13bc873fc3aefe40a2b15b6db01e0592eafbb209b3c91a924d",
+        "status": "current",
+        "version": 2
+      },
+      "CreativeCommonsAttributionNoderivs30Italy": {
+        "date": "2026-09-24",
+        "hash": "sha256:9fd1cd9ceffd4d00d02225700c73bb6b4abf08690f99bc7a1fe2a0a723f5262c",
+        "status": "current",
+        "version": 2
+      },
+      "CreativeCommonsAttributionNoderivs30Luxembourg": {
+        "date": "2026-09-24",
+        "hash": "sha256:78e031654389377efc3ed5d4889218458e513ef574d4b0f252d3891639208525",
+        "status": "current",
+        "version": 2
+      },
+      "CreativeCommonsAttributionNoderivs30Netherlands": {
+        "date": "2026-09-24",
+        "hash": "sha256:9c317be1cf68ce6d3b5b7137b8115aa3c692de49ae55b8cddc79db8798724bf8",
+        "status": "current",
+        "version": 2
+      },
+      "CreativeCommonsAttributionNoderivs30NewZealand": {
+        "date": "2026-09-24",
+        "hash": "sha256:0311306439610435274e4f57378577633b80f92446218d1204f3920efd19f3d2",
+        "status": "current",
+        "version": 2
+      },
+      "CreativeCommonsAttributionNoderivs30Norway": {
+        "date": "2026-09-24",
+        "hash": "sha256:be4e79d8cf4ee15bebffc637174f320146e93c23a33d75db5c05a5556792033f",
+        "status": "current",
+        "version": 2
+      },
+      "CreativeCommonsAttributionNoderivs30Philippines": {
+        "date": "2026-09-24",
+        "hash": "sha256:94215c4d97954c1778c28b0b3b2036406bf9699fa164e12d6cd2e324b32deba7",
+        "status": "current",
+        "version": 2
+      },
+      "CreativeCommonsAttributionNoderivs30Poland": {
+        "date": "2026-09-24",
+        "hash": "sha256:2cd5360a14ce463ac8db65c573395fde84b3dc6c10c994d4db15eb034721142c",
+        "status": "current",
+        "version": 2
+      },
+      "CreativeCommonsAttributionNoderivs30Portugal": {
+        "date": "2026-09-24",
+        "hash": "sha256:ba281f50c87433b302b8e7f61b6e94ba15d73fc6048a36be369e82834a6ee9b9",
+        "status": "current",
+        "version": 2
+      },
+      "CreativeCommonsAttributionNoderivs30Romania": {
+        "date": "2026-09-24",
+        "hash": "sha256:b055fb19c8f27c86eb0b804ecb2a9862c3177a3935679bfa88968dcc47eb13d0",
+        "status": "current",
+        "version": 2
+      },
+      "CreativeCommonsAttributionNoderivs30Singapore": {
+        "date": "2026-09-24",
+        "hash": "sha256:61a8420665288cd8620a1e478090659d10a8d44369465ec2322059027306decc",
+        "status": "current",
+        "version": 2
+      },
+      "CreativeCommonsAttributionNoderivs30SouthAfrica": {
+        "date": "2026-09-24",
+        "hash": "sha256:1d1e11e20ebf03de743f608e854371a281d84c406c513a87cbc1d2b31a916c1a",
+        "status": "current",
+        "version": 2
+      },
+      "CreativeCommonsAttributionNoderivs30Thailand": {
+        "date": "2026-09-24",
+        "hash": "sha256:e1f90528de9ce83a5eba82209eb26623e55d9a7d2200ecb7a914b4ff009b7e31",
+        "status": "current",
+        "version": 2
+      },
+      "CreativeCommonsAttributionNoderivs30Uganda": {
+        "date": "2026-09-24",
+        "hash": "sha256:f8c1be11249cb12b31c9ad19a3f1d93e13c0adcdd5ac4d0f4e99c101df20471c",
+        "status": "current",
+        "version": 2
+      },
+      "CreativeCommonsAttributionNoderivs30UnitedStatesofAmerica": {
+        "date": "2026-09-24",
+        "hash": "sha256:b867cb92be383ae817e6ef61ec3d4af5fdd4b7e70d9a1fc6f8a5687a7f0cfdb6",
+        "status": "current",
+        "version": 2
+      },
+      "CreativeCommonsAttributionNoderivs30Venezuela": {
+        "date": "2026-09-24",
+        "hash": "sha256:88d6ef7ea48c6a3a75b115b91f0379fa3c0b543bf4111ea162ac9576e4b9edda",
+        "status": "current",
+        "version": 2
+      },
+      "CreativeCommonsAttributionNoderivs30Vietnam": {
+        "date": "2026-09-24",
+        "hash": "sha256:5e1baa890c9a996c233bd578b07dc40fdcbe1128325d63ede216d801ec098fb3",
+        "status": "current",
+        "version": 2
+      },
+      "CreativeCommonsAttributionNoncommercialNoderivs20Australia": {
+        "date": "2026-09-24",
+        "hash": "sha256:36fef3f8dc13afb0978f935049381752fde986f0165fcc275b6bc72fb97dc6be",
+        "status": "current",
+        "version": 2
+      },
+      "CreativeCommonsAttributionNoncommercialNoderivs20Austria": {
+        "date": "2026-09-24",
+        "hash": "sha256:42953fb15e64f76318f22d09e6c9758660ec47a7c0e6e888d018016b301cac76",
+        "status": "current",
+        "version": 2
+      },
+      "CreativeCommonsAttributionNoncommercialNoderivs20Brazil": {
+        "date": "2026-09-24",
+        "hash": "sha256:91bd70ed7f32b336fe80f9165a6c5e98fd59ef31711f49144441a4055d12aef7",
+        "status": "current",
+        "version": 2
+      },
+      "CreativeCommonsAttributionNoncommercialNoderivs20Chile": {
+        "date": "2026-09-24",
+        "hash": "sha256:e800af621dd48bd89a9dec8d5cab838771c5129eff8c7a1dfe8b3c9e9bd3807f",
+        "status": "current",
+        "version": 2
+      },
+      "CreativeCommonsAttributionNoncommercialNoderivs20Croatia": {
+        "date": "2026-09-24",
+        "hash": "sha256:44ce70223f9373cf110fd01d1b6390db402f86dc810c1df842e7b6b663f89fb3",
+        "status": "current",
+        "version": 2
+      },
+      "CreativeCommonsAttributionNoncommercialNoderivs20France": {
+        "date": "2026-09-24",
+        "hash": "sha256:c5693fb4b8288451c997d5acb984bda7c4d5d4c4241659281af7094fbf59e7aa",
+        "status": "current",
+        "version": 2
+      },
+      "CreativeCommonsAttributionNoncommercialNoderivs20Germany": {
+        "date": "2026-09-24",
+        "hash": "sha256:a9027e9563a169ea8475bedc21e0b946ccde551b340a7f6cc0dca8696728efe8",
+        "status": "current",
+        "version": 2
+      },
+      "CreativeCommonsAttributionNoncommercialNoderivs20Italy": {
+        "date": "2026-09-24",
+        "hash": "sha256:a83ccfb7e0b5578a58f26327d2ed6e7d7fc5d3aef35cada588aa4a530b05046d",
+        "status": "current",
+        "version": 2
+      },
+      "CreativeCommonsAttributionNoncommercialNoderivs20Japan": {
+        "date": "2026-09-24",
+        "hash": "sha256:f3d8ecc9eb673341cb3bda0696940027ae30cefd1c3cea263ead00e1c067e4c7",
+        "status": "current",
+        "version": 2
+      },
+      "CreativeCommonsAttributionNoncommercialNoderivs20KoreaSouth": {
+        "date": "2026-09-24",
+        "hash": "sha256:29529bbd78fefc9c1fe23be98dfeba457d5d0c8e7a27cc1ef88f65c50d96259b",
+        "status": "current",
+        "version": 2
+      },
+      "CreativeCommonsAttributionNoncommercialNoderivs20Netherlands": {
+        "date": "2026-09-24",
+        "hash": "sha256:e911cb16de5599b8504ee38e0a5b195a945c74ef9d86ba44659ecf6483b1283e",
+        "status": "current",
+        "version": 2
+      },
+      "CreativeCommonsAttributionNoncommercialNoderivs20Poland": {
+        "date": "2026-09-24",
+        "hash": "sha256:e05582575f52d66a5e645ab0200e946e0a36542b58f198314f27ac5c636b6c78",
+        "status": "current",
+        "version": 2
+      },
+      "CreativeCommonsAttributionNoncommercialNoderivs20SouthAfrica": {
+        "date": "2026-09-24",
+        "hash": "sha256:eb8f61733ea25a8a94ff05166894992fb57d5097145f0b79bd1b8523fc47bb0c",
+        "status": "current",
+        "version": 2
+      },
+      "CreativeCommonsAttributionNoncommercialNoderivs30Armenia": {
+        "date": "2026-09-24",
+        "hash": "sha256:19bd374e0a2df8b63039b0a1959d5e6ea72fff18854627e008433a2a23f50964",
+        "status": "current",
+        "version": 2
+      },
+      "CreativeCommonsAttributionNoncommercialNoderivs30Australia": {
+        "date": "2026-09-24",
+        "hash": "sha256:836674da89b4f1a2e947343e8a2f3042e3df0063cbe44022889c8440f24a0628",
+        "status": "current",
+        "version": 2
+      },
+      "CreativeCommonsAttributionNoncommercialNoderivs30Austria": {
+        "date": "2026-09-24",
+        "hash": "sha256:4e0669d00614e599a510ec21bacfe76db4d2fbc9ebfb790657159b911507a418",
+        "status": "current",
+        "version": 2
+      },
+      "CreativeCommonsAttributionNoncommercialNoderivs30Azerbaijan": {
+        "date": "2026-09-24",
+        "hash": "sha256:01c4fc959b461c092d2334e2b394771e70d9708955f17b38531d687c736c4e9e",
+        "status": "current",
+        "version": 2
+      },
+      "CreativeCommonsAttributionNoncommercialNoderivs30Brazil": {
+        "date": "2026-09-24",
+        "hash": "sha256:c6297b74ae7381e611f18d045ff9a658b4a71246b1870519f86c75a0f6d35cd1",
+        "status": "current",
+        "version": 2
+      },
+      "CreativeCommonsAttributionNoncommercialNoderivs30Chile": {
+        "date": "2026-09-24",
+        "hash": "sha256:b246ca44a952e03287cc3273974366616d62bb4e4b594d52d73a621f6da86bd6",
+        "status": "current",
+        "version": 2
+      },
+      "CreativeCommonsAttributionNoncommercialNoderivs30China": {
+        "date": "2026-09-24",
+        "hash": "sha256:f88e4b7251a31b3421ae62594b29bf757a8256b2bb789841a4d09859e2b25c4c",
+        "status": "current",
+        "version": 2
+      },
+      "CreativeCommonsAttributionNoncommercialNoderivs30CostaRica": {
+        "date": "2026-09-24",
+        "hash": "sha256:3d637e7853f7e9e7b38e39186253c420798cff47ea4c7bc57ab7f6593b719c62",
+        "status": "current",
+        "version": 2
+      },
+      "CreativeCommonsAttributionNoncommercialNoderivs30Croatia": {
+        "date": "2026-09-24",
+        "hash": "sha256:de7b6d1e610efa01022ac7273118bbc8aae3bbddccc209f3caa7502b1f06a637",
+        "status": "current",
+        "version": 2
+      },
+      "CreativeCommonsAttributionNoncommercialNoderivs30Czechia": {
+        "date": "2026-09-24",
+        "hash": "sha256:bd14b86510f123d131793d36080912219b69ae712f143777e02acc1a4126cfe1",
+        "status": "current",
+        "version": 2
+      },
+      "CreativeCommonsAttributionNoncommercialNoderivs30Ecuador": {
+        "date": "2026-09-24",
+        "hash": "sha256:e715871ce615d16089f6d2ad16e4a4f83cb84771b81b49cfe779109ffeba7715",
+        "status": "current",
+        "version": 2
+      },
+      "CreativeCommonsAttributionNoncommercialNoderivs30Egypt": {
+        "date": "2026-09-24",
+        "hash": "sha256:0e18bee55e0e40dcc6e511c80e1f4ffe1822874a8c41ef8258b8d82d78f35c0e",
+        "status": "current",
+        "version": 2
+      },
+      "CreativeCommonsAttributionNoncommercialNoderivs30Estonia": {
+        "date": "2026-09-24",
+        "hash": "sha256:4a3e8e4d9d265ae7833bbe6133219e91c9ce4307feb75149294b818f4c1434ef",
+        "status": "current",
+        "version": 2
+      },
+      "CreativeCommonsAttributionNoncommercialNoderivs30France": {
+        "date": "2026-09-24",
+        "hash": "sha256:1835c784e524fa5adac82d140912990462aebc2a533f6ba092c4e695b3e8457d",
+        "status": "current",
+        "version": 2
+      },
+      "CreativeCommonsAttributionNoncommercialNoderivs30Georgia": {
+        "date": "2026-09-24",
+        "hash": "sha256:ea6d409e6508d0d37618728af49d0300dbc0f9e03e91e2c28532439d07b7d5a1",
+        "status": "current",
+        "version": 2
+      },
+      "CreativeCommonsAttributionNoncommercialNoderivs30Germany": {
+        "date": "2026-09-24",
+        "hash": "sha256:82d644764b6efbfccf2b3e953be2a6397fd2df44731a646dbc88fbda15ea1a76",
+        "status": "current",
+        "version": 2
+      },
+      "CreativeCommonsAttributionNoncommercialNoderivs30Greece": {
+        "date": "2026-09-24",
+        "hash": "sha256:6f36e8adac1146a22e109e7592f2a28bcbd97d0c773cbc0a3198535b429dcc32",
+        "status": "current",
+        "version": 2
+      },
+      "CreativeCommonsAttributionNoncommercialNoderivs30Guatemala": {
+        "date": "2026-09-24",
+        "hash": "sha256:a294fc32f51ea64993044d2adb47f356d2afe2479bbd2d6f2c98cfdb2c56c526",
+        "status": "current",
+        "version": 2
+      },
+      "CreativeCommonsAttributionNoncommercialNoderivs30Ireland": {
+        "date": "2026-09-24",
+        "hash": "sha256:122562b79469f1f4d02541b576a0cc646ff7f7f77c9a636d3fd172cebc72dc01",
+        "status": "current",
+        "version": 2
+      },
+      "CreativeCommonsAttributionNoncommercialNoderivs30Italy": {
+        "date": "2026-09-24",
+        "hash": "sha256:caae821f587d4c1e34cd1fac05afc760d5ba1d5e73ac04c5517fbab200a78086",
+        "status": "current",
+        "version": 2
+      },
+      "CreativeCommonsAttributionNoncommercialNoderivs30Luxembourg": {
+        "date": "2026-09-24",
+        "hash": "sha256:a067e413c8bc22a1f345f76cb3b80a14cb11f2175603f215f84611bbda89f09a",
+        "status": "current",
+        "version": 2
+      },
+      "CreativeCommonsAttributionNoncommercialNoderivs30Netherlands": {
+        "date": "2026-09-24",
+        "hash": "sha256:453c6e8021a9ffec3ad7c235729a15e27d2fc00b9cc93f4dc63490b32b853bae",
+        "status": "current",
+        "version": 2
+      },
+      "CreativeCommonsAttributionNoncommercialNoderivs30NewZealand": {
+        "date": "2026-09-24",
+        "hash": "sha256:43779874a817a938dcd3c4842eb8b2c2a3d896232a51fdb3b90519f528854a1e",
+        "status": "current",
+        "version": 2
+      },
+      "CreativeCommonsAttributionNoncommercialNoderivs30Norway": {
+        "date": "2026-09-24",
+        "hash": "sha256:dacd2c0ffc071a75f2e223c3d6339118968a136ffad31621587a109b2a9c73c6",
+        "status": "current",
+        "version": 2
+      },
+      "CreativeCommonsAttributionNoncommercialNoderivs30Philippines": {
+        "date": "2026-09-24",
+        "hash": "sha256:96b592d2328335cce2a6ef523a5bf73d81552b76085a7350762e34eed97fb39e",
+        "status": "current",
+        "version": 2
+      },
+      "CreativeCommonsAttributionNoncommercialNoderivs30Poland": {
+        "date": "2026-09-24",
+        "hash": "sha256:335a47b98345af420884e623f1f4bb220ed028b0a1b72164079030d08598fb3e",
+        "status": "current",
+        "version": 2
+      },
+      "CreativeCommonsAttributionNoncommercialNoderivs30Portugal": {
+        "date": "2026-09-24",
+        "hash": "sha256:e49db532e6a8ddcdca493551d4aa675071e77c7c544725371e765fbee3f9af88",
+        "status": "current",
+        "version": 2
+      },
+      "CreativeCommonsAttributionNoncommercialNoderivs30Romania": {
+        "date": "2026-09-24",
+        "hash": "sha256:3b803da6b278f27f20f977d86542eec51b81982db0787fdcc09f627e0b604169",
+        "status": "current",
+        "version": 2
+      },
+      "CreativeCommonsAttributionNoncommercialNoderivs30Singapore": {
+        "date": "2026-09-24",
+        "hash": "sha256:9105d988737624ec139ed6e354a64310396fbbdc2a8e2c8d8d9b120190e6c6af",
+        "status": "current",
+        "version": 2
+      },
+      "CreativeCommonsAttributionNoncommercialNoderivs30SouthAfrica": {
+        "date": "2026-09-24",
+        "hash": "sha256:c58be6758a8647f39008966c563c7fbcce2278bbe2dc57bd55d06d6fc9af36c5",
+        "status": "current",
+        "version": 2
+      },
+      "CreativeCommonsAttributionNoncommercialNoderivs30Thailand": {
+        "date": "2026-09-24",
+        "hash": "sha256:93acbbe983e7e5efa77c521077b16ed25c74608222fd7932f8ee09743ce8ac20",
+        "status": "current",
+        "version": 2
+      },
+      "CreativeCommonsAttributionNoncommercialNoderivs30Uganda": {
+        "date": "2026-09-24",
+        "hash": "sha256:cd99dfbdd3952d709217b2122ee3d5879d83c2f90f21ae6b3edbbc8df9c6797e",
+        "status": "current",
+        "version": 2
+      },
+      "CreativeCommonsAttributionNoncommercialNoderivs30UnitedStatesofAmerica": {
+        "date": "2026-09-24",
+        "hash": "sha256:561155bcf8085a79e7bc7a4c8c1dc05ae500d6cffe5fec0c83b34ecc3ad4053a",
+        "status": "current",
+        "version": 2
+      },
+      "CreativeCommonsAttributionNoncommercialNoderivs30Venezuela": {
+        "date": "2026-09-24",
+        "hash": "sha256:dbfdba05fc4efde7b009f58b0c619425b80051ec5a5055dec281198e9e75a375",
+        "status": "current",
+        "version": 2
+      },
+      "CreativeCommonsAttributionNoncommercialNoderivs30Vietnam": {
+        "date": "2026-09-24",
+        "hash": "sha256:6715d5bc678ee8f8bc74156936b8d52b3f34994fa1404a824cf1e832b9b0ae52",
+        "status": "current",
+        "version": 2
+      },
+      "CreativeCommonsAttributionNoncommercialSharealike20Australia": {
+        "date": "2026-09-24",
+        "hash": "sha256:5a83209c6ac010d8221341f7c5b5c2806926f0b2b6aed60121072d3fa9d2ec06",
+        "status": "current",
+        "version": 2
+      },
+      "CreativeCommonsAttributionNoncommercialSharealike20Austria": {
+        "date": "2026-09-24",
+        "hash": "sha256:fe4c5e538b3e11187219b575abb5b1ff6ecafbc19397e36636169bb7f07bce2d",
+        "status": "current",
+        "version": 2
+      },
+      "CreativeCommonsAttributionNoncommercialSharealike20Brazil": {
+        "date": "2026-09-24",
+        "hash": "sha256:c29ec16037c98e9c8a154726b95147da9c0a1b279f4691fa48c8dee209c8612d",
+        "status": "current",
+        "version": 2
+      },
+      "CreativeCommonsAttributionNoncommercialSharealike20Chile": {
+        "date": "2026-09-24",
+        "hash": "sha256:986ddc79db95659cfad5ba3a8afd57a3b9d00b58ad7c1d0cbd8b3dfa1641d257",
+        "status": "current",
+        "version": 2
+      },
+      "CreativeCommonsAttributionNoncommercialSharealike20Croatia": {
+        "date": "2026-09-24",
+        "hash": "sha256:2ac30d96b1a52a16ba4b87a1979a2d5fa69d8e6b7d363ca54817509bc77ebf95",
+        "status": "current",
+        "version": 2
+      },
+      "CreativeCommonsAttributionNoncommercialSharealike20France": {
+        "date": "2026-09-24",
+        "hash": "sha256:ebe59da87b6dfd5dc3796b805ac158e5593cd3d989c86e22b60d61e1b92f207c",
+        "status": "current",
+        "version": 2
+      },
+      "CreativeCommonsAttributionNoncommercialSharealike20Germany": {
+        "date": "2026-09-24",
+        "hash": "sha256:bcbb814de79059c944b6a34074b8dc48a1856abb41e6d44f2dff9c32c339312a",
+        "status": "current",
+        "version": 2
+      },
+      "CreativeCommonsAttributionNoncommercialSharealike20Japan": {
+        "date": "2026-09-24",
+        "hash": "sha256:89f1e595f8e9995fc3f5f7521c6324d3dd19c6dff86dfb0031e7bd8a93e52f8d",
+        "status": "current",
+        "version": 2
+      },
+      "CreativeCommonsAttributionNoncommercialSharealike20KoreaSouth": {
+        "date": "2026-09-24",
+        "hash": "sha256:38b97beefa4c182a546c9890a48b1aca8c14b42b6fb3a3491741216beb71c08a",
+        "status": "current",
+        "version": 2
+      },
+      "CreativeCommonsAttributionNoncommercialSharealike20Netherlands": {
+        "date": "2026-09-24",
+        "hash": "sha256:e0b0c60045f355f873c903da6084fcca1ebb37fd626683a4142c433e182ad8cf",
+        "status": "current",
+        "version": 2
+      },
+      "CreativeCommonsAttributionNoncommercialSharealike20Poland": {
+        "date": "2026-09-24",
+        "hash": "sha256:05d6a103f9f27feded96376c9c88683035af5dbfeafd4c1e45640daf23a5aca0",
+        "status": "current",
+        "version": 2
+      },
+      "CreativeCommonsAttributionNoncommercialSharealike20SouthAfrica": {
+        "date": "2026-09-24",
+        "hash": "sha256:22a7f5d57ebd807a70f332368802e36328b4efee93c8820f2e0427a92ffac8fa",
+        "status": "current",
+        "version": 2
+      },
+      "CreativeCommonsAttributionNoncommercialSharealike30Armenia": {
+        "date": "2026-09-24",
+        "hash": "sha256:0b9e02ae61ae97722a1cf7bc307e4c6343b6a831544475b64ab9da81ec51daca",
+        "status": "current",
+        "version": 2
+      },
+      "CreativeCommonsAttributionNoncommercialSharealike30Australia": {
+        "date": "2026-09-24",
+        "hash": "sha256:4ebcfa125a5962c830e26e0833947a069a99b5e25ae982bcc19dce84de6793b5",
+        "status": "current",
+        "version": 2
+      },
+      "CreativeCommonsAttributionNoncommercialSharealike30Austria": {
+        "date": "2026-09-24",
+        "hash": "sha256:caf83ef11d3b6a86d5bfb799c97716342d4fc5d25113b5e1a051e041912e6d0c",
+        "status": "current",
+        "version": 2
+      },
+      "CreativeCommonsAttributionNoncommercialSharealike30Azerbaijan": {
+        "date": "2026-09-24",
+        "hash": "sha256:be30d478b81a376fc3fdf42eb0778ebf2d1f51a3fffa683781f9e04bcf3f6149",
+        "status": "current",
+        "version": 2
+      },
+      "CreativeCommonsAttributionNoncommercialSharealike30Brazil": {
+        "date": "2026-09-24",
+        "hash": "sha256:23f6fd78fcab08de026f8166665905f7ab7c5efd0a33084700d3945752a7fb33",
+        "status": "current",
+        "version": 2
+      },
+      "CreativeCommonsAttributionNoncommercialSharealike30Chile": {
+        "date": "2026-09-24",
+        "hash": "sha256:b001648125a55ebebd34774f24cd717969cc023d9a8e73caf8305b47496fe635",
+        "status": "current",
+        "version": 2
+      },
+      "CreativeCommonsAttributionNoncommercialSharealike30China": {
+        "date": "2026-09-24",
+        "hash": "sha256:df4e34c28277915880b5327116d2210019a3868642eab30dba768a85c1968418",
+        "status": "current",
+        "version": 2
+      },
+      "CreativeCommonsAttributionNoncommercialSharealike30CostaRica": {
+        "date": "2026-09-24",
+        "hash": "sha256:d8893f23a58d9b74ecc7ee31929df8a4ed63aea6d1087f1e6aef26091a629c6a",
+        "status": "current",
+        "version": 2
+      },
+      "CreativeCommonsAttributionNoncommercialSharealike30Croatia": {
+        "date": "2026-09-24",
+        "hash": "sha256:2b2454e6eaca60d1b68f90ee58569804c136f38145d6b44a63acaa0342f78720",
+        "status": "current",
+        "version": 2
+      },
+      "CreativeCommonsAttributionNoncommercialSharealike30Czechia": {
+        "date": "2026-09-24",
+        "hash": "sha256:b7550d4e32d2cdd874ec64d8bebb40f88d8efe84c73ba0cb037dcc2c8f876550",
+        "status": "current",
+        "version": 2
+      },
+      "CreativeCommonsAttributionNoncommercialSharealike30Ecuador": {
+        "date": "2026-09-24",
+        "hash": "sha256:777993b4eb7d203e1f2e027af5cad9002c8cf36c98ec9fb4c840bebf7d11f577",
+        "status": "current",
+        "version": 2
+      },
+      "CreativeCommonsAttributionNoncommercialSharealike30Egypt": {
+        "date": "2026-09-24",
+        "hash": "sha256:b9fe681d218ebeffd957347c43b9f29a60f6c7e82e20b566b73c316cac0650d2",
+        "status": "current",
+        "version": 2
+      },
+      "CreativeCommonsAttributionNoncommercialSharealike30Estonia": {
+        "date": "2026-09-24",
+        "hash": "sha256:dbb9f378d7958686b97a025697f0e4563ce1149cad14723c2fd6541bced7016a",
+        "status": "current",
+        "version": 2
+      },
+      "CreativeCommonsAttributionNoncommercialSharealike30France": {
+        "date": "2026-09-24",
+        "hash": "sha256:d2f5e2e3327251fb1940232ab63fb9a25505d073f7b8eeb86b9e112520bb7616",
+        "status": "current",
+        "version": 2
+      },
+      "CreativeCommonsAttributionNoncommercialSharealike30Georgia": {
+        "date": "2026-09-24",
+        "hash": "sha256:9566242a94d4370bff65f1e3e092ed8a8c5072d494ad4a631483e3fbdba89844",
+        "status": "current",
+        "version": 2
+      },
+      "CreativeCommonsAttributionNoncommercialSharealike30Germany": {
+        "date": "2026-09-24",
+        "hash": "sha256:180700544acca1220da556007710e525cce0beeab0fb90cc89081064242a51ea",
+        "status": "current",
+        "version": 2
+      },
+      "CreativeCommonsAttributionNoncommercialSharealike30Greece": {
+        "date": "2026-09-24",
+        "hash": "sha256:e85b491234a91a8b497d1f49b03b511bb000c03454514469c1e17dc4c8a29449",
+        "status": "current",
+        "version": 2
+      },
+      "CreativeCommonsAttributionNoncommercialSharealike30Guatemala": {
+        "date": "2026-09-24",
+        "hash": "sha256:ef0211617d7dd382600e5c1f94ef3a466b2224225ae278d56a0571e7d5a6e83b",
+        "status": "current",
+        "version": 2
+      },
+      "CreativeCommonsAttributionNoncommercialSharealike30Ireland": {
+        "date": "2026-09-24",
+        "hash": "sha256:8b9c4a0653828b24483c026d8b709b639193e074edf3e3b7adc3bece181ebff1",
+        "status": "current",
+        "version": 2
+      },
+      "CreativeCommonsAttributionNoncommercialSharealike30Italy": {
+        "date": "2026-09-24",
+        "hash": "sha256:3d30b6e01cd1848522b4bb3f3e34da9066f68c354f2b897e9a7f0c23234244b1",
+        "status": "current",
+        "version": 2
+      },
+      "CreativeCommonsAttributionNoncommercialSharealike30Luxembourg": {
+        "date": "2026-09-24",
+        "hash": "sha256:bdbd6a23b242a43d5f354da01212d762dce3dc94e929e509b055f643ba8c3ff5",
+        "status": "current",
+        "version": 2
+      },
+      "CreativeCommonsAttributionNoncommercialSharealike30Netherlands": {
+        "date": "2026-09-24",
+        "hash": "sha256:cf8beda7e8f03c39b52a9280a73ea123e627e6ea9fbc8ff89165fc30be0d5223",
+        "status": "current",
+        "version": 2
+      },
+      "CreativeCommonsAttributionNoncommercialSharealike30NewZealand": {
+        "date": "2026-09-24",
+        "hash": "sha256:14901e2a489a824a8e1e513b5a87fc4b21d392c5c9b9c44a1b9ef9f8348d92fe",
+        "status": "current",
+        "version": 2
+      },
+      "CreativeCommonsAttributionNoncommercialSharealike30Norway": {
+        "date": "2026-09-24",
+        "hash": "sha256:493101533026f4176a9e94352e30323ee5167af80436505c40c724d02e07d585",
+        "status": "current",
+        "version": 2
+      },
+      "CreativeCommonsAttributionNoncommercialSharealike30Philippines": {
+        "date": "2026-09-24",
+        "hash": "sha256:3ddb06ce76710b1d06b48ec76df373c7506841cbcd60f40db6b5f67e0e3e5146",
+        "status": "current",
+        "version": 2
+      },
+      "CreativeCommonsAttributionNoncommercialSharealike30Poland": {
+        "date": "2026-09-24",
+        "hash": "sha256:c26ff170b09f925e2ea937e1a1d1d7f9933d3d11137fc12a3fd9aa91e4def121",
+        "status": "current",
+        "version": 2
+      },
+      "CreativeCommonsAttributionNoncommercialSharealike30Portugal": {
+        "date": "2026-09-24",
+        "hash": "sha256:f17a15b68e38b843851ff748b79b5639dc169691b46cb70263d5c78c668e7a70",
+        "status": "current",
+        "version": 2
+      },
+      "CreativeCommonsAttributionNoncommercialSharealike30Romania": {
+        "date": "2026-09-24",
+        "hash": "sha256:ba191924de101480802b825ef7f4e3fed1509297e91420ca9c89ebb0d7716402",
+        "status": "current",
+        "version": 2
+      },
+      "CreativeCommonsAttributionNoncommercialSharealike30Singapore": {
+        "date": "2026-09-24",
+        "hash": "sha256:5b7f497c4a4b39157fda971e2d31e5ba6768f0a796ea5f66db4c3c18474e44b7",
+        "status": "current",
+        "version": 2
+      },
+      "CreativeCommonsAttributionNoncommercialSharealike30SouthAfrica": {
+        "date": "2026-09-24",
+        "hash": "sha256:1643087cc353bc2b9132a7179af53e8eb6a98c9b54bc9db3695d4b12f3c2da75",
+        "status": "current",
+        "version": 2
+      },
+      "CreativeCommonsAttributionNoncommercialSharealike30Thailand": {
+        "date": "2026-09-24",
+        "hash": "sha256:0b574acee2d7878eb23b9a73eae6e243eb5c653ccac400790e084f6766dbd1d7",
+        "status": "current",
+        "version": 2
+      },
+      "CreativeCommonsAttributionNoncommercialSharealike30Uganda": {
+        "date": "2026-09-24",
+        "hash": "sha256:079bed5b248f8e850dd1bdb3cfb9b6e30aa57f3d037b537fbc8938a769c8a853",
+        "status": "current",
+        "version": 2
+      },
+      "CreativeCommonsAttributionNoncommercialSharealike30UnitedStatesofAmerica": {
+        "date": "2026-09-24",
+        "hash": "sha256:a964ee923ca9bf98aba71ef5bb2981dcebd1b1e22fd7a22756ec3908ae4665b7",
+        "status": "current",
+        "version": 2
+      },
+      "CreativeCommonsAttributionNoncommercialSharealike30Venezuela": {
+        "date": "2026-09-24",
+        "hash": "sha256:9dfffd9647dc86b74562fff979683e93384d7dd5ba3ed02a1fe72f7721d4cbb0",
+        "status": "current",
+        "version": 2
+      },
+      "CreativeCommonsAttributionNoncommercialSharealike30Vietnam": {
+        "date": "2026-09-24",
+        "hash": "sha256:75eb4e7fda3aa10d2d79fcf713786d8507b094ba9ba511591330829dd7704998",
+        "status": "current",
+        "version": 2
+      },
+      "CreativeCommonsAttributionSharealike20Australia": {
+        "date": "2026-09-24",
+        "hash": "sha256:ec60a66cb221f5d1281546ed6a3582ce455887f6d22c57a02b18d2404102e60f",
+        "status": "current",
+        "version": 2
+      },
+      "CreativeCommonsAttributionSharealike20Austria": {
+        "date": "2026-09-24",
+        "hash": "sha256:7260c5f396f03f0f03783e928f22a8426741e1e018d42818e1b51824d391d98a",
+        "status": "current",
+        "version": 2
+      },
+      "CreativeCommonsAttributionSharealike20Brazil": {
+        "date": "2026-09-24",
+        "hash": "sha256:ab9c7990b8ef53a15af1693d127a6c88e7c29188b1150fd804d03bc570930423",
+        "status": "current",
+        "version": 2
+      },
+      "CreativeCommonsAttributionSharealike20Chile": {
+        "date": "2026-09-24",
+        "hash": "sha256:0406d2a16d1496549e5f2db103ed82880dcc7861e2da089510104f2812571fdf",
+        "status": "current",
+        "version": 2
+      },
+      "CreativeCommonsAttributionSharealike20Croatia": {
+        "date": "2026-09-24",
+        "hash": "sha256:1c851290478f5cf4c7dbca5bb420c2e5146fd91a7b66d50a1fcb580153d80f8c",
+        "status": "current",
+        "version": 2
+      },
+      "CreativeCommonsAttributionSharealike20France": {
+        "date": "2026-09-24",
+        "hash": "sha256:3543c4b427733e6eab601ac1f2a2b70f08707035ad5eccf0ce582d43103e79f9",
+        "status": "current",
+        "version": 2
+      },
+      "CreativeCommonsAttributionSharealike20Germany": {
+        "date": "2026-09-24",
+        "hash": "sha256:1944c14aaf45749e127a8fa882b0a84319858d1e6ea49d76e854d51450d96cdc",
+        "status": "current",
+        "version": 2
+      },
+      "CreativeCommonsAttributionSharealike20Italy": {
+        "date": "2026-09-24",
+        "hash": "sha256:ae9a0d24acf1689c8653f256a88b7fed443770bff38cec1c013fc1267de889ce",
+        "status": "current",
+        "version": 2
+      },
+      "CreativeCommonsAttributionSharealike20Japan": {
+        "date": "2026-09-24",
+        "hash": "sha256:f41f89e33b6b524ed03b9801189b58314b3e318020e9693c0a73bc6b27f34cef",
+        "status": "current",
+        "version": 2
+      },
+      "CreativeCommonsAttributionSharealike20KoreaSouth": {
+        "date": "2026-09-24",
+        "hash": "sha256:4b53fc557dd8182a244c549f8dfac133801476c1e9652b927caf878097a452b6",
+        "status": "current",
+        "version": 2
+      },
+      "CreativeCommonsAttributionSharealike20Netherlands": {
+        "date": "2026-09-24",
+        "hash": "sha256:0ded83756a825badf55ee97849032762fc350caa40c6a8d7f2b732eb6bd1e7cc",
+        "status": "current",
+        "version": 2
+      },
+      "CreativeCommonsAttributionSharealike20Poland": {
+        "date": "2026-09-24",
+        "hash": "sha256:37dde734d19b0ad609e5976e7426b16a7fa6fe18cad2c524dd798f6d962883a4",
+        "status": "current",
+        "version": 2
+      },
+      "CreativeCommonsAttributionSharealike20SouthAfrica": {
+        "date": "2026-09-24",
+        "hash": "sha256:3bf5ccf0f53a68bebdf546372b82f223d84f132e15c21262b7cdec6f466bb2c2",
+        "status": "current",
+        "version": 2
+      },
+      "CreativeCommonsAttributionSharealike30Armenia": {
+        "date": "2026-09-24",
+        "hash": "sha256:98993e52af1fdd6c179010784ffdec410f7bf0a69fa5bb3f2ef3a95497cb882e",
+        "status": "current",
+        "version": 2
+      },
+      "CreativeCommonsAttributionSharealike30Australia": {
+        "date": "2026-09-24",
+        "hash": "sha256:3eaf174c923b15fa4d93ee045a2e6b6cd64e1ffabe69cedfcc498b7f68e5c93e",
+        "status": "current",
+        "version": 2
+      },
+      "CreativeCommonsAttributionSharealike30Austria": {
+        "date": "2026-09-24",
+        "hash": "sha256:ebcf853c75a2eb5d071acbd86bd750adb76e42d54b6e40e35c9a832a0e6e1437",
+        "status": "current",
+        "version": 2
+      },
+      "CreativeCommonsAttributionSharealike30Azerbaijan": {
+        "date": "2026-09-24",
+        "hash": "sha256:af498f2ba7c83c0a855b325077a63d5e5867e4a11039a0e1224a786118046d23",
+        "status": "current",
+        "version": 2
+      },
+      "CreativeCommonsAttributionSharealike30Brazil": {
+        "date": "2026-09-24",
+        "hash": "sha256:d96eb870e524f193ad825a220e849aae9c5969544ed44e70a6bc170d34bac546",
+        "status": "current",
+        "version": 2
+      },
+      "CreativeCommonsAttributionSharealike30Chile": {
+        "date": "2026-09-24",
+        "hash": "sha256:fede077a25db3275d3399acdeec8e07942136899e62a7e45412e9f41ebf408a1",
+        "status": "current",
+        "version": 2
+      },
+      "CreativeCommonsAttributionSharealike30China": {
+        "date": "2026-09-24",
+        "hash": "sha256:eb7b30f21d0ff179cf062410b35965c95338ce0852b82c7ddca80b73531bbc5b",
+        "status": "current",
+        "version": 2
+      },
+      "CreativeCommonsAttributionSharealike30CostaRica": {
+        "date": "2026-09-24",
+        "hash": "sha256:499825b722cdec8536573d2065fea6ff1388bc6884daa9857f5b7686a7a93bc9",
+        "status": "current",
+        "version": 2
+      },
+      "CreativeCommonsAttributionSharealike30Croatia": {
+        "date": "2026-09-24",
+        "hash": "sha256:2dedc66aeba094b7bdfb19db1728274ff3ead570e5b0d8c03252951024049666",
+        "status": "current",
+        "version": 2
+      },
+      "CreativeCommonsAttributionSharealike30Czechia": {
+        "date": "2026-09-24",
+        "hash": "sha256:1026cbf9c3c5e3f96c15ee4c60b39dafececdd3f0be2b7c69a29dfe4af792a2e",
+        "status": "current",
+        "version": 2
+      },
+      "CreativeCommonsAttributionSharealike30Ecuador": {
+        "date": "2026-09-24",
+        "hash": "sha256:ca99cb6d32d21dadedeed85f57c489b250c8519664bd69054b616e0591c5f3e6",
+        "status": "current",
+        "version": 2
+      },
+      "CreativeCommonsAttributionSharealike30Egypt": {
+        "date": "2026-09-24",
+        "hash": "sha256:220a2ad27ad1d7b369d90dadca819a3f72106ff245c6a06626e23179a464589a",
+        "status": "current",
+        "version": 2
+      },
+      "CreativeCommonsAttributionSharealike30Estonia": {
+        "date": "2026-09-24",
+        "hash": "sha256:19fba35bf5b138be0a6f70a19b485fa6cc9425a6cc7be1a306dcd6c9450235a1",
+        "status": "current",
+        "version": 2
+      },
+      "CreativeCommonsAttributionSharealike30France": {
+        "date": "2026-09-24",
+        "hash": "sha256:8fcecd634214773a20a9128cbc33524002a30935bc09284a997f79ea92781357",
+        "status": "current",
+        "version": 2
+      },
+      "CreativeCommonsAttributionSharealike30Georgia": {
+        "date": "2026-09-24",
+        "hash": "sha256:5e54467ff7a131908783f21b44a3b5dcc8559c8f2bede47345e5f0f550738b10",
+        "status": "current",
+        "version": 2
+      },
+      "CreativeCommonsAttributionSharealike30Germany": {
+        "date": "2026-09-24",
+        "hash": "sha256:2fee212dca44f12e110d3629715f171fb1f6089b93ff6aa8f9aa3b8c11843449",
+        "status": "current",
+        "version": 2
+      },
+      "CreativeCommonsAttributionSharealike30Greece": {
+        "date": "2026-09-24",
+        "hash": "sha256:7d2042fb021d3cfef8bed5e986cd46d03bd0569d9d0b2381587501fd9180b685",
+        "status": "current",
+        "version": 2
+      },
+      "CreativeCommonsAttributionSharealike30Guatemala": {
+        "date": "2026-09-24",
+        "hash": "sha256:95a1453124547c0779577d2907b1a0464d16c47a5cbb6f0d4e6e016c47692211",
+        "status": "current",
+        "version": 2
+      },
+      "CreativeCommonsAttributionSharealike30Ireland": {
+        "date": "2026-09-24",
+        "hash": "sha256:50b6e34ea5d8dcb317e7970d52fc3caa709f403bec543248b4306fa0bef127e7",
+        "status": "current",
+        "version": 2
+      },
+      "CreativeCommonsAttributionSharealike30Italy": {
+        "date": "2026-09-24",
+        "hash": "sha256:45043342b73a168cbf9a776185097b6361132faffd6ab16096923658be19ed2c",
+        "status": "current",
+        "version": 2
+      },
+      "CreativeCommonsAttributionSharealike30Luxembourg": {
+        "date": "2026-09-24",
+        "hash": "sha256:59df453988ef28ea68f52a2ac5c0c626ca6845e43717f9c9d12e75710ef64201",
+        "status": "current",
+        "version": 2
+      },
+      "CreativeCommonsAttributionSharealike30Netherlands": {
+        "date": "2026-09-24",
+        "hash": "sha256:8d6f7504a333ada361eeef61bd7b2f40c5f249367134a9fc2465bf1eb61f440b",
+        "status": "current",
+        "version": 2
+      },
+      "CreativeCommonsAttributionSharealike30NewZealand": {
+        "date": "2026-09-24",
+        "hash": "sha256:0c5f993c8478ec3ce8a40ae7b388f43d64e3f6bc823c5dce9661463817b15ae8",
+        "status": "current",
+        "version": 2
+      },
+      "CreativeCommonsAttributionSharealike30Norway": {
+        "date": "2026-09-24",
+        "hash": "sha256:6646bd6c9ab7df6a4e012c049bac4cbec1442d61aa9129589961815debeeed2f",
+        "status": "current",
+        "version": 2
+      },
+      "CreativeCommonsAttributionSharealike30Philippines": {
+        "date": "2026-09-24",
+        "hash": "sha256:49bc7a1b3cf6593cb4c54e848022bc93dbb1959d12316030dee26732e64436c7",
+        "status": "current",
+        "version": 2
+      },
+      "CreativeCommonsAttributionSharealike30Poland": {
+        "date": "2026-09-24",
+        "hash": "sha256:7fd01d06b29ca70e361c661625908896fec480c69501df1698060f1bc783ec8f",
+        "status": "current",
+        "version": 2
+      },
+      "CreativeCommonsAttributionSharealike30Portugal": {
+        "date": "2026-09-24",
+        "hash": "sha256:223f6ae6971e03c2445e4abbc2c9db46fad18bd5890f2db086bda3e8f7650c6e",
+        "status": "current",
+        "version": 2
+      },
+      "CreativeCommonsAttributionSharealike30Romania": {
+        "date": "2026-09-24",
+        "hash": "sha256:34b20b0d9bdaec81d0d52dbcad8848840e5e14aed53ef1740556ef51491d5c80",
+        "status": "current",
+        "version": 2
+      },
+      "CreativeCommonsAttributionSharealike30Singapore": {
+        "date": "2026-09-24",
+        "hash": "sha256:6288146807fb49355384c57486465f2bf26771d640e67672b4fb04997d8ca1e4",
+        "status": "current",
+        "version": 2
+      },
+      "CreativeCommonsAttributionSharealike30SouthAfrica": {
+        "date": "2026-09-24",
+        "hash": "sha256:bf8865d9533c8d960e2e31204c87b3cf79fa4e2732364d097c60c5014ec675df",
+        "status": "current",
+        "version": 2
+      },
+      "CreativeCommonsAttributionSharealike30Thailand": {
+        "date": "2026-09-24",
+        "hash": "sha256:e852022e1f35988bf02ab0a433a4ed0b86344310f6e30cb68a26fcb420efc660",
+        "status": "current",
+        "version": 2
+      },
+      "CreativeCommonsAttributionSharealike30Uganda": {
+        "date": "2026-09-24",
+        "hash": "sha256:dbb4cc8f17bb64a2fead9b6a3a399ba6693c6138d938fd2de7b6a853c337b818",
+        "status": "current",
+        "version": 2
+      },
+      "CreativeCommonsAttributionSharealike30UnitedStatesofAmerica": {
+        "date": "2026-09-24",
+        "hash": "sha256:95811d157878879a07bb0a2d8ebece9194c3902e4076c2b62b18b28b22292187",
+        "status": "current",
+        "version": 2
+      },
+      "CreativeCommonsAttributionSharealike30Venezuela": {
+        "date": "2026-09-24",
+        "hash": "sha256:446c060f62be92cca529fdf687c6ffcbdedd119583aaf9ecab3878253bd9b111",
+        "status": "current",
+        "version": 2
+      },
+      "CreativeCommonsAttributionSharealike30Vietnam": {
+        "date": "2026-09-24",
+        "hash": "sha256:5fa3b86005142eb095b90a5a72172427035fb67de0f3aacb21e5739e0a558e00",
+        "status": "current",
+        "version": 2
+      },
+      "CreativeML-OpenRAIL-M": {
+        "date": "2026-09-24",
+        "hash": "sha256:935255a3cd00d79a24827327b09fc65524431767c2400879d4be60e8431aef9d",
+        "status": "current",
+        "version": 2
+      },
+      "CreativeML-OpenRAIL-Mpp": {
+        "date": "2026-09-24",
+        "hash": "sha256:6a42af3a20962957561e513e1509871563d71b00323871a988e7859a67fa4f1f",
+        "status": "current",
+        "version": 2
+      },
+      "Cube": {
+        "date": "2026-09-24",
+        "hash": "sha256:0172680165f5886583a8a2ad3a8d2676631800daaa00611300209121ddbf0ea7",
+        "status": "current",
+        "version": 2
+      },
+      "DL-DE-BY-2.0": {
+        "date": "2026-09-24",
+        "hash": "sha256:7235f6a4f268d95a4bc29cd10331a51d5064e506d378091135f2d45b2492668b",
+        "status": "current",
+        "version": 2
+      },
+      "DL-DE-ZERO-2.0": {
+        "date": "2026-09-24",
+        "hash": "sha256:6fa226cb40d02a3d30efe0312cbf3ab6500273aa69bcca09325845a801a91aad",
+        "status": "current",
+        "version": 2
+      },
+      "DOC": {
+        "date": "2026-09-24",
+        "hash": "sha256:d10c37b89e987aaead59cfda19fd00ecfc9664137874ef38da2b7463ddbb1d8c",
+        "status": "current",
+        "version": 2
+      },
+      "DataExplorationLicence": {
+        "date": "2026-09-24",
+        "hash": "sha256:6fc25272154381718ff045bbe86af6c52781e2dc2f8c080c756899f9eb31b72f",
+        "status": "current",
+        "version": 2
+      },
+      "DeepFloyd-IF-License": {
+        "date": "2026-09-24",
+        "hash": "sha256:6672b3372c2aab64314c20551630a8338f2e776c67997aee92d010beccbe12f1",
+        "status": "current",
+        "version": 2
+      },
+      "DeveloperLicense": {
+        "date": "2026-09-24",
+        "hash": "sha256:4adbc1ae84c669d4c53a0a4f888f82c6821695354c21a7a8849a58e63d7a23b6",
+        "status": "current",
+        "version": 2
+      },
+      "ECL-1.0": {
+        "date": "2026-09-24",
+        "hash": "sha256:f2c71a7b1beaff37116cec961a5b0b565166e956fa02e96d0b6152e791762c81",
+        "status": "current",
+        "version": 2
+      },
+      "ECL-2.0": {
+        "date": "2026-09-24",
+        "hash": "sha256:50821fcd2e90342608f6901c312fc2741dd67ef8f12f619f63540f3835d5d393",
+        "status": "current",
+        "version": 2
+      },
+      "EFL-1.0": {
+        "date": "2026-09-24",
+        "hash": "sha256:56cc2a48cfb178ab459cfbd7acd0dd01915c18689fd278e8168af2a106ce2c00",
+        "status": "current",
+        "version": 2
+      },
+      "EFL-2.0": {
+        "date": "2026-09-24",
+        "hash": "sha256:14f8ea4b439c57cea7b0b86af9a00656596ebcd534c599a0cdb8796895fa75a8",
+        "status": "current",
+        "version": 2
+      },
+      "EPL-2.0": {
+        "date": "2026-09-24",
+        "hash": "sha256:413f863376d64dfbbf3f5f1d6a863e3fff4e0fda6c5da788c42b109bf9b3b522",
+        "status": "current",
+        "version": 2
+      },
+      "EUDatagrid": {
+        "date": "2026-09-24",
+        "hash": "sha256:a8b01bb3d818722a414c3edf62938d70d8af030e65a69896ec1d15c479aab79f",
+        "status": "current",
+        "version": 2
+      },
+      "EUPL-1.1": {
+        "date": "2026-09-24",
+        "hash": "sha256:01076446efced4583f14a2c01343cdd362fb12f068b0e4f0bc9e40f52917c137",
+        "status": "current",
+        "version": 2
+      },
+      "EUPL-1.2": {
+        "date": "2026-09-24",
+        "hash": "sha256:4494f95edc5a52d41e3ccabf337aade5f9f5394787510e0fe291799442a02e3f",
+        "status": "current",
+        "version": 2
+      },
+      "EclipsePublicLicense10": {
+        "date": "2026-09-24",
+        "hash": "sha256:98790824f1ba2173c81d288bd262be5fb9c27b3595547f18cfc9c97c0ea6869d",
+        "status": "current",
+        "version": 2
+      },
+      "Elastic-2.0": {
+        "date": "2026-09-24",
+        "hash": "sha256:fd093623c7b92a69bb29441f7d894651aa70e57179d139d5e1d8284fb5d4c28b",
+        "status": "current",
+        "version": 2
+      },
+      "Entessa": {
+        "date": "2026-09-24",
+        "hash": "sha256:278ba96d8b46c4f6f537875773eddb39dce0a923d2351b81749070baacd427e0",
+        "status": "current",
+        "version": 2
+      },
+      "FSL-1.1-ALv2": {
+        "date": "2026-09-24",
+        "hash": "sha256:b79aae7cbc6516496d8d96eb1e1dbc5d19d3d630adb19a269f73e81c78f4fbf6",
+        "status": "current",
+        "version": 2
+      },
+      "FSL-1.1-MIT": {
+        "date": "2026-09-24",
+        "hash": "sha256:00517e90b71ce1d9a6d7bdfa77313ba4752ba0e0a4e5e294ec408ea82052556d",
+        "status": "current",
+        "version": 2
+      },
+      "Fair": {
+        "date": "2026-09-24",
+        "hash": "sha256:36add830da26c90207539b097c57e3d3d4a6d230a97ceda23e9f60bc6a8c3acb",
+        "status": "current",
+        "version": 2
+      },
+      "Frameworx-1.0": {
+        "date": "2026-09-24",
+        "hash": "sha256:b8b30e66ceddb49b7e9e0839b0cd59a40839f48efe95a0f75f0e4ef894beae69",
+        "status": "current",
+        "version": 2
+      },
+      "GFDL-1.1-only": {
+        "date": "2026-09-24",
+        "hash": "sha256:382680471e8989152a4b7b579b68e75146a6d6bf7fa60c59d70e8878f133254d",
+        "status": "current",
+        "version": 2
+      },
+      "GFDL-1.1-or-later": {
+        "date": "2026-09-24",
+        "hash": "sha256:a2d886f09c81ee5a0cb911dbc24894f73deaef0acfb267361bee40cd4cfcc9a7",
+        "status": "current",
+        "version": 2
+      },
+      "GFDL-1.2-only": {
+        "date": "2026-09-24",
+        "hash": "sha256:2d96de5ff0cda62cd0cb21158ca34380888aeb507b97f661239101d618cae16f",
+        "status": "current",
+        "version": 2
+      },
+      "GFDL-1.2-or-later": {
+        "date": "2026-09-24",
+        "hash": "sha256:dcb2100357e83144d227846dd48b5cb6c5c295790d181cf1ef3ee9e40126dec5",
+        "status": "current",
+        "version": 2
+      },
+      "GFDL-1.3-invariants-only": {
+        "date": "2026-09-24",
+        "hash": "sha256:d9077e19f4c4dc22d14487ee9bdc896830622e557e8173cd7b863b696a70b917",
+        "status": "current",
+        "version": 2
+      },
+      "GFDL-1.3-invariants-or-later": {
+        "date": "2026-09-24",
+        "hash": "sha256:46679dc096c92b2d8797fa0f8cc4ba2c9c9f14cb47f19138084dc694f68ffc5e",
+        "status": "current",
+        "version": 2
+      },
+      "GFDL-1.3-no-invariants-only": {
+        "date": "2026-09-24",
+        "hash": "sha256:c83764f89be16b557eb98008e8497071e5d22e64583ef694a2087e37fdcfdc77",
+        "status": "current",
+        "version": 2
+      },
+      "GFDL-1.3-no-invariants-or-later": {
+        "date": "2026-09-24",
+        "hash": "sha256:165d067d3c507b15b29f1ca97f044cae6cd49a7bc599afd2efc89e8a23863e24",
+        "status": "current",
+        "version": 2
+      },
+      "GFDL-1.3-or-later": {
+        "date": "2026-09-24",
+        "hash": "sha256:83b4327839e40c80b264363c62674c62af12025bdf15fc5d12f2359edfb194ec",
+        "status": "current",
+        "version": 2
+      },
+      "GPL-1.0-only": {
+        "date": "2026-09-24",
+        "hash": "sha256:9537327d5c7d6885a1f7d4383b6ffa745461accce9bede1a444f5125ab3c0424",
+        "status": "current",
+        "version": 2
+      },
+      "GPL-1.0-or-later": {
+        "date": "2026-09-24",
+        "hash": "sha256:f9efaf8705be09a462c6d34adead352792fd56f8ddd91078d5020668643ffe9f",
+        "status": "current",
+        "version": 2
+      },
+      "GPL-2.0-only": {
+        "date": "2026-09-24",
+        "hash": "sha256:8d3b43636711dd24c093872873dae5f936210d6cc8dadf170bb50b9f135aee87",
+        "status": "current",
+        "version": 2
+      },
+      "GPL-2.0-only-with-Classpath-exception-2.0": {
+        "date": "2026-09-24",
+        "hash": "sha256:b40bf7eeb3ad24295c7b2f4d54084806aafa63e4d9d18bdf7b32bcfdafc739b5",
+        "status": "current",
+        "version": 2
+      },
+      "GPL-2.0-only-with-Font-exception-2.0": {
+        "date": "2026-09-24",
+        "hash": "sha256:fdcffa7587ec323430b585a6e9d4bc2eb8195c96f344b504f9ee13eb7763023f",
+        "status": "current",
+        "version": 2
+      },
+      "GPL-2.0-only-with-GCC-exception-2.0": {
+        "date": "2026-09-24",
+        "hash": "sha256:f8a52042a8f5dd8bf78381c82f66659c2570536d1bc0671301d11a2b7e571a38",
+        "status": "current",
+        "version": 2
+      },
+      "GPL-2.0-only-with-Linux-syscall-note": {
+        "date": "2026-09-24",
+        "hash": "sha256:8d8350d2ba738c73c0016499c95ecc1c2599207402dad7b10a667d7fcbd16f1a",
+        "status": "current",
+        "version": 2
+      },
+      "GPL-2.0-only-with-OpenJDK-assembly-exception-1.0": {
+        "date": "2026-09-24",
+        "hash": "sha256:abe9eabac7db04210ccea3188a5b288369aa1ea9d39f53d0bb152205e84b914e",
+        "status": "current",
+        "version": 2
+      },
+      "GPL-2.0-only-with-Universal-FOSS-exception-1.0": {
+        "date": "2026-09-24",
+        "hash": "sha256:9725760efdc37837491808e3da5186f3791d384f294f56507e9037a701d495fa",
+        "status": "current",
+        "version": 2
+      },
+      "GPL-2.0-or-later": {
+        "date": "2026-09-24",
+        "hash": "sha256:c648c52cfa4a2c63822956b5d3a7f61d01ce65304d21e5c472cb5fafc1b9eedb",
+        "status": "current",
+        "version": 2
+      },
+      "GPL-2.0-or-later-with-Autoconf-exception-2.0": {
+        "date": "2026-09-24",
+        "hash": "sha256:ac98c21a4d0a024a8f1578ec380803479abf1dcd3077c37df75ba555d3ece468",
+        "status": "current",
+        "version": 2
+      },
+      "GPL-2.0-or-later-with-Bison-exception-2.2": {
+        "date": "2026-09-24",
+        "hash": "sha256:cefb9329fb8338119a883009bb9f2882ccf7dd71cc0f6466b4f02102d42b5cac",
+        "status": "current",
+        "version": 2
+      },
+      "GPL-2.0-or-later-with-Classpath-exception-2.0": {
+        "date": "2026-09-24",
+        "hash": "sha256:a1809f3cd10e37ca089a780f9042d07e3c02f75e967e2b659ae29d22fccb94fb",
+        "status": "current",
+        "version": 2
+      },
+      "GPL-3.0-only": {
+        "date": "2026-09-24",
+        "hash": "sha256:f215e9811deb35d534ddc6b530bf7dc355173103b4ff5cc623eeaaf0ef014e71",
+        "status": "current",
+        "version": 2
+      },
+      "GPL-3.0-only-with-GCC-exception-3.1": {
+        "date": "2026-09-24",
+        "hash": "sha256:0544cfc3a95562f702e3075d45ae2f485b303c99237423b9d60ef2c47b01089c",
+        "status": "current",
+        "version": 2
+      },
+      "GPL-3.0-only-with-GPL-3.0-linking-exception": {
+        "date": "2026-09-24",
+        "hash": "sha256:de226ef820cd13c801d1172cb17c3b711ac8b40ae44d3c213d1f385ca55d6969",
+        "status": "current",
+        "version": 2
+      },
+      "GPL-3.0-only-with-Qt-GPL-exception-1.0": {
+        "date": "2026-09-24",
+        "hash": "sha256:82922d7e2f82dfc084cd7ca1b390c7e40599d6968b3e8974e6e8e36ced831015",
+        "status": "current",
+        "version": 2
+      },
+      "GPL-3.0-or-later": {
+        "date": "2026-09-24",
+        "hash": "sha256:f1e0179d3ee120ff5ce77928e499724603059d7e5dadcf5b830806019351e03e",
+        "status": "current",
+        "version": 2
+      },
+      "GPL-3.0-or-later-with-Autoconf-exception-3.0": {
+        "date": "2026-09-24",
+        "hash": "sha256:5d31abe7f385acbe8bbc0d2cde20161d6298387ce0df4a5e2af881956ce544f3",
+        "status": "current",
+        "version": 2
+      },
+      "GPL-3.0-or-later-with-Bison-exception-2.2": {
+        "date": "2026-09-24",
+        "hash": "sha256:209b084909869d7836dde5681dda8caead8461c19b7d63c59f937e953a3699bd",
+        "status": "current",
+        "version": 2
+      },
+      "GPL-3.0-or-later-with-GCC-exception-3.1": {
+        "date": "2026-09-24",
+        "hash": "sha256:f984cbe2db9c06a1b6d13c677fa333eae4de1ba1c4208661cb2dac76bc1c9bba",
+        "status": "current",
+        "version": 2
+      },
+      "Gemma-Terms-of-Use": {
+        "date": "2026-09-24",
+        "hash": "sha256:667d6947596a58ca0438db75a53c6aa3517a9e4ac1cc5fa973ea950835488407",
+        "status": "current",
+        "version": 2
+      },
+      "GnuFreeDocumentationLicense": {
+        "date": "2026-09-24",
+        "hash": "sha256:bc1ca0bba66044fee012772f3b4d1a39951d8ca9acbc1af871aa8d4dff7d3e84",
+        "status": "current",
+        "version": 2
+      },
+      "HPND": {
+        "date": "2026-09-24",
+        "hash": "sha256:bee93372044836493a50042ff1df5684df380a6debc0899cb0d567683544f627",
+        "status": "current",
+        "version": 2
+      },
+      "Hippocratic-2.1": {
+        "date": "2026-09-24",
+        "hash": "sha256:677b77fcfc2d2fd064cf0ce47827fc93d9dd800f789d127e3dfbb6fd8e2deb0c",
+        "status": "current",
+        "version": 2
+      },
+      "ICU": {
+        "date": "2026-09-24",
+        "hash": "sha256:cd484f31154e75d853a7b8cddef42020b0a8eacb2c67831acf12e765cb2aef78",
+        "status": "current",
+        "version": 2
+      },
+      "IPA": {
+        "date": "2026-09-24",
+        "hash": "sha256:6b4016dad007ac579378e80344e94a919000ccb5e60cd410dbc91605b8e04db8",
+        "status": "current",
+        "version": 2
+      },
+      "IPL-1.0": {
+        "date": "2026-09-24",
+        "hash": "sha256:c7d6cd98cec1d3e2c25e4df4405b2d98afbe4b1d234fcc0a4c2915de3a2d80f4",
+        "status": "current",
+        "version": 2
+      },
+      "ImageMagick": {
+        "date": "2026-09-24",
+        "hash": "sha256:044796290c1c9dfb8ba8f0520fdd133e22b3088042196331bdca4cbc93bd8c81",
+        "status": "current",
+        "version": 2
+      },
+      "Info-ZIP": {
+        "date": "2026-09-24",
+        "hash": "sha256:56f14b1557b7b76717da7e032614ffb61ab59bb5e3805feef3501cda31b6cba3",
+        "status": "current",
+        "version": 2
+      },
+      "InspireEndUserLicence": {
+        "date": "2026-09-24",
+        "hash": "sha256:bab550491029b5766ee5fc8479c30f55f178d8a631f645842eee4d994c34710b",
+        "status": "current",
+        "version": 2
+      },
+      "Intel": {
+        "date": "2026-09-24",
+        "hash": "sha256:9f985594906a498c6e79a7637de6e829eb0adff068e2b2ab1416728bbcbf8de6",
+        "status": "current",
+        "version": 2
+      },
+      "Intel-Research-Use-License": {
+        "date": "2026-09-24",
+        "hash": "sha256:cefcfd7af64430787f752688db9779e2cd1a3eb8c930fae294dc20b1891720d1",
+        "status": "current",
+        "version": 2
+      },
+      "IscLicense": {
+        "date": "2026-09-24",
+        "hash": "sha256:fc4ecce86879645e0b461211ce64625564c2b596e7f56042636f0c1a1f551906",
+        "status": "current",
+        "version": 2
+      },
+      "JSON": {
+        "date": "2026-09-24",
+        "hash": "sha256:737b529985dcf358d2b9b291494517b96efae2f38db0a6ee2fa1f40199817152",
+        "status": "current",
+        "version": 2
+      },
+      "Jam": {
+        "date": "2026-09-24",
+        "hash": "sha256:aa765e62dfd37e9014db6aadf960781af5dae255c0b2a9db91ce78c36b3e664e",
+        "status": "current",
+        "version": 2
+      },
+      "LGPL-2.0-only": {
+        "date": "2026-09-24",
+        "hash": "sha256:85fdc9b43192f545a3073a0762228a14b0a6cd56e94096a2604d648a98829b29",
+        "status": "current",
+        "version": 2
+      },
+      "LGPL-2.0-or-later": {
+        "date": "2026-09-24",
+        "hash": "sha256:1dbd8894c4b87c9c5deb5a8cca41acded570ee5134054faf0b5eca84139ab830",
+        "status": "current",
+        "version": 2
+      },
+      "LGPL-2.1-only": {
+        "date": "2026-09-24",
+        "hash": "sha256:6f07615f50348f8a90c34da72fd917d6cc9d7c2b813e929cd91a54b47fee385b",
+        "status": "current",
+        "version": 2
+      },
+      "LGPL-2.1-only-with-Qt-LGPL-exception-1.1": {
+        "date": "2026-09-24",
+        "hash": "sha256:9b3c4d40efff33d4993808b133312e89084c1c3281ed0556464606d5db1f028e",
+        "status": "current",
+        "version": 2
+      },
+      "LGPL-2.1-or-later": {
+        "date": "2026-09-24",
+        "hash": "sha256:496eb3f1640191032a437c863082d10b69803bd63bd14ba8a6249c51379bd1fb",
+        "status": "current",
+        "version": 2
+      },
+      "LGPL-3.0-only": {
+        "date": "2026-09-24",
+        "hash": "sha256:c4cde6c7cf81371ecd47633570da84b8f3a8137af850a8c8142378bf0d300f13",
+        "status": "current",
+        "version": 2
+      },
+      "LGPL-3.0-only-with-LGPL-3.0-linking-exception": {
+        "date": "2026-09-24",
+        "hash": "sha256:0a77575ad7038fe12908224305f30aace0db96d8a8f1e3ff49d29915b2c91c49",
+        "status": "current",
+        "version": 2
+      },
+      "LGPL-3.0-or-later": {
+        "date": "2026-09-24",
+        "hash": "sha256:44e8163f8105db9007febef45a9de5f026c7ea4e97f31b737823829b629de48e",
+        "status": "current",
+        "version": 2
+      },
+      "LPL-1.0": {
+        "date": "2026-09-24",
+        "hash": "sha256:80f558fd735f1853e02ae126076c8c024d5345c609e51cadedb5977fe8082bd6",
+        "status": "current",
+        "version": 2
+      },
+      "LPL-1.02": {
+        "date": "2026-09-24",
+        "hash": "sha256:aa530d5ee96b2207dc982042b2b527be60cc0f4ad430417c65097f9bd7d6033b",
+        "status": "current",
+        "version": 2
+      },
+      "LPPL-1.0": {
+        "date": "2026-09-24",
+        "hash": "sha256:ce4c8063ae32b1e5aa8b0e64f0d29aed17945875cf55c69e3b0ff30e1902d1a4",
+        "status": "current",
+        "version": 2
+      },
+      "LPPL-1.1": {
+        "date": "2026-09-24",
+        "hash": "sha256:01c1c84941629229eb0269c47410f5121d10c51d31ad88ebb7bbf4ae4a6e447d",
+        "status": "current",
+        "version": 2
+      },
+      "LPPL-1.2": {
+        "date": "2026-09-24",
+        "hash": "sha256:ca68b9bf3db9b837bd8c69984e3fefaec226c5c0f622d665170345b453f20eb5",
+        "status": "current",
+        "version": 2
+      },
+      "LPPL-1.3a": {
+        "date": "2026-09-24",
+        "hash": "sha256:baf9e9806155844294ddd9be4b52cb94fa0d42b7e9d505a43112850643b81ad2",
+        "status": "current",
+        "version": 2
+      },
+      "LatexProjectPublicLicenseVersion13c": {
+        "date": "2026-09-24",
+        "hash": "sha256:03086e5b6a9c55ca8e29b517b42ad08c969624f0aec191194b7c2e7ea464c1a0",
+        "status": "current",
+        "version": 2
+      },
+      "LiLiQ-P-1.1": {
+        "date": "2026-09-24",
+        "hash": "sha256:2127653b776f27d1f7d5bee14668872c19a55891d165ebc23081f8dbb962eb2c",
+        "status": "current",
+        "version": 2
+      },
+      "LiLiQ-R-1.1": {
+        "date": "2026-09-24",
+        "hash": "sha256:06f68e583b03efe4c3bf1733fff084f9382ee0b270d84d586db6e978627ef123",
+        "status": "current",
+        "version": 2
+      },
+      "LiLiQ-Rplus-1.1": {
+        "date": "2026-09-24",
+        "hash": "sha256:b7fdaf2f732003772d14f33ac94deb0d5c63538878819e75b755ff3649ee7dc2",
+        "status": "current",
+        "version": 2
+      },
+      "Libpng": {
+        "date": "2026-09-24",
+        "hash": "sha256:7dbf4d69be5186ec04f0223849690223220dd5bacac6fb91efb557aeca1baa05",
+        "status": "current",
+        "version": 2
+      },
+      "Llama-2-Community-License": {
+        "date": "2026-09-24",
+        "hash": "sha256:3118fe5970e93e6485dafe9ed4ee31e50cec1aa11d1c6a3ee335a128011073d5",
+        "status": "current",
+        "version": 2
+      },
+      "Llama-3-Community-License": {
+        "date": "2026-09-24",
+        "hash": "sha256:e98224f46e2ec3278ca7a2f2c1ee0cbcad503947a7d2ea95f3380ee22f854737",
+        "status": "current",
+        "version": 2
+      },
+      "Llama-3.1-Community-License": {
+        "date": "2026-09-24",
+        "hash": "sha256:c925f2fd2dcd3c2dbbfcfdeca9caade25f3dcba1367a58e0b4849c7d255e76b4",
+        "status": "current",
+        "version": 2
+      },
+      "Llama-3.2-Community-License": {
+        "date": "2026-09-24",
+        "hash": "sha256:064094aecb2963b512ad0016376acf6e010463f7b4bd3d4c841a960a1d15f480",
+        "status": "current",
+        "version": 2
+      },
+      "Llama-3.3-Community-License": {
+        "date": "2026-09-24",
+        "hash": "sha256:98b0f31c423d8a23e5498810a0464c3ecda4d69e1b315ef523e92a76d35cb4b7",
+        "status": "current",
+        "version": 2
+      },
+      "Llama-4-Community-License": {
+        "date": "2026-09-24",
+        "hash": "sha256:3fab671ba4601fd0b887069b074d7bbfc52e97bc4d3cf1c198f1b614905874d1",
+        "status": "current",
+        "version": 2
+      },
+      "MIT": {
+        "date": "2026-09-24",
+        "hash": "sha256:0d8f7c33de27b9b276abdfac7cb21ee163087cc28fd32678c28d5b699cd3bfee",
+        "status": "current",
+        "version": 2
+      },
+      "MIT-0": {
+        "date": "2026-09-24",
+        "hash": "sha256:53fbb491a0d038e88768c6fc6a4c032631c2f0ddc1aa1b66784c5fd10d070460",
+        "status": "current",
+        "version": 2
+      },
+      "MIT-CMU": {
+        "date": "2026-09-24",
+        "hash": "sha256:741373c5866e766b3d198776edfc9a83d3bdebd7b14aea3a82415b8d494e5ea4",
+        "status": "current",
+        "version": 2
+      },
+      "MIT-Modern-Variant": {
+        "date": "2026-09-24",
+        "hash": "sha256:fb550d003625ca1e1a7b2c63b56f56ce6845d652c4adc15b7dd1a5aac5ccfa07",
+        "status": "current",
+        "version": 2
+      },
+      "MIT-Wu": {
+        "date": "2026-09-24",
+        "hash": "sha256:e4f7f0f9ef588c02f8c5a0635dfd38b1126791197b8927bb6c539c497ff6cf93",
+        "status": "current",
+        "version": 2
+      },
+      "MPL-1.0": {
+        "date": "2026-09-24",
+        "hash": "sha256:10d5b07f02411d59d8b48a718dc2972dde8d2ef2a28c28f76fed39a966b66e62",
+        "status": "current",
+        "version": 2
+      },
+      "MPL-1.1": {
+        "date": "2026-09-24",
+        "hash": "sha256:7b98263e521dafd898fda6c38d9f7409323d7584a4dc07e17c74460b686de0f1",
+        "status": "current",
+        "version": 2
+      },
+      "MPL-2.0-no-copyleft-exception": {
+        "date": "2026-09-24",
+        "hash": "sha256:8fb51aa0b3dbc8c0dc8d54a39016205ad9253799ccd086cf22f840348041b4df",
+        "status": "current",
+        "version": 2
+      },
+      "MS-RL": {
+        "date": "2026-09-24",
+        "hash": "sha256:cf1832e27885f9a8107dea47633dac370a619309c7224e38131b5dc188ddec19",
+        "status": "current",
+        "version": 2
+      },
+      "MicrosoftPublicLicense": {
+        "date": "2026-09-24",
+        "hash": "sha256:b3a235e721243589c0bc498d022109bc99f3652600c8d359e42c7ba038020b10",
+        "status": "current",
+        "version": 2
+      },
+      "MirOS": {
+        "date": "2026-09-24",
+        "hash": "sha256:62d80c13c4e06b7c6a7d1ea7f78ce29a37609b58b9e7070054364357ed87f01d",
+        "status": "current",
+        "version": 2
+      },
+      "Motosoto": {
+        "date": "2026-09-24",
+        "hash": "sha256:2d195a08288f1b5ed8b1bc7db657a79e047d6ee9358f5ef412443a56ddc0abfa",
+        "status": "current",
+        "version": 2
+      },
+      "MozillaPublicLicenseVersion20": {
+        "date": "2026-09-24",
+        "hash": "sha256:0b80c1236b35cd4ecf663224b781d1fb3756a8f3b5f13fbc24aeab4c774becd6",
+        "status": "current",
+        "version": 2
+      },
+      "MulanPSL-1.0": {
+        "date": "2026-09-24",
+        "hash": "sha256:ec0c007888dfde5f9a097ed88fba422522b714893dc427714774f8ed93aa2246",
+        "status": "current",
+        "version": 2
+      },
+      "MulanPSL-2.0": {
+        "date": "2026-09-24",
+        "hash": "sha256:d4522f5402c96d9388f6ed40803729d5b610b499bcf8a0e72f0001b5ea3686c6",
+        "status": "current",
+        "version": 2
+      },
+      "Multics": {
+        "date": "2026-09-24",
+        "hash": "sha256:01135dc88da0fb5742bc82f25cbc9bebd2349659b5b15a459aea4a70fdc8f5de",
+        "status": "current",
+        "version": 2
+      },
+      "NASA-1.3": {
+        "date": "2026-09-24",
+        "hash": "sha256:2f804a084f6d8ab8b20d634151c63374a68f362d239bb9abcc0d04b197ba96bd",
+        "status": "current",
+        "version": 2
+      },
+      "NCGL-UK-2.0": {
+        "date": "2026-09-24",
+        "hash": "sha256:1cb2350c083137484934b31a4acffc7a990986864b940a36b1cc1c00e6782001",
+        "status": "current",
+        "version": 2
+      },
+      "NCSA": {
+        "date": "2026-09-24",
+        "hash": "sha256:1e0f15b703b990e23ea003d5c2f61a97422ebf393d8ce5e44b964997757b709d",
+        "status": "current",
+        "version": 2
+      },
+      "NGPL": {
+        "date": "2026-09-24",
+        "hash": "sha256:bb688e72acf95a7860143a2ad1ffd7a6c9b80e8fee973aa86e3e98e4bf2a6839",
+        "status": "current",
+        "version": 2
+      },
+      "NLOD-2.0": {
+        "date": "2026-09-24",
+        "hash": "sha256:b395580bbca96ceb392d312665a74b04e7242945273583cd12a873bb77d6927d",
+        "status": "current",
+        "version": 2
+      },
+      "NPOSL-3.0": {
+        "date": "2026-09-24",
+        "hash": "sha256:fdb8aa7002708b609f1e615a598738ea3e838684a9dd1c0c8a8f6fd26f0e7284",
+        "status": "current",
+        "version": 2
+      },
+      "NTP": {
+        "date": "2026-09-24",
+        "hash": "sha256:abb6e35b139a001acda574d76ffece814e0d83855f6d47e9badfc4dbbce98c57",
+        "status": "current",
+        "version": 2
+      },
+      "NVIDIA-Open-Model-License": {
+        "date": "2026-09-24",
+        "hash": "sha256:85001d398e6e2d568251b447763f7b8b680e3ac23987be464b79a2f1a3a90d77",
+        "status": "current",
+        "version": 2
+      },
+      "Naumen": {
+        "date": "2026-09-24",
+        "hash": "sha256:38fee4942dc381357a2101ddfe72bd708833434844df4d844e3c713fba2761d0",
+        "status": "current",
+        "version": 2
+      },
+      "Nokia": {
+        "date": "2026-09-24",
+        "hash": "sha256:595787ad75b2da9b32deaf627af267ffaaac8af948b7fdf31f6853b80896a67b",
+        "status": "current",
+        "version": 2
+      },
+      "O-UDA-1.0": {
+        "date": "2026-09-24",
+        "hash": "sha256:a9b0abe365b5420af0ecefb0b86d7907081f3fb5861ee028ca0960fd63efd886",
+        "status": "current",
+        "version": 2
+      },
+      "OCLC-2.0": {
+        "date": "2026-09-24",
+        "hash": "sha256:613ae76ccd407363b0d5a557cd5b3da9857174a0d0afbdd2af09827772e411fe",
+        "status": "current",
+        "version": 2
+      },
+      "OFL-1.0": {
+        "date": "2026-09-24",
+        "hash": "sha256:e35efe113cf5e6c6b530b0c5006898cbb95305eabeffc63d9d211319173c29ff",
+        "status": "current",
+        "version": 2
+      },
+      "OFL-1.1": {
+        "date": "2026-09-24",
+        "hash": "sha256:4398d578af8372d5b5582a81a78678045759a87dc587c1401facd8349229ed41",
+        "status": "current",
+        "version": 2
+      },
+      "OFL-1.1-RFN": {
+        "date": "2026-09-24",
+        "hash": "sha256:cd5cad216e02a44b1e56e688e6ef85ca4a43dd3c91fa86c763e0e6c77eec415d",
+        "status": "current",
+        "version": 2
+      },
+      "OFL-1.1-no-RFN": {
+        "date": "2026-09-24",
+        "hash": "sha256:c51e22d5671ce68d2a0366c0df14cbe9cba0e0026f91f0ba6b00c453acec0be5",
+        "status": "current",
+        "version": 2
+      },
+      "OGL-UK-1.0": {
+        "date": "2026-09-24",
+        "hash": "sha256:d2e0646acd9d8bfce5f00b8fe3a0815df9b4cde9c8e4425d1f13a1b03326338f",
+        "status": "current",
+        "version": 2
+      },
+      "OGL-UK-2.0": {
+        "date": "2026-09-24",
+        "hash": "sha256:09b5319677f578ccff588f60bc0bc576187b05ccf23709916c34426cdb7dfa3f",
+        "status": "current",
+        "version": 2
+      },
+      "OGTSL": {
+        "date": "2026-09-24",
+        "hash": "sha256:01642c1d247491d2453e259391cc0463f8a13d79a413190cfd33a6ac7fffd714",
+        "status": "current",
+        "version": 2
+      },
+      "OLDAP-2.8": {
+        "date": "2026-09-24",
+        "hash": "sha256:dfc634cd20c83b5aab3e6d7cdd0d381bea14c3336ff3f1ee18ea81fd053c415d",
+        "status": "current",
+        "version": 2
+      },
+      "OLFL-1.3": {
+        "date": "2026-09-24",
+        "hash": "sha256:ab545b60456d49155c91a483d05e377f969345f52a4c21e54f5674e49f6ef0c5",
+        "status": "current",
+        "version": 2
+      },
+      "OSC-1.0": {
+        "date": "2026-09-24",
+        "hash": "sha256:c02d8d0d4c9bbc2599d6f41f42675421e80ae27dbd5f5bb1cc3b0cfe70d07e89",
+        "status": "current",
+        "version": 2
+      },
+      "OSET-PL-2.1": {
+        "date": "2026-09-24",
+        "hash": "sha256:5acf881332ea43b76412904c0145b550a7fe291c5dca79904ac71a9ed4085a6b",
+        "status": "current",
+        "version": 2
+      },
+      "OSL-1.0": {
+        "date": "2026-09-24",
+        "hash": "sha256:a101e2d841288b61060f6ff69223d48f22bd3d83cb98fc79bcada624d4324987",
+        "status": "current",
+        "version": 2
+      },
+      "OSL-2.0": {
+        "date": "2026-09-24",
+        "hash": "sha256:c068cf73a4f7c65205d83194860f3a07882e1722bbfcbc1fd1554b8884e75c96",
+        "status": "current",
+        "version": 2
+      },
+      "OSL-2.1": {
+        "date": "2026-09-24",
+        "hash": "sha256:76829592ee9c1410b9cf6714d32cb4203b0776606a40de173e6770771b37028a",
+        "status": "current",
+        "version": 2
+      },
+      "OSL-3.0": {
+        "date": "2026-09-24",
+        "hash": "sha256:d45906c9a3359720411b454f12dedbb6a2e7b06d5f34116ffdcf7f1ac40105ad",
+        "status": "current",
+        "version": 2
+      },
+      "OdcOpenDatabaseLicense": {
+        "date": "2026-09-24",
+        "hash": "sha256:eec3c5f55a07c607670dabc5984b4b0bc506710595b888cd4eb31e384bdff2ac",
+        "status": "current",
+        "version": 2
+      },
+      "OdcPublicDomainDedicationAndLicence": {
+        "date": "2026-09-24",
+        "hash": "sha256:9d214357b19f0f1b7f8a6b3971c51d6da441756e93e57a79ca53763d396c325a",
+        "status": "current",
+        "version": 2
+      },
+      "OpenDataCommonsAttributionLicenseV10": {
+        "date": "2026-09-24",
+        "hash": "sha256:98a52abe937ee3fb6b7bcbf46be0fe8252c69b90862cdf78e62797c6c2dd6bd7",
+        "status": "current",
+        "version": 2
+      },
+      "OpenDataLicenceAgreement": {
+        "date": "2026-09-24",
+        "hash": "sha256:088ac51c00c5dc3f9702fa9549391633629a0be84ab7076bb9c39d23f16b079e",
+        "status": "current",
+        "version": 2
+      },
+      "OpenGovernmentLicenceCanada": {
+        "date": "2026-09-24",
+        "hash": "sha256:c446e62ab9ea2ce9fe1e5e495bfd5523d5fb8ebf2fe785c45a2344fb03841be5",
+        "status": "current",
+        "version": 2
+      },
+      "OpenSSL": {
+        "date": "2026-09-24",
+        "hash": "sha256:a291ecf0e16a526a80df4d52a6d0b01f274c68ac187be66f9c69dfbf8297f620",
+        "status": "current",
+        "version": 2
+      },
+      "OpenSupremeCourtLicence": {
+        "date": "2026-09-24",
+        "hash": "sha256:31d6deedf45c08b00cacab0ddc8bd530c49e2cb4070930f05f269c3de2beab1e",
+        "status": "current",
+        "version": 2
+      },
+      "PHP-3.01": {
+        "date": "2026-09-24",
+        "hash": "sha256:bb7a6afd40177311ed5bfae0444bfc10e36abbaaaeda04ae37318b3286c0ffbe",
+        "status": "current",
+        "version": 2
+      },
+      "PSF-2.0": {
+        "date": "2026-09-24",
+        "hash": "sha256:8c7be470d6713f196cbdca99d854ac3a4e5f056484a2e6d5d487488fa1c94224",
+        "status": "current",
+        "version": 2
+      },
+      "Parity-6.0.0": {
+        "date": "2026-09-24",
+        "hash": "sha256:cedf59675a109942262b41f0cd67ec98ab8a32a10106e2811c9953308a19c363",
+        "status": "current",
+        "version": 2
+      },
+      "Parity-7.0.0": {
+        "date": "2026-09-24",
+        "hash": "sha256:7397aa806fad34a5bd907401fc87c588173ba3ab0318023e718ffda919792623",
+        "status": "current",
+        "version": 2
+      },
+      "PhpLicense30": {
+        "date": "2026-09-24",
+        "hash": "sha256:d3c04b0a953aa8db4aeb456252413548471b466ca46e795eb5f6f92f0b3131cd",
+        "status": "current",
+        "version": 2
+      },
+      "PolyForm-Noncommercial-1.0.0": {
+        "date": "2026-09-24",
+        "hash": "sha256:baab44ab5e9eaaa27009a81ad50369c9e6bc3f6ba60ffdc805d4ea16ca2b57b7",
+        "status": "current",
+        "version": 2
+      },
+      "PolyForm-Shield-1.0.0": {
+        "date": "2026-09-24",
+        "hash": "sha256:436ec7ba284efe0d8df2e4cbf9d607fb82826e351edd0e6b19ea7244b24a530d",
+        "status": "current",
+        "version": 2
+      },
+      "PolyForm-Small-Business-1.0.0": {
+        "date": "2026-09-24",
+        "hash": "sha256:be01713e6dd2c0acdb09b6e3ca371aff0bac5267b6398cf281987b3f37f46953",
+        "status": "current",
+        "version": 2
+      },
+      "PolyForm-Strict-1.0.0": {
+        "date": "2026-09-24",
+        "hash": "sha256:9c26ed59b7f9550a8fa1a6a932d25731370fbcafc0d40027557ad905d1cf3945",
+        "status": "current",
+        "version": 2
+      },
+      "PostgreSQL": {
+        "date": "2026-09-24",
+        "hash": "sha256:f99267bf922c4c7b657ec31db67e8b3744ef7122956bd8fe52a83f73abef2090",
+        "status": "current",
+        "version": 2
+      },
+      "Python-2.0.1": {
+        "date": "2026-09-24",
+        "hash": "sha256:20366769e2c0213cece0711dbc7655d89c809a92f0f284aed2e02785b3a37850",
+        "status": "current",
+        "version": 2
+      },
+      "PythonLicense20": {
+        "date": "2026-09-24",
+        "hash": "sha256:2ad65dfbbd9bfc7b1708d630e107dccc9b30badd2b6cc26722a84677a209b741",
+        "status": "current",
+        "version": 2
+      },
+      "QPublicLicenseVersion10": {
+        "date": "2026-09-24",
+        "hash": "sha256:ebcec079348dd7217c2f54b23a2af8eb335e57feff882f64061cfa4c22920f46",
+        "status": "current",
+        "version": 2
+      },
+      "RPL-1.1": {
+        "date": "2026-09-24",
+        "hash": "sha256:da062405b7cd9634ea45d42291f448a3450fd7ce06c2b4d992c500328d76db54",
+        "status": "current",
+        "version": 2
+      },
+      "RPL-1.5": {
+        "date": "2026-09-24",
+        "hash": "sha256:9cbc677ec71094e425a9b2567edb059f84f1161c081c3e90236b3cfbe1ab0f71",
+        "status": "current",
+        "version": 2
+      },
+      "RPSL-1.0": {
+        "date": "2026-09-24",
+        "hash": "sha256:c42579dab8260f97a3e485c75d204a5ffbd47da1121d33a3028cf68d6071c30a",
+        "status": "current",
+        "version": 2
+      },
+      "RSALv2": {
+        "date": "2026-09-24",
+        "hash": "sha256:f58894aeaa1cdb4acee4d6b8a10670912db7bd5f8489235565802fdd13eec179",
+        "status": "current",
+        "version": 2
+      },
+      "RSCPL": {
+        "date": "2026-09-24",
+        "hash": "sha256:ffbad9916b9066b98b3a7441d2c4e771c2cdd8226e0ee6286c53723c1825c4fd",
+        "status": "current",
+        "version": 2
+      },
+      "Ruby": {
+        "date": "2026-09-24",
+        "hash": "sha256:65b8fc32387e10909fbcb775d4c8a5975c0fd32c690fa55962ab09a31f5210db",
+        "status": "current",
+        "version": 2
+      },
+      "SISSL": {
+        "date": "2026-09-24",
+        "hash": "sha256:efbbf004e9d10295fee330a5d960acb5c0c63eb42fd5e0c9a1fda8c8c58b506e",
+        "status": "current",
+        "version": 2
+      },
+      "SSH-OpenSSH": {
+        "date": "2026-09-24",
+        "hash": "sha256:f4451c2e93257e742e903db27d7924d4e666e30d3faa083e9e5d5f39e92ee3be",
+        "status": "current",
+        "version": 2
+      },
+      "SSPL-1.0": {
+        "date": "2026-09-24",
+        "hash": "sha256:8011d5b9c21a73ec5da95f06707ceef7290000913279eddb99516ba4043391ee",
+        "status": "current",
+        "version": 2
+      },
+      "SampleLicenseSl": {
+        "date": "2026-09-24",
+        "hash": "sha256:26660b830abc377a0338ed0e7f8587fd2fb759f2e1bd4cabcefd65af5dae5a0c",
+        "status": "current",
+        "version": 2
+      },
+      "SimPL-2.0": {
+        "date": "2026-09-24",
+        "hash": "sha256:e0a319f81cd3b2a7a296858cb68ce0d3c5a83b1cb859147a2b0de51ee2e044e5",
+        "status": "current",
+        "version": 2
+      },
+      "Sleepycat": {
+        "date": "2026-09-24",
+        "hash": "sha256:6fd9d66aa23a7d15c35f388a20ffbc0d3962067a7e99ddeb51e6ebb0b7d85dc4",
+        "status": "current",
+        "version": 2
+      },
+      "StatisticsCanadaOpenLicenceAgreement": {
+        "date": "2026-09-24",
+        "hash": "sha256:e666fa2a6ed70c13f0237350807389c363d7dc04ba23de87b29b9282f7280191",
+        "status": "current",
+        "version": 2
+      },
+      "SunPublicLicenseVersion10": {
+        "date": "2026-09-24",
+        "hash": "sha256:aad951c2780165516afb5a5bb699855479e26d1122e48a9fddcceda6bbd6b7be",
+        "status": "current",
+        "version": 2
+      },
+      "Sustainable-Use-License": {
+        "date": "2026-09-24",
+        "hash": "sha256:d264873370a042560782f56f66c14979b4f8225ad188cf5fc7519fb5dcbac568",
+        "status": "current",
+        "version": 2
+      },
+      "TheUniversalPermissiveLicenseUplVersion10": {
+        "date": "2026-09-24",
+        "hash": "sha256:82141c226b3f678e4a886ae6c52cd24d236dfe537c04041bf6d5c3f126f22032",
+        "status": "current",
+        "version": 2
+      },
+      "TheZlibLibpngLicense": {
+        "date": "2026-09-24",
+        "hash": "sha256:235f73b16fde0d7c68b7e452a62a61d8fab5436e47365f1b36f517c4073e3655",
+        "status": "current",
+        "version": 2
+      },
+      "Timescale-License": {
+        "date": "2026-09-24",
+        "hash": "sha256:17126bad6f778376c51720a2d73122c5ae9cacad823ddb96aa63d7f695b95d13",
+        "status": "current",
+        "version": 2
+      },
+      "UCL-1.0": {
+        "date": "2026-09-24",
+        "hash": "sha256:24460359a54f49cbedbd369fe95b7fc450a013e7f738c98d609780d58183c139",
+        "status": "current",
+        "version": 2
+      },
+      "UkOpenGovernmentLicenseForPublicSectorInformation": {
+        "date": "2026-09-24",
+        "hash": "sha256:3c21f0613038283615392fc17913bb87fc65027dfce0723c1fc2274df297cc96",
+        "status": "current",
+        "version": 2
+      },
+      "Unicode-3.0": {
+        "date": "2026-09-24",
+        "hash": "sha256:db8026701f12be05fdd0a6029a2833336f3e82f892a9279b2dfe38deae0dd44c",
+        "status": "current",
+        "version": 2
+      },
+      "Unicode-DFS-2016": {
+        "date": "2026-09-24",
+        "hash": "sha256:179476eec12006756cccd2b79e531359bba948ad161c53284a4c23cd3ce66272",
+        "status": "current",
+        "version": 2
+      },
+      "Unlicense": {
+        "date": "2026-09-24",
+        "hash": "sha256:0e16930486cdb4b2bfd5034e277ba61fb2cfb5822e4c460bab888d3ac8946872",
+        "status": "current",
+        "version": 2
+      },
+      "VSL-1.0": {
+        "date": "2026-09-24",
+        "hash": "sha256:debd4c6109e4ed4aef1082ca4209dacd9464b4f93fe46247ae3298c7777b9df7",
+        "status": "current",
+        "version": 2
+      },
+      "Vim": {
+        "date": "2026-09-24",
+        "hash": "sha256:d20e9373ea2a27d3ce1c142a54a435bd2d0ca1c4c487b5f4d5bb295155cc277e",
+        "status": "current",
+        "version": 2
+      },
+      "W3C": {
+        "date": "2026-09-24",
+        "hash": "sha256:179c047051ad41206f56d42a697abd596e7f8ef6fa3f1c99a2e3b28b0d52d50b",
+        "status": "current",
+        "version": 2
+      },
+      "W3cSoftwareAndDocumentNoticeAndLicense": {
+        "date": "2026-09-24",
+        "hash": "sha256:c166ecd96509a62bad2ff31a8cb934d74987b8175e24f7b617b9e65ba53cb78a",
+        "status": "current",
+        "version": 2
+      },
+      "WTFPL": {
+        "date": "2026-09-24",
+        "hash": "sha256:4550cda695b314b1d2ce607ea608d915fedf9c6aaaf3147e582f053cd170f5bc",
+        "status": "current",
+        "version": 2
+      },
+      "Watcom-1.0": {
+        "date": "2026-09-24",
+        "hash": "sha256:128c2e7a2468ca5c51e27861031f3de5b7e09a41e948b09e836a3355e4276762",
+        "status": "current",
+        "version": 2
+      },
+      "WordNet": {
+        "date": "2026-09-24",
+        "hash": "sha256:093ab4236879ed5bd19d1eb4f62bc48543a420decff5d25b4dede045868b7578",
+        "status": "current",
+        "version": 2
+      },
+      "X11": {
+        "date": "2026-09-24",
+        "hash": "sha256:e7ee5b3ecbde426f0968d9a499dbb26fe668241846e404058171b248c94eaa03",
+        "status": "current",
+        "version": 2
+      },
+      "Xnet": {
+        "date": "2026-09-24",
+        "hash": "sha256:4a1ce0d70b707c8b84a757042aca6e6154afecd81d00a39087e27d608bd48cb3",
+        "status": "current",
+        "version": 2
+      },
+      "ZPL-2.0": {
+        "date": "2026-09-24",
+        "hash": "sha256:ef941f1d947c999e36db1418232ec50e275f7da6bda84b17d8d1c9d8163ea931",
+        "status": "current",
+        "version": 2
+      },
+      "ZPL-2.1": {
+        "date": "2026-09-24",
+        "hash": "sha256:bacfde258f9ceb325cd314e68e0d7fe760acba4a620ef2ed04403bb4fed8d0e6",
+        "status": "current",
+        "version": 2
+      },
+      "bzip2-1.0.6": {
+        "date": "2026-09-24",
+        "hash": "sha256:5c0123ef153b4f346b28a62a754af0abe7f68406e284a97e12326d7c60e26b51",
+        "status": "current",
+        "version": 2
+      },
+      "curl": {
+        "date": "2026-09-24",
+        "hash": "sha256:221c863a44ac63ddc56424cebecb674b371797455b79cabdf7c9a6b832d6ba1b",
+        "status": "current",
+        "version": 2
+      },
+      "etalab-2.0": {
+        "date": "2026-09-24",
+        "hash": "sha256:4091a4b699aadb76e1c08e4c647098e8d5f6ef0872f0fe9da6fc6f06edce647d",
+        "status": "current",
+        "version": 2
+      },
+      "libpng-2.0": {
+        "date": "2026-09-24",
+        "hash": "sha256:60198f4c35856102499c5ab332c608c1b149109bc7937d0f0de49b06abd1342b",
+        "status": "current",
+        "version": 2
+      },
+      "zlib-acknowledgement": {
+        "date": "2026-09-24",
+        "hash": "sha256:5d096266aaaa942120e45da5b4300f52421732f7df5f2d1d398da7212f92e2ab",
+        "status": "current",
+        "version": 2
+      }
+    }
+  },
+  "release": "data-cc2fd2f7f4a6f172",
+  "vocabulary": {
+    "date": "2026-09-24",
+    "hash": "sha256:5a538e4afdc69631ef416b2fce5988133399e1b65e257c2e242322a03d4ef7e3",
+    "id": "ns-b5e891e76aaa1249",
+    "version": 2
+  }
+}

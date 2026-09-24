@@ -5,12 +5,15 @@
  *
  * Public API (all under window.DALICC):
  *
- *   DALICC.disclaimer.open()      show the experimental-service modal
- *   DALICC.disclaimer.close()     hide it and remember the acknowledgement
- *   DALICC.disclaimer.reset()     forget the acknowledgement (testing)
+ *   DALICC.disclaimer.open()      show the notice modal, where a page carries one
+ *   DALICC.disclaimer.close()     hide it again
+ *   DALICC.disclaimer.returnFocusTo(el)  where the focus goes when it closes
  *   DALICC.switches.value(name)   current value of a named tri-/two-state switch
  *   DALICC.switches.set(name, v)  set it programmatically
  *   DALICC.flash(message, kind)   append a flash message to [data-flash-region]
+ *
+ * A form with data-confirm="<question>" asks that question before it is sent, and
+ * is not sent when the answer is no. Without JavaScript it is sent at once.
  *
  * Everything degrades: with JavaScript off the switches are plain radio groups
  * and checkboxes, the fieldsets are <details>, the tooltips work on hover, and
@@ -23,35 +26,10 @@
 
   /* ------------------------------------------------------------ disclaimer */
 
-  var DISCLAIMER_KEY = "dalicc.disclaimer.ack";
   var lastFocus = null;
 
   function panel() {
     return document.getElementById("disclaimer-overlay");
-  }
-
-  function storageGet(key) {
-    try {
-      return window.localStorage.getItem(key);
-    } catch (err) {
-      return null;
-    }
-  }
-
-  function storageSet(key, value) {
-    try {
-      window.localStorage.setItem(key, value);
-    } catch (err) {
-      /* private mode / blocked storage: the modal simply shows again */
-    }
-  }
-
-  function storageRemove(key) {
-    try {
-      window.localStorage.removeItem(key);
-    } catch (err) {
-      /* ignore */
-    }
   }
 
   var disclaimer = {
@@ -67,14 +45,12 @@
       var node = panel();
       if (!node) return;
       node.hidden = true;
-      storageSet(DISCLAIMER_KEY, "1");
       if (lastFocus && typeof lastFocus.focus === "function") lastFocus.focus();
     },
-    reset: function () {
-      storageRemove(DISCLAIMER_KEY);
-    },
-    acknowledged: function () {
-      return storageGet(DISCLAIMER_KEY) === "1";
+    /** A page that has something to focus while the dialog is open hands it over here,
+     * so nothing behind the dialog takes the focus and the answer still gets it. */
+    returnFocusTo: function (element) {
+      lastFocus = element;
     }
   };
   root.disclaimer = disclaimer;
@@ -108,7 +84,9 @@
       }
     });
 
-    if (node.dataset.autoOpen === "true" && !disclaimer.acknowledged()) {
+    // Nothing is remembered: the tool pages carry a static note instead, and a page
+    // that asks for the dialog to open by itself gets it on every visit.
+    if (node.dataset.autoOpen === "true") {
       disclaimer.open();
     }
   }
@@ -192,6 +170,61 @@
     return box;
   };
 
+  /* ---------------------------------------------------------- confirmations */
+
+  /**
+   * Ask before a form that deletes, revokes, withdraws or hands something over is
+   * sent. The question sits on the form as data-confirm, written for that action:
+   * what happens and what stops working. One listener on the document covers every
+   * form, including the ones a page adds later.
+   */
+  function initConfirmations() {
+    document.addEventListener(
+      "submit",
+      function (event) {
+        var form = event.target;
+        if (!form || !form.getAttribute) return;
+        var question = form.getAttribute("data-confirm");
+        if (!question) return;
+        if (!window.confirm(question)) {
+          event.preventDefault();
+          event.stopImmediatePropagation();
+        }
+      },
+      true
+    );
+  }
+
+  /* ------------------------------------------------------------ result notice */
+
+  /**
+   * Focus the notice a page rendered next to the control that was used.
+   *
+   * A form on a long page answers with the page again, and the answer sits in the
+   * section of that form, marked data-result-notice and tabindex="-1". Focusing it
+   * brings it into view and puts a keyboard or screen reader user on it, instead of
+   * at the top of the page. Behind an open disclaimer dialog nothing is focused; the
+   * dialog hands the focus over when it closes.
+   */
+  function initResultNotice() {
+    var notice = document.querySelector("[data-result-notice]");
+    if (!notice || !notice.querySelector(".flash")) return;
+    var overlay = panel();
+    if (overlay && !overlay.hidden) {
+      disclaimer.returnFocusTo(notice);
+      return;
+    }
+    notice.focus();
+    // A page opened at a section (#people-heading) scrolls there once it has loaded,
+    // and the browser hands the focus back to the page while it does; the notice
+    // takes it again right after.
+    window.addEventListener("load", function () {
+      window.setTimeout(function () {
+        if (document.activeElement === document.body) notice.focus({ preventScroll: true });
+      }, 0);
+    });
+  }
+
   function ready(fn) {
     if (document.readyState === "loading") {
       document.addEventListener("DOMContentLoaded", fn);
@@ -203,5 +236,7 @@
   ready(function () {
     initDisclaimer();
     initTooltips();
+    initConfirmations();
+    initResultNotice();
   });
 })();

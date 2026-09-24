@@ -87,8 +87,15 @@
   --size-h3: 24px;
   --size-h3-narrow: 21px;
   --size-h4: 20px;
+  --size-numeral: 54px;
+  --size-card-title-large: 26px;
+  --size-card-title: 22px;
   --size-lede: 19px;
   --size-body: 18px;
+  --size-body-small: 17px;
+  --size-caption: 15px;
+  --size-label: 14px;
+  --size-label-small: 13px;
   --size-ui: 19px;
   --size-ui-small: 16px;
   --size-mono: 14px;
@@ -101,9 +108,11 @@
 <style>
   /* The mirror's navigation is always open: it has no menu button to open it. */
   .site-nav.mirror-nav { display: block; }
+  .mirror-social ul { display: flex; flex-wrap: wrap; gap: 4px 20px; }
 </style>
 </head>
-<body class="">
+<body class=""
+      data-bookmarks-script="/static/site/dashboard.js?v=140b71793dd8">
   <a class="skip-link" href="#main-content">Skip to main content</a>
 
   <header class="site-header">
@@ -120,6 +129,7 @@
         <li class="site-nav__item"><a class="site-nav__link" href="../index.html">Vocabulary</a></li>
         <li class="site-nav__item"><a class="site-nav__link" href="../dependency-graph/">Dependency graph</a></li>
         <li class="site-nav__item site-nav__item--active"><a class="site-nav__link" href="./" aria-current="page">Reasoning</a></li>
+        <li class="site-nav__item"><a class="site-nav__link" href="../history/">History</a></li>
         <li class="site-nav__item"><a class="site-nav__link" href="../dalicc-ns.ttl">Turtle</a></li>
         <li class="site-nav__item"><a class="site-nav__link" href="../dalicc-ns.jsonld">JSON-LD</a></li>
         <li class="site-nav__item"><a class="site-nav__link" href="../dalicc-ns.rdf">RDF/XML</a></li>
@@ -149,7 +159,7 @@
   <div class="flash flash--info" role="status">
     <span class="flash__icon" aria-hidden="true">&#8505;</span>
     <div class="flash__body">
-      <p style="margin:0">Static mirror of https://dalicc.net/ns, vocabulary version 7, generated on 2026-09-23; the live pages may be newer.</p>
+      <p style="margin:0">Static mirror of https://dalicc.net/ns, vocabulary version 2, generated on 2026-09-24; the live pages may be newer.</p>
     </div>
   </div>
 </div>
@@ -171,6 +181,8 @@
 >Dependency Graph Viewer</a>
   <a class="section-links__link" href="https://dalicc.net/dependency-graph/editor"
 >Dependency Graph Editor</a>
+  <a class="section-links__link" href="../dependency-graph/compare/"
+>Compare graphs</a>
 </nav>
 
 
@@ -190,9 +202,10 @@
     license, that a license requiring share alike for the whole work does not at the
     same time permit changing the license without a duty to pick a compliant one,
     because the work could then leave the license that requires it to stay. The
-    <a href="https://dalicc.net/license-mixer">License Mixer</a> asks the second one over a whole bundle
-    and lists every conflicting pair it finds, direct and derived, with the chain behind
-    it. The API answers both, so a program gets what these pages get. Every one of these
+    <a href="https://dalicc.net/license-mixer">License Mixer</a> asks the second one over a whole bundle,
+    lists every pair it finds, direct and derived, with the chain behind it, and tells a
+    conflict from a restriction: what no combined work can meet from what the combined
+    work may merely not do. The API answers both, so a program gets what these pages get. Every one of these
     checks reasons with a dependency graph, and you choose which graph that is.
   </p>
 
@@ -493,32 +506,45 @@ that says how the actions of the vocabulary
     graph records a reading of the law; it does not make that reading correct, and
     nothing here is legal advice.
   </p>
-
-  <h2>What a licence does not say</h2>
   <p>
-    A record in the library states what its text states, and most licence texts are
+    The jurisdiction graphs DALICC ships work the same way. Each one is a complete graph:
+    the core graph's statements, and on top of them what the law of one market says
+    differently. A jurisdiction graph can add default rules, leave out a statement of the
+    core graph that its law does not support, or replace one of the core graph's rules,
+    and it names the legal reason every time, with a plain explanation beside the
+    citation. A check under it reads that one graph and nothing else. To see exactly what
+    one graph does to another,
+    <a href="../dependency-graph/compare/">compare the two</a>: the comparator lists what the
+    second graph adds, what it does not have and what it holds in a different form.
+  </p>
+
+  <h2>What a license does not say</h2>
+  <p>
+    A record in the library states what its text states, and most license texts are
     silent about most acts. What follows from that silence is a question of law rather
     than of the text, and the answer can differ from one country to the next, so a
     dependency graph carries a second kind of statement for it: a default rule<span class="info">
   <button type="button" class="info__btn" aria-describedby="reasoning-default-rule">
     <span aria-hidden="true">?</span><span class="visually-hidden">More information</span>
   </button>
-  <span class="info__bubble" id="reasoning-default-rule" role="tooltip">A default rule names one action, what applies to it when the licence says nothing, the territory it holds in, and the statute or principle it rests on.</span>
+  <span class="info__bubble" id="reasoning-default-rule" role="tooltip">A default rule names one action, what applies to it when the license says nothing, the territory it holds in, and the statute or principle it rests on.</span>
 </span>
 . The
-    core graph adopts one: a copyright licence that says nothing about endorsement
+    core graph adopts one: a copyright license that says nothing about endorsement
     grants no right to use the licensor's name, which rests on trademark law and the
-    protection of names. A check under that graph therefore reads a silent licence the
+    protection of names. A check under that graph therefore reads a silent license the
     way it read a record that carried the prohibition, and every finding says which side
     came from the text and which from the rule.
   </p>
   <p>
     Seven further graphs hold the rules proposed for the European Union, the United
-    States, China, the United Kingdom, Japan, India and Brazil: moral rights a licence
+    States, China, the United Kingdom, Japan, India and Brazil: moral rights a license
     cannot waive, the database right, the mining exceptions, decompilation for
     interoperability and exhaustion after a first sale. Each rule names the statute it
-    rests on, each one is marked as a proposal, and none of them reaches a reader who
-    chooses nothing. Choosing one of those graphs is a request to see what its rules
+    rests on, explains in two or three plain sentences what it does and why, is marked as
+    a proposal, and reaches no reader who chooses nothing. The graphs themselves are published under plain names such as
+    "European Union default rules"; the status belongs to each rule, and every finding a
+    rule supplied says "by default rule (proposed)" or "(adopted)". Choosing one of those graphs is a request to see what its rules
     would do. They are questions for a legal reviewer and nothing in them is legal
     advice.
   </p>
@@ -592,11 +618,23 @@ that says how the actions of the vocabulary
       may be the same license: that is what makes the consistency check possible.
     </li>
     <li>
-      Only permissions against prohibitions, and permissions against permissions through
-      <code>dalicc:contradicts</code>, are weighed against each other. Duties are read
-      and reported, and the consistency check does test a duty against a prohibition of
-      the same license, but the compatibility check does not compare the duties of
-      different licenses.
+      A duty of one license against a prohibition of another, and two licenses that each
+      keep the whole work under themselves (share alike of the whole work, or of every
+      derivative with changing the license forbidden), are reported as
+      <strong>direct</strong> too. The second is weighed only when nothing links the two:
+      not the same license text, not an "or later" option that reaches the other
+      version, not a compatibility clause. GPL-2.0-only with GPL-3.0-only is such a pair;
+      GPL-2.0-or-later with GPL-3.0-only is not.
+    </li>
+    <li>
+      The mixer and the GitHub License Checker read every pair as one of three kinds. A
+      <strong>conflict</strong> is one no combined work can meet. A
+      <strong>restriction</strong> is a permission against a prohibition: MIT permits
+      changing the license and GPL-3.0-only forbids it, so the combined work may not
+      change its license, and MIT code can still go into a GPL-3.0 work. A finding
+      <strong>about one license alone</strong> is a license that contradicts itself.
+      The verdict names the worst kind, and under it the pages list the duties of the
+      combined work, which the reasoner does not weigh against each other.
     </li>
     <li>
       Nothing here knows what kind of asset a license covers. The License Mixer checks
@@ -612,6 +650,29 @@ that says how the actions of the vocabulary
     </li>
   </ul>
 
+  <h2 id="cannot-see">What the check cannot see</h2>
+  <ul class="rsn-limits">
+    <li>
+      <strong>Compatibility nobody states.</strong> Some licenses name the licenses a
+      work may move to: CC BY-SA 4.0 lets an adaptation go under GPL-3.0, the LGPL lets
+      its code be relicensed under the GPL, and GPL-3.0 and AGPL-3.0 allow each other
+      in their section 13. Where a record states such a license, the check sees it in
+      the direction it is granted and says the combined work has to be released under
+      the named license. Where no record states it, two licenses that each keep the
+      whole work are reported as a conflict.
+    </li>
+    <li>
+      <strong>Clauses the vocabulary cannot express.</strong> A ban on selling the
+      software (the Commons Clause) or on production use (the Business Source License)
+      has no action of its own, so nothing is weighed against it.
+    </li>
+    <li>
+      <strong>The texts themselves.</strong> The check reads what a record states, not
+      the license text, and a record can miss a clause. Read the license texts before
+      you combine the works.
+    </li>
+  </ul>
+
   <h2>Try it</h2>
   <ul class="rsn-try">
     <li>
@@ -621,8 +682,8 @@ that says how the actions of the vocabulary
         stroke-linecap="round" stroke-linejoin="round"/>
 </svg>
  License Mixer</a>
-      <span>Put two or more licenses in a bundle and read the conflicts, direct and
-        derived, with the chain behind each one.</span>
+      <span>Put two or more licenses in a bundle and read the verdict: the conflicts,
+        the restrictions, what you must do and what the check cannot see.</span>
     </li>
     <li>
       <a class="arrow-link" href="https://dalicc.net/license-composer"><svg width="20" height="20" viewBox="0 0 20 20" fill="none" aria-hidden="true" focusable="false">
@@ -654,14 +715,14 @@ that says how the actions of the vocabulary
         disagree with and reason with your version.</span>
     </li>
     <li>
-      <a class="arrow-link" href="https://github.com/dalicc/dalicc_production/blob/HEAD/reasoner/README.md"
+      <a class="arrow-link" href="https://github.com/dalicc/dalicc/blob/main/reasoner/README.md"
          target="_blank" rel="noopener noreferrer"><svg width="20" height="20" viewBox="0 0 20 20" fill="none" aria-hidden="true" focusable="false">
   <circle cx="10" cy="10" r="9" stroke="currentColor" stroke-width="1.5"/>
   <path d="M6 10h8m-3.2-3.2L14 10l-3.2 3.2" stroke="currentColor" stroke-width="1.5"
         stroke-linecap="round" stroke-linejoin="round"/>
 </svg>
  The reasoner, in detail</a>
-      <span>The developer documentation: the logic program, the external atoms, the
+      <span>The reasoner's own documentation, in the public data repository: the logic program, the external atoms, the
         request and answer shapes, and the limits.</span>
     </li>
   </ul>
@@ -673,7 +734,12 @@ that says how the actions of the vocabulary
 
   <footer class="site-footer">
     <div class="site-footer__inner">
-      
+      <nav class="site-footer__nav mirror-social" aria-label="DALICC elsewhere">
+        <ul>
+          <li><a href="https://www.linkedin.com/groups/13523102" target="_blank" rel="noopener noreferrer">DALICC on LinkedIn</a></li>
+          <li><a href="https://github.com/dalicc/" target="_blank" rel="noopener noreferrer">DALICC on GitHub</a></li>
+        </ul>
+      </nav>
       <p class="site-footer__funding">
         DALICC does not replace legal advice.
       </p>
@@ -702,7 +768,6 @@ that says how the actions of the vocabulary
 
   <script src="../assets/site/site.js" defer></script>
   <script src="../assets/site/components.js" defer></script>
-  <script src="../assets/site/dashboard.js" defer></script>
 <script src="../assets/site/reasoning.js" defer></script>
 </body>
 </html>

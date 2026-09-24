@@ -1,0 +1,84 @@
+{
+  "items": [
+    {
+      "content_hash": "sha256:5a538e4afdc69631ef416b2fce5988133399e1b65e257c2e242322a03d4ef7e3",
+      "date": "2026-09-24",
+      "formats": {
+        "jsonld": "/v2/vocabulary/versions/2?format=jsonld",
+        "nt": "/v2/vocabulary/versions/2?format=nt",
+        "rdfxml": "/v2/vocabulary/versions/2?format=rdfxml",
+        "ttl": "/v2/vocabulary/versions/2?format=ttl"
+      },
+      "hash_algorithm": "dalicc-c14n-1",
+      "id": "dalicc-ns",
+      "iri": "https://dalicc.net/ns#",
+      "kind": "vocabulary",
+      "latest_version": 2,
+      "links": {
+        "canonical": "/v2/vocabulary/versions/2",
+        "changelog": "/ns/changelog",
+        "html": "https://dalicc.net/ns",
+        "latest": "/v2/vocabulary/versions/2",
+        "predecessor": "/v2/vocabulary/versions/1",
+        "self": "/v2/vocabulary/versions/2",
+        "successor": null,
+        "v1": "/ns?format=ttl",
+        "version_history": "/v2/vocabulary/versions"
+      },
+      "port_of": null,
+      "published_on": "2026-09-24",
+      "record_status": "published",
+      "replaced_by": null,
+      "replaces": null,
+      "status": "current",
+      "summary": "The content review of 2026-09-15 defined the terms the license texts need and the review itself writes, and the model history added the terms a versioned model needs. The later changes defined the terms of the standard licenses, a composed license's own text, variants and SPDX exceptions, default rules for what a license does not say, complete dependency graphs built from a difference file and where a statement of a record comes from, made every action definition describe its act, deprecated seven duplicates and spell license the way the site does.",
+      "terms": 142,
+      "title": "DALICC vocabulary",
+      "version": 2,
+      "withdrawn_on": null
+    },
+    {
+      "content_hash": "sha256:f781c32371c19d794600984a60f2dcf94f974eedf379e80c757b13f52555003a",
+      "date": "",
+      "formats": {
+        "jsonld": "/v2/vocabulary/versions/1?format=jsonld",
+        "nt": "/v2/vocabulary/versions/1?format=nt",
+        "rdfxml": "/v2/vocabulary/versions/1?format=rdfxml",
+        "ttl": "/v2/vocabulary/versions/1?format=ttl"
+      },
+      "hash_algorithm": "dalicc-c14n-1",
+      "id": "dalicc-ns",
+      "iri": "https://dalicc.net/ns#",
+      "kind": "vocabulary",
+      "latest_version": 2,
+      "links": {
+        "canonical": "/v2/vocabulary/versions/1",
+        "changelog": "/ns/changelog",
+        "html": "https://dalicc.net/ns",
+        "latest": "/v2/vocabulary/versions/2",
+        "predecessor": null,
+        "self": "/v2/vocabulary/versions/1",
+        "successor": "/v2/vocabulary/versions/2",
+        "v1": "/ns/versions/1",
+        "version_history": "/v2/vocabulary/versions"
+      },
+      "port_of": null,
+      "published_on": "",
+      "record_status": "published",
+      "replaced_by": null,
+      "replaces": null,
+      "status": "superseded",
+      "summary": "",
+      "terms": 41,
+      "title": "DALICC vocabulary",
+      "version": 1,
+      "withdrawn_on": null
+    }
+  ],
+  "links": {
+    "next": null,
+    "self": "/v2/vocabulary/versions"
+  },
+  "next_cursor": null,
+  "total": 2
+}

@@ -8,12 +8,12 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>license text | DALICC</title>
+  <title>License text | DALICC</title>
   <meta name="description" content="dalicc:licenseText in the DALICC vocabulary: what the term means, what kind of term it is, and how much of the DALICC license library uses it.">
   <link rel="canonical" href="https://dalicc.net/ns/licenseText">
   <meta property="og:site_name" content="DALICC">
   <meta property="og:type" content="website">
-  <meta property="og:title" content="license text">
+  <meta property="og:title" content="License text">
   <meta property="og:description" content="dalicc:licenseText in the DALICC vocabulary: what the term means, what kind of term it is, and how much of the DALICC license library uses it.">
   <meta property="og:url" content="https://dalicc.net/ns/licenseText">
   <meta property="og:image" content="https://dalicc.net/static/DALICC_full_logo_RGB.svg?v=e3b77d30f4d3">
@@ -88,8 +88,15 @@
   --size-h3: 24px;
   --size-h3-narrow: 21px;
   --size-h4: 20px;
+  --size-numeral: 54px;
+  --size-card-title-large: 26px;
+  --size-card-title: 22px;
   --size-lede: 19px;
   --size-body: 18px;
+  --size-body-small: 17px;
+  --size-caption: 15px;
+  --size-label: 14px;
+  --size-label-small: 13px;
   --size-ui: 19px;
   --size-ui-small: 16px;
   --size-mono: 14px;
@@ -102,9 +109,11 @@
 <style>
   /* The mirror's navigation is always open: it has no menu button to open it. */
   .site-nav.mirror-nav { display: block; }
+  .mirror-social ul { display: flex; flex-wrap: wrap; gap: 4px 20px; }
 </style>
 </head>
-<body class="">
+<body class=""
+      data-bookmarks-script="/static/site/dashboard.js?v=140b71793dd8">
   <a class="skip-link" href="#main-content">Skip to main content</a>
 
   <header class="site-header">
@@ -121,6 +130,7 @@
         <li class="site-nav__item"><a class="site-nav__link" href="../../index.html">Vocabulary</a></li>
         <li class="site-nav__item"><a class="site-nav__link" href="../../dependency-graph/">Dependency graph</a></li>
         <li class="site-nav__item"><a class="site-nav__link" href="../../reasoning/">Reasoning</a></li>
+        <li class="site-nav__item"><a class="site-nav__link" href="../../history/">History</a></li>
         <li class="site-nav__item"><a class="site-nav__link" href="../../dalicc-ns.ttl">Turtle</a></li>
         <li class="site-nav__item"><a class="site-nav__link" href="../../dalicc-ns.jsonld">JSON-LD</a></li>
         <li class="site-nav__item"><a class="site-nav__link" href="../../dalicc-ns.rdf">RDF/XML</a></li>
@@ -150,7 +160,7 @@
   <div class="flash flash--info" role="status">
     <span class="flash__icon" aria-hidden="true">&#8505;</span>
     <div class="flash__body">
-      <p style="margin:0">Static mirror of https://dalicc.net/ns, vocabulary version 7, generated on 2026-09-23; the live pages may be newer.</p>
+      <p style="margin:0">Static mirror of https://dalicc.net/ns, vocabulary version 2, generated on 2026-09-24; the live pages may be newer.</p>
     </div>
   </div>
 </div>
@@ -163,11 +173,11 @@
 <a href="../../index.html">Vocabulary</a>
     </li>
     <li>
-<span aria-current="page">license text</span>    </li>
+<span aria-current="page">License text</span>    </li>
   </ol>
 </nav>
 
-<h1>license text</h1>
+<h1>License text</h1>
 <hr class="rule-dotted">
 
 
@@ -183,15 +193,15 @@
   <section class="term-card"
            id="licenseText">
     <h2>
-      license text
+      License text
 <span class="term-card__kind">owl:DatatypeProperty</span>    </h2>
 
     <p class="term-card__iri"><code>https://dalicc.net/ns#licenseText</code></p>
 
-<p class="term-card__definition">The full text of a licence as its licensor publishes it, carried by the
+<p class="term-card__definition">The full text of a license as its licensor publishes it, carried by the
 record itself. Curated records point at the authoritative text with cc:legalcode and quote
 single clauses in dalicc:WarrantyDisclaimer, dalicc:LiabilityLimitation and
-dalicc:additionalClauses; a composed licence may carry the text written for it, for example
+dalicc:additionalClauses; a composed license may carry the text written for it, for example
 by License-to-Text after the licensor has checked it.</p><p class="text-muted">Written by the DALICC license composer onto user-composed licenses; no license of the published library carries it.</p>
     <dl class="term-card__meta">
       <dt>Kind</dt>
@@ -201,6 +211,16 @@ by License-to-Text after the licensor has checked it.</p><p class="text-muted">W
       <dd>
         In 0 of the 581 license records
         and by 0 dependency-graph statements.
+      </dd>
+      <dt>Domain</dt>
+      <dd class="term-card__links">
+        <a href="http://www.w3.org/ns/odrl/2/Set" rel="noopener noreferrer">
+          <code>odrl:Set</code></a>
+      </dd>
+      <dt>Range</dt>
+      <dd class="term-card__links">
+        <a href="http://www.w3.org/2001/XMLSchema#string" rel="noopener noreferrer">
+          <code>xsd:string</code></a>
       </dd>
       <dt>See also</dt>
       <dd class="term-card__links">
@@ -220,7 +240,12 @@ by License-to-Text after the licensor has checked it.</p><p class="text-muted">W
 
   <footer class="site-footer">
     <div class="site-footer__inner">
-      
+      <nav class="site-footer__nav mirror-social" aria-label="DALICC elsewhere">
+        <ul>
+          <li><a href="https://www.linkedin.com/groups/13523102" target="_blank" rel="noopener noreferrer">DALICC on LinkedIn</a></li>
+          <li><a href="https://github.com/dalicc/" target="_blank" rel="noopener noreferrer">DALICC on GitHub</a></li>
+        </ul>
+      </nav>
       <p class="site-footer__funding">
         DALICC does not replace legal advice.
       </p>
@@ -249,6 +274,5 @@ by License-to-Text after the licensor has checked it.</p><p class="text-muted">W
 
   <script src="../../assets/site/site.js" defer></script>
   <script src="../../assets/site/components.js" defer></script>
-  <script src="../../assets/site/dashboard.js" defer></script>
 </body>
 </html>

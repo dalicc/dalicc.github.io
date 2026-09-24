@@ -87,8 +87,15 @@
   --size-h3: 24px;
   --size-h3-narrow: 21px;
   --size-h4: 20px;
+  --size-numeral: 54px;
+  --size-card-title-large: 26px;
+  --size-card-title: 22px;
   --size-lede: 19px;
   --size-body: 18px;
+  --size-body-small: 17px;
+  --size-caption: 15px;
+  --size-label: 14px;
+  --size-label-small: 13px;
   --size-ui: 19px;
   --size-ui-small: 16px;
   --size-mono: 14px;
@@ -102,9 +109,11 @@
 <style>
   /* The mirror's navigation is always open: it has no menu button to open it. */
   .site-nav.mirror-nav { display: block; }
+  .mirror-social ul { display: flex; flex-wrap: wrap; gap: 4px 20px; }
 </style>
 </head>
-<body class="">
+<body class=""
+      data-bookmarks-script="/static/site/dashboard.js?v=140b71793dd8">
   <a class="skip-link" href="#main-content">Skip to main content</a>
 
   <header class="site-header">
@@ -121,6 +130,7 @@
         <li class="site-nav__item"><a class="site-nav__link" href="../index.html">Vocabulary</a></li>
         <li class="site-nav__item site-nav__item--active"><a class="site-nav__link" href="./" aria-current="page">Dependency graph</a></li>
         <li class="site-nav__item"><a class="site-nav__link" href="../reasoning/">Reasoning</a></li>
+        <li class="site-nav__item"><a class="site-nav__link" href="../history/">History</a></li>
         <li class="site-nav__item"><a class="site-nav__link" href="../dalicc-ns.ttl">Turtle</a></li>
         <li class="site-nav__item"><a class="site-nav__link" href="../dalicc-ns.jsonld">JSON-LD</a></li>
         <li class="site-nav__item"><a class="site-nav__link" href="../dalicc-ns.rdf">RDF/XML</a></li>
@@ -150,7 +160,7 @@
   <div class="flash flash--info" role="status">
     <span class="flash__icon" aria-hidden="true">&#8505;</span>
     <div class="flash__body">
-      <p style="margin:0">Static mirror of https://dalicc.net/ns, vocabulary version 7, generated on 2026-09-23; the live pages may be newer.</p>
+      <p style="margin:0">Static mirror of https://dalicc.net/ns, vocabulary version 2, generated on 2026-09-24; the live pages may be newer.</p>
     </div>
   </div>
 </div>
@@ -189,59 +199,59 @@
 
   <section class="dg-picker" aria-labelledby="dg-picker-heading">
     <h2 id="dg-picker-heading">Graphs you can reason with</h2>
+    <h3 class="dg-picker__group">Core graph</h3>
     <ul class="dg-picker__list">
       <li class="dg-picker__item dg-picker__item--current">
         <a href="./">DALICC deontic dependency graph</a>
-        <span class="badge badge--neutral">core, default</span>
-        <span class="text-muted">version 5</span>
+<span class="badge badge--neutral">core, default</span>        <span class="text-muted">version 2</span>
+      </li>
+    </ul>
+    <h3 class="dg-picker__group">Jurisdiction graphs (the core graph plus local default rules)</h3>
+    <ul class="dg-picker__list">
+      <li class="dg-picker__item">
+        <a href="https://dalicc.net/dependency-graph?graph=dg_br">Brazil default rules</a>
+        <span class="text-muted">version 2: the core graph plus 3 default rules</span>
       </li>
       <li class="dg-picker__item">
-        <a href="https://dalicc.net/dependency-graph?graph=dg_br">Brazil default rules (proposal)</a>
-        <span class="badge badge--neutral">core</span>
-        <span class="text-muted">version 1</span>
+        <a href="https://dalicc.net/dependency-graph?graph=dg_cn">China default rules</a>
+        <span class="text-muted">version 2: the core graph plus 2 default rules</span>
       </li>
       <li class="dg-picker__item">
-        <a href="https://dalicc.net/dependency-graph?graph=dg_cn">China default rules (proposal)</a>
-        <span class="badge badge--neutral">core</span>
-        <span class="text-muted">version 1</span>
+        <a href="https://dalicc.net/dependency-graph?graph=dg_eu">European Union default rules</a>
+        <span class="text-muted">version 2: the core graph plus 9 default rules</span>
       </li>
       <li class="dg-picker__item">
-        <a href="https://dalicc.net/dependency-graph?graph=dg_eu">European Union default rules (proposal)</a>
-        <span class="badge badge--neutral">core</span>
-        <span class="text-muted">version 1</span>
+        <a href="https://dalicc.net/dependency-graph?graph=dg_in">India default rules</a>
+        <span class="text-muted">version 2: the core graph plus 3 default rules</span>
       </li>
       <li class="dg-picker__item">
-        <a href="https://dalicc.net/dependency-graph?graph=dg_in">India default rules (proposal)</a>
-        <span class="badge badge--neutral">core</span>
-        <span class="text-muted">version 1</span>
+        <a href="https://dalicc.net/dependency-graph?graph=dg_jp">Japan default rules</a>
+        <span class="text-muted">version 2: the core graph plus 3 default rules</span>
       </li>
       <li class="dg-picker__item">
-        <a href="https://dalicc.net/dependency-graph?graph=dg_jp">Japan default rules (proposal)</a>
-        <span class="badge badge--neutral">core</span>
-        <span class="text-muted">version 1</span>
+        <a href="https://dalicc.net/dependency-graph?graph=dg_gb">United Kingdom default rules</a>
+        <span class="text-muted">version 2: the core graph plus 5 default rules</span>
       </li>
       <li class="dg-picker__item">
-        <a href="https://dalicc.net/dependency-graph?graph=dg_gb">United Kingdom default rules (proposal)</a>
-        <span class="badge badge--neutral">core</span>
-        <span class="text-muted">version 1</span>
-      </li>
-      <li class="dg-picker__item">
-        <a href="https://dalicc.net/dependency-graph?graph=dg_us">United States default rules (proposal)</a>
-        <span class="badge badge--neutral">core</span>
-        <span class="text-muted">version 1</span>
+        <a href="https://dalicc.net/dependency-graph?graph=dg_us">United States default rules</a>
+        <span class="text-muted">version 2: the core graph plus 2 default rules</span>
       </li>
     </ul>
     <p class="field__hint">
-      A core graph is curated by the project, and it is what everybody reasons with. While
-      you are signed in, your own graphs and the ones shared with you appear here too,
-      drafts included. Any of them can be chosen in the License Composer and the License
-      Mixer straight away; <a href="https://dalicc.net/my/dependency-graphs">manage your graphs</a>.
+      The core graph is curated by the project, and it is what everybody reasons with. Each
+      jurisdiction graph is complete: it is the core graph with the default rules proposed
+      for one market, and says what it removes or replaces when it does. While you are
+      signed in, your own graphs and the ones shared with you appear here too, drafts
+      included. Any of them can be chosen in the License Composer and the License Mixer
+      straight away; <a href="compare/">compare two of them</a> or
+      <a href="https://dalicc.net/my/dependency-graphs">manage your graphs</a>.
     </p>
   </section>
 
   <div class="tool-actions">
     <a class="btn btn--ghost" href="https://dalicc.net/dependency-graph.ttl" download>Download as Turtle</a>
     <a class="btn btn--ghost" href="https://api.dalicc.net/dependencygraph/list">The same data as JSON</a>
+    <a class="btn btn--ghost" href="compare/">Compare graphs</a>
     <a class="btn btn--ghost" href="../index.html">The DALICC vocabulary</a>
     <a class="btn btn--ghost"
        href="mailto:tassilo.pellegrini@ustp.at,giray.havur@ustp.at?subject=DALICC%20dependency%20graph%20dg_default">Report an issue</a>
@@ -251,6 +261,15 @@
   <p class="dg-definition">
     Named graph <code class="uri">https://dalicc.net/dependencygraph/dg_default</code>.
   </p>
+  <nav class="section-links" aria-label="On this page">
+    <a class="section-links__link" href="#includedin">odrl:includedIn</a>
+    <a class="section-links__link" href="#implies">odrl:implies</a>
+    <a class="section-links__link" href="#sameas">owl:sameAs</a>
+    <a class="section-links__link" href="#contradicts">dalicc:contradicts</a>
+    <a class="section-links__link" href="#default-rules">Default rules</a>
+    <a class="section-links__link" href="#dg-history-heading">History</a>
+  </nav>
+
 
   <figure class="dg-figure">
     <div class="dg-canvas" id="dependency-graph-canvas"
@@ -1151,8 +1170,7 @@
 
 
   <h2 id="default-rules">
-    Default rules
-    <span class="dg-count">1</span>
+Default rules    <span class="dg-count">1</span>
   </h2>
   <p class="dg-definition">
     An axiom above relates two actions. A default rule says what applies to an action a
@@ -1171,7 +1189,7 @@
         <th scope="col">What applies</th>
         <th scope="col">Where</th>
         <th scope="col">On the strength of</th>
-        <th scope="col">State</th>
+        <th scope="col"><a href="https://dalicc.net/documentation/glossary#proposed">Status</a></th>
       </tr>
     </thead>
     <tbody>
@@ -1183,12 +1201,16 @@
         </th>
         <td>Not granted by default</td>
         <td>Worldwide</td>
-        <td class="dg-basis">trademark law and the protection of names: a copyright licence that is silent grants no right to endorsement</td>
+        <td class="dg-basis">Trademark and name rights are separate from copyright: Regulation (EU) 2017/1001 article 9 lets the proprietor of an EU trade mark prevent all third parties not having his consent from using the sign in the course of trade, and Directive (EU) 2015/2436 article 10, 15 U.S.C. 1114 and 1125(a), section 12 BGB and section 43 ABGB protect marks and names in the same way. The library&#39;s evidence is Creative Commons 4.0 section 2(b)(2): Patent and trademark rights are not licensed under this Public License. A copyright licence that is silent grants no right to use the licensor&#39;s name or marks to suggest endorsement</td>
         <td>
           <span class="dg-rule-state dg-rule-state--adopted">
             Adopted
           </span>
+          <span class="field__hint dg-rule-adoption">Adopted on <time datetime="2026-09-23">2026-09-23</time>. Giray Havur, for the association&#39;s review, adopted this rule on 2026-09-23.</span>
         </td>
+      </tr>
+      <tr class="dg-rule-explanation">
+        <td colspan="5"><span class="visually-hidden">What this rule does: </span>A licence that says nothing about endorsement is read as not allowing it: the licence gives the licensee no right to use the licensor&#39;s name or marks in a way that states or implies that the licensor endorses the licensee or its product, while stating truthfully that a work is based on or uses the licensed work is a different act that this rule does not decide. A copyright licence grants rights in the work, and the right to use a name or a trademark is a separate right under trademark law and the protection of names, which a silent copyright licence does not pass on. Combining a licence that is silent about endorsement with one that permits it shows a conflict marked as coming from this rule.</td>
       </tr>
     </tbody>
   </table>
@@ -1201,73 +1223,70 @@
   <section class="history-box" aria-labelledby="dg-history-heading">
   <h2 id="dg-history-heading">History</h2>
   <p class="history-box__lede">
-    The dependency graph has 5 versions. Version 5 is
+    The dependency graph has 2 versions. Version 2 is
     the one served today; every earlier version keeps its own address, so a conclusion drawn
     from one of them can still be checked against it.
   </p>
   <ol class="version-list">
-    <li class="version version--current">
+    <li class="version version--current" id="version-2">
       <p class="version__head">
-        <span class="version__number">Version 5</span>
-<span class="badge badge--ok">current</span><span class="version__date">2026-09-23</span>        <span class="version__reviewer">Giray Havur</span>
+        <span class="version__number">Version 2</span>
+<span class="badge badge--ok">current</span><span class="version__date">2026-09-24</span>        <span class="version__reviewer">Giray Havur</span>
       </p>
-      <p class="version__summary">The graph gained a second kind of statement. An axiom relates two actions; a default rule says what applies to an action a licence is silent about, in which jurisdiction, and on the strength of which legal source. The first adopted rule is the one the library had been keeping as a house convention on 519 records: a copyright licence that says nothing about endorsement grants none. The 46 axioms are unchanged.</p>
+      <p class="version__summary">The content review of 2026-09-15 removed the pair of axioms that made a reciprocal license which also grants sublicensing contradict itself, and the reviews that followed related the two names of sublicensing and the commercial-use terms, so the graph holds 46 axioms. The graph also gained its first default rule, which Giray Havur adopted on 2026-09-23: a copyright license that is silent grants no right to endorsement, which refuses only a use that suggests endorsement and cites article 9 of the EU Trade Mark Regulation and section 2(b)(2) of Creative Commons 4.0.</p>
       <p class="version__links">
-        <a class="btn btn--ghost btn--small" href="./">View</a>
+        <a class="btn btn--ghost btn--small" href="./">View<span class="visually-hidden"> version 2</span></a>
         <a class="btn btn--slate btn--small"
            href="https://dalicc.net/dependency-graph.ttl"
            download>Turtle</a>
       </p>
-      <details class="collapsible version__changes" id="dg-history-changes-5">
+      <details class="collapsible version__changes" id="dg-history-changes-2">
   <summary class="collapsible__legend">
     <span class="collapsible__sign" aria-hidden="true"></span>
-    <span>2 changes</span>
+    <span>22 changes</span>
   </summary>
   <div class="collapsible__body">
     <ul class="change-list">
-      <li class="change change--added">
+      <li class="change change--removed">
         <p class="change__head">
-          <span class="change__action">added</span>
-          <code class="change__statement">rule dalicc:promote dalicc:NotGrantedByDefault in dalicc:worldwide</code>
+          <span class="change__action">removed</span>
+          <code class="change__statement">cc:ShareAlike dalicc:contradicts odrl:grantUse</code>
         </p>
         <p class="change__reason">
-          <span class="badge badge--neutral">dependency-graph-review</span>
-          Open proposal 1 of the licence review: dalicc:promote was prohibited on 519 of 581 records although the GNU texts and the older Creative Commons texts say nothing about endorsement. The prohibition was a house convention resting on a legal default, so it belongs in the rule layer and not in the records. Basis: trademark law and the protection of names, under which a copyright licence that is silent grants no right to endorsement. Status: adopted, so a check that chooses nothing reads a silent licence exactly as it read a record that carried the prohibition.
+          <span class="badge badge--neutral">Review decision</span>
+          Review decision 5: passing the same terms on is the normal way to satisfy a share-alike condition, not a contradiction of it.
+        </p>
+      </li>
+      <li class="change change--removed">
+        <p class="change__head">
+          <span class="change__action">removed</span>
+          <code class="change__statement">odrl:grantUse dalicc:contradicts cc:ShareAlike</code>
+        </p>
+        <p class="change__reason">
+          <span class="badge badge--neutral">Review decision</span>
+          Review decision 5: passing the same terms on is the normal way to satisfy a share-alike condition, not a contradiction of it.
         </p>
       </li>
       <li class="change change--added">
         <p class="change__head">
           <span class="change__action">added</span>
-          <code class="change__statement">the graphs dg_eu, dg_us, dg_cn, dg_gb, dg_jp, dg_in and dg_br</code>
+          <code class="change__statement">dalicc:sublicense owl:sameAs odrl:grantUse</code>
         </p>
         <p class="change__reason">
-          <span class="badge badge--neutral">dependency-graph-review</span>
-          The owner asked for options for the biggest markets. Each graph holds the default rules proposed for one of them, names this graph with dalicc:extendsGraph so the axioms stay written once, and carries only proposals, so nothing in it reaches a reader who chooses nothing. Every rule names the statute or the principle it rests on, and nothing in any of them is legal advice.
+          <span class="badge badge--neutral">Review decision</span>
+          Open issue 9 of the content review is decided: the two terms denote the same act, so a bundle of a license that forbids sublicensing with one that permits it must report a conflict instead of no conflict.
         </p>
       </li>
-    </ul>
-  </div>
-</details>
-    </li>
-    <li class="version">
-      <p class="version__head">
-        <span class="version__number">Version 4</span>
-<span class="version__date">2026-09-23</span>        <span class="version__reviewer">Giray Havur</span>
-      </p>
-      <p class="version__summary">The review of 2026-09-23 read every action the vocabulary defines against the axioms that mention it. Eight statements were added, three were removed, and the graph now holds 46. The commercial-use cluster is the substance of the change: the term 579 library statements use was not in the graph at all, so the axioms about selling and charging a fee concluded nothing.</p>
-      <p class="version__links">
-        <a class="btn btn--ghost btn--small" href="https://dalicc.net/dependencygraph/versions/4">View</a>
-        <a class="btn btn--slate btn--small"
-           href="https://dalicc.net/dependencygraph/versions/4"
-           download>Turtle</a>
-      </p>
-      <details class="collapsible version__changes" id="dg-history-changes-4">
-  <summary class="collapsible__legend">
-    <span class="collapsible__sign" aria-hidden="true"></span>
-    <span>11 changes</span>
-  </summary>
-  <div class="collapsible__body">
-    <ul class="change-list">
+      <li class="change change--added">
+        <p class="change__head">
+          <span class="change__action">added</span>
+          <code class="change__statement">odrl:grantUse owl:sameAs dalicc:sublicense</code>
+        </p>
+        <p class="change__reason">
+          <span class="badge badge--neutral">Review decision</span>
+          The inverse spelling, written explicitly because the graph states every owl:sameAs pair in both directions.
+        </p>
+      </li>
       <li class="change change--added">
         <p class="change__head">
           <span class="change__action">added</span>
@@ -1325,7 +1344,7 @@
         </p>
         <p class="change__reason">
           <span class="badge badge--neutral">dependency-graph-review</span>
-          The inverse of cc:Notice owl:sameAs odrl:AttachPolicy. The change log of version 3 says the graph states every owl:sameAs pair in both directions; three pairs did not, and now every one of them does.
+          The inverse of cc:Notice owl:sameAs odrl:AttachPolicy. The graph states every owl:sameAs pair in both directions; three pairs did not, and now every one of them does.
         </p>
       </li>
       <li class="change change--added">
@@ -1378,97 +1397,85 @@
           odrl:display is &#39;create a static and transient rendition of the work&#39; and odrl:play is &#39;render the asset in an audio or video form&#39;. A static rendition is not an audio or video one, so displaying is not a kind of playing. Both remain kinds of odrl:present.
         </p>
       </li>
-    </ul>
-  </div>
-</details>
-    </li>
-    <li class="version">
-      <p class="version__head">
-        <span class="version__number">Version 3</span>
-<span class="version__date">2026-09-15</span>        <span class="version__reviewer">Giray Havur</span>
-      </p>
-      <p class="version__summary">The standard-license addition of 2026-09-15 related the two terms that name the same act: dalicc:sublicense, which 295 records use as a prohibition, and odrl:grantUse, which the permissive records use as a permission.</p>
-      <p class="version__links">
-        <a class="btn btn--ghost btn--small" href="https://dalicc.net/dependencygraph/versions/3">View</a>
-        <a class="btn btn--slate btn--small"
-           href="https://dalicc.net/dependencygraph/versions/3"
-           download>Turtle</a>
-      </p>
-      <details class="collapsible version__changes" id="dg-history-changes-3">
-  <summary class="collapsible__legend">
-    <span class="collapsible__sign" aria-hidden="true"></span>
-    <span>2 changes</span>
-  </summary>
-  <div class="collapsible__body">
-    <ul class="change-list">
       <li class="change change--added">
         <p class="change__head">
           <span class="change__action">added</span>
-          <code class="change__statement">dalicc:sublicense owl:sameAs odrl:grantUse</code>
+          <code class="change__statement">rule dalicc:promote dalicc:NotGrantedByDefault in dalicc:worldwide</code>
         </p>
         <p class="change__reason">
-          <span class="badge badge--neutral">Review decision</span>
-          Open issue 9 of the content review is decided: the two terms denote the same act, so a bundle of a license that forbids sublicensing with one that permits it must report a conflict instead of no conflict.
+          <span class="badge badge--neutral">dependency-graph-review</span>
+          Open proposal 1 of the licence review: dalicc:promote was prohibited on 519 of 581 records although the GNU texts and the older Creative Commons texts say nothing about endorsement. The prohibition was a house convention resting on a legal default, so it belongs in the rule layer and not in the records. Basis: trademark law and the protection of names, under which a copyright licence that is silent grants no right to endorsement. Status: adopted, so a check that chooses nothing reads a silent licence exactly as it read a record that carried the prohibition.
         </p>
       </li>
       <li class="change change--added">
         <p class="change__head">
           <span class="change__action">added</span>
-          <code class="change__statement">odrl:grantUse owl:sameAs dalicc:sublicense</code>
+          <code class="change__statement">the graphs dg_eu, dg_us, dg_cn, dg_gb, dg_jp, dg_in and dg_br</code>
         </p>
         <p class="change__reason">
-          <span class="badge badge--neutral">Review decision</span>
-          The inverse spelling, written explicitly because the graph states every owl:sameAs pair in both directions.
+          <span class="badge badge--neutral">dependency-graph-review</span>
+          The review considered the seven largest markets and proposed default rules for each. Each graph holds the default rules proposed for one of them, names this graph with dalicc:extendsGraph so the axioms stay written once, and carries only proposals, so nothing in it reaches a reader who chooses nothing. Every rule names the statute or the principle it rests on, and nothing in any of them is legal advice.
+        </p>
+      </li>
+      <li class="change change--changed">
+        <p class="change__head">
+          <span class="change__action">changed</span>
+          <code class="change__statement">rule dalicc:promote dalicc:NotGrantedByDefault in dalicc:worldwide</code>
+        </p>
+        <p class="change__previous">was <code>rule dalicc:promote dalicc:NotGrantedByDefault in dalicc:worldwide, with no dalicc:ruleExplanation</code></p>
+        <p class="change__reason">
+          <span class="badge badge--neutral">dependency-graph-review</span>
+          A citation alone does not say what a rule does. dalicc:ruleExplanation, a term the vocabulary gained for it, now says what the rule does to a silent licence, why trademark law and the protection of names lead there, and what a person combining licences will notice.
+        </p>
+      </li>
+      <li class="change change--changed">
+        <p class="change__head">
+          <span class="change__action">changed</span>
+          <code class="change__statement">the graphs dg_eu, dg_us, dg_cn, dg_gb, dg_jp, dg_in and dg_br are generated from this graph</code>
+        </p>
+        <p class="change__previous">was <code>the graphs dg_eu, dg_us, dg_cn, dg_gb, dg_jp, dg_in and dg_br name this graph with dalicc:extendsGraph</code></p>
+        <p class="change__reason">
+          <span class="badge badge--neutral">dependency-graph-review</span>
+          Every graph under Graphs you can reason with reads like a complete graph, and a jurisdiction whose law does not agree with the core graph had no way to say so. Each jurisdiction graph now holds the 46 axioms and this rule itself, is built by scripts/build_dependency_graphs.py from this file and its difference file, and can remove an axiom or replace a rule with a legal reason. The reasoner reads one graph and follows no link.
+        </p>
+      </li>
+      <li class="change change--changed">
+        <p class="change__head">
+          <span class="change__action">changed</span>
+          <code class="change__statement">rule dalicc:promote dalicc:NotGrantedByDefault in dalicc:worldwide, with dalicc:ruleBasis citing Regulation (EU) 2017/1001 article 9 and Creative Commons 4.0 section 2(b)(2)</code>
+        </p>
+        <p class="change__previous">was <code>rule dalicc:promote dalicc:NotGrantedByDefault in dalicc:worldwide, with dalicc:ruleBasis: trademark law and the protection of names: a copyright licence that is silent grants no right to endorsement</code></p>
+        <p class="change__reason">
+          <span class="badge badge--neutral">dependency-graph-review</span>
+          The rule was the only adopted one and cited no source a lawyer could check. Trademark and endorsement rights are separate from copyright: the EU Trade Mark Regulation gives the proprietor the right to prevent use of the sign without consent, and the Creative Commons 4.0 licences, which the library models, say in section 2(b)(2) that patent and trademark rights are not licensed under them.
+        </p>
+      </li>
+      <li class="change change--changed">
+        <p class="change__head">
+          <span class="change__action">changed</span>
+          <code class="change__statement">rule dalicc:promote dalicc:NotGrantedByDefault in dalicc:worldwide, with a dalicc:ruleExplanation that refuses only a use suggesting endorsement</code>
+        </p>
+        <p class="change__previous">was <code>rule dalicc:promote dalicc:NotGrantedByDefault in dalicc:worldwide, with a dalicc:ruleExplanation that said the licensee may not use the name or the marks of the licensor to promote a product</code></p>
+        <p class="change__reason">
+          <span class="badge badge--neutral">dependency-graph-review</span>
+          Descriptive or referential use of a name, such as saying truthfully that a product is based on or compatible with the licensed work, is generally lawful; the legal limit is a use that states or implies endorsement or origin.
+        </p>
+      </li>
+      <li class="change change--added">
+        <p class="change__head">
+          <span class="change__action">added</span>
+          <code class="change__statement">rule dalicc:promote dalicc:NotGrantedByDefault in dalicc:worldwide: dct:contributor &#34;Giray Havur, for the association&#39;s review, adopted this rule on 2026-09-23&#34;; dct:dateAccepted 2026-09-23</code>
+        </p>
+        <p class="change__reason">
+          <span class="badge badge--neutral">dependency-graph-review</span>
+          A lawyer reading the graph could not tell who adopted the rule. The vocabulary has no reviewer property for rules, so the rule names its reviewer with dct:contributor and the date of adoption, which the version 2 entry of this log records, with dct:dateAccepted.
         </p>
       </li>
     </ul>
   </div>
 </details>
     </li>
-    <li class="version">
-      <p class="version__head">
-        <span class="version__number">Version 2</span>
-<span class="version__date">2026-09-15</span>        <span class="version__reviewer">Giray Havur</span>
-      </p>
-      <p class="version__summary">The content review of 2026-09-15 removed the pair of axioms that made a reciprocal license which also grants sublicensing contradict itself.</p>
-      <p class="version__links">
-        <a class="btn btn--ghost btn--small" href="https://dalicc.net/dependencygraph/versions/2">View</a>
-        <a class="btn btn--slate btn--small"
-           href="https://dalicc.net/dependencygraph/versions/2"
-           download>Turtle</a>
-      </p>
-      <details class="collapsible version__changes" id="dg-history-changes-2">
-  <summary class="collapsible__legend">
-    <span class="collapsible__sign" aria-hidden="true"></span>
-    <span>2 changes</span>
-  </summary>
-  <div class="collapsible__body">
-    <ul class="change-list">
-      <li class="change change--removed">
-        <p class="change__head">
-          <span class="change__action">removed</span>
-          <code class="change__statement">cc:ShareAlike dalicc:contradicts odrl:grantUse</code>
-        </p>
-        <p class="change__reason">
-          <span class="badge badge--neutral">Review decision</span>
-          Review decision 5: passing the same terms on is the normal way to satisfy a share-alike condition, not a contradiction of it.
-        </p>
-      </li>
-      <li class="change change--removed">
-        <p class="change__head">
-          <span class="change__action">removed</span>
-          <code class="change__statement">odrl:grantUse dalicc:contradicts cc:ShareAlike</code>
-        </p>
-        <p class="change__reason">
-          <span class="badge badge--neutral">Review decision</span>
-          Review decision 5: passing the same terms on is the normal way to satisfy a share-alike condition, not a contradiction of it.
-        </p>
-      </li>
-    </ul>
-  </div>
-</details>
-    </li>
-    <li class="version">
+    <li class="version" id="version-1">
       <p class="version__head">
         <span class="version__number">Version 1</span>
       </p>
@@ -1476,7 +1483,7 @@
         The version this model had before the content review of 2026-09-15.
       </p>
       <p class="version__links">
-        <a class="btn btn--ghost btn--small" href="https://dalicc.net/dependencygraph/versions/1">View</a>
+        <a class="btn btn--ghost btn--small" href="https://dalicc.net/dependencygraph/versions/1">View<span class="visually-hidden"> version 1</span></a>
         <a class="btn btn--slate btn--small"
            href="https://dalicc.net/dependencygraph/versions/1"
            download>Turtle</a>
@@ -1498,7 +1505,12 @@
 
   <footer class="site-footer">
     <div class="site-footer__inner">
-      
+      <nav class="site-footer__nav mirror-social" aria-label="DALICC elsewhere">
+        <ul>
+          <li><a href="https://www.linkedin.com/groups/13523102" target="_blank" rel="noopener noreferrer">DALICC on LinkedIn</a></li>
+          <li><a href="https://github.com/dalicc/" target="_blank" rel="noopener noreferrer">DALICC on GitHub</a></li>
+        </ul>
+      </nav>
       <p class="site-footer__funding">
         DALICC does not replace legal advice.
       </p>
@@ -1527,7 +1539,6 @@
 
   <script src="../assets/site/site.js" defer></script>
   <script src="../assets/site/components.js" defer></script>
-  <script src="../assets/site/dashboard.js" defer></script>
 <script src="../assets/site/graph.js" defer></script>
 </body>
 </html>
